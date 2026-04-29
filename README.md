@@ -4,6 +4,16 @@
 
 项目使用 Vue 3 + Vite + TailwindCSS，所有数据都来自本地 JSON 文件，不依赖后端，适合部署到 Cloudflare Pages、GitHub Pages、Vercel、Netlify 或任意静态服务器。
 
+## 在线体验
+
+你可以直接打开下面的 Demo 试用：
+
+```text
+https://w0nderful666.github.io/prompt-market/
+```
+
+在线 Demo 是纯前端静态页面，不会调用后端服务，也不会调用外部 AI API。用户导入的词库、保存的方案和编辑内容都只会保存在当前浏览器的 `localStorage` 中，不会上传到服务器，也不会影响其他用户。
+
 ## 功能特点
 
 - 分类选择提示词关键词
