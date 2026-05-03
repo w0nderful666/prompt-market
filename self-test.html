@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Self-Test - Prompt Director</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, sans-serif; background: #0f172a; color: #e2e8f0; padding: 20px; }
+    h1 { font-size: 20px; margin-bottom: 16px; }
+    .suite { margin-bottom: 24px; }
+    .suite h2 { font-size: 16px; color: #86efac; margin-bottom: 8px; }
+    .test { padding: 8px 12px; margin: 4px 0; border-radius: 8px; font-size: 13px; display: flex; align-items: center; gap: 8px; }
+    .pass { background: #064e3b; color: #6ee7b7; }
+    .fail { background: #7f1d1d; color: #fca5a5; }
+    .skip { background: #1e293b; color: #94a3b8; }
+    .summary { margin-top: 20px; padding: 16px; border-radius: 12px; font-size: 14px; font-weight: bold; }
+    .summary.all-pass { background: #064e3b; color: #6ee7b7; }
+    .summary.has-fail { background: #7f1d1d; color: #fca5a5; }
+    #results { white-space: pre-wrap; font-family: monospace; font-size: 12px; margin-top: 20px; padding: 16px; background: #1e293b; border-radius: 8px; max-height: 60vh; overflow-y: auto; }
+  </style>
+</head>
+<body>
+  <h1>🧪 Prompt Director - Self Test</h1>
+  <div id="output"></div>
+  <div id="results"></div>
+  <script type="module" src="./self-test.js"></script>
+</body>
+</html>

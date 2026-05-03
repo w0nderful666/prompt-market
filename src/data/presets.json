@@ -1,0 +1,62 @@
+{
+  "scenes": [
+    { "id": "bathroom_mirror", "zh": "浴室镜自拍", "en": "bathroom mirror selfie" },
+    { "id": "subway_station", "zh": "地铁站", "en": "subway station" },
+    { "id": "convenience_store", "zh": "便利店门口", "en": "convenience store entrance" },
+    { "id": "night_street", "zh": "夜晚街头", "en": "night street" },
+    { "id": "campus_corridor", "zh": "校园走廊", "en": "campus corridor" },
+    { "id": "bedroom_window", "zh": "卧室窗边", "en": "bedroom window side" },
+    { "id": "public_escalator", "zh": "公共扶梯", "en": "public escalator" },
+    { "id": "rainy_car_window", "zh": "雨天车窗", "en": "rainy car window" },
+    { "id": "old_town_corner", "zh": "老城区街角", "en": "old town street corner" },
+    { "id": "home_room", "zh": "普通家庭房间", "en": "ordinary home room" }
+  ],
+  "textures": [
+    { "id": "low_res_selfie", "zh": "低分辨率手机自拍", "en": "low resolution phone selfie" },
+    { "id": "old_digicam", "zh": "老式数码相机", "en": "old digital camera" },
+    { "id": "film_grain", "zh": "胶片颗粒", "en": "film grain" },
+    { "id": "ccd_snapshot", "zh": "CCD 快照", "en": "CCD snapshot" },
+    { "id": "korean_street", "zh": "韩系街拍", "en": "Korean street style" },
+    { "id": "realistic_photo", "zh": "写实摄影", "en": "realistic photography" },
+    { "id": "casual_snap", "zh": "生活化随手拍", "en": "casual everyday snap" },
+    { "id": "warm_wb", "zh": "暖白平衡", "en": "warm white balance" },
+    { "id": "partial_overexpose", "zh": "局部过曝", "en": "partial overexposure" },
+    { "id": "compression_artifact", "zh": "轻微压缩伪影", "en": "slight compression artifacts" }
+  ],
+  "compositions": [
+    { "id": "close_half", "zh": "近景半身", "en": "close-up half body" },
+    { "id": "extreme_close", "zh": "特写", "en": "extreme close-up" },
+    { "id": "vertical_frame", "zh": "竖构图", "en": "vertical composition" },
+    { "id": "rule_of_thirds", "zh": "三分法构图", "en": "rule of thirds" },
+    { "id": "low_angle", "zh": "低角度微仰视", "en": "slight low angle" },
+    { "id": "top_down", "zh": "俯拍", "en": "top-down shot" },
+    { "id": "mirror_selfie", "zh": "镜子自拍", "en": "mirror selfie" },
+    { "id": "bg_bokeh", "zh": "背景虚化", "en": "background bokeh" },
+    { "id": "over_shoulder", "zh": "越肩视角", "en": "over-the-shoulder" },
+    { "id": "diagonal_line", "zh": "斜线构图", "en": "diagonal composition" }
+  ],
+  "lightings": [
+    { "id": "bathroom_ceiling", "zh": "浴室顶灯", "en": "bathroom ceiling light" },
+    { "id": "dusk_backlight", "zh": "黄昏逆光", "en": "dusk backlight" },
+    { "id": "store_cool", "zh": "便利店冷光", "en": "convenience store cool light" },
+    { "id": "subway_fluorescent", "zh": "地铁荧光灯", "en": "subway fluorescent light" },
+    { "id": "night_neon", "zh": "夜晚霓虹", "en": "night neon lights" },
+    { "id": "window_natural", "zh": "窗边自然光", "en": "natural window light" },
+    { "id": "harsh_flash", "zh": "强烈直闪", "en": "harsh direct flash" },
+    { "id": "soft_light", "zh": "柔光", "en": "soft light" },
+    { "id": "hard_light", "zh": "硬光", "en": "hard light" },
+    { "id": "mixed_temp", "zh": "混合色温", "en": "mixed color temperature" }
+  ],
+  "atmospheres": [
+    { "id": "lazy", "zh": "慵懒", "en": "lazy" },
+    { "id": "intimate", "zh": "亲近", "en": "intimate" },
+    { "id": "playful", "zh": "调皮", "en": "playful" },
+    { "id": "hazy", "zh": "略迷离", "en": "slightly hazy" },
+    { "id": "private_not_sexy", "zh": "私密但不过度性感", "en": "private but not overly sexual" },
+    { "id": "candid", "zh": "随手拍", "en": "candid" },
+    { "id": "late_night", "zh": "深夜感", "en": "late night feeling" },
+    { "id": "unfinished_pause", "zh": "未完成的情绪停顿", "en": "unfinished emotional pause" },
+    { "id": "real_life", "zh": "真实生活气息", "en": "authentic everyday atmosphere" },
+    { "id": "slight_daze", "zh": "轻微恍惚", "en": "slight daze" }
+  ]
+}

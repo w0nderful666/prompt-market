@@ -1,0 +1,59 @@
+/**
+ * Variant generator - creates prompt variations based on style directions
+ */
+import { buildChineseStandard, buildEnglishStandard } from './directorBuilder.js'
+
+const VARIANTS = [
+  { "id": "more_realistic", "zh": "更真实", "en": "More Realistic", "suffix_zh": "画面追求极致真实感，保留自然瑕疵、噪点和不完美，像真实相机拍摄而非AI生成。", "suffix_en": "The image pursues extreme realism, retaining natural imperfections, noise, and flaws, as if taken by a real camera rather than AI-generated." },
+  { "id": "more_cinematic", "zh": "更电影感", "en": "More Cinematic", "suffix_zh": "画面具有电影剧照般的光影层次和叙事感，色调偏电影调色。", "suffix_en": "The image has cinematic lighting layers and narrative feel, with a film-like color grade." },
+  { "id": "more_film", "zh": "更胶片", "en": "More Film-like", "suffix_zh": "色彩带有轻微偏移和自然颗粒，呈现柔和的胶片质感，保留复古韵味。", "suffix_en": "Colors have slight shifts and natural grain, presenting a soft film texture with a vintage feel." },
+  { "id": "more_lowres", "zh": "更低清手机感", "en": "More Low-res Phone", "suffix_zh": "模拟低分辨率手机拍摄，带数字噪点、JPEG压缩痕迹和轻微跑焦。", "suffix_en": "Simulating low-resolution phone capture with digital noise, JPEG artifacts, and slight focus miss." },
+  { "id": "more_japanese", "zh": "更日系", "en": "More Japanese Style", "suffix_zh": "色调柔和自然，带有日系写真的清新感和淡雅氛围。", "suffix_en": "Soft and natural tones, with the fresh and elegant atmosphere of Japanese-style photography." },
+  { "id": "more_dark", "zh": "更暗黑", "en": "More Dark", "suffix_zh": "整体色调偏暗，对比度高，带有神秘和暗黑美学。", "suffix_en": "Overall darker tones with high contrast, featuring mysterious and dark aesthetics." },
+  { "id": "more_lifestyle", "zh": "更生活化", "en": "More Lifestyle", "suffix_zh": "强调日常生活的自然感，像随手拍的记录，不做作。", "suffix_en": "Emphasizing the natural feel of daily life, like a casual record, unpretentious." },
+  { "id": "more_premium", "zh": "更高级", "en": "More Premium", "suffix_zh": "画面质感更精致，色彩更克制，构图更考究，呈现高级审美。", "suffix_en": "More refined texture, restrained colors, and deliberate composition, presenting premium aesthetics." },
+  { "id": "gpt_image", "zh": "更适合 GPT Image", "en": "Optimized for GPT Image", "suffix_zh": "适配 GPT Image 模型特点，强调自然语言描述和画面完整性。", "suffix_en": "Adapted for GPT Image model, emphasizing natural language description and image completeness." },
+  { "id": "midjourney", "zh": "更适合 Midjourney", "en": "Optimized for Midjourney", "suffix_zh": "适配 Midjourney 风格，加入风格参数和画面质量关键词。", "suffix_en": "Adapted for Midjourney style, adding style parameters and quality keywords." },
+  { "id": "stable_diffusion", "zh": "更适合 Stable Diffusion", "en": "Optimized for SD", "suffix_zh": "适配 Stable Diffusion，加入质量标签和负面提示词优化。", "suffix_en": "Adapted for Stable Diffusion, adding quality tags and negative prompt optimization." }
+]
+
+export function generateVariants(director) {
+  if (!director) return []
+
+  const base_zh = buildChineseStandard(director)
+  const base_en = buildEnglishStandard(director)
+
+  return VARIANTS.map(variant => {
+    let zh = base_zh
+    let en = base_en
+
+    // Append variant-specific suffix
+    if (variant.suffix_zh) {
+      zh = zh.replace(/。$/, '') + '。' + variant.suffix_zh
+    }
+    if (variant.suffix_en) {
+      en = en.replace(/\.$/, '') + '. ' + variant.suffix_en
+    }
+
+    // Model-specific optimizations
+    if (variant.id === 'midjourney') {
+      zh += ' --ar ' + (director.ratio || '3:4') + ' --v 6'
+      en += ' --ar ' + (director.ratio || '3:4') + ' --v 6'
+    }
+    if (variant.id === 'stable_diffusion') {
+      const avoid = director.avoid || ''
+      if (avoid) {
+        zh += `\n\n负面提示词：${avoid}, low quality, blurry, bad hands`
+        en += `\n\nNegative prompt: ${avoid}, low quality, blurry, bad hands`
+      }
+    }
+
+    return {
+      id: variant.id,
+      name_zh: variant.zh,
+      name_en: variant.en,
+      text_zh: zh,
+      text_en: en
+    }
+  })
+}

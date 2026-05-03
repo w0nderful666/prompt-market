@@ -1,0 +1,77 @@
+[
+  {
+    "id": "bathroom_selfie_lowres",
+    "name": "浴室镜自拍 / 低清手机质感",
+    "description": "浴室镜面自拍，低分辨率手机质感，自然真实",
+    "director": {
+      "model": "GPT Image / 写实人像",
+      "subject": "一位二十出头的年轻女性，自然站姿，表情放松",
+      "scene": "浴室，镜面自拍，瓷砖墙面",
+      "composition": "竖构图，镜子自拍视角，半身",
+      "expression": "看向镜中自己，嘴角微微上扬，自然放松",
+      "face": "清透妆容，自然底妆，轻微腮红，自然唇色",
+      "hair": "锁骨发，自然碎发，微微凌乱",
+      "body": "自然站立，一手拿手机，一手自然下垂",
+      "clothing": "白色吊带背心，宽松居家短裤",
+      "accessories": "无",
+      "lighting": "浴室顶灯，偏冷白色，局部过曝",
+      "camera": "低分辨率手机自拍，轻微噪点，暖白平衡",
+      "background": "浴室瓷砖，洗手台边缘，镜面反光",
+      "atmosphere": "私密但不过度性感，真实生活气息",
+      "caption": "手机自拍，社交媒体随手拍风格",
+      "mustKeep": "自然皮肤纹理，真实生活感，不过度精修",
+      "avoid": "过度精修，塑料皮肤，网红脸，商业棚拍感",
+      "ratio": "9:16 竖版"
+    }
+  },
+  {
+    "id": "night_street_film",
+    "name": "夜晚街头 / 胶片摄影",
+    "description": "夜晚街头胶片质感，自然颗粒，城市氛围",
+    "director": {
+      "model": "Midjourney / 胶片人像",
+      "subject": "一位年轻女性，街拍模特气质，自然随性",
+      "scene": "夜晚城市街头，潮湿路面，霓虹灯光",
+      "composition": "近景半身，三分法构图，主体略偏离中心",
+      "expression": "看向镜头，表情自然，眼神有焦点",
+      "face": "自然底妆，淡眼妆，自然唇色，健康肤色光泽",
+      "hair": "黑色长发，发丝被微风吹起",
+      "body": "自然行走中，身体微微转向镜头",
+      "clothing": "黑色皮夹克，白色T恤，水洗牛仔裤",
+      "accessories": "简约项链，帆布包",
+      "lighting": "夜晚霓虹，混合色温，路灯暖光",
+      "camera": "35mm胶片，胶片颗粒，轻微色偏",
+      "background": "霓虹招牌，模糊路人，潮湿路面反光",
+      "atmosphere": "深夜感，略迷离，真实生活气息",
+      "caption": "胶片摄影，城市纪实风格",
+      "mustKeep": "胶片颗粒，自然肤色，真实街道氛围",
+      "avoid": "过度锐化，塑料皮肤，AI生成感，过度精修",
+      "ratio": "3:4 横版"
+    }
+  },
+  {
+    "id": "product_ecommerce",
+    "name": "产品图 / 高级电商质感",
+    "description": "产品展示图，高级电商视觉，干净专业",
+    "director": {
+      "model": "Stable Diffusion / 产品摄影",
+      "subject": "一瓶精华液产品，瓶身通透，质感高级",
+      "scene": "纯色背景，简洁产品台面",
+      "composition": "中心构图，产品居中，留白适当",
+      "expression": "无",
+      "face": "无",
+      "hair": "无",
+      "body": "无",
+      "clothing": "无",
+      "accessories": "无",
+      "lighting": "柔光箱，均匀照明，无硬阴影",
+      "camera": "商业产品摄影，微距镜头，高细节",
+      "background": "渐变浅灰背景，无杂物",
+      "atmosphere": "干净，高级，专业商业质感",
+      "caption": "商业产品图，电商主图风格",
+      "mustKeep": "产品细节清晰，瓶身质感，色彩准确",
+      "avoid": "背景混乱，阴影过重，低质量，模糊",
+      "ratio": "1:1 方图"
+    }
+  }
+]

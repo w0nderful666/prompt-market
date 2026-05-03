@@ -6,7 +6,13 @@ const STORAGE_KEYS = {
   customPrompts: 'prompt_market_custom_prompts',
   currentCategory: 'prompt_market_current_category',
   currentTab: 'prompt_market_current_tab',
-  editorStatePrefix: 'prompt_market_editor_state'
+  editorStatePrefix: 'prompt_market_editor_state',
+  // Director mode keys
+  directorSchemes: 'prompt_market_director_schemes',
+  directorHistory: 'prompt_market_director_history',
+  directorFavorites: 'prompt_market_director_favorites',
+  directorCurrent: 'prompt_market_director_current',
+  currentView: 'prompt_market_current_view'
 }
 
 function read(key, fallback) {
@@ -60,7 +66,50 @@ export const storage = {
 
   getEditorState: (libraryId, fallback) => read(editorKey(libraryId), fallback),
   setEditorState: (libraryId, state) => write(editorKey(libraryId), state),
-  clearEditorState: (libraryId) => remove(editorKey(libraryId))
+  clearEditorState: (libraryId) => remove(editorKey(libraryId)),
+
+  // Director mode
+  getCurrentView: () => read(STORAGE_KEYS.currentView, 'classic'),
+  setCurrentView: (view) => write(STORAGE_KEYS.currentView, view),
+
+  getDirectorCurrent: () => read(STORAGE_KEYS.directorCurrent, null),
+  setDirectorCurrent: (data) => write(STORAGE_KEYS.directorCurrent, data),
+
+  getDirectorHistory: () => read(STORAGE_KEYS.directorHistory, []),
+  addDirectorHistory: (entry) => {
+    const history = read(STORAGE_KEYS.directorHistory, [])
+    history.unshift({ ...entry, id: `h_${Date.now()}`, createdAt: new Date().toISOString() })
+    write(STORAGE_KEYS.directorHistory, history.slice(0, 10))
+  },
+  clearDirectorHistory: () => remove(STORAGE_KEYS.directorHistory),
+
+  getDirectorFavorites: () => read(STORAGE_KEYS.directorFavorites, []),
+  addDirectorFavorite: (entry) => {
+    const favs = read(STORAGE_KEYS.directorFavorites, [])
+    favs.unshift({ ...entry, id: `f_${Date.now()}`, createdAt: new Date().toISOString() })
+    write(STORAGE_KEYS.directorFavorites, favs)
+  },
+  removeDirectorFavorite: (id) => {
+    const favs = read(STORAGE_KEYS.directorFavorites, []).filter(f => f.id !== id)
+    write(STORAGE_KEYS.directorFavorites, favs)
+  },
+
+  getDirectorSchemes: () => read(STORAGE_KEYS.directorSchemes, []),
+  saveDirectorScheme: (name, director, outputs) => {
+    const schemes = read(STORAGE_KEYS.directorSchemes, [])
+    schemes.unshift({
+      id: `ds_${Date.now()}`,
+      name,
+      director: { ...director },
+      outputs: { ...outputs },
+      createdAt: new Date().toISOString()
+    })
+    write(STORAGE_KEYS.directorSchemes, schemes)
+  },
+  deleteDirectorScheme: (id) => {
+    const schemes = read(STORAGE_KEYS.directorSchemes, []).filter(s => s.id !== id)
+    write(STORAGE_KEYS.directorSchemes, schemes)
+  }
 }
 
 export function saveScheme(name, prompts, promptState = {}) {
@@ -86,6 +135,18 @@ export function deleteScheme(id) {
 
 export function downloadJson(data, filename) {
   const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json;charset=utf-8' })
+  const url = URL.createObjectURL(blob)
+  const link = document.createElement('a')
+  link.href = url
+  link.download = filename
+  document.body.appendChild(link)
+  link.click()
+  link.remove()
+  URL.revokeObjectURL(url)
+}
+
+export function downloadText(text, filename) {
+  const blob = new Blob([text], { type: 'text/plain;charset=utf-8' })
   const url = URL.createObjectURL(blob)
   const link = document.createElement('a')
   link.href = url

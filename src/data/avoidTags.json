@@ -1,0 +1,17 @@
+[
+  { "id": "over_retouch", "zh": "过度精修", "en": "over-retouching" },
+  { "id": "plastic_skin", "zh": "塑料皮肤", "en": "plastic skin" },
+  { "id": "studio_light", "zh": "影棚光", "en": "studio lighting" },
+  { "id": "luxury_bg", "zh": "豪华背景", "en": "luxury background" },
+  { "id": "hand_error", "zh": "手部错误", "en": "hand errors" },
+  { "id": "extra_fingers", "zh": "多余手指", "en": "extra fingers" },
+  { "id": "limb_deform", "zh": "肢体畸形", "en": "deformed limbs" },
+  { "id": "mirror_error", "zh": "镜像错误", "en": "mirror errors" },
+  { "id": "text_watermark", "zh": "文字水印", "en": "text watermark" },
+  { "id": "over_sharp", "zh": "过度锐化", "en": "oversharpened" },
+  { "id": "commercial_look", "zh": "商业棚拍感", "en": "commercial studio look" },
+  { "id": "influencer_face", "zh": "网红脸", "en": "influencer face" },
+  { "id": "cartoonish", "zh": "卡通化", "en": "cartoonish" },
+  { "id": "low_quality_face", "zh": "低质量脸部", "en": "low quality face" },
+  { "id": "messy_bg", "zh": "背景混乱", "en": "messy background" }
+]

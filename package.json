@@ -1,12 +1,13 @@
 {
   "name": "prompt-market",
-  "version": "1.0.0",
-  "description": "AI 绘图提示词集市 / Prompt 关键词选择器",
+  "version": "2.0.0",
+  "description": "AI 绘图提示词导演工作台 / Prompt Director Workstation",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "self-test": "node self-test.js"
   },
   "dependencies": {
     "vue": "^3.4.21"
