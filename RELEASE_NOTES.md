@@ -1,5 +1,23 @@
 # Release Notes
 
+## v3.1.1 - Release Link Hotfix (2026-05-03)
+
+### 🔗 链接校验与修复
+- 全项目搜索确认 GitHub Pages 在线地址正确：`https://w0nderful666.github.io/prompt-market/`
+- 全项目搜索确认仓库地址正确：`https://github.com/w0nderful666/prompt-market`
+- 确认无错误用户名 `w0nderful66.github.io` 出现
+- README / RELEASE_NOTES / self-test 链接全部统一
+
+### 🔖 版本升级
+- package.json / appMeta / footer / README / RELEASE_NOTES / self-test 版本统一为 v3.1.1
+
+### 🧪 self-test 增强
+- 新增：README 包含正确在线地址检查
+- 新增：项目中不包含错误用户名检查
+- 新增：v3.1.1 版本一致性检查
+
+---
+
 ## v3.1.0 - Release Candidate / Final Polish (2026-05-03)
 
 ### 🔍 最终体验检查

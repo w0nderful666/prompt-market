@@ -4,7 +4,7 @@
 
 **Prompt Director Studio** 是一个面向 AI 图像生成的结构化 Prompt 编辑器。通过模块化填写、多模型适配、质量评分、冲突检测，生成适合 GPT Image / Midjourney / Stable Diffusion / Flux 的高质量提示词。
 
-**v3.1.0** · Vue 3 + Vite + TailwindCSS · 纯前端 · 无后端 · 隐私友好
+**v3.1.1** · Vue 3 + Vite + TailwindCSS · 纯前端 · 无后端 · 隐私友好
 
 🔗 **在线访问**: [https://w0nderful666.github.io/prompt-market/](https://w0nderful666.github.io/prompt-market/)
 
@@ -230,7 +230,7 @@ npm run preflight    # 构建 + 自测（CI 等效）
 
 ## 📋 版本信息
 
-- **当前版本**: v3.1.0
+- **当前版本**: v3.1.1
 - **构建日期**: 2026-05-03
 - **技术栈**: Vue 3 + Vite + TailwindCSS
 - **详细日志**: [RELEASE_NOTES.md](./RELEASE_NOTES.md)

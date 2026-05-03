@@ -1,5 +1,5 @@
 /**
- * Self-test for Prompt Director Studio v3.1.0
+ * Self-test for Prompt Director Studio v3.1.1
  * Run: node self-test.js (after build)
  */
 
@@ -25,7 +25,7 @@ function readFile(p) { return readFileSync(p, 'utf-8') }
 // ====== 1. Package Version ======
 console.log('\n📦 Version Check')
 const pkg = JSON.parse(readFile(join(__dirname, 'package.json')))
-assert(pkg.version === '3.1.0', 'package.json version is 3.1.0')
+assert(pkg.version === '3.1.1', 'package.json version is 3.1.1')
 
 // ====== 2. Page Title ======
 console.log('\n📄 Page Title')
@@ -95,13 +95,13 @@ try {
 // ====== 8. README ======
 console.log('\n📝 README')
 const readme = readFile(join(__dirname, 'README.md'))
-assert(readme.includes('v3.1.0'), 'README contains "v3.1.0"')
+assert(readme.includes('v3.1.1'), 'README contains "v3.1.1"')
 assert(readme.includes('Prompt Director Studio'), 'README contains product name')
 
 // ====== 9. RELEASE_NOTES ======
 console.log('\n📋 Release Notes')
 const releaseNotes = readFile(join(__dirname, 'RELEASE_NOTES.md'))
-assert(releaseNotes.includes('v3.1.0'), 'RELEASE_NOTES contains "v3.1.0"')
+assert(releaseNotes.includes('v3.1.1'), 'RELEASE_NOTES contains "v3.1.1"')
 assert(releaseNotes.includes('Prompt Director Studio'), 'RELEASE_NOTES contains product name')
 
 // ====== 10. Build Output ======
@@ -160,7 +160,7 @@ console.log('\n⚙️  Configuration')
 assert(pkg.scripts.build === 'vite build', 'build script')
 assert(pkg.scripts['self-test'] === 'node self-test.js', 'self-test script')
 const appMeta = readFile(join(srcDir(), 'config/appMeta.js'))
-assert(appMeta.includes('3.1.0'), 'appMeta has version 3.1.0')
+assert(appMeta.includes('3.1.1'), 'appMeta has version 3.1.1')
 assert(appMeta.includes('Prompt Director Studio'), 'appMeta has product name')
 assert(appMeta.includes('2026-05-03'), 'appMeta has build date')
 
@@ -387,6 +387,26 @@ for (const f of allVueFiles) {
   }
 }
 assert(deadLinks === 0, `47. No href="#" in any component (found ${deadLinks})`)
+
+// ====== v3.1.1: Link Validation ======
+console.log('\n🔗 v3.1.1: Link Validation')
+assert(readme.includes('https://w0nderful666.github.io/prompt-market/'), '48. README has correct GitHub Pages URL (w0nderful666)')
+assert(!readme.includes('w0nderful66.github.io/prompt-market'), '49. README has NO wrong URL (w0nderful66)')
+const wrongUrlSrc = [
+  readme, releaseNotes, appVue, appFooterVue,
+  readFile(join(srcDir(), 'components/layout/AppHeader.vue')),
+  readFile(join(srcDir(), 'config/appMeta.js'))
+].join('\n')
+const wrongUrlCheck = wrongUrlSrc.includes('w0nderful66.github.io') && !wrongUrlSrc.includes('w0nderful666.github.io')
+assert(!wrongUrlCheck, '50. No wrong username "w0nderful66.github.io" in project files')
+
+// ====== v3.1.1: Version Bump ======
+console.log('\n🔖 v3.1.1: Version Bump')
+assert(pkg.version === '3.1.1', '51. package.json version is 3.1.1')
+assert(readme.includes('v3.1.1'), '52. README contains "v3.1.1"')
+assert(releaseNotes.includes('v3.1.1'), '53. RELEASE_NOTES contains "v3.1.1"')
+assert(releaseNotes.includes('Release Link Hotfix'), '54. RELEASE_NOTES has v3.1.1 hotfix section')
+assert(appMeta.includes('3.1.1'), '55. appMeta has version 3.1.1')
 
 // ====== Summary ======
 console.log('\n' + '='.repeat(50))

@@ -1,6 +1,6 @@
 {
   "name": "prompt-market",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "description": "AI 绘图提示词导演工作台 / Prompt Director Workstation",
   "type": "module",
   "scripts": {
