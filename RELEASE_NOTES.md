@@ -1,5 +1,53 @@
 # Release Notes
 
+## v2.1.0 - Professional Enhancement
+
+### ⚠️ 新增：Prompt Conflict Detector
+- 检测 8 类冲突：分辨率、场景、妆容、构图、风格、光线、氛围、设备
+- 每个冲突显示具体冲突词和修复建议
+- 冲突卡片带 dismiss 功能
+
+### 🧹 新增：Prompt Token Cleaner
+- 一键清理重复词、空模块、多余标点
+- 清理堆叠形容词、中英文混乱空格
+- 检测重复的避免项和必须保留项
+- 显示清理报告
+
+### 🤖 新增：模型适配器
+- 6 种模型输出格式：GPT Image / Midjourney / Stable Diffusion / Flux / 通用中文 / 通用英文
+- Midjourney 自动追加 --ar 和 --style raw
+- Stable Diffusion 拆分 positive/negative prompt
+- Flux 简洁高密度英文
+- 面板内切换，一键复制/下载
+
+### 📋 新增：Prompt Recipe 配方卡片
+- 保存为配方：标题、模型、风格标签、比例、完整度分数、修改时间
+- 一键加载/复制/导出
+- 卡片式网格展示
+
+### 🔗 新增：分享链接
+- 配置压缩到 URL hash，不上传服务器
+- 打开链接自动恢复提示词配置
+- 显示链接长度
+
+### 🖼️ 新增：Prompt Gallery
+- 6 个完整高级示例，每个模块都有详细填写
+- 浴室镜自拍 / 地铁站 CCD / 夜晚便利店 / 雨天车窗 / 高级产品图 / GitHub 封面
+- 带评分、标签、模型信息
+
+### 🎨 UI 高级感优化
+- 首页 Hero 区域
+- Local First / No Backend / Privacy Friendly / GitHub Pages Ready 徽章
+- 右侧输出区 sticky 固定
+- 所有交互有动画反馈（active:scale-95, hover:translateY）
+- 深色模式对比度优化
+
+### 🧪 自测增强
+- 143 项测试全部通过
+- 新增冲突检测、清理器、模型适配器、分享链接、Gallery、Hero、徽章测试
+
+---
+
 ## v2.0.0 - Prompt Director Upgrade
 
 ### 🎬 新增：结构化提示词编辑器

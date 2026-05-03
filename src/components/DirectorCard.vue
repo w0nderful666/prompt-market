@@ -63,7 +63,8 @@ const props = defineProps({
   icon: { type: String, default: '📝' },
   placeholder: { type: String, default: '' },
   locked: { type: Boolean, default: false },
-  presets: { type: Array, default: () => [] }
+  presets: { type: Array, default: () => [] },
+  darkMode: { type: Boolean, default: false }
 })
 
 const emit = defineEmits(['update:modelValue', 'toggle-lock', 'clear'])

@@ -116,7 +116,7 @@
 
     <!-- Director Mode -->
     <div v-if="currentView === 'director'" class="mx-auto max-w-7xl p-3">
-      <DirectorEditor @show-history="showHistoryModal = true" />
+      <DirectorEditor :dark-mode="darkMode" />
     </div>
 
     <!-- Save modal (classic) -->
