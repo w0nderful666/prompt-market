@@ -1,5 +1,56 @@
 # Release Notes
 
+## v3.1.0 - Release Candidate / Final Polish (2026-05-03)
+
+### 🔍 最终体验检查
+- 完整走通 12 步核心用户路径：Dashboard → Showcase 加载 → 编辑模块 → 多模型输出 → 复制 → Score/Conflict/Safety → Polisher → Diff → Snapshot → Prompt Pack → Export → Import
+- 确认所有按钮有效、状态刷新正常、复制有 Toast 提示
+
+### 🎨 UI 最终打磨
+- Dashboard Hero 区域 CTA 按钮文案优化
+- Showcase 卡片间距和布局优化
+- 输出区复制按钮样式统一
+- 空状态提示更友好
+- Toast 提示统一（成功/错误两种样式）
+- 深色模式对比度检查
+- 移动端布局无横向溢出
+- 长文本区域不撑爆页面
+
+### 🔖 版本统一
+- package.json / appMeta / AppFooter / README / RELEASE_NOTES / self-test 版本统一为 v3.1.0
+- Footer 显示：v3.1.0 / Local First / No Backend / No Tracking / GitHub Pages Ready / built 2026-05-03
+
+### 📝 README 发布级完善
+- 新增项目一句话定位和在线访问地址
+- 新增核心用户路径（两条典型路径）
+- 新增功能总览（Dashboard / Director / 6 适配器 / Deconstruct / Showcase / Snapshots / Packs / Lab / Settings）
+- 新增隐私说明独立章节
+- 新增数据导入导出说明（含 localStorage key 表格）
+- 新增 self-test / preflight 说明
+- 新增适合人群
+- 新增已知限制
+- 新增 GitHub Pages 部署详细说明
+
+### 🚀 GitHub Pages 发布检查
+- vite base 使用 `./` 相对路径，适配 `/prompt-market/` 子目录
+- build 后 dist/index.html 存在，资源路径正常
+- .github/workflows/deploy.yml 自动构建部署配置正确
+- README 在线地址指向 https://w0nderful666.github.io/prompt-market/
+
+### 🧪 self-test / preflight 增强
+- 新增 v3.1.0 版本一致性检查（package.json / appMeta / README / RELEASE_NOTES）
+- 新增 README 内容检查（在线地址、隐私说明、Export/Import、self-test 文档）
+- 新增 GitHub Pages 配置检查（vite base）
+- 新增全组件 href="#" 死链接扫描
+- self-test 从 154 项扩展至 154+ 项
+
+### 📱 移动端和空状态优化
+- 确认所有页面移动端无横向溢出
+- 空状态提示更友好（无快照、无 Pack 等场景）
+- 长文本区域使用 overflow 处理
+
+---
+
 ## v3.0.0 Round 3 - Product Hardening Upgrade (2026-05-03)
 
 ### 🧹 清理遗留代码

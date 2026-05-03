@@ -1,5 +1,5 @@
 /**
- * Self-test for Prompt Director Studio v3.0.0
+ * Self-test for Prompt Director Studio v3.1.0
  * Run: node self-test.js (after build)
  */
 
@@ -25,7 +25,7 @@ function readFile(p) { return readFileSync(p, 'utf-8') }
 // ====== 1. Package Version ======
 console.log('\n📦 Version Check')
 const pkg = JSON.parse(readFile(join(__dirname, 'package.json')))
-assert(pkg.version === '3.0.0', 'package.json version is 3.0.0')
+assert(pkg.version === '3.1.0', 'package.json version is 3.1.0')
 
 // ====== 2. Page Title ======
 console.log('\n📄 Page Title')
@@ -95,13 +95,13 @@ try {
 // ====== 8. README ======
 console.log('\n📝 README')
 const readme = readFile(join(__dirname, 'README.md'))
-assert(readme.includes('v3.0.0'), 'README contains "v3.0.0"')
+assert(readme.includes('v3.1.0'), 'README contains "v3.1.0"')
 assert(readme.includes('Prompt Director Studio'), 'README contains product name')
 
 // ====== 9. RELEASE_NOTES ======
 console.log('\n📋 Release Notes')
 const releaseNotes = readFile(join(__dirname, 'RELEASE_NOTES.md'))
-assert(releaseNotes.includes('v3.0.0'), 'RELEASE_NOTES contains "v3.0.0"')
+assert(releaseNotes.includes('v3.1.0'), 'RELEASE_NOTES contains "v3.1.0"')
 assert(releaseNotes.includes('Prompt Director Studio'), 'RELEASE_NOTES contains product name')
 
 // ====== 10. Build Output ======
@@ -160,7 +160,7 @@ console.log('\n⚙️  Configuration')
 assert(pkg.scripts.build === 'vite build', 'build script')
 assert(pkg.scripts['self-test'] === 'node self-test.js', 'self-test script')
 const appMeta = readFile(join(srcDir(), 'config/appMeta.js'))
-assert(appMeta.includes('3.0.0'), 'appMeta has version 3.0.0')
+assert(appMeta.includes('3.1.0'), 'appMeta has version 3.1.0')
 assert(appMeta.includes('Prompt Director Studio'), 'appMeta has product name')
 assert(appMeta.includes('2026-05-03'), 'appMeta has build date')
 
@@ -355,6 +355,38 @@ const allVueSrc = [
   readFile(join(srcDir(), 'components/layout/AppNavigation.vue'))
 ].join('\n')
 assert(!allVueSrc.includes('href="#"'), '37. No href="#" dead links in new components')
+
+// ====== v3.1.0: Version Consistency ======
+console.log('\n🔖 v3.1.0: Version Consistency')
+assert(readme.includes('https://w0nderful666.github.io/prompt-market/'), '38. README contains online demo URL')
+assert(readme.includes('https://github.com/w0nderful666/prompt-market'), '39. README contains repo URL')
+assert(readme.includes('隐私') || readme.includes('Privacy') || readme.includes('privacy'), '40. README contains privacy statement')
+assert(readme.includes('Export') && readme.includes('Import'), '41. README contains Export/Import docs')
+assert(readme.includes('self-test') || readme.includes('preflight'), '42. README contains self-test/preflight docs')
+assert(releaseNotes.includes('v3.1.0') && releaseNotes.includes('Release Candidate'), '43. RELEASE_NOTES has v3.1.0 RC section')
+
+// ====== v3.1.0: Footer version ======
+console.log('\n🦶 v3.1.0: Footer Version')
+assert(appFooterVue.includes('appMeta.version'), '44. Footer references version from appMeta')
+
+// ====== v3.1.0: GitHub Pages Config ======
+console.log('\n🚀 v3.1.0: GitHub Pages Config')
+const viteConfig = readFile(join(__dirname, 'vite.config.js'))
+assert(viteConfig.includes("base:"), '45. vite.config.js has base config')
+assert(!viteConfig.includes("base: '/prompt-market/'") || viteConfig.includes("base: './'"), '46. vite base is relative (./) for GitHub Pages')
+
+// ====== v3.1.0: No href="#" across all vue files ======
+console.log('\n🔘 v3.1.0: Full Codebase Dead Link Check')
+const allVueFiles = readdirSync(join(srcDir(), 'components')).concat(readdirSync(join(srcDir(), 'sections')).map(f => 'sections/' + f)).filter(f => f.endsWith('.vue'))
+let deadLinks = 0
+for (const f of allVueFiles) {
+  const fullPath = f.includes('/') ? join(srcDir(), f) : join(srcDir(), 'components', f)
+  if (existsSync(fullPath)) {
+    const content = readFile(fullPath)
+    if (content.includes('href="#"')) deadLinks++
+  }
+}
+assert(deadLinks === 0, `47. No href="#" in any component (found ${deadLinks})`)
 
 // ====== Summary ======
 console.log('\n' + '='.repeat(50))
