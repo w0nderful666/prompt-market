@@ -3,57 +3,24 @@
  */
 
 const MODULE_TITLES_ZH = {
-  model: '模型/用途',
-  subject: '主体设定',
-  scene: '场景环境',
-  composition: '构图与镜头',
-  expression: '表情与状态',
-  face: '脸部与妆容',
-  hair: '发型与细节',
-  body: '身体与姿势',
-  clothing: '服装与配件',
-  lighting: '光线与色彩',
-  camera: '摄影/画面质感',
-  background: '背景元素',
-  atmosphere: '整体氛围',
-  caption: 'Caption 感',
-  mustKeep: '必须保留',
-  avoid: '避免项',
-  ratio: '比例/尺寸'
+  model: '模型/用途', subject: '主体设定', scene: '场景环境', composition: '构图与镜头',
+  expression: '表情与状态', face: '脸部与妆容', hair: '发型与细节', body: '身体与姿势',
+  clothing: '服装与配件', lighting: '光线与色彩', camera: '摄影/画面质感',
+  depthOfField: '景深效果', background: '背景元素', atmosphere: '整体氛围',
+  caption: 'Caption 感', mustKeep: '必须保留', avoid: '避免项', ratio: '比例/尺寸'
 }
 
 const MODULE_TITLES_EN = {
-  model: 'Model / Purpose',
-  subject: 'Subject',
-  scene: 'Scene / Environment',
-  composition: 'Composition / Framing',
-  expression: 'Expression / State',
-  face: 'Face / Makeup',
-  hair: 'Hair / Details',
-  body: 'Body / Pose',
-  clothing: 'Clothing / Outfit',
-  lighting: 'Lighting / Color',
-  camera: 'Camera / Texture',
-  background: 'Background',
-  atmosphere: 'Atmosphere',
-  caption: 'Caption Feel',
-  mustKeep: 'Must Keep',
-  avoid: 'Avoid',
-  ratio: 'Ratio / Size'
+  model: 'Model / Purpose', subject: 'Subject', scene: 'Scene / Environment',
+  composition: 'Composition / Framing', expression: 'Expression / State',
+  face: 'Face / Makeup', hair: 'Hair / Details', body: 'Body / Pose',
+  clothing: 'Clothing / Outfit', lighting: 'Lighting / Color', camera: 'Camera / Texture',
+  depthOfField: 'Depth of Field', background: 'Background', atmosphere: 'Atmosphere',
+  caption: 'Caption Feel', mustKeep: 'Must Keep', avoid: 'Avoid', ratio: 'Ratio / Size'
 }
-
-const DIRECTOR_SECTION_ORDER = [
-  'model', 'subject', 'scene', 'expression', 'face', 'hair',
-  'body', 'composition', 'clothing', 'camera', 'lighting',
-  'background', 'atmosphere', 'mustKeep', 'avoid'
-]
 
 function val(director, key) {
   return (director?.[key] || '').trim()
-}
-
-function hasVal(director, key) {
-  return !!val(director, key)
 }
 
 /**
@@ -67,12 +34,14 @@ export function buildChineseShort(director) {
   const cam = val(director, 'camera')
   const lit = val(director, 'lighting')
   const atmo = val(director, 'atmosphere')
+  const dof = val(director, 'depthOfField')
 
   if (s) parts.push(s)
   if (sc) parts.push(sc)
   if (comp) parts.push(comp)
   if (cam) parts.push(cam)
   if (lit) parts.push(lit)
+  if (dof) parts.push(dof)
   if (atmo) parts.push(atmo)
 
   const avoid = val(director, 'avoid')
@@ -96,26 +65,24 @@ export function buildChineseStandard(director) {
   const cloth = val(director, 'clothing')
   const lit = val(director, 'lighting')
   const cam = val(director, 'camera')
+  const dof = val(director, 'depthOfField')
   const bg = val(director, 'background')
   const atmo = val(director, 'atmosphere')
   const must = val(director, 'mustKeep')
   const avoid = val(director, 'avoid')
 
-  if (s && sc) {
-    sections.push(`这是一张位于${sc}的画面，主体是${s}。`)
-  } else if (s) {
-    sections.push(`这是一张以${s}为主体的画面。`)
-  }
+  if (s && sc) sections.push(`这是一张位于${sc}的画面，主体是${s}。`)
+  else if (s) sections.push(`这是一张以${s}为主体的画面。`)
 
   if (expr) sections.push(`表情和状态为${expr}。`)
   if (face) sections.push(`脸部妆容为${face}。`)
   if (hair) sections.push(`发型为${hair}。`)
   if (body) sections.push(`身体姿态为${body}。`)
   if (cloth) sections.push(`身穿${cloth}。`)
-
   if (comp) sections.push(`构图采用${comp}。`)
   if (lit) sections.push(`光线来自${lit}。`)
   if (cam) sections.push(`画面质感为${cam}。`)
+  if (dof) sections.push(`景深效果为${dof}。`)
   if (bg) sections.push(`背景元素包括${bg}。`)
   if (atmo) sections.push(`整体氛围为${atmo}。`)
   if (must) sections.push(`必须保留：${must}。`)
@@ -139,10 +106,9 @@ export function buildChineseDirector(director) {
     ['脸部与妆容', val(director, 'face')],
     ['头发', val(director, 'hair')],
     ['身体与构图', [val(director, 'body'), val(director, 'composition')].filter(Boolean).join('，')],
-    ['姿势', val(director, 'body')],
     ['服装', val(director, 'clothing')],
-    ['配件', val(director, 'clothing')],
     ['摄影风格', val(director, 'camera')],
+    ['景深效果', val(director, 'depthOfField')],
     ['背景环境', val(director, 'background')],
     ['整体氛围', val(director, 'atmosphere')],
     ['必须保留', val(director, 'mustKeep')],
@@ -174,16 +140,14 @@ export function buildEnglishStandard(director) {
   const cloth = val(director, 'clothing')
   const lit = val(director, 'lighting')
   const cam = val(director, 'camera')
+  const dof = val(director, 'depthOfField')
   const bg = val(director, 'background')
   const atmo = val(director, 'atmosphere')
   const must = val(director, 'mustKeep')
   const avoid = val(director, 'avoid')
 
-  if (s && sc) {
-    sections.push(`This is an image set in ${sc}, featuring ${s}.`)
-  } else if (s) {
-    sections.push(`This is an image featuring ${s}.`)
-  }
+  if (s && sc) sections.push(`This is an image set in ${sc}, featuring ${s}.`)
+  else if (s) sections.push(`This is an image featuring ${s}.`)
 
   if (expr) sections.push(`Expression: ${expr}.`)
   if (face) sections.push(`Face and makeup: ${face}.`)
@@ -193,6 +157,7 @@ export function buildEnglishStandard(director) {
   if (comp) sections.push(`Composition: ${comp}.`)
   if (lit) sections.push(`Lighting: ${lit}.`)
   if (cam) sections.push(`Camera/texture: ${cam}.`)
+  if (dof) sections.push(`Depth of field: ${dof}.`)
   if (bg) sections.push(`Background: ${bg}.`)
   if (atmo) sections.push(`Atmosphere: ${atmo}.`)
   if (must) sections.push(`Must keep: ${must}.`)
@@ -210,7 +175,6 @@ export function buildEnglishStandard(director) {
 export function buildAvoidPrompt(director) {
   const avoid = val(director, 'avoid')
   if (!avoid) return ''
-
   const baseAvoid = 'low quality, blurry, watermark, over-smoothed skin, plastic skin, AI-generated look, bad hands, extra fingers, deformed limbs'
   return `${baseAvoid}, ${avoid}`
 }

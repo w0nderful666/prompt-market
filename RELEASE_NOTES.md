@@ -1,5 +1,135 @@
 # Release Notes
 
+## v3.0.0 Round 2 - Prompt Diagnostics Upgrade (2026-05-03)
+
+### 📊 Prompt Score 升级至 16 维度
+- 从 10 维度升级到 16 维度，总分 100
+- 新增维度：质感明确度、动作/姿势明确度、服装/配件明确度、背景完整度、氛围一致性、Must Keep 完整度、Avoid 完整度、Failure Guard 完整度、模型适配度、比例明确度、冲突风险、内容风险
+- 每个维度有具体的改进建议（非泛泛而谈）
+- 自动更新：编辑器内容变化时自动重新评分
+- 等级：Excellent (≥90) / Good (≥70) / Needs Work (≥50) / Incomplete (<50)
+
+### ⚠️ Conflict Detector 升级至 19+ 规则
+- 从 8 类冲突升级到 19+ 条规则，覆盖 6 大类：
+  - 质量冲突（3 条）：低分辨率 vs 超清、模糊 vs 锐利、CCD vs 棚拍
+  - 场景冲突（3 条）：家庭 vs 豪华、夜晚 vs 清晨、室内 vs 户外
+  - 构图冲突（4 条）：半身 vs 全身、裁切 vs 全身、特写 vs 远景、镜面自拍 vs 第三人称
+  - 风格冲突（3 条）：写实 vs 卡通、随手拍 vs 商业、胶片 vs 未来科技
+  - 氛围冲突（3 条）：慵懒 vs 活力、私密 vs 商业、安静 vs 高能
+  - 主体冲突（3 条）：单人 vs 合影、无首饰 vs 重型、无文字 vs 大标题
+- 新增风险等级标签：高风险 / 中风险 / 低风险
+- 新增"移除冲突词"按钮，一键从所有模块中移除冲突关键词
+- 移除后自动重新运行评分和冲突检测
+
+### 🛡️ Safety Hints（全新）
+- 9 类安全规则，本地规则匹配，无 API 调用：
+  - 年龄模糊 + 亲密场景 → Caution
+  - 未成年人相关词 → Risky
+  - 真实人物/公众人物 → Caution
+  - 商标/版权角色 → Caution
+  - 偷拍/窥视/非自愿 → Risky
+  - 过度性化/色情 → Risky
+  - 文字/水印/标志 → Caution
+  - 医疗/法律/证件 → Caution
+  - 个人隐私信息模式 → Caution
+- 6 个快速修复按钮，每个都实际修改编辑器字段
+- 不阻断编辑，仅提供提示和建议
+
+### ✨ Prompt Polisher（全新）
+- 15 种本地润色模式：
+  - 更自然 / 更专业 / 更适合 GPT Image / Midjourney / SD / Flux
+  - 更短 / 更详细 / 更写实 / 更电影感 / 更低清手机质感
+  - 更生活化 / 更高级产品图 / 更适合头像 / 更适合 GitHub 封面
+- 预览模式：查看变更内容后再确认
+- 撤销功能：一键恢复到润色前状态
+- 每种模式有独立的 add/remove/transform 规则
+
+### 🔀 Prompt Diff（全新）
+- Token 级文本对比：新增 / 移除 / 保留
+- 字符变化和 Token 估计统计
+- localStorage 历史记录（最多 20 条）
+- 复制对比摘要
+- 快速发送到原始/优化区
+
+### 🎨 UI 升级
+- ConflictPanel 新增风险等级徽章和移除按钮
+- PromptScorePanel 升级为 16 维度详情视图
+- DirectorEditor 集成 SafetyPanel 和 PolisherPanel
+- Lab 区域新增 PolisherPanel、PromptDiffPanel、SafetyPanel
+- 所有新面板支持深色模式
+
+### 📝 其他
+- README.md 更新：新增 Prompt Score / Conflict Detector / Safety Hints / Polisher / Diff 文档
+- self-test.js 增强：新增 26 项测试覆盖所有新功能
+- 示例内容安全审查：确保 8 个内置示例全部 Safe 级别
+
+---
+
+## v3.0.0 - Prompt Director Studio (2026-05-03)
+
+### 🎯 产品重命名
+- 产品名统一为 "Prompt Director Studio"
+- 版本号升至 3.0.0
+- 新增 src/config/appMeta.js 集中管理版本、产品名、标语、构建日期
+
+### 📊 新增：Dashboard 总览页
+- Hero 区域：标题、副标题、5 个徽章（Local First / No Backend / Privacy Friendly / GPT Image Ready / GitHub Pages Ready）
+- 4 个 CTA 按钮，全部真实可用：从一句话开始 / 粘贴提示词拆解 / 浏览 Showcase / 加载官方示例
+- 统计数据卡片：17 模块 / 6 适配器 / 8 示例 / 100% 隐私
+- 快速跳转卡片
+
+### 🧭 新增：全局导航架构
+- 6 个顶级 Tab：Dashboard / Director / Deconstruct / Showcase / Lab / Settings
+- 切换不丢失编辑状态（v-show 保活）
+- 自动恢复上次活跃区域（localStorage）
+- 移动端响应式导航
+
+### 🎬 Director 编辑器重构
+- 18 个模块重新分组为 5 个可折叠组：
+  - Foundation 基础设定: model, subject, scene, ratio
+  - Visual Direction 视觉导演: composition, lighting, camera, depthOfField (新增)
+  - Subject Details 主体细节: expression, face, hair, body, clothing
+  - Atmosphere 氛围叙事: background, atmosphere, caption
+  - Control 控制项: mustKeep, avoid
+- 每组显示已填/总数统计
+- 新增「景深效果」模块（depthOfField）
+- 全部展开/收起按钮
+- 编辑器通过 defineExpose 暴露方法给父组件
+
+### 🤖 模型适配器增强
+- 6 种输出格式全部包含景深（depthOfField）字段
+- GPT Image：自然语言导演描述 + Must Keep + Avoid + Aspect Ratio
+- Midjourney：英文短语 + --ar + --style raw + --no
+- Stable Diffusion：拆分 Positive / Negative Prompt
+- Flux：简洁高密度英文，不过度打标签
+- 通用中文 / 通用英文：结构化输出
+
+### 🖼️ Showcase 升级
+- 从 6 个扩展到 8 个内置示例
+- 新增：浴室兔耳镜自拍、个人头像写实摄影、暗黑赛博街头写真
+- 每个示例填充 17 个模块（含 depthOfField）
+- 卡片展示：标题、标签、推荐模型、推荐比例、加载按钮、复制 GPT 按钮
+
+### ⚙️ Settings 页面
+- 独立设置页面
+- 深色模式一键切换
+- 数据管理：导入词库、导出词库、导出方案、清空所有、重置词库
+- 关于信息
+
+### 📱 Footer
+- 显示版本号 v3.0.0
+- 显示构建日期 2026-05-03
+- 显示隐私声明：Local First / No Backend / No Tracking / GitHub Pages Ready
+
+### 🧪 自测增强
+- 新增 v3.0.0 版本验证
+- 新增 8 示例验证
+- 新增导航 Tab 存在验证
+- 新增 Midjourney --ar 输出验证
+- 新增 Stable Diffusion Positive/Negative 验证
+
+---
+
 ## v2.1.0 - Professional Enhancement
 
 ### ⚠️ 新增：Prompt Conflict Detector
@@ -95,11 +225,6 @@
 - 一键复制当前结果
 - 下载 .txt 文件
 
-### 📋 新增：示例数据
-- 浴室镜自拍 / 低清手机质感
-- 夜晚街头 / 胶片摄影
-- 产品图 / 高级电商质感
-
 ### 🌙 新增：深色模式
 - 支持亮色/暗色主题切换
 - 所有组件适配深色模式
@@ -111,10 +236,6 @@
 ### 🧪 新增：自测
 - self-test.html + self-test.js
 - 覆盖：页面加载、模块存在、示例加载、提示词生成、评分、localStorage、导出、移动端布局
-
-### 📝 更新：文档
-- 更新 README.md 项目介绍
-- 新增 RELEASE_NOTES.md
 
 ---
 

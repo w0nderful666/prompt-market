@@ -1,9 +1,9 @@
 /**
  * Model Adapters - format prompts for different AI models
+ * 6 output types: GPT Image, Midjourney, Stable Diffusion, Flux, 通用中文, 通用英文
  */
 
 function val(d, key) { return (d?.[key] || '').trim() }
-function has(d, key) { return !!val(d, key) }
 
 /**
  * GPT Image - natural language director-style description
@@ -20,6 +20,7 @@ export function adaptGPTImage(director) {
   const cloth = val(director, 'clothing')
   const lit = val(director, 'lighting')
   const cam = val(director, 'camera')
+  const dof = val(director, 'depthOfField')
   const bg = val(director, 'background')
   const atmo = val(director, 'atmosphere')
   const must = val(director, 'mustKeep')
@@ -36,6 +37,7 @@ export function adaptGPTImage(director) {
   if (comp) parts.push(`Use ${comp} composition.`)
   if (lit) parts.push(`Lighting: ${lit}.`)
   if (cam) parts.push(`Camera feel: ${cam}.`)
+  if (dof) parts.push(`Depth of field: ${dof}.`)
   if (bg) parts.push(`Background: ${bg}.`)
   if (atmo) parts.push(`Overall atmosphere: ${atmo}.`)
   if (must) parts.push(`Must preserve: ${must}.`)
@@ -48,7 +50,7 @@ export function adaptGPTImage(director) {
 }
 
 /**
- * Midjourney - concise with parameters
+ * Midjourney - concise English phrases with parameters
  */
 export function adaptMidjourney(director) {
   const parts = []
@@ -59,14 +61,13 @@ export function adaptMidjourney(director) {
   const cloth = val(director, 'clothing')
   const lit = val(director, 'lighting')
   const cam = val(director, 'camera')
+  const dof = val(director, 'depthOfField')
   const bg = val(director, 'background')
   const atmo = val(director, 'atmosphere')
 
-  // Build concise prompt
-  const desc = [s, sc, comp, expr, cloth, lit, cam, bg, atmo].filter(Boolean).join(', ')
+  const desc = [s, sc, comp, expr, cloth, lit, cam, dof, bg, atmo].filter(Boolean).join(', ')
   parts.push(desc)
 
-  // Style keywords
   const face = val(director, 'face')
   const hair = val(director, 'hair')
   if (face) parts.push(face)
@@ -93,7 +94,7 @@ export function adaptStableDiffusion(director) {
   const positive = []
   const negative = ['low quality', 'blurry', 'watermark', 'bad hands', 'extra fingers', 'deformed']
 
-  const fields = ['subject', 'scene', 'composition', 'expression', 'face', 'hair', 'body', 'clothing', 'lighting', 'camera', 'background', 'atmosphere']
+  const fields = ['subject', 'scene', 'composition', 'expression', 'face', 'hair', 'body', 'clothing', 'lighting', 'camera', 'depthOfField', 'background', 'atmosphere']
   for (const f of fields) {
     const v = val(director, f)
     if (v) positive.push(v)
@@ -113,11 +114,11 @@ export function adaptStableDiffusion(director) {
 }
 
 /**
- * Flux - concise high-density English
+ * Flux - concise high-density English, not over-tagged
  */
 export function adaptFlux(director) {
   const parts = []
-  const fields = ['subject', 'scene', 'composition', 'expression', 'face', 'hair', 'body', 'clothing', 'lighting', 'camera', 'background', 'atmosphere']
+  const fields = ['subject', 'scene', 'composition', 'expression', 'face', 'hair', 'body', 'clothing', 'lighting', 'camera', 'depthOfField', 'background', 'atmosphere']
   for (const f of fields) {
     const v = val(director, f)
     if (v) parts.push(v)
@@ -144,6 +145,7 @@ export function adaptChineseGeneric(director) {
   const cloth = val(director, 'clothing')
   const lit = val(director, 'lighting')
   const cam = val(director, 'camera')
+  const dof = val(director, 'depthOfField')
   const bg = val(director, 'background')
   const atmo = val(director, 'atmosphere')
 
@@ -157,6 +159,7 @@ export function adaptChineseGeneric(director) {
   if (comp) parts.push(`构图采用${comp}。`)
   if (lit) parts.push(`光线来自${lit}。`)
   if (cam) parts.push(`画面质感为${cam}。`)
+  if (dof) parts.push(`景深为${dof}。`)
   if (bg) parts.push(`背景为${bg}。`)
   if (atmo) parts.push(`氛围为${atmo}。`)
 
@@ -177,7 +180,7 @@ export function adaptEnglishGeneric(director) {
     ['subject', 'Subject'], ['scene', 'Scene'], ['composition', 'Composition'],
     ['expression', 'Expression'], ['face', 'Face'], ['hair', 'Hair'],
     ['body', 'Body'], ['clothing', 'Clothing'], ['lighting', 'Lighting'],
-    ['camera', 'Camera'], ['background', 'Background'], ['atmosphere', 'Atmosphere']
+    ['camera', 'Camera'], ['depthOfField', 'Depth of field'], ['background', 'Background'], ['atmosphere', 'Atmosphere']
   ]
 
   for (const [key, label] of fields) {
