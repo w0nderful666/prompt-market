@@ -412,7 +412,7 @@ function exportJson() {
 }
 
 // Expose methods for parent (App.vue)
-defineExpose({ loadGalleryExample, applyDeconstructed, director })
+defineExpose({ loadGalleryExample, applyDeconstructed, director, outputs, modelOutputs, currentScore, safetyResult, conflicts })
 </script>
 
 <style scoped>

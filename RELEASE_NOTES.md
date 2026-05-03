@@ -1,5 +1,78 @@
 # Release Notes
 
+## v3.0.0 Round 3 - Product Hardening Upgrade (2026-05-03)
+
+### 🧹 清理遗留代码
+- 删除 4 个未使用组件：DirectorHistory、PromptEditor、PromptGallery、TopBar
+- 移除 Classic 旧模式全部 UI（activeSection === 'classic'、hidden 区域、旧关键词选择器）
+- 移除 Classic 模式相关组件引用（CategoryTabs、SubTabs、SearchBox、KeywordGroup、SelectedPanel、SavedSchemes、PromptModeSwitch、PromptSections、QuickAppendPanel、TemplatePanel）
+- 保留有价值的词库数据通过 storage.js 继续可用
+
+### 🏗️ 拆分 App.vue
+- 提取 AppHeader.vue — 顶部导航栏（标题、版本、深色模式切换）
+- 提取 AppFooter.vue — 底部信息（版本、构建日期、隐私声明）
+- 提取 AppNavigation.vue — Tab 导航组件
+- 提取 DashboardSection.vue — Dashboard 页面（Hero、统计、快速入口）
+- 提取 LabSection.vue — Lab 实验室页面（6 个面板）
+- 提取 SettingsSection.vue — Settings 设置页面（数据管理全套）
+- App.vue 行数显著下降，职责清晰
+
+### 📸 新增 Snapshots 快照
+- SnapshotsPanel.vue — 完整快照管理面板
+- 功能：保存当前 Director 状态 / 列表展示 / 恢复快照 / 删除快照 / 复制 GPT Image 输出 / 导出 JSON / 导入 JSON
+- 每个快照保存：id、标题、创建时间、版本、director 全部模块、模型、输出、评分、安全等级、冲突数、比例、备注
+- 最多 20 条，超出提示清理
+- 存储 key: prompt_market_snapshots
+
+### 📦 新增 Prompt Packs 模板包
+- PromptPacksPanel.vue — 模板包管理面板
+- 功能：创建 Pack / 编辑名称描述标签 / 添加当前提示词 / 从 Pack 加载 / 删除提示词 / 导出 JSON / 导入 JSON / 删除 Pack
+- 内置 3 个官方 Pack：
+  1. Realistic Portrait Starter Pack（4 条 prompt）
+  2. Creator Utility Pack（3 条 prompt）
+  3. Dark Street Style Pack（4 条 prompt）
+- 每条 prompt 至少 12 个模块，包含完整 director 数据
+- 存储 key: prompt_market_packs
+
+### 📤 统一导入导出和 Storage 管理
+- storageManager.js — 全新存储管理工具
+- getStorageUsage() — 本地数据占用估算（B/KB/MB）
+- exportAllData() — 导出全部 prompt_market_ 前缀数据
+- importAllData(json, mode) — 导入数据，支持 merge / overwrite 模式
+- safeWrite() — 写入时自动捕获 QuotaExceededError
+- clearHistoryData / clearDiffHistory / clearSnapshots / clearUserPacks / resetSettings / clearAllPromptMarketData
+- ImportExportModal.vue — 导入导出弹窗组件
+- SettingsSection 集成完整数据管理 UI
+
+### 🖼️ Showcase 补强至 12 个示例
+- 新增 4 个示例：
+  9. 极简 App 图标概念（GPT Image，1:1，13 模块）
+  10. AI 工具官网 Hero 图（GPT Image，16:9，13 模块）
+  11. 复古胶片校园走廊（Midjourney，3:4，18 模块）
+  12. 赛博朋克城市壁纸（Stable Diffusion，16:9，13 模块）
+- 每个示例包含 recommendedModel、aspectRatio、tags、summary
+
+### 🧪 增强自测和预检
+- self-test.js 从 109 项扩展到 153 项
+- 新增 37 项 Round 3 检查：
+  - Layout 组件存在（AppHeader / AppFooter / AppNavigation / DashboardSection / LabSection / SettingsSection）
+  - Classic 模式已移除
+  - Snapshots 面板和逻辑存在
+  - Prompt Packs 面板和逻辑存在，官方 Pack ≥ 3
+  - Export/Import All Data 存在
+  - storageManager.js 和 QuotaExceededError 处理存在
+  - Settings 数据管理存在
+  - Showcase ≥ 12 示例
+  - README 包含 Snapshots / Prompt Packs / Product Hardening
+  - RELEASE_NOTES 包含 Round 3 / Product Hardening
+  - 无 href="#" 死链接
+
+### 📝 文档更新
+- README.md 新增：Snapshots、Prompt Packs、Product Hardening、localStorage 数据治理
+- RELEASE_NOTES.md 新增：Round 3 完整变更记录
+
+---
+
 ## v3.0.0 Round 2 - Prompt Diagnostics Upgrade (2026-05-03)
 
 ### 📊 Prompt Score 升级至 16 维度
