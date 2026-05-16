@@ -1,0 +1,3431 @@
+{
+  "version": "1.4.0",
+  "updatedAt": "2026-04-29",
+  "categories": [
+    {
+      "id": "draw",
+      "name": "绘图",
+      "tabs": [
+        {
+          "id": "subject",
+          "name": "主体",
+          "groups": [
+            {
+              "id": "person",
+              "name": "人物",
+              "items": [
+                {
+                  "id": "male",
+                  "zh": "男性",
+                  "en": "male"
+                },
+                {
+                  "id": "female",
+                  "zh": "女性",
+                  "en": "female"
+                },
+                {
+                  "id": "boy",
+                  "zh": "少年",
+                  "en": "boy"
+                },
+                {
+                  "id": "girl",
+                  "zh": "少女",
+                  "en": "girl"
+                },
+                {
+                  "id": "young_man",
+                  "zh": "青年",
+                  "en": "young man"
+                },
+                {
+                  "id": "elderly",
+                  "zh": "老人",
+                  "en": "elderly"
+                },
+                {
+                  "id": "child",
+                  "zh": "儿童",
+                  "en": "child"
+                },
+                {
+                  "id": "coser",
+                  "zh": "Coser",
+                  "en": "coser"
+                },
+                {
+                  "id": "model",
+                  "zh": "模特",
+                  "en": "model"
+                },
+                {
+                  "id": "idol",
+                  "zh": "偶像",
+                  "en": "idol"
+                },
+                {
+                  "id": "singer",
+                  "zh": "歌手",
+                  "en": "singer"
+                },
+                {
+                  "id": "dancer",
+                  "zh": "舞者",
+                  "en": "dancer"
+                },
+                {
+                  "id": "athlete",
+                  "zh": "运动员",
+                  "en": "athlete"
+                },
+                {
+                  "id": "portrait",
+                  "zh": "单人肖像",
+                  "en": "portrait"
+                },
+                {
+                  "id": "half_body",
+                  "zh": "半身像",
+                  "en": "half body"
+                },
+                {
+                  "id": "full_body",
+                  "zh": "全身像",
+                  "en": "full body"
+                },
+                {
+                  "id": "close_up",
+                  "zh": "近景半身",
+                  "en": "close up portrait"
+                },
+                {
+                  "id": "double",
+                  "zh": "双人",
+                  "en": "double"
+                },
+                {
+                  "id": "group",
+                  "zh": "群像",
+                  "en": "group"
+                }
+              ]
+            },
+            {
+              "id": "anime_character",
+              "name": "动漫形象",
+              "items": [
+                {
+                  "id": "anime_char",
+                  "zh": "动漫角色",
+                  "en": "anime character"
+                },
+                {
+                  "id": "manga_char",
+                  "zh": "漫画角色",
+                  "en": "manga character"
+                },
+                {
+                  "id": "game_char",
+                  "zh": "游戏角色",
+                  "en": "game character"
+                },
+                {
+                  "id": "hero",
+                  "zh": "英雄角色",
+                  "en": "hero character"
+                },
+                {
+                  "id": "villain",
+                  "zh": "反派角色",
+                  "en": "villain character"
+                },
+                {
+                  "id": "fairy_tale",
+                  "zh": "童话角色",
+                  "en": "fairy tale character"
+                },
+                {
+                  "id": "goku",
+                  "zh": "龙珠孙悟空",
+                  "en": "Dragon Ball Goku"
+                },
+                {
+                  "id": "luffy",
+                  "zh": "路飞",
+                  "en": "One Piece Luffy"
+                },
+                {
+                  "id": "whitesnake",
+                  "zh": "白蛇",
+                  "en": "White Snake"
+                },
+                {
+                  "id": "biyao",
+                  "zh": "碧瑶",
+                  "en": "Bi Yao"
+                },
+                {
+                  "id": "fair",
+                  "zh": "费尔",
+                  "en": "Fair"
+                },
+                {
+                  "id": "oc",
+                  "zh": "原创角色",
+                  "en": "original character"
+                }
+              ]
+            },
+            {
+              "id": "age_identity",
+              "name": "年龄与身份",
+              "items": [
+                {
+                  "id": "adult_woman",
+                  "zh": "成年女性",
+                  "en": "adult woman"
+                },
+                {
+                  "id": "young_adult_woman",
+                  "zh": "二十出头女性",
+                  "en": "woman in her early twenties"
+                },
+                {
+                  "id": "young_adult_man",
+                  "zh": "二十出头男性",
+                  "en": "man in his early twenties"
+                },
+                {
+                  "id": "college_student",
+                  "zh": "大学生",
+                  "en": "college student"
+                },
+                {
+                  "id": "office_worker",
+                  "zh": "上班族",
+                  "en": "office worker"
+                },
+                {
+                  "id": "fashion_blogger",
+                  "zh": "时尚博主",
+                  "en": "fashion blogger"
+                },
+                {
+                  "id": "street_snap_model",
+                  "zh": "街拍模特",
+                  "en": "street style model"
+                },
+                {
+                  "id": "influencer_style",
+                  "zh": "网红风人物",
+                  "en": "influencer style person"
+                },
+                {
+                  "id": "ordinary_person",
+                  "zh": "普通路人感",
+                  "en": "ordinary candid person"
+                },
+                {
+                  "id": "main_character_energy",
+                  "zh": "主角感",
+                  "en": "main character energy"
+                },
+                {
+                  "id": "barista",
+                  "zh": "咖啡师",
+                  "en": "barista"
+                },
+                {
+                  "id": "commuter",
+                  "zh": "通勤者",
+                  "en": "commuter"
+                },
+                {
+                  "id": "tourist",
+                  "zh": "游客",
+                  "en": "tourist"
+                },
+                {
+                  "id": "photographer",
+                  "zh": "摄影师",
+                  "en": "photographer"
+                },
+                {
+                  "id": "designer",
+                  "zh": "设计师",
+                  "en": "designer"
+                },
+                {
+                  "id": "student_uniform",
+                  "zh": "校服学生",
+                  "en": "student in school uniform"
+                },
+                {
+                  "id": "office_lady",
+                  "zh": "办公室女性",
+                  "en": "office lady"
+                },
+                {
+                  "id": "city_worker",
+                  "zh": "都市上班族",
+                  "en": "urban office worker"
+                }
+              ]
+            },
+            {
+              "id": "expression_pose",
+              "name": "表情与姿态",
+              "items": [
+                {
+                  "id": "looking_at_camera",
+                  "zh": "看向镜头",
+                  "en": "looking at camera"
+                },
+                {
+                  "id": "looking_back",
+                  "zh": "回头看镜头",
+                  "en": "looking back at camera"
+                },
+                {
+                  "id": "slight_smile",
+                  "zh": "淡淡微笑",
+                  "en": "slight smile"
+                },
+                {
+                  "id": "neutral_expression",
+                  "zh": "冷淡表情",
+                  "en": "neutral expression"
+                },
+                {
+                  "id": "soft_gaze",
+                  "zh": "柔和眼神",
+                  "en": "soft gaze"
+                },
+                {
+                  "id": "confident_gaze",
+                  "zh": "自信眼神",
+                  "en": "confident gaze"
+                },
+                {
+                  "id": "candid_pose",
+                  "zh": "抓拍姿态",
+                  "en": "candid pose"
+                },
+                {
+                  "id": "walking_pose",
+                  "zh": "行走中",
+                  "en": "walking"
+                },
+                {
+                  "id": "sitting_pose",
+                  "zh": "坐姿",
+                  "en": "sitting pose"
+                },
+                {
+                  "id": "squatting_pose",
+                  "zh": "蹲姿",
+                  "en": "squatting pose"
+                },
+                {
+                  "id": "leaning_wall",
+                  "zh": "倚靠墙面",
+                  "en": "leaning against wall"
+                },
+                {
+                  "id": "hand_in_hair",
+                  "zh": "手扶头发",
+                  "en": "hand in hair"
+                },
+                {
+                  "id": "holding_bag",
+                  "zh": "手拿包袋",
+                  "en": "holding a bag"
+                },
+                {
+                  "id": "one_hand_in_pocket",
+                  "zh": "单手插兜",
+                  "en": "one hand in pocket"
+                },
+                {
+                  "id": "turning_body",
+                  "zh": "身体微微转向",
+                  "en": "body slightly turned"
+                },
+                {
+                  "id": "checking_phone",
+                  "zh": "低头看手机",
+                  "en": "looking down at a phone"
+                },
+                {
+                  "id": "crossing_street",
+                  "zh": "穿过街道",
+                  "en": "crossing the street"
+                },
+                {
+                  "id": "waiting_train",
+                  "zh": "等待列车",
+                  "en": "waiting for the train"
+                },
+                {
+                  "id": "adjusting_hair",
+                  "zh": "整理头发",
+                  "en": "adjusting hair"
+                },
+                {
+                  "id": "natural_laugh",
+                  "zh": "自然笑出声",
+                  "en": "laughing naturally"
+                },
+                {
+                  "id": "side_profile",
+                  "zh": "侧脸轮廓",
+                  "en": "side profile"
+                },
+                {
+                  "id": "relaxed_shoulder",
+                  "zh": "肩颈放松",
+                  "en": "relaxed shoulders and neck"
+                },
+                {
+                  "id": "clear_eye_contact",
+                  "zh": "眼神有焦点",
+                  "en": "clear eye contact"
+                },
+                {
+                  "id": "natural_breathing_pose",
+                  "zh": "带呼吸感的自然姿态",
+                  "en": "natural breathing pose"
+                },
+                {
+                  "id": "slight_head_tilt",
+                  "zh": "轻微歪头",
+                  "en": "slight head tilt"
+                },
+                {
+                  "id": "hands_relaxed",
+                  "zh": "双手自然放松",
+                  "en": "hands relaxed naturally"
+                }
+              ]
+            },
+            {
+              "id": "subject_phrases",
+              "name": "主体短语",
+              "items": [
+                {
+                  "id": "quiet_young_woman",
+                  "zh": "一位气质清冷的年轻女性",
+                  "en": "a young woman with a cool and elegant temperament"
+                },
+                {
+                  "id": "confident_male_portrait",
+                  "zh": "自信从容的男性肖像",
+                  "en": "a confident and composed male portrait"
+                },
+                {
+                  "id": "girl_looking_back",
+                  "zh": "回头看向镜头的女孩",
+                  "en": "a girl looking back at the camera"
+                },
+                {
+                  "id": "model_standing_naturally",
+                  "zh": "自然站立的时装模特",
+                  "en": "a fashion model standing naturally"
+                },
+                {
+                  "id": "idol_stage_moment",
+                  "zh": "舞台灯光下的偶像瞬间",
+                  "en": "an idol moment under stage lighting"
+                },
+                {
+                  "id": "coser_character_scene",
+                  "zh": "沉浸式角色扮演场景",
+                  "en": "an immersive cosplay character scene"
+                },
+                {
+                  "id": "two_people_story",
+                  "zh": "带有故事感的双人画面",
+                  "en": "a two-person scene with a sense of story"
+                },
+                {
+                  "id": "crowd_focus_subject",
+                  "zh": "人群中被突出表现的主体",
+                  "en": "a subject standing out from the crowd"
+                },
+                {
+                  "id": "natural_portrait_subject",
+                  "zh": "自然真实的人像主体",
+                  "en": "natural realistic portrait subject"
+                },
+                {
+                  "id": "urban_commuter_portrait",
+                  "zh": "都市通勤人像",
+                  "en": "urban commuter portrait"
+                },
+                {
+                  "id": "casual_life_portrait",
+                  "zh": "日常生活感人像",
+                  "en": "casual lifestyle portrait"
+                }
+              ]
+            },
+            {
+              "id": "action_mood",
+              "name": "动作与情绪",
+              "items": [
+                {
+                  "id": "soft_smile",
+                  "zh": "露出自然柔和的微笑",
+                  "en": "with a natural soft smile"
+                },
+                {
+                  "id": "calm_expression",
+                  "zh": "表情平静克制",
+                  "en": "with a calm and restrained expression"
+                },
+                {
+                  "id": "slightly_lowered_head",
+                  "zh": "微微低头看向一侧",
+                  "en": "slightly lowering the head and looking aside"
+                },
+                {
+                  "id": "walking_toward_camera",
+                  "zh": "缓慢走向镜头",
+                  "en": "slowly walking toward the camera"
+                },
+                {
+                  "id": "hair_in_wind",
+                  "zh": "发丝被微风吹起",
+                  "en": "hair gently blown by the wind"
+                },
+                {
+                  "id": "hand_near_face",
+                  "zh": "手自然靠近脸颊",
+                  "en": "one hand naturally near the cheek"
+                },
+                {
+                  "id": "leaning_against_wall",
+                  "zh": "自然倚靠在墙边",
+                  "en": "leaning naturally against a wall"
+                },
+                {
+                  "id": "caught_in_moment",
+                  "zh": "像被随手捕捉的瞬间",
+                  "en": "a candid moment as if casually captured"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "clothing",
+          "name": "服装",
+          "groups": [
+            {
+              "id": "material",
+              "name": "材质质感",
+              "items": [
+                {
+                  "id": "lace",
+                  "zh": "蕾丝",
+                  "en": "lace"
+                },
+                {
+                  "id": "cotton",
+                  "zh": "棉麻",
+                  "en": "cotton linen"
+                },
+                {
+                  "id": "denim",
+                  "zh": "牛仔",
+                  "en": "denim"
+                },
+                {
+                  "id": "leather",
+                  "zh": "皮革",
+                  "en": "leather"
+                },
+                {
+                  "id": "silk",
+                  "zh": "丝绸",
+                  "en": "silk"
+                },
+                {
+                  "id": "mesh",
+                  "zh": "网纱",
+                  "en": "mesh fabric"
+                },
+                {
+                  "id": "wool",
+                  "zh": "羊毛",
+                  "en": "wool"
+                },
+                {
+                  "id": "velvet",
+                  "zh": "天鹅绒",
+                  "en": "velvet"
+                },
+                {
+                  "id": "sheer",
+                  "zh": "薄纱半透",
+                  "en": "sheer"
+                },
+                {
+                  "id": "knit",
+                  "zh": "编织纹理",
+                  "en": "knitted texture"
+                },
+                {
+                  "id": "satin",
+                  "zh": "缎面高光",
+                  "en": "satin finish"
+                },
+                {
+                  "id": "sequin",
+                  "zh": "亮片装饰",
+                  "en": "sequin decoration"
+                },
+                {
+                  "id": "chunky_knit",
+                  "zh": "针织粗线",
+                  "en": "chunky knit"
+                },
+                {
+                  "id": "fine_knit",
+                  "zh": "针织细线",
+                  "en": "fine knit"
+                }
+              ]
+            },
+            {
+              "id": "traditional",
+              "name": "传统服饰",
+              "items": [
+                {
+                  "id": "hanfu",
+                  "zh": "汉服",
+                  "en": "hanfu"
+                },
+                {
+                  "id": "kimono",
+                  "zh": "和服",
+                  "en": "kimono"
+                },
+                {
+                  "id": "qipao",
+                  "zh": "旗袍",
+                  "en": "qipao"
+                },
+                {
+                  "id": "hanbok",
+                  "zh": "韩服",
+                  "en": "hanbok"
+                },
+                {
+                  "id": "tibetan",
+                  "zh": "藏服",
+                  "en": "tibetan clothing"
+                },
+                {
+                  "id": "embroidery",
+                  "zh": "民族刺绣",
+                  "en": "ethnic embroidery"
+                }
+              ]
+            },
+            {
+              "id": "style_clothing",
+              "name": "风格服饰",
+              "items": [
+                {
+                  "id": "baroque",
+                  "zh": "巴洛克风格",
+                  "en": "baroque style"
+                },
+                {
+                  "id": "gothic",
+                  "zh": "哥特风",
+                  "en": "gothic style"
+                },
+                {
+                  "id": "y2k",
+                  "zh": "Y2K",
+                  "en": "Y2K style"
+                },
+                {
+                  "id": "rococo",
+                  "zh": "洛可可",
+                  "en": "rococo style"
+                },
+                {
+                  "id": "dark_style",
+                  "zh": "暗黑系",
+                  "en": "dark style"
+                },
+                {
+                  "id": "casual",
+                  "zh": "休闲",
+                  "en": "casual"
+                },
+                {
+                  "id": "streetwear",
+                  "zh": "街头风",
+                  "en": "streetwear"
+                },
+                {
+                  "id": "stage",
+                  "zh": "舞台服",
+                  "en": "stage costume"
+                },
+                {
+                  "id": "cyberpunk_style",
+                  "zh": "未来感服装",
+                  "en": "cyberpunk fashion"
+                },
+                {
+                  "id": "sweet_cool",
+                  "zh": "甜酷",
+                  "en": "sweet cool"
+                },
+                {
+                  "id": "salt_style",
+                  "zh": "盐系",
+                  "en": "salt aesthetic"
+                },
+                {
+                  "id": "punk",
+                  "zh": "朋克风",
+                  "en": "punk style"
+                },
+                {
+                  "id": "vintage_style",
+                  "zh": "复古风",
+                  "en": "vintage style"
+                }
+              ]
+            },
+            {
+              "id": "tops_dresses",
+              "name": "上衣与裙装",
+              "items": [
+                {
+                  "id": "white_sheer_cardigan",
+                  "zh": "白色薄纱开衫",
+                  "en": "white sheer cardigan"
+                },
+                {
+                  "id": "v_neck_top",
+                  "zh": "V领上衣",
+                  "en": "V-neck top"
+                },
+                {
+                  "id": "cherry_print_top",
+                  "zh": "樱桃图案上衣",
+                  "en": "cherry print top"
+                },
+                {
+                  "id": "camisole",
+                  "zh": "吊带上衣",
+                  "en": "camisole top"
+                },
+                {
+                  "id": "crop_top",
+                  "zh": "短款上衣",
+                  "en": "crop top"
+                },
+                {
+                  "id": "oversized_hoodie",
+                  "zh": "宽松卫衣",
+                  "en": "oversized hoodie"
+                },
+                {
+                  "id": "leather_jacket",
+                  "zh": "皮夹克",
+                  "en": "leather jacket"
+                },
+                {
+                  "id": "denim_jacket",
+                  "zh": "牛仔外套",
+                  "en": "denim jacket"
+                },
+                {
+                  "id": "pleated_skirt",
+                  "zh": "百褶裙",
+                  "en": "pleated skirt"
+                },
+                {
+                  "id": "mini_skirt",
+                  "zh": "短裙",
+                  "en": "mini skirt"
+                },
+                {
+                  "id": "slip_dress",
+                  "zh": "吊带裙",
+                  "en": "slip dress"
+                },
+                {
+                  "id": "lace_trim_dress",
+                  "zh": "蕾丝边连衣裙",
+                  "en": "lace-trimmed dress"
+                },
+                {
+                  "id": "school_uniform",
+                  "zh": "学院制服",
+                  "en": "school uniform"
+                },
+                {
+                  "id": "black_lolita_dress",
+                  "zh": "黑色洛丽塔裙",
+                  "en": "black lolita dress"
+                }
+              ]
+            },
+            {
+              "id": "fashion_details",
+              "name": "服装细节",
+              "items": [
+                {
+                  "id": "ribbon_detail",
+                  "zh": "蝴蝶结细节",
+                  "en": "ribbon detail"
+                },
+                {
+                  "id": "frill_trim",
+                  "zh": "荷叶边",
+                  "en": "frill trim"
+                },
+                {
+                  "id": "lace_trim",
+                  "zh": "蕾丝边",
+                  "en": "lace trim"
+                },
+                {
+                  "id": "metal_chain_detail",
+                  "zh": "金属链条装饰",
+                  "en": "metal chain detail"
+                },
+                {
+                  "id": "rivet_detail",
+                  "zh": "铆钉装饰",
+                  "en": "rivet detail"
+                },
+                {
+                  "id": "embroidered_patch",
+                  "zh": "刺绣贴布",
+                  "en": "embroidered patch"
+                },
+                {
+                  "id": "distressed_denim",
+                  "zh": "破洞牛仔",
+                  "en": "distressed denim"
+                },
+                {
+                  "id": "layered_outfit",
+                  "zh": "叠穿",
+                  "en": "layered outfit"
+                },
+                {
+                  "id": "loose_silhouette",
+                  "zh": "宽松廓形",
+                  "en": "loose silhouette"
+                },
+                {
+                  "id": "slim_fit",
+                  "zh": "修身剪裁",
+                  "en": "slim fit"
+                },
+                {
+                  "id": "oversized_jacket",
+                  "zh": "宽松外套",
+                  "en": "oversized jacket"
+                },
+                {
+                  "id": "white_tshirt",
+                  "zh": "白色T恤",
+                  "en": "white T-shirt"
+                },
+                {
+                  "id": "pleated_skirt",
+                  "zh": "百褶裙",
+                  "en": "pleated skirt"
+                },
+                {
+                  "id": "washed_jeans",
+                  "zh": "水洗牛仔裤",
+                  "en": "washed jeans"
+                },
+                {
+                  "id": "trench_coat",
+                  "zh": "风衣",
+                  "en": "trench coat"
+                },
+                {
+                  "id": "loafers",
+                  "zh": "乐福鞋",
+                  "en": "loafers"
+                },
+                {
+                  "id": "canvas_shoes",
+                  "zh": "帆布鞋",
+                  "en": "canvas shoes"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "accessories",
+          "name": "配饰",
+          "groups": [
+            {
+              "id": "bags",
+              "name": "包袋",
+              "items": [
+                {
+                  "id": "wallet",
+                  "zh": "钱包",
+                  "en": "wallet"
+                },
+                {
+                  "id": "waist_bag",
+                  "zh": "腰包",
+                  "en": "waist bag"
+                },
+                {
+                  "id": "mini_bag",
+                  "zh": "迷你包",
+                  "en": "mini bag"
+                },
+                {
+                  "id": "handbag",
+                  "zh": "手提包",
+                  "en": "handbag"
+                },
+                {
+                  "id": "backpack",
+                  "zh": "双肩包",
+                  "en": "backpack"
+                },
+                {
+                  "id": "tote_bag",
+                  "zh": "托特包",
+                  "en": "tote bag"
+                },
+                {
+                  "id": "crossbody",
+                  "zh": "斜挎包",
+                  "en": "crossbody bag"
+                },
+                {
+                  "id": "clutch",
+                  "zh": "腋下包",
+                  "en": "clutch bag"
+                },
+                {
+                  "id": "messenger",
+                  "zh": "邮差包",
+                  "en": "messenger bag"
+                },
+                {
+                  "id": "crescent",
+                  "zh": "月牙包",
+                  "en": "crescent bag"
+                }
+              ]
+            },
+            {
+              "id": "earrings",
+              "name": "耳饰",
+              "items": [
+                {
+                  "id": "ear_stud",
+                  "zh": "耳钉",
+                  "en": "ear stud"
+                },
+                {
+                  "id": "ear_ring",
+                  "zh": "耳环",
+                  "en": "earring"
+                },
+                {
+                  "id": "ear_clip",
+                  "zh": "耳夹",
+                  "en": "ear clip"
+                },
+                {
+                  "id": "ear_cuff",
+                  "zh": "耳扣",
+                  "en": "ear cuff"
+                },
+                {
+                  "id": "geometric_ear",
+                  "zh": "几何耳饰",
+                  "en": "geometric earring"
+                },
+                {
+                  "id": "tassel_ear",
+                  "zh": "流苏耳饰",
+                  "en": "tassel earring"
+                },
+                {
+                  "id": "drop_ear",
+                  "zh": "长坠耳饰",
+                  "en": "drop earring"
+                },
+                {
+                  "id": "pearl_ear",
+                  "zh": "珍珠耳环",
+                  "en": "pearl earring"
+                }
+              ]
+            },
+            {
+              "id": "neckwear",
+              "name": "颈饰",
+              "items": [
+                {
+                  "id": "bow_tie",
+                  "zh": "蝴蝶结领结",
+                  "en": "bow tie"
+                },
+                {
+                  "id": "scarf_bow",
+                  "zh": "丝巾蝴蝶结",
+                  "en": "silk scarf bow"
+                },
+                {
+                  "id": "choker",
+                  "zh": "颈圈",
+                  "en": "choker"
+                },
+                {
+                  "id": "necktie2",
+                  "zh": "领带",
+                  "en": "necktie"
+                },
+                {
+                  "id": "tie_clip",
+                  "zh": "领夹",
+                  "en": "tie clip"
+                },
+                {
+                  "id": "cravat",
+                  "zh": "领结",
+                  "en": "cravat"
+                },
+                {
+                  "id": "shawl",
+                  "zh": "披肩",
+                  "en": "shawl"
+                },
+                {
+                  "id": "scarf",
+                  "zh": "围巾",
+                  "en": "scarf"
+                },
+                {
+                  "id": "necklace",
+                  "zh": "项链",
+                  "en": "necklace"
+                },
+                {
+                  "id": "chunky_chain",
+                  "zh": "粗链项链",
+                  "en": "chunky chain necklace"
+                },
+                {
+                  "id": "metal_choker",
+                  "zh": "金属颈圈",
+                  "en": "metal choker"
+                }
+              ]
+            },
+            {
+              "id": "tech_accessories",
+              "name": "科技配件",
+              "items": [
+                {
+                  "id": "headphones",
+                  "zh": "耳机",
+                  "en": "headphones"
+                },
+                {
+                  "id": "wristwatch",
+                  "zh": "腕表",
+                  "en": "wristwatch"
+                },
+                {
+                  "id": "pendant_device",
+                  "zh": "项坠设备",
+                  "en": "pendant device"
+                },
+                {
+                  "id": "smartwatch",
+                  "zh": "智能手表",
+                  "en": "smartwatch"
+                }
+              ]
+            },
+            {
+              "id": "props",
+              "name": "道具小物",
+              "items": [
+                {
+                  "id": "old_digital_camera",
+                  "zh": "老式数码相机",
+                  "en": "old digital camera"
+                },
+                {
+                  "id": "compact_camera",
+                  "zh": "卡片相机",
+                  "en": "compact camera"
+                },
+                {
+                  "id": "smartphone",
+                  "zh": "手机",
+                  "en": "smartphone"
+                },
+                {
+                  "id": "wired_earphones",
+                  "zh": "有线耳机",
+                  "en": "wired earphones"
+                },
+                {
+                  "id": "plush_toy",
+                  "zh": "毛绒玩偶",
+                  "en": "plush toy"
+                },
+                {
+                  "id": "kuromi_plush",
+                  "zh": "库洛米风玩偶",
+                  "en": "black cartoon plush charm"
+                },
+                {
+                  "id": "drink_cup",
+                  "zh": "饮料杯",
+                  "en": "drink cup"
+                },
+                {
+                  "id": "umbrella",
+                  "zh": "雨伞",
+                  "en": "umbrella"
+                },
+                {
+                  "id": "shopping_bag",
+                  "zh": "购物袋",
+                  "en": "shopping bag"
+                },
+                {
+                  "id": "keychain",
+                  "zh": "钥匙扣",
+                  "en": "keychain"
+                },
+                {
+                  "id": "retro_date_stamp",
+                  "zh": "复古日期戳记",
+                  "en": "retro orange date stamp"
+                },
+                {
+                  "id": "takeaway_coffee",
+                  "zh": "外带咖啡",
+                  "en": "takeaway coffee"
+                },
+                {
+                  "id": "transparent_umbrella",
+                  "zh": "透明雨伞",
+                  "en": "transparent umbrella"
+                },
+                {
+                  "id": "paper_shopping_bag",
+                  "zh": "纸质购物袋",
+                  "en": "paper shopping bag"
+                },
+                {
+                  "id": "metro_card",
+                  "zh": "地铁卡",
+                  "en": "metro card"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "makeup_hair",
+          "name": "妆发",
+          "groups": [
+            {
+              "id": "makeup_style",
+              "name": "妆容风格",
+              "items": [
+                {
+                  "id": "east_asian_influencer_makeup",
+                  "zh": "东亚网红妆",
+                  "en": "East Asian influencer makeup"
+                },
+                {
+                  "id": "clean_makeup",
+                  "zh": "清透妆容",
+                  "en": "clean makeup"
+                },
+                {
+                  "id": "soft_glam_makeup",
+                  "zh": "轻欧美妆",
+                  "en": "soft glam makeup"
+                },
+                {
+                  "id": "idol_makeup",
+                  "zh": "爱豆妆",
+                  "en": "idol makeup"
+                },
+                {
+                  "id": "gyaru_makeup",
+                  "zh": "辣妹妆",
+                  "en": "gyaru makeup"
+                },
+                {
+                  "id": "goth_makeup",
+                  "zh": "哥特妆",
+                  "en": "goth makeup"
+                },
+                {
+                  "id": "smoky_eye",
+                  "zh": "烟熏眼妆",
+                  "en": "smoky eye makeup"
+                },
+                {
+                  "id": "glossy_lips",
+                  "zh": "亮泽唇彩",
+                  "en": "glossy lips"
+                },
+                {
+                  "id": "matte_lips",
+                  "zh": "雾面唇妆",
+                  "en": "matte lips"
+                },
+                {
+                  "id": "heavy_blush",
+                  "zh": "浓郁腮红",
+                  "en": "heavy blush"
+                },
+                {
+                  "id": "light_foundation",
+                  "zh": "浅色底妆",
+                  "en": "pale foundation"
+                },
+                {
+                  "id": "doll_like_makeup",
+                  "zh": "娃娃感妆容",
+                  "en": "doll-like makeup"
+                },
+                {
+                  "id": "tear_mole",
+                  "zh": "眼下美人痣",
+                  "en": "beauty mark under the eye"
+                },
+                {
+                  "id": "freckles",
+                  "zh": "雀斑",
+                  "en": "freckles"
+                },
+                {
+                  "id": "dewy_skin",
+                  "zh": "水光肌",
+                  "en": "dewy skin"
+                },
+                {
+                  "id": "natural_base_makeup",
+                  "zh": "自然底妆",
+                  "en": "natural base makeup"
+                },
+                {
+                  "id": "subtle_eye_makeup",
+                  "zh": "淡眼妆",
+                  "en": "subtle eye makeup"
+                },
+                {
+                  "id": "healthy_skin_glow",
+                  "zh": "健康肤色光泽",
+                  "en": "healthy skin glow"
+                },
+                {
+                  "id": "natural_lip_color",
+                  "zh": "自然唇色",
+                  "en": "natural lip color"
+                }
+              ]
+            },
+            {
+              "id": "hair_style",
+              "name": "发型",
+              "items": [
+                {
+                  "id": "bob_cut",
+                  "zh": "短波波头",
+                  "en": "bob cut"
+                },
+                {
+                  "id": "messy_bob",
+                  "zh": "蓬松短波波头",
+                  "en": "messy bob cut"
+                },
+                {
+                  "id": "hime_cut",
+                  "zh": "姬发式",
+                  "en": "hime cut"
+                },
+                {
+                  "id": "straight_bangs",
+                  "zh": "齐刘海",
+                  "en": "straight bangs"
+                },
+                {
+                  "id": "wispy_bangs",
+                  "zh": "空气刘海",
+                  "en": "wispy bangs"
+                },
+                {
+                  "id": "center_part",
+                  "zh": "中分长发",
+                  "en": "center-parted long hair"
+                },
+                {
+                  "id": "black_long_hair",
+                  "zh": "黑色长发",
+                  "en": "long black hair"
+                },
+                {
+                  "id": "platinum_blonde_hair",
+                  "zh": "铂金色头发",
+                  "en": "platinum blonde hair"
+                },
+                {
+                  "id": "pink_hair",
+                  "zh": "粉色头发",
+                  "en": "pink hair"
+                },
+                {
+                  "id": "twin_tails",
+                  "zh": "双马尾",
+                  "en": "twin tails"
+                },
+                {
+                  "id": "low_ponytail",
+                  "zh": "低马尾",
+                  "en": "low ponytail"
+                },
+                {
+                  "id": "wet_hair",
+                  "zh": "湿发感",
+                  "en": "wet hair look"
+                },
+                {
+                  "id": "windblown_hair",
+                  "zh": "发丝被风吹起",
+                  "en": "windblown hair"
+                },
+                {
+                  "id": "hair_clips",
+                  "zh": "发夹装饰",
+                  "en": "hair clips"
+                },
+                {
+                  "id": "loose_hair_strands",
+                  "zh": "自然碎发",
+                  "en": "loose natural hair strands"
+                },
+                {
+                  "id": "clean_ponytail",
+                  "zh": "干净马尾",
+                  "en": "clean ponytail"
+                },
+                {
+                  "id": "shoulder_length_hair",
+                  "zh": "锁骨发",
+                  "en": "shoulder-length hair"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "scene",
+          "name": "场景",
+          "groups": [
+            {
+              "id": "urban",
+              "name": "城市",
+              "items": [
+                {
+                  "id": "city_street",
+                  "zh": "城市街景",
+                  "en": "city street"
+                },
+                {
+                  "id": "night_street",
+                  "zh": "夜晚街头",
+                  "en": "night street"
+                },
+                {
+                  "id": "convenience_store",
+                  "zh": "便利店门口",
+                  "en": "convenience store"
+                },
+                {
+                  "id": "subway",
+                  "zh": "地铁站",
+                  "en": "subway station"
+                },
+                {
+                  "id": "rooftop",
+                  "zh": "天台",
+                  "en": "rooftop"
+                },
+                {
+                  "id": "rainy_night",
+                  "zh": "雨夜",
+                  "en": "rainy night"
+                },
+                {
+                  "id": "neon_street",
+                  "zh": "霓虹灯街区",
+                  "en": "neon street"
+                },
+                {
+                  "id": "alley",
+                  "zh": "老旧小巷",
+                  "en": "old alley"
+                }
+              ]
+            },
+            {
+              "id": "nature",
+              "name": "自然",
+              "items": [
+                {
+                  "id": "campus",
+                  "zh": "校园",
+                  "en": "campus"
+                },
+                {
+                  "id": "classroom",
+                  "zh": "教室",
+                  "en": "classroom"
+                },
+                {
+                  "id": "beach",
+                  "zh": "海边",
+                  "en": "beach"
+                },
+                {
+                  "id": "forest",
+                  "zh": "森林",
+                  "en": "forest"
+                },
+                {
+                  "id": "garden",
+                  "zh": "花园",
+                  "en": "garden"
+                },
+                {
+                  "id": "snow",
+                  "zh": "雪地",
+                  "en": "snowfield"
+                }
+              ]
+            },
+            {
+              "id": "indoor",
+              "name": "室内",
+              "items": [
+                {
+                  "id": "cafe",
+                  "zh": "咖啡馆",
+                  "en": "cafe"
+                },
+                {
+                  "id": "bedroom",
+                  "zh": "卧室",
+                  "en": "bedroom"
+                },
+                {
+                  "id": "studio",
+                  "zh": "工作室",
+                  "en": "studio"
+                }
+              ]
+            },
+            {
+              "id": "fantasy_scene",
+              "name": "幻想",
+              "items": [
+                {
+                  "id": "cyberpunk_city",
+                  "zh": "赛博朋克城市",
+                  "en": "cyberpunk city"
+                },
+                {
+                  "id": "ruins",
+                  "zh": "废墟",
+                  "en": "ruins"
+                }
+              ]
+            },
+            {
+              "id": "transit_spaces",
+              "name": "交通空间",
+              "items": [
+                {
+                  "id": "escalator",
+                  "zh": "公共扶梯",
+                  "en": "public escalator"
+                },
+                {
+                  "id": "descending_escalator",
+                  "zh": "下行扶梯",
+                  "en": "descending escalator"
+                },
+                {
+                  "id": "metal_stairs",
+                  "zh": "金属楼梯",
+                  "en": "metal stairs"
+                },
+                {
+                  "id": "blue_escalator_handrail",
+                  "zh": "亮蓝色扶梯扶手",
+                  "en": "bright blue escalator handrail"
+                },
+                {
+                  "id": "yellow_warning_line",
+                  "zh": "黄色警示线",
+                  "en": "yellow warning line"
+                },
+                {
+                  "id": "train_platform",
+                  "zh": "地铁月台",
+                  "en": "train platform"
+                },
+                {
+                  "id": "station_corridor",
+                  "zh": "车站通道",
+                  "en": "station corridor"
+                },
+                {
+                  "id": "underground_passage",
+                  "zh": "地下通道",
+                  "en": "underground passage"
+                },
+                {
+                  "id": "bus_stop",
+                  "zh": "公交站",
+                  "en": "bus stop"
+                },
+                {
+                  "id": "taxi_backseat",
+                  "zh": "出租车后座",
+                  "en": "taxi back seat"
+                },
+                {
+                  "id": "ticket_gate",
+                  "zh": "地铁闸机",
+                  "en": "subway ticket gate"
+                },
+                {
+                  "id": "platform_screen_doors",
+                  "zh": "站台屏蔽门",
+                  "en": "platform screen doors"
+                },
+                {
+                  "id": "overpass",
+                  "zh": "人行天桥",
+                  "en": "pedestrian overpass"
+                },
+                {
+                  "id": "crosswalk",
+                  "zh": "斑马线",
+                  "en": "crosswalk"
+                },
+                {
+                  "id": "elevator_hall",
+                  "zh": "电梯厅",
+                  "en": "elevator hall"
+                },
+                {
+                  "id": "parking_garage",
+                  "zh": "地下停车场",
+                  "en": "underground parking garage"
+                }
+              ]
+            },
+            {
+              "id": "urban_texture",
+              "name": "城市细节",
+              "items": [
+                {
+                  "id": "leaving_pedestrians",
+                  "zh": "离去的行人背景",
+                  "en": "pedestrians leaving in the background"
+                },
+                {
+                  "id": "blurred_passersby",
+                  "zh": "模糊路人",
+                  "en": "blurred passersby"
+                },
+                {
+                  "id": "shop_signs",
+                  "zh": "店铺招牌",
+                  "en": "shop signs"
+                },
+                {
+                  "id": "vending_machine",
+                  "zh": "自动售货机",
+                  "en": "vending machine"
+                },
+                {
+                  "id": "fluorescent_ceiling_lights",
+                  "zh": "头顶荧光灯",
+                  "en": "overhead fluorescent lights"
+                },
+                {
+                  "id": "concrete_wall",
+                  "zh": "混凝土墙面",
+                  "en": "concrete wall"
+                },
+                {
+                  "id": "metal_shutter",
+                  "zh": "金属卷帘门",
+                  "en": "metal shutter"
+                },
+                {
+                  "id": "graffiti_wall",
+                  "zh": "涂鸦墙",
+                  "en": "graffiti wall"
+                },
+                {
+                  "id": "wet_pavement",
+                  "zh": "潮湿路面",
+                  "en": "wet pavement"
+                },
+                {
+                  "id": "night_traffic",
+                  "zh": "夜间车流",
+                  "en": "night traffic"
+                },
+                {
+                  "id": "narrow_backstreet",
+                  "zh": "狭窄后街",
+                  "en": "narrow backstreet"
+                },
+                {
+                  "id": "rain_reflection",
+                  "zh": "雨后地面反光",
+                  "en": "rain reflections on the ground"
+                },
+                {
+                  "id": "store_window",
+                  "zh": "商店橱窗",
+                  "en": "store window"
+                },
+                {
+                  "id": "plastic_chair",
+                  "zh": "塑料椅",
+                  "en": "plastic chair"
+                },
+                {
+                  "id": "poster_wall",
+                  "zh": "海报墙",
+                  "en": "poster wall"
+                },
+                {
+                  "id": "security_camera",
+                  "zh": "监控摄像头",
+                  "en": "security camera"
+                },
+                {
+                  "id": "trash_bin_corner",
+                  "zh": "角落垃圾桶",
+                  "en": "trash bin in the corner"
+                }
+              ]
+            },
+            {
+              "id": "scene_phrases",
+              "name": "场景短语",
+              "items": [
+                {
+                  "id": "rainy_neon_street",
+                  "zh": "雨夜霓虹街头，地面有反光",
+                  "en": "rainy neon street at night with reflective pavement"
+                },
+                {
+                  "id": "quiet_classroom_after_school",
+                  "zh": "放学后的安静教室",
+                  "en": "a quiet classroom after school"
+                },
+                {
+                  "id": "sunset_rooftop_breeze",
+                  "zh": "黄昏天台，微风吹动发丝",
+                  "en": "sunset rooftop with a gentle breeze moving the hair"
+                },
+                {
+                  "id": "old_alley_daily_life",
+                  "zh": "老旧小巷里的日常生活感",
+                  "en": "everyday life feeling in an old alley"
+                },
+                {
+                  "id": "cafe_window_light",
+                  "zh": "咖啡馆靠窗位置的自然光",
+                  "en": "natural window light in a cafe"
+                },
+                {
+                  "id": "subway_platform_waiting",
+                  "zh": "地铁站台上等待的瞬间",
+                  "en": "a waiting moment on a subway platform"
+                },
+                {
+                  "id": "seaside_blue_hour",
+                  "zh": "海边蓝调时刻",
+                  "en": "blue hour by the seaside"
+                },
+                {
+                  "id": "bedroom_morning_light",
+                  "zh": "卧室清晨柔和光线",
+                  "en": "soft morning light in a bedroom"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "atmosphere",
+          "name": "氛围",
+          "groups": [
+            {
+              "id": "emotion_atmosphere",
+              "name": "情绪氛围",
+              "items": [
+                {
+                  "id": "quiet_lonely_mood",
+                  "zh": "安静、略带孤独的氛围",
+                  "en": "quiet and slightly lonely atmosphere"
+                },
+                {
+                  "id": "warm_daily_mood",
+                  "zh": "温暖日常的生活感",
+                  "en": "warm everyday life atmosphere"
+                },
+                {
+                  "id": "dreamy_romantic_mood",
+                  "zh": "梦幻浪漫的氛围",
+                  "en": "dreamy and romantic atmosphere"
+                },
+                {
+                  "id": "cool_distance_mood",
+                  "zh": "清冷疏离的高级感",
+                  "en": "cool, distant and sophisticated mood"
+                },
+                {
+                  "id": "youthful_summer_mood",
+                  "zh": "青春夏日感",
+                  "en": "youthful summer vibe"
+                },
+                {
+                  "id": "late_night_mood",
+                  "zh": "深夜城市情绪",
+                  "en": "late night urban mood"
+                },
+                {
+                  "id": "nostalgic_memory_mood",
+                  "zh": "带有回忆感的怀旧氛围",
+                  "en": "nostalgic memory-like atmosphere"
+                },
+                {
+                  "id": "subtle_story_mood",
+                  "zh": "克制但有故事张力",
+                  "en": "subtle mood with narrative tension"
+                }
+              ]
+            },
+            {
+              "id": "prompt_blocks",
+              "name": "组合提示块",
+              "items": [
+                {
+                  "id": "real_portrait_block",
+                  "zh": "真实人像，主体清晰，背景自然虚化",
+                  "en": "realistic portrait, clear subject, natural background bokeh"
+                },
+                {
+                  "id": "cinematic_still_block",
+                  "zh": "电影剧照感，细腻光影，低调叙事",
+                  "en": "cinematic still, delicate lighting, subtle storytelling"
+                },
+                {
+                  "id": "mobile_snapshot_block",
+                  "zh": "手机随拍感，轻微不完美，真实生活气息",
+                  "en": "mobile snapshot feel, slight imperfections, authentic everyday atmosphere"
+                },
+                {
+                  "id": "fashion_editorial_block",
+                  "zh": "时尚杂志大片，高级造型，干净构图",
+                  "en": "fashion editorial, sophisticated styling, clean composition"
+                },
+                {
+                  "id": "anime_key_visual_block",
+                  "zh": "动漫主视觉，角色突出，画面完成度高",
+                  "en": "anime key visual, prominent character, highly polished image"
+                },
+                {
+                  "id": "commercial_product_block",
+                  "zh": "商业视觉质感，主体突出，细节干净",
+                  "en": "commercial visual quality, prominent subject, clean details"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "style",
+          "name": "风格",
+          "groups": [
+            {
+              "id": "photography",
+              "name": "摄影",
+              "items": [
+                {
+                  "id": "realistic",
+                  "zh": "写实摄影",
+                  "en": "realistic photography"
+                },
+                {
+                  "id": "film",
+                  "zh": "胶片摄影",
+                  "en": "film photography"
+                },
+                {
+                  "id": "japanese",
+                  "zh": "日系写真",
+                  "en": "Japanese style photo"
+                },
+                {
+                  "id": "hongkong_style",
+                  "zh": "港风",
+                  "en": "Hong Kong style"
+                },
+                {
+                  "id": "cyberpunk",
+                  "zh": "赛博朋克",
+                  "en": "cyberpunk"
+                },
+                {
+                  "id": "retro_photo",
+                  "zh": "复古",
+                  "en": "retro style"
+                },
+                {
+                  "id": "dark",
+                  "zh": "暗黑",
+                  "en": "dark style"
+                },
+                {
+                  "id": "sweet_style",
+                  "zh": "甜美",
+                  "en": "sweet style"
+                },
+                {
+                  "id": "cold",
+                  "zh": "清冷",
+                  "en": "cold and elegant"
+                },
+                {
+                  "id": "cinematic",
+                  "zh": "电影感",
+                  "en": "cinematic"
+                },
+                {
+                  "id": "magazine",
+                  "zh": "杂志封面",
+                  "en": "magazine cover"
+                },
+                {
+                  "id": "street_photo",
+                  "zh": "街拍",
+                  "en": "street photography"
+                },
+                {
+                  "id": "documentary_photo",
+                  "zh": "纪实摄影",
+                  "en": "documentary photography"
+                },
+                {
+                  "id": "editorial_photo",
+                  "zh": "编辑部写真",
+                  "en": "editorial photography"
+                },
+                {
+                  "id": "lifestyle_photo",
+                  "zh": "生活方式摄影",
+                  "en": "lifestyle photography"
+                },
+                {
+                  "id": "travel_snapshot",
+                  "zh": "旅行随拍",
+                  "en": "travel snapshot"
+                },
+                {
+                  "id": "urban_documentary",
+                  "zh": "城市纪实",
+                  "en": "urban documentary"
+                }
+              ]
+            },
+            {
+              "id": "illustration",
+              "name": "插画",
+              "items": [
+                {
+                  "id": "lolita",
+                  "zh": "洛丽塔",
+                  "en": "lolita"
+                },
+                {
+                  "id": "gothic_illust",
+                  "zh": "哥特",
+                  "en": "gothic illustration"
+                },
+                {
+                  "id": "anime_illust",
+                  "zh": "二次元",
+                  "en": "anime style"
+                },
+                {
+                  "id": "thick_paint",
+                  "zh": "厚涂",
+                  "en": "thick paint"
+                },
+                {
+                  "id": "illustration_style",
+                  "zh": "插画",
+                  "en": "illustration"
+                },
+                {
+                  "id": "watercolor",
+                  "zh": "水彩",
+                  "en": "watercolor"
+                },
+                {
+                  "id": "oil_painting",
+                  "zh": "油画",
+                  "en": "oil painting"
+                },
+                {
+                  "id": "pixel_art",
+                  "zh": "像素风",
+                  "en": "pixel art"
+                }
+              ]
+            },
+            {
+              "id": "color_style",
+              "name": "色调",
+              "items": [
+                {
+                  "id": "low_saturation",
+                  "zh": "低饱和",
+                  "en": "low saturation"
+                },
+                {
+                  "id": "high_contrast",
+                  "zh": "高对比",
+                  "en": "high contrast"
+                },
+                {
+                  "id": "soft_tone",
+                  "zh": "柔和色调",
+                  "en": "soft tone"
+                }
+              ]
+            },
+            {
+              "id": "snapshot_realism",
+              "name": "真实快照",
+              "items": [
+                {
+                  "id": "old_digicam_snapshot",
+                  "zh": "老式数码相机快照",
+                  "en": "old digital camera snapshot"
+                },
+                {
+                  "id": "amateur_smartphone_photo",
+                  "zh": "业余智能手机摄影",
+                  "en": "amateur smartphone photo"
+                },
+                {
+                  "id": "direct_flash_photo",
+                  "zh": "直闪摄影",
+                  "en": "direct flash photography"
+                },
+                {
+                  "id": "on_camera_flash",
+                  "zh": "机顶闪光灯",
+                  "en": "on-camera flash"
+                },
+                {
+                  "id": "candid_street_snap",
+                  "zh": "街头抓拍",
+                  "en": "candid street snap"
+                },
+                {
+                  "id": "raw_realism",
+                  "zh": "原始真实感",
+                  "en": "raw realism"
+                },
+                {
+                  "id": "unpolished_photo",
+                  "zh": "未修饰照片",
+                  "en": "unpolished photo"
+                },
+                {
+                  "id": "paparazzi_snapshot",
+                  "zh": "狗仔感抓拍",
+                  "en": "paparazzi-style snapshot"
+                },
+                {
+                  "id": "social_media_photo",
+                  "zh": "社交媒体随手拍",
+                  "en": "social media casual photo"
+                },
+                {
+                  "id": "nightlife_flash_photo",
+                  "zh": "夜生活闪光灯照片",
+                  "en": "nightlife flash photo"
+                },
+                {
+                  "id": "youth_culture_photo",
+                  "zh": "青年亚文化写真",
+                  "en": "youth subculture photography"
+                },
+                {
+                  "id": "nostalgic_urban_snapshot",
+                  "zh": "怀旧都市快照",
+                  "en": "nostalgic urban snapshot"
+                },
+                {
+                  "id": "real_life_documentary",
+                  "zh": "生活纪实感",
+                  "en": "real life documentary feeling"
+                },
+                {
+                  "id": "accidental_composition",
+                  "zh": "偶然构图",
+                  "en": "accidental composition"
+                },
+                {
+                  "id": "slightly_missed_focus",
+                  "zh": "轻微跑焦",
+                  "en": "slightly missed focus"
+                },
+                {
+                  "id": "jpeg_artifacts",
+                  "zh": "JPEG压缩痕迹",
+                  "en": "JPEG compression artifacts"
+                },
+                {
+                  "id": "date_stamp",
+                  "zh": "复古日期戳",
+                  "en": "retro date stamp"
+                },
+                {
+                  "id": "imperfect_skin_texture",
+                  "zh": "真实不完美皮肤纹理",
+                  "en": "imperfect real skin texture"
+                }
+              ]
+            },
+            {
+              "id": "aesthetic_subculture",
+              "name": "审美与亚文化",
+              "items": [
+                {
+                  "id": "jirai_kei",
+                  "zh": "地雷系",
+                  "en": "jirai kei"
+                },
+                {
+                  "id": "ryousangata",
+                  "zh": "量产型",
+                  "en": "ryousangata fashion"
+                },
+                {
+                  "id": "harajuku_style",
+                  "zh": "原宿风",
+                  "en": "Harajuku style"
+                },
+                {
+                  "id": "shibuya_girl",
+                  "zh": "涩谷辣妹风",
+                  "en": "Shibuya girl style"
+                },
+                {
+                  "id": "korean_street_style",
+                  "zh": "韩系街拍",
+                  "en": "Korean street style"
+                },
+                {
+                  "id": "chinese_influencer_style",
+                  "zh": "中式网红风",
+                  "en": "Chinese influencer aesthetic"
+                },
+                {
+                  "id": "coquette",
+                  "zh": "蝴蝶结少女感",
+                  "en": "coquette aesthetic"
+                },
+                {
+                  "id": "balletcore",
+                  "zh": "芭蕾风",
+                  "en": "balletcore"
+                },
+                {
+                  "id": "blokecore",
+                  "zh": "球衣街头风",
+                  "en": "blokecore"
+                },
+                {
+                  "id": "office_siren",
+                  "zh": "办公室魅惑风",
+                  "en": "office siren aesthetic"
+                },
+                {
+                  "id": "dark_academia",
+                  "zh": "暗黑学院风",
+                  "en": "dark academia"
+                },
+                {
+                  "id": "soft_grunge",
+                  "zh": "软颓废风",
+                  "en": "soft grunge"
+                }
+              ]
+            },
+            {
+              "id": "era_device_style",
+              "name": "年代与设备感",
+              "items": [
+                {
+                  "id": "early_2000s_digicam",
+                  "zh": "2000年代数码相机感",
+                  "en": "early 2000s digicam aesthetic"
+                },
+                {
+                  "id": "y2k_snapshot",
+                  "zh": "Y2K快照",
+                  "en": "Y2K snapshot"
+                },
+                {
+                  "id": "90s_film_photo",
+                  "zh": "90年代胶片感",
+                  "en": "90s film photo"
+                },
+                {
+                  "id": "2000s_date_stamp",
+                  "zh": "2000年代日期戳",
+                  "en": "2000s date stamp"
+                },
+                {
+                  "id": "vhs_still",
+                  "zh": "VHS截帧感",
+                  "en": "VHS still frame"
+                },
+                {
+                  "id": "disposable_camera",
+                  "zh": "一次性相机感",
+                  "en": "disposable camera photo"
+                },
+                {
+                  "id": "polaroid_photo",
+                  "zh": "拍立得照片",
+                  "en": "Polaroid photo"
+                },
+                {
+                  "id": "leica_color",
+                  "zh": "徕卡色彩",
+                  "en": "Leica color rendering"
+                },
+                {
+                  "id": "fuji_film_color",
+                  "zh": "富士胶片色彩",
+                  "en": "Fujifilm color"
+                },
+                {
+                  "id": "kodak_gold",
+                  "zh": "柯达金胶片色彩",
+                  "en": "Kodak Gold film look"
+                }
+              ]
+            },
+            {
+              "id": "style_blocks",
+              "name": "风格组合",
+              "items": [
+                {
+                  "id": "realistic_japanese_photo",
+                  "zh": "写实日系写真，色彩柔和自然",
+                  "en": "realistic Japanese portrait photography with soft natural colors"
+                },
+                {
+                  "id": "hk_film_night",
+                  "zh": "港风胶片夜景，强烈氛围感",
+                  "en": "Hong Kong film night scene with strong atmosphere"
+                },
+                {
+                  "id": "cyberpunk_portrait",
+                  "zh": "赛博朋克人像，霓虹色彩，高反差",
+                  "en": "cyberpunk portrait, neon colors, high contrast"
+                },
+                {
+                  "id": "low_sat_editorial",
+                  "zh": "低饱和杂志感，干净高级",
+                  "en": "low-saturation editorial style, clean and refined"
+                },
+                {
+                  "id": "soft_watercolor_illustration",
+                  "zh": "柔和水彩插画，边缘细腻",
+                  "en": "soft watercolor illustration with delicate edges"
+                },
+                {
+                  "id": "thick_paint_character",
+                  "zh": "厚涂角色插画，层次丰富",
+                  "en": "thick-painted character illustration with rich layers"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "composition",
+          "name": "构图",
+          "groups": [
+            {
+              "id": "shot_composition",
+              "name": "取景构图",
+              "items": [
+                {
+                  "id": "half_compose",
+                  "zh": "半身构图",
+                  "en": "half body composition"
+                },
+                {
+                  "id": "full_compose",
+                  "zh": "全身构图",
+                  "en": "full body composition"
+                },
+                {
+                  "id": "close_up_shot",
+                  "zh": "特写",
+                  "en": "close-up shot"
+                },
+                {
+                  "id": "near_shot",
+                  "zh": "近景",
+                  "en": "near shot"
+                },
+                {
+                  "id": "medium_shot",
+                  "zh": "中景",
+                  "en": "medium shot"
+                },
+                {
+                  "id": "long_shot",
+                  "zh": "远景",
+                  "en": "long shot"
+                }
+              ]
+            },
+            {
+              "id": "angle_composition",
+              "name": "角度构图",
+              "items": [
+                {
+                  "id": "low_angle",
+                  "zh": "低角度",
+                  "en": "low angle shot"
+                },
+                {
+                  "id": "top_down",
+                  "zh": "俯拍",
+                  "en": "top-down shot"
+                },
+                {
+                  "id": "bottom_up",
+                  "zh": "仰拍",
+                  "en": "bottom-up shot"
+                },
+                {
+                  "id": "center_compose",
+                  "zh": "中心构图",
+                  "en": "center composition"
+                },
+                {
+                  "id": "rule_of_thirds",
+                  "zh": "三分法构图",
+                  "en": "rule of thirds composition"
+                },
+                {
+                  "id": "symmetry",
+                  "zh": "对称构图",
+                  "en": "symmetry composition"
+                },
+                {
+                  "id": "dynamic",
+                  "zh": "动态构图",
+                  "en": "dynamic composition"
+                }
+              ]
+            },
+            {
+              "id": "focus_compose",
+              "name": "焦点构图",
+              "items": [
+                {
+                  "id": "shallow_dof",
+                  "zh": "浅景深",
+                  "en": "shallow depth of field"
+                },
+                {
+                  "id": "bokeh",
+                  "zh": "背景虚化",
+                  "en": "bokeh"
+                }
+              ]
+            },
+            {
+              "id": "camera_orientation",
+              "name": "镜头方向",
+              "items": [
+                {
+                  "id": "high_angle_overhead",
+                  "zh": "高处俯拍",
+                  "en": "high-angle overhead shot"
+                },
+                {
+                  "id": "top_down_tilt",
+                  "zh": "从上方向下倾斜拍摄",
+                  "en": "top-down tilted shot"
+                },
+                {
+                  "id": "dutch_angle",
+                  "zh": "荷兰角倾斜构图",
+                  "en": "Dutch angle"
+                },
+                {
+                  "id": "slight_tilt",
+                  "zh": "轻微倾斜画面",
+                  "en": "slight tilted frame"
+                },
+                {
+                  "id": "three_quarter_angle",
+                  "zh": "三分之四角度",
+                  "en": "three-quarter angle"
+                },
+                {
+                  "id": "profile_view",
+                  "zh": "侧脸视角",
+                  "en": "profile view"
+                },
+                {
+                  "id": "back_view",
+                  "zh": "背影视角",
+                  "en": "back view"
+                },
+                {
+                  "id": "over_the_shoulder",
+                  "zh": "越肩视角",
+                  "en": "over-the-shoulder shot"
+                },
+                {
+                  "id": "point_of_view",
+                  "zh": "第一视角",
+                  "en": "point of view shot"
+                },
+                {
+                  "id": "selfie_angle",
+                  "zh": "自拍视角",
+                  "en": "selfie angle"
+                },
+                {
+                  "id": "slightly_tilted_frame",
+                  "zh": "轻微倾斜画面",
+                  "en": "slightly tilted frame"
+                },
+                {
+                  "id": "shoulder_level_shot",
+                  "zh": "肩部高度视角",
+                  "en": "shoulder-level shot"
+                },
+                {
+                  "id": "through_glass",
+                  "zh": "隔着玻璃拍摄",
+                  "en": "shot through glass"
+                },
+                {
+                  "id": "foreground_blur",
+                  "zh": "前景虚化遮挡",
+                  "en": "blurred foreground occlusion"
+                },
+                {
+                  "id": "crowd_framing",
+                  "zh": "人群框景",
+                  "en": "framed by the crowd"
+                }
+              ]
+            },
+            {
+              "id": "framing_advanced",
+              "name": "高级取景",
+              "items": [
+                {
+                  "id": "tight_framing",
+                  "zh": "紧凑取景",
+                  "en": "tight framing"
+                },
+                {
+                  "id": "off_center_subject",
+                  "zh": "主体偏离中心",
+                  "en": "off-center subject"
+                },
+                {
+                  "id": "foreground_obstruction",
+                  "zh": "前景遮挡",
+                  "en": "foreground obstruction"
+                },
+                {
+                  "id": "leading_lines",
+                  "zh": "引导线构图",
+                  "en": "leading lines"
+                },
+                {
+                  "id": "diagonal_lines",
+                  "zh": "斜线构图",
+                  "en": "diagonal lines composition"
+                },
+                {
+                  "id": "negative_space",
+                  "zh": "留白构图",
+                  "en": "negative space"
+                },
+                {
+                  "id": "environmental_portrait",
+                  "zh": "环境人像",
+                  "en": "environmental portrait"
+                },
+                {
+                  "id": "snapshot_crop",
+                  "zh": "随手拍裁切",
+                  "en": "snapshot crop"
+                },
+                {
+                  "id": "cropped_limbs",
+                  "zh": "自然裁切肢体",
+                  "en": "naturally cropped limbs"
+                },
+                {
+                  "id": "subject_partially_out_of_frame",
+                  "zh": "主体部分出框",
+                  "en": "subject partially out of frame"
+                }
+              ]
+            },
+            {
+              "id": "composition_phrases",
+              "name": "构图短语",
+              "items": [
+                {
+                  "id": "foreground_depth",
+                  "zh": "前景遮挡形成空间层次",
+                  "en": "foreground occlusion creating spatial depth"
+                },
+                {
+                  "id": "subject_off_center",
+                  "zh": "主体略偏离中心，画面更自然",
+                  "en": "subject slightly off-center for a more natural frame"
+                },
+                {
+                  "id": "eye_level_portrait",
+                  "zh": "平视人像，亲近自然",
+                  "en": "eye-level portrait, intimate and natural"
+                },
+                {
+                  "id": "close_face_detail",
+                  "zh": "面部特写，突出眼神和情绪",
+                  "en": "close-up face shot emphasizing eyes and emotion"
+                },
+                {
+                  "id": "full_body_environment",
+                  "zh": "全身构图并保留环境信息",
+                  "en": "full-body composition with environmental context"
+                },
+                {
+                  "id": "cinematic_wide_frame",
+                  "zh": "电影宽画幅构图",
+                  "en": "cinematic widescreen composition"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "lighting",
+          "name": "光影",
+          "groups": [
+            {
+              "id": "light_type",
+              "name": "光质",
+              "items": [
+                {
+                  "id": "natural_light",
+                  "zh": "自然光",
+                  "en": "natural light"
+                },
+                {
+                  "id": "soft_light",
+                  "zh": "柔光",
+                  "en": "soft light"
+                },
+                {
+                  "id": "hard_light",
+                  "zh": "硬光",
+                  "en": "hard light"
+                },
+                {
+                  "id": "backlight",
+                  "zh": "逆光",
+                  "en": "backlight"
+                },
+                {
+                  "id": "side_light",
+                  "zh": "侧光",
+                  "en": "side light"
+                },
+                {
+                  "id": "rembrandt",
+                  "zh": "伦勃朗光",
+                  "en": "Rembrandt lighting"
+                },
+                {
+                  "id": "neon_light",
+                  "zh": "霓虹灯光",
+                  "en": "neon light"
+                },
+                {
+                  "id": "moonlight",
+                  "zh": "月光",
+                  "en": "moonlight"
+                }
+              ]
+            },
+            {
+              "id": "time_light",
+              "name": "时段光",
+              "items": [
+                {
+                  "id": "morning_light",
+                  "zh": "清晨光线",
+                  "en": "morning light"
+                },
+                {
+                  "id": "dusk_light",
+                  "zh": "黄昏光线",
+                  "en": "dusk light"
+                },
+                {
+                  "id": "low_light",
+                  "zh": "低照度",
+                  "en": "low light"
+                }
+              ]
+            },
+            {
+              "id": "contrast_light",
+              "name": "明暗对比",
+              "items": [
+                {
+                  "id": "high_contrast_light",
+                  "zh": "强烈明暗对比",
+                  "en": "high contrast lighting"
+                },
+                {
+                  "id": "soft_shadow",
+                  "zh": "柔和阴影",
+                  "en": "soft shadow"
+                }
+              ]
+            },
+            {
+              "id": "artificial_light",
+              "name": "人工光源",
+              "items": [
+                {
+                  "id": "cold_fluorescent_light",
+                  "zh": "冷冽荧光灯",
+                  "en": "cold fluorescent lighting"
+                },
+                {
+                  "id": "flat_artificial_light",
+                  "zh": "平淡人工照明",
+                  "en": "flat artificial lighting"
+                },
+                {
+                  "id": "harsh_flash",
+                  "zh": "强烈直闪",
+                  "en": "harsh direct flash"
+                },
+                {
+                  "id": "flash_highlight_on_skin",
+                  "zh": "闪光灯皮肤高光",
+                  "en": "flash highlights on skin"
+                },
+                {
+                  "id": "mixed_color_temperature",
+                  "zh": "混合色温",
+                  "en": "mixed color temperature"
+                },
+                {
+                  "id": "street_lamp_light",
+                  "zh": "路灯光",
+                  "en": "street lamp lighting"
+                },
+                {
+                  "id": "storefront_light",
+                  "zh": "店铺灯光",
+                  "en": "storefront lighting"
+                },
+                {
+                  "id": "phone_screen_light",
+                  "zh": "手机屏幕光",
+                  "en": "phone screen light"
+                },
+                {
+                  "id": "mall_ceiling_light",
+                  "zh": "商场顶灯",
+                  "en": "shopping mall ceiling light"
+                },
+                {
+                  "id": "subway_fluorescent_light",
+                  "zh": "地铁荧光灯",
+                  "en": "subway fluorescent light"
+                },
+                {
+                  "id": "overcast_daylight",
+                  "zh": "阴天漫射光",
+                  "en": "overcast diffused daylight"
+                },
+                {
+                  "id": "window_side_light",
+                  "zh": "窗边侧光",
+                  "en": "window side light"
+                },
+                {
+                  "id": "traffic_light_color",
+                  "zh": "交通信号灯色彩",
+                  "en": "traffic light color cast"
+                }
+              ]
+            },
+            {
+              "id": "lighting_phrases",
+              "name": "光影短语",
+              "items": [
+                {
+                  "id": "soft_window_light_skin",
+                  "zh": "柔和窗光照亮自然肤色",
+                  "en": "soft window light illuminating natural skin tone"
+                },
+                {
+                  "id": "neon_rim_light",
+                  "zh": "霓虹边缘光勾勒轮廓",
+                  "en": "neon rim light outlining the silhouette"
+                },
+                {
+                  "id": "golden_hour_backlight",
+                  "zh": "黄金时刻逆光，发丝透亮",
+                  "en": "golden hour backlight with glowing hair"
+                },
+                {
+                  "id": "low_key_shadow",
+                  "zh": "低调暗部层次，保留细节",
+                  "en": "low-key shadows with preserved detail"
+                },
+                {
+                  "id": "cinematic_light_ratio",
+                  "zh": "电影级光比，明暗层次清晰",
+                  "en": "cinematic lighting ratio with clear light and shadow layers"
+                },
+                {
+                  "id": "soft_overcast_light",
+                  "zh": "阴天柔光，肤色均匀自然",
+                  "en": "soft overcast light, even and natural skin tone"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "camera",
+          "name": "镜头",
+          "groups": [
+            {
+              "id": "lens_type",
+              "name": "镜头类型",
+              "items": [
+                {
+                  "id": "lens_35",
+                  "zh": "35mm",
+                  "en": "35mm lens"
+                },
+                {
+                  "id": "lens_50",
+                  "zh": "50mm",
+                  "en": "50mm lens"
+                },
+                {
+                  "id": "lens_85",
+                  "zh": "85mm",
+                  "en": "85mm lens"
+                },
+                {
+                  "id": "portrait_lens",
+                  "zh": "人像镜头",
+                  "en": "portrait lens"
+                },
+                {
+                  "id": "wide_angle",
+                  "zh": "广角镜头",
+                  "en": "wide angle lens"
+                },
+                {
+                  "id": "telephoto",
+                  "zh": "长焦镜头",
+                  "en": "telephoto lens"
+                },
+                {
+                  "id": "macro",
+                  "zh": "微距镜头",
+                  "en": "macro lens"
+                }
+              ]
+            },
+            {
+              "id": "effect_lens",
+              "name": "效果镜头",
+              "items": [
+                {
+                  "id": "phone_flash",
+                  "zh": "手机闪光灯",
+                  "en": "phone flash"
+                },
+                {
+                  "id": "ccd",
+                  "zh": "CCD质感",
+                  "en": "CCD camera"
+                },
+                {
+                  "id": "film_grain",
+                  "zh": "胶片颗粒",
+                  "en": "film grain"
+                },
+                {
+                  "id": "motion_blur",
+                  "zh": "轻微运动模糊",
+                  "en": "slight motion blur"
+                }
+              ]
+            },
+            {
+              "id": "camera_devices",
+              "name": "拍摄设备",
+              "items": [
+                {
+                  "id": "iphone_photo",
+                  "zh": "iPhone拍摄",
+                  "en": "photo taken on iPhone"
+                },
+                {
+                  "id": "android_phone_photo",
+                  "zh": "安卓手机拍摄",
+                  "en": "photo taken on Android phone"
+                },
+                {
+                  "id": "cheap_compact_camera",
+                  "zh": "廉价卡片相机",
+                  "en": "cheap compact digital camera"
+                },
+                {
+                  "id": "consumer_digicam",
+                  "zh": "消费级数码相机",
+                  "en": "consumer digital camera"
+                },
+                {
+                  "id": "security_camera_still",
+                  "zh": "监控截图感",
+                  "en": "security camera still"
+                },
+                {
+                  "id": "camcorder_still",
+                  "zh": "家用摄像机截帧",
+                  "en": "camcorder still"
+                }
+              ]
+            },
+            {
+              "id": "photo_imperfections",
+              "name": "照片缺陷",
+              "items": [
+                {
+                  "id": "digital_noise",
+                  "zh": "数字噪点",
+                  "en": "digital noise"
+                },
+                {
+                  "id": "visible_grain",
+                  "zh": "可见颗粒",
+                  "en": "visible grain"
+                },
+                {
+                  "id": "slight_underexposure",
+                  "zh": "轻微欠曝",
+                  "en": "slightly underexposed"
+                },
+                {
+                  "id": "flat_lighting",
+                  "zh": "平淡照明",
+                  "en": "flat lighting"
+                },
+                {
+                  "id": "red_eye_flash",
+                  "zh": "轻微红眼闪光",
+                  "en": "slight red-eye flash"
+                },
+                {
+                  "id": "chromatic_aberration",
+                  "zh": "色差",
+                  "en": "chromatic aberration"
+                },
+                {
+                  "id": "lens_flare",
+                  "zh": "镜头眩光",
+                  "en": "lens flare"
+                },
+                {
+                  "id": "motion_smear",
+                  "zh": "运动拖影",
+                  "en": "motion smear"
+                },
+                {
+                  "id": "focus_miss",
+                  "zh": "轻微跑焦",
+                  "en": "slightly missed focus"
+                },
+                {
+                  "id": "jpeg_artifacts",
+                  "zh": "JPEG压缩痕迹",
+                  "en": "JPEG compression artifacts"
+                },
+                {
+                  "id": "timestamp_overlay",
+                  "zh": "日期时间叠印",
+                  "en": "timestamp overlay"
+                },
+                {
+                  "id": "orange_date_stamp",
+                  "zh": "橙色日期戳",
+                  "en": "orange date stamp"
+                },
+                {
+                  "id": "slight_noise",
+                  "zh": "轻微噪点",
+                  "en": "slight noise"
+                },
+                {
+                  "id": "soft_focus",
+                  "zh": "柔和焦点",
+                  "en": "soft focus"
+                },
+                {
+                  "id": "underexposed_background",
+                  "zh": "背景轻微欠曝",
+                  "en": "slightly underexposed background"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "quality",
+          "name": "质量",
+          "groups": [
+            {
+              "id": "resolution",
+              "name": "分辨率",
+              "items": [
+                {
+                  "id": "ultra_hd",
+                  "zh": "超清",
+                  "en": "ultra HD"
+                },
+                {
+                  "id": "hd",
+                  "zh": "高清",
+                  "en": "HD"
+                },
+                {
+                  "id": "8k",
+                  "zh": "8K",
+                  "en": "8K"
+                }
+              ]
+            },
+            {
+              "id": "detail",
+              "name": "细节质量",
+              "items": [
+                {
+                  "id": "realistic_texture",
+                  "zh": "真实纹理",
+                  "en": "realistic texture"
+                },
+                {
+                  "id": "hyperdetail",
+                  "zh": "超写实细节",
+                  "en": "hyper detailed"
+                },
+                {
+                  "id": "beautiful_face",
+                  "zh": "精致五官",
+                  "en": "beautiful face"
+                },
+                {
+                  "id": "natural_skin",
+                  "zh": "自然肤色",
+                  "en": "natural skin tone"
+                },
+                {
+                  "id": "cinematic_color",
+                  "zh": "电影级调色",
+                  "en": "cinematic color grading"
+                },
+                {
+                  "id": "masterpiece",
+                  "zh": "masterpiece",
+                  "en": "masterpiece"
+                },
+                {
+                  "id": "best_quality",
+                  "zh": "best quality",
+                  "en": "best quality"
+                },
+                {
+                  "id": "highly_detailed",
+                  "zh": "highly detailed",
+                  "en": "highly detailed"
+                },
+                {
+                  "id": "photorealistic",
+                  "zh": "photorealistic",
+                  "en": "photorealistic"
+                }
+              ]
+            },
+            {
+              "id": "realism_quality",
+              "name": "真实质感",
+              "items": [
+                {
+                  "id": "skin_pores",
+                  "zh": "皮肤毛孔",
+                  "en": "visible skin pores"
+                },
+                {
+                  "id": "skin_texture",
+                  "zh": "真实皮肤纹理",
+                  "en": "real skin texture"
+                },
+                {
+                  "id": "natural_asymmetry",
+                  "zh": "自然不对称",
+                  "en": "natural facial asymmetry"
+                },
+                {
+                  "id": "realistic_fabric_texture",
+                  "zh": "真实布料纹理",
+                  "en": "realistic fabric texture"
+                },
+                {
+                  "id": "natural_motion",
+                  "zh": "自然动态",
+                  "en": "natural motion"
+                },
+                {
+                  "id": "documentary_feel",
+                  "zh": "纪实感",
+                  "en": "documentary feel"
+                },
+                {
+                  "id": "non_ai_look",
+                  "zh": "不像AI生成",
+                  "en": "non-AI-looking image"
+                },
+                {
+                  "id": "authentic_moment",
+                  "zh": "真实瞬间",
+                  "en": "authentic moment"
+                },
+                {
+                  "id": "believable_skin_pores",
+                  "zh": "可信皮肤毛孔",
+                  "en": "believable skin pores"
+                },
+                {
+                  "id": "natural_cloth_wrinkles",
+                  "zh": "自然衣物褶皱",
+                  "en": "natural fabric wrinkles"
+                },
+                {
+                  "id": "unposed_body_language",
+                  "zh": "非摆拍肢体语言",
+                  "en": "unposed body language"
+                },
+                {
+                  "id": "realistic_environment_details",
+                  "zh": "真实环境细节",
+                  "en": "realistic environmental details"
+                },
+                {
+                  "id": "not_over_retouched",
+                  "zh": "不过度精修",
+                  "en": "not overly retouched"
+                },
+                {
+                  "id": "natural_face_asymmetry",
+                  "zh": "自然面部不对称",
+                  "en": "natural facial asymmetry"
+                },
+                {
+                  "id": "subtle_under_eye_texture",
+                  "zh": "轻微眼下纹理",
+                  "en": "subtle under-eye texture"
+                },
+                {
+                  "id": "realistic_hair_detail",
+                  "zh": "真实发丝细节",
+                  "en": "realistic hair detail"
+                },
+                {
+                  "id": "natural_body_proportion",
+                  "zh": "自然身体比例",
+                  "en": "natural body proportions"
+                }
+              ]
+            },
+            {
+              "id": "quality_blocks",
+              "name": "质量组合",
+              "items": [
+                {
+                  "id": "clean_real_skin",
+                  "zh": "清晰主体，自然皮肤纹理，不过度磨皮",
+                  "en": "clear subject, natural skin texture, not overly retouched"
+                },
+                {
+                  "id": "high_detail_no_plastic",
+                  "zh": "高细节但避免塑料质感",
+                  "en": "highly detailed while avoiding plastic texture"
+                },
+                {
+                  "id": "sharp_eyes_natural_face",
+                  "zh": "眼神清晰，五官自然协调",
+                  "en": "sharp eyes, natural and harmonious facial features"
+                },
+                {
+                  "id": "balanced_exposure_color",
+                  "zh": "曝光准确，色彩自然，层次稳定",
+                  "en": "accurate exposure, natural colors, stable tonal layers"
+                },
+                {
+                  "id": "finished_commercial_quality",
+                  "zh": "完成度高，商业级画面质感",
+                  "en": "highly finished image with commercial-grade quality"
+                },
+                {
+                  "id": "real_photo_texture",
+                  "zh": "真实照片质感，细节可信",
+                  "en": "real photo texture with believable details"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "negative",
+          "name": "负面词",
+          "groups": [
+            {
+              "id": "quality_issues",
+              "name": "质量问题",
+              "items": [
+                {
+                  "id": "lowres",
+                  "zh": "低清晰度",
+                  "en": "lowres"
+                },
+                {
+                  "id": "bad_hands",
+                  "zh": "畸形手指",
+                  "en": "bad hands"
+                },
+                {
+                  "id": "extra_fingers",
+                  "zh": "多余手指",
+                  "en": "extra fingers"
+                },
+                {
+                  "id": "bad_face",
+                  "zh": "脸部崩坏",
+                  "en": "bad face"
+                },
+                {
+                  "id": "wrong_anatomy",
+                  "zh": "比例错误",
+                  "en": "wrong anatomy"
+                },
+                {
+                  "id": "low_quality",
+                  "zh": "低质量",
+                  "en": "low quality"
+                },
+                {
+                  "id": "blurry",
+                  "zh": "模糊",
+                  "en": "blurry"
+                },
+                {
+                  "id": "overexposed",
+                  "zh": "过曝",
+                  "en": "overexposed"
+                },
+                {
+                  "id": "underexposed",
+                  "zh": "欠曝",
+                  "en": "underexposed"
+                }
+              ]
+            },
+            {
+              "id": "watermark",
+              "name": "水印文字",
+              "items": [
+                {
+                  "id": "watermark_tag",
+                  "zh": "水印",
+                  "en": "watermark"
+                },
+                {
+                  "id": "text_tag",
+                  "zh": "文字",
+                  "en": "text"
+                },
+                {
+                  "id": "logo_tag",
+                  "zh": "logo",
+                  "en": "logo"
+                }
+              ]
+            },
+            {
+              "id": "anatomy_issues",
+              "name": "结构问题",
+              "items": [
+                {
+                  "id": "duplicate_limbs",
+                  "zh": "重复肢体",
+                  "en": "duplicate limbs"
+                },
+                {
+                  "id": "bad_hands_tag",
+                  "zh": "坏手",
+                  "en": "bad hands"
+                },
+                {
+                  "id": "bad_eyes",
+                  "zh": "坏眼睛",
+                  "en": "bad eyes"
+                }
+              ]
+            },
+            {
+              "id": "ai_artifacts",
+              "name": "AI痕迹",
+              "items": [
+                {
+                  "id": "plastic_skin",
+                  "zh": "塑料皮肤",
+                  "en": "plastic skin"
+                },
+                {
+                  "id": "over_smooth_skin",
+                  "zh": "过度磨皮",
+                  "en": "overly smooth skin"
+                },
+                {
+                  "id": "uncanny_face",
+                  "zh": "恐怖谷脸",
+                  "en": "uncanny face"
+                },
+                {
+                  "id": "ai_generated_look",
+                  "zh": "AI生成感",
+                  "en": "AI-generated look"
+                },
+                {
+                  "id": "overprocessed",
+                  "zh": "过度后期",
+                  "en": "overprocessed"
+                },
+                {
+                  "id": "oversharpened",
+                  "zh": "过度锐化",
+                  "en": "oversharpened"
+                },
+                {
+                  "id": "cgi_render",
+                  "zh": "CG渲染感",
+                  "en": "CGI render"
+                },
+                {
+                  "id": "doll_face",
+                  "zh": "假娃娃脸",
+                  "en": "fake doll face"
+                },
+                {
+                  "id": "symmetrical_perfection",
+                  "zh": "过度完美对称",
+                  "en": "overly perfect symmetry"
+                },
+                {
+                  "id": "overly_perfect_face",
+                  "zh": "过度完美的脸",
+                  "en": "overly perfect face"
+                },
+                {
+                  "id": "dead_eyes",
+                  "zh": "无神眼睛",
+                  "en": "dead eyes"
+                },
+                {
+                  "id": "uncanny_smile",
+                  "zh": "诡异微笑",
+                  "en": "uncanny smile"
+                }
+              ]
+            },
+            {
+              "id": "style_negative_real_photo",
+              "name": "真人摄影排除",
+              "items": [
+                {
+                  "id": "anime_negative",
+                  "zh": "动漫风",
+                  "en": "anime"
+                },
+                {
+                  "id": "cartoon_negative",
+                  "zh": "卡通",
+                  "en": "cartoon"
+                },
+                {
+                  "id": "painting_negative",
+                  "zh": "绘画感",
+                  "en": "painting"
+                },
+                {
+                  "id": "illustration_negative",
+                  "zh": "插画感",
+                  "en": "illustration"
+                },
+                {
+                  "id": "sketch_negative",
+                  "zh": "草图",
+                  "en": "sketch"
+                },
+                {
+                  "id": "3d_negative",
+                  "zh": "3D渲染",
+                  "en": "3D render"
+                }
+              ]
+            },
+            {
+              "id": "negative_blocks",
+              "name": "组合负面词",
+              "items": [
+                {
+                  "id": "avoid_ai_plastic",
+                  "zh": "避免AI塑料感、过度磨皮、假皮肤",
+                  "en": "avoid AI plastic look, over-smoothed skin, fake skin texture"
+                },
+                {
+                  "id": "avoid_bad_anatomy",
+                  "zh": "避免畸形手指、多余肢体、错误人体结构",
+                  "en": "avoid deformed fingers, extra limbs, wrong anatomy"
+                },
+                {
+                  "id": "avoid_dirty_image",
+                  "zh": "避免低清晰度、模糊、噪点过多、压缩痕迹",
+                  "en": "avoid low resolution, blur, excessive noise, compression artifacts"
+                },
+                {
+                  "id": "avoid_text_logo",
+                  "zh": "避免水印、文字、logo、签名",
+                  "en": "avoid watermark, text, logo, signature"
+                },
+                {
+                  "id": "avoid_overprocessed",
+                  "zh": "避免过锐、过曝、过饱和、HDR过度",
+                  "en": "avoid oversharpening, overexposure, oversaturation, excessive HDR"
+                },
+                {
+                  "id": "avoid_uncanny_face",
+                  "zh": "避免脸部崩坏、眼神不自然、五官错位",
+                  "en": "avoid broken face, unnatural eyes, misplaced facial features"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "video",
+      "name": "视频",
+      "tabs": []
+    },
+    {
+      "id": "writing",
+      "name": "写作",
+      "tabs": []
+    },
+    {
+      "id": "design",
+      "name": "设计",
+      "tabs": []
+    },
+    {
+      "id": "coding",
+      "name": "编程",
+      "tabs": []
+    }
+  ],
+  "description": "优化版绘图提示词库：强化真实摄影、老式数码相机、街拍、妆发、动作姿态、场景细节、镜头语言、负面词与模板。",
+  "templates": [
+    {
+      "id": "natural_portrait_template",
+      "name": "自然人像描述模板",
+      "description": "适合写实人像、街拍、生活感照片和可编辑中文长 prompt。",
+      "type": "image",
+      "mode": "template",
+      "variables": [
+        "subject",
+        "clothing",
+        "accessories",
+        "makeup",
+        "scene",
+        "atmosphere",
+        "style",
+        "composition",
+        "lighting",
+        "camera",
+        "quality"
+      ],
+      "zh": "这是一张{style}风格的人像画面，画面主体是{subject}。{subject}身穿{clothing}，搭配{accessories}，妆发细节为{makeup}。场景位于{scene}，周围环境带有{atmosphere}。镜头采用{composition}，光线来自{lighting}。画面像由{camera}拍摄，整体具有{quality}，并保留真实自然的细节。",
+      "en": "A {style} portrait image featuring {subject}. The subject wears {clothing}, paired with {accessories}, with makeup and hair details of {makeup}. The scene is set in {scene}, carrying {atmosphere}. The frame uses {composition}, lit by {lighting}. It feels captured with {camera}, with overall {quality} and natural believable details.",
+      "negative": "low quality, blurry, watermark, over-smoothed skin, plastic skin, AI-generated look"
+    },
+    {
+      "type": "image",
+      "mode": "template",
+      "variables": [
+        "subject",
+        "clothing",
+        "accessories",
+        "makeup",
+        "scene",
+        "atmosphere",
+        "style",
+        "composition",
+        "lighting",
+        "camera",
+        "quality"
+      ],
+      "id": "old_digicam_escalator_snapshot",
+      "name": "老式数码相机扶梯抓拍",
+      "zh": "老式数码相机快照，高处俯拍，一位二十出头女性乘坐下行扶梯，抬头看向镜头，淡淡微笑，东亚网红妆，浅色底妆，浓郁腮红，亮泽唇彩，眼下美人痣，蓬松短波波头，白色薄纱开衫，V领上衣，樱桃图案，深红色皮质手提包，纤细项链，荷兰角倾斜构图，业余智能手机摄影，亮蓝色扶梯扶手，黄色警示线，金属楼梯，离去的行人背景，原始真实感，数字噪点，可见颗粒，平淡人工照明，橙色日期戳，怀旧都市快照",
+      "en": "old digital camera snapshot, high-angle overhead shot, a woman in her early twenties riding a descending escalator, looking up at the camera, slight smile, East Asian influencer makeup, pale foundation, heavy blush, glossy lips, beauty mark under the eye, messy bob cut, white sheer cardigan, V-neck top with small cherry print, dark red leather handbag, delicate necklace, Dutch angle, amateur smartphone photo, bright blue escalator handrail, yellow warning line, metal stairs, pedestrians leaving in the background, raw realism, digital noise, visible grain, flat artificial lighting, orange date stamp, nostalgic urban snapshot",
+      "description": "适合 CCD、公共扶梯、地铁通道、老式数码相机快照。",
+      "negative": "low quality, blurry, watermark, over-smoothed skin, AI-generated look"
+    },
+    {
+      "type": "image",
+      "mode": "template",
+      "variables": [
+        "subject",
+        "clothing",
+        "accessories",
+        "makeup",
+        "scene",
+        "atmosphere",
+        "style",
+        "composition",
+        "lighting",
+        "camera",
+        "quality"
+      ],
+      "id": "night_flash_street_portrait",
+      "name": "夜晚街头直闪人像",
+      "zh": "夜晚街头，直闪摄影，年轻女性，街拍模特，Y2K穿搭，粉色迷你包，金属链条装饰，发丝被风吹起，看向镜头，背景车流模糊，店铺招牌，潮湿路面，轻微运动模糊，数字噪点，真实皮肤纹理，社交媒体随手拍",
+      "en": "night street, direct flash photography, young woman, street style model, Y2K outfit, pink mini bag, metal chain detail, windblown hair, looking at camera, blurred traffic in the background, shop signs, wet pavement, slight motion blur, digital noise, real skin texture, social media casual photo",
+      "description": "适合夜晚街头、直闪、人像街拍和社交媒体随手拍。",
+      "negative": "low quality, blurry, watermark, over-smoothed skin, AI-generated look"
+    },
+    {
+      "type": "image",
+      "mode": "template",
+      "variables": [
+        "subject",
+        "clothing",
+        "accessories",
+        "makeup",
+        "scene",
+        "atmosphere",
+        "style",
+        "composition",
+        "lighting",
+        "camera",
+        "quality"
+      ],
+      "id": "dark_kawaii_alley_snapshot",
+      "name": "暗黑可爱小巷抓拍",
+      "zh": "狭窄后街，暗黑系，地雷系，黑色洛丽塔裙，蕾丝边，蝴蝶结细节，双马尾，发夹装饰，颈圈，毛绒玩偶，蹲姿，看向镜头，强烈直闪，混凝土墙面，金属卷帘门，原始真实感，JPEG压缩痕迹，轻微跑焦",
+      "en": "narrow backstreet, dark style, jirai kei, black lolita dress, lace trim, ribbon detail, twin tails, hair clips, choker, plush toy, squatting pose, looking at camera, harsh direct flash, concrete wall, metal shutter, raw realism, JPEG compression artifacts, slightly missed focus",
+      "description": "适合暗黑可爱、后街抓拍、洛丽塔和强直闪风格。",
+      "negative": "low quality, blurry, watermark, over-smoothed skin, AI-generated look"
+    }
+  ],
+  "updateNotes": [
+    "补充妆发分类，增强真人/网红/街拍类生成控制。",
+    "补充老式数码相机、直闪、日期戳、数字噪点等真实快照词。",
+    "补充镜头角度、荷兰角、高处俯拍、随手拍裁切等构图词。",
+    "补充交通空间、扶梯、地铁、城市细节，适配参考提示词。",
+    "补充AI痕迹负面词，区分真实摄影与插画/动漫/CG风格。",
+    "新增模板 templates，方便一键套用成熟组合。"
+  ]
+}
