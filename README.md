@@ -1,73 +1,32 @@
-# React + TypeScript + Vite
+# Prompt Market React / AI 写真人像提示词导演台
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+一站式 AI 写真人像提示词生成器。快速出片 + 精细调校 + 动作导演变体。
 
-Currently, two official plugins are available:
+## 核心功能
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **快速生成** — 从 50+ 模板中选择，一键生成正向提示词、负面词、参数后缀
+- **高级编辑** — 分面精细编辑，微调每一个细节槽位
+- **Pose Director（动作导演）** — 基于场景生成 3/5/9 张动作变体，支持轻微/标准/动态强度
+- **智能 Diff** — 根据选择自动启用手部修复、面部修复、动态防扭曲等
+- 无后端、本地优先、localStorage 持久化
 
-## React Compiler
+## 开发命令
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev      # 启动开发服务器
+npm run build    # TypeScript 检查 + Vite 构建
+npm run self-test # 数据一致性检查
+npm run preflight # 部署前检查
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 部署
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+GitHub Pages: 推送 main 分支自动部署到 `https://w0nderful666.github.io/prompt-market-react/`
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 技术栈
+
+React 19, TypeScript, Tailwind CSS, Vite
+
+## 项目状态
+
+当前版本：feat/pose-director-bridge — 已完成状态统一，等待正式发布。

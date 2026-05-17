@@ -17,7 +17,23 @@ function triggerMatchesPack(packTriggerSlots: string[], selectionSlotKeys: strin
   return false
 }
 
-export function composePrompt(sel: DirectorSelection): ComposedOutput {
+export function composePrompt(
+  sel: DirectorSelection,
+  variantOverlay?: {
+    shotId: string
+    bodyPose: string
+    bodyAngle: string
+    weightShift: string
+    handTask: string
+    gaze: string
+    expression: string
+    sceneInteraction: string
+    cameraCrop: string
+    cameraAngle: string
+    motionCue: string
+    autoDiffPacks: string[]
+  } | null
+): ComposedOutput {
   const device = sel.devicePreset ? DEVICE_MAP[sel.devicePreset] : null
   const scene = sel.scenePack ? SCENE_MAP[sel.scenePack] : null
   const light = sel.lightPack ? LIGHT_MAP[sel.lightPack] : null
@@ -54,6 +70,23 @@ export function composePrompt(sel: DirectorSelection): ComposedOutput {
     positiveParts.push(light.positivePromptZh)
   }
 
+  if (variantOverlay) {
+    const overlayParts: string[] = []
+    if (variantOverlay.bodyPose && !variantOverlay.bodyPose.includes('选一个')) overlayParts.push(variantOverlay.bodyPose)
+    if (variantOverlay.bodyAngle) overlayParts.push(variantOverlay.bodyAngle)
+    if (variantOverlay.weightShift) overlayParts.push(variantOverlay.weightShift)
+    if (variantOverlay.handTask && !variantOverlay.handTask.includes('选一个')) overlayParts.push(variantOverlay.handTask)
+    if (variantOverlay.gaze) overlayParts.push(variantOverlay.gaze)
+    if (variantOverlay.expression) overlayParts.push(variantOverlay.expression)
+    if (variantOverlay.sceneInteraction) overlayParts.push(variantOverlay.sceneInteraction)
+    if (variantOverlay.cameraCrop) overlayParts.push(variantOverlay.cameraCrop)
+    if (variantOverlay.cameraAngle) overlayParts.push(variantOverlay.cameraAngle)
+    if (variantOverlay.motionCue && !variantOverlay.motionCue.includes('选一个')) overlayParts.push(variantOverlay.motionCue)
+    if (overlayParts.length > 0) {
+      positiveParts.push(overlayParts.join('，'))
+    }
+  }
+
   const positivePrompt = positiveParts.join('，')
 
   const enabledPacks: AutoEnabledPack[] = []
@@ -73,6 +106,12 @@ export function composePrompt(sel: DirectorSelection): ComposedOutput {
   for (const prop of sel.customProps) {
     selectedValueIds.push(`prop_${prop}`)
     selectionSlotKeys.push('handheld')
+  }
+
+  if (variantOverlay) {
+    for (const packId of variantOverlay.autoDiffPacks) {
+      selectedValueIds.push(packId)
+    }
   }
 
   for (const pack of Object.values(DIFF_MAP)) {

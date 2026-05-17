@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "self-test": "npx tsx scripts/self-test.ts",
+    "preflight": "npx tsx scripts/preflight.ts"
   },
   "dependencies": {
     "react": "^19.2.6",

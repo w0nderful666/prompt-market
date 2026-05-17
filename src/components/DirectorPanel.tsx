@@ -1,5 +1,6 @@
 import { useState, useMemo, useCallback, useRef } from 'react'
 import { useDirector } from '../context/DirectorContext'
+import { usePromptDispatch } from '../context/PromptStateContext'
 import { masterTemplates, MASTER_TEMPLATE_MAP } from '../data/masterTemplates'
 import { DEVICE_PRESETS } from '../data/devicePresets'
 import { SCENE_PACKS } from '../data/scenePacks'
@@ -253,6 +254,7 @@ function pickRandom<T>(arr: T[]): T {
 
 function TemplateSection() {
   const { selection, applyMasterTemplate, toggleState, setDevice, setLight } = useDirector()
+  const dispatch = usePromptDispatch()
   const [poseVariants, setPoseVariants] = useState<PoseVariant[]>([])
   const [variantCount, setVariantCount] = useState<3 | 5 | 9>(5)
   const [variantIntensity, setVariantIntensity] = useState<'subtle' | 'standard' | 'dynamic'>('standard')
@@ -386,14 +388,18 @@ function TemplateSection() {
                   <textarea value={v.positivePrompt} readOnly
                     className="w-full resize-none rounded border border-border bg-muted p-2 text-[10px] leading-relaxed text-foreground outline-none"
                     rows={3} />
-                  <div className="flex gap-1">
+                  <div className="flex flex-wrap gap-1">
                     <button onClick={() => handleVariantCopied(v.positivePrompt)}
-                      className="flex-1 rounded bg-muted px-2 py-1 text-[9px] font-bold text-muted-foreground hover:bg-muted/80 transition">
-                      📋 复制
+                      className="flex-1 min-w-[60px] rounded bg-muted px-2 py-1 text-[9px] font-bold text-muted-foreground hover:bg-muted/80 transition">
+                      📋 复制正向
                     </button>
                     <button onClick={() => handleVariantCopied(`正向：${v.positivePrompt}\n负面：${v.negativePrompt.join(', ')}`)}
-                      className="flex-1 rounded bg-primary/10 px-2 py-1 text-[9px] font-bold text-primary hover:bg-primary/20 transition">
+                      className="flex-1 min-w-[60px] rounded bg-primary/10 px-2 py-1 text-[9px] font-bold text-primary hover:bg-primary/20 transition">
                       📋 复制全部
+                    </button>
+                    <button onClick={() => dispatch({ type: 'APPLY_POSE_VARIANT', variantId: v.shot.id })}
+                      className="flex-1 min-w-[60px] rounded bg-green-100 px-2 py-1 text-[9px] font-bold text-green-700 hover:bg-green-200 transition dark:bg-green-900/30 dark:text-green-300">
+                      ✅ 应用
                     </button>
                   </div>
                 </div>

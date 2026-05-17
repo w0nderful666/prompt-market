@@ -2,6 +2,7 @@ import { useState, useMemo, useCallback } from 'react'
 import { ALL_FACETS } from '../data/facetedPresets'
 import type { FacetValue } from '../data/facetedPresets'
 import { useDirector } from '../context/DirectorContext'
+import { usePromptState } from '../context/PromptStateContext'
 import { detectFacetConflicts, buildFacetedPrompt, getSelectionSummary, getSelectedCount } from '../utils/facetedBuilder'
 import type { FacetConflict } from '../utils/facetedBuilder'
 import { copyToClipboard } from '../utils/clipboard'
@@ -12,8 +13,16 @@ function getAllValues(): FacetValue[] {
   return ALL_FACETS.flatMap(f => f.values || [])
 }
 
+const SOURCE_LABELS: Record<string, string> = {
+  director: '来自快速生成模板',
+  advanced: '手动精细微调',
+  variant: '已应用动作变体',
+  mixed: '快速生成 + 手动微调',
+}
+
 export default function FacetedPresetPanel({ onNavigateToQuick }: { onNavigateToQuick?: () => void }) {
   const { sharedFacetSelections, setSharedFacetSelections, syncFromPresets } = useDirector()
+  const promptState = usePromptState()
   const [activeFacet, setActiveFacet] = useState<string>('image')
   const [conflicts, setConflicts] = useState<FacetConflict[]>([])
   const [copied, setCopied] = useState(false)
@@ -77,7 +86,8 @@ export default function FacetedPresetPanel({ onNavigateToQuick }: { onNavigateTo
           <div>
             <h3 className="text-xs font-bold text-amber-800 dark:text-amber-300">高级编辑模式</h3>
             <p className="text-[10px] text-amber-600 dark:text-amber-400">
-              此处为手动精细微调。从快速生成页面点击「进入高级编辑」将自动同步当前模板的选择。
+              {SOURCE_LABELS[promptState.state.source] || '手动精细微调'}
+              {promptState.state.variants.appliedVariantId ? ' · 已应用动作变体' : ''}
             </p>
           </div>
           {onNavigateToQuick && (

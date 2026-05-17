@@ -1,7 +1,7 @@
-import { createContext, useContext, useState, useCallback, useMemo, type ReactNode } from 'react'
+import { createContext, useContext, useCallback, useMemo, type ReactNode, useState } from 'react'
 import type { DirectorSelection, ComposedOutput } from '../core/types'
-import { MASTER_TEMPLATE_MAP } from '../data/masterTemplates'
-import { composePrompt } from '../core/promptComposer'
+import { usePromptState, usePromptDispatch, usePromptOutput } from './PromptStateContext'
+import type { PromptState } from '../core/promptState'
 import { directorToFacetSelections, facetToDirectorUpdate } from '../core/bridgeMapper'
 
 type FacetSelections = Record<string, string | string[]>
@@ -25,109 +25,104 @@ interface DirectorContextType {
   clearAll: () => void
 }
 
-const defaultSelection: DirectorSelection = {
-  directorTemplate: null,
-  devicePreset: null,
-  scenePack: null,
-  lightPack: null,
-  statePacks: [],
-  diffStrength: 'normal',
-  parameterPreset: null,
-  customProps: [],
-}
-
 const DirectorContext = createContext<DirectorContextType>(null!)
 
 export function DirectorProvider({ children }: { children: ReactNode }) {
-  const [selection, setSelection] = useState<DirectorSelection>(defaultSelection)
-  const [sharedFacetSelections, setSharedFacetSelections] = useState<FacetSelections>({})
+  const { state, dispatch } = usePromptState()
+  const output = usePromptOutput()
+  const [localSelections, setLocalSelections] = useState<FacetSelections>({})
 
-  const output = useMemo(() => composePrompt(selection), [selection])
+  const selection: DirectorSelection = {
+    directorTemplate: state.director.templateId,
+    devicePreset: state.director.deviceId,
+    scenePack: state.director.sceneId,
+    lightPack: state.director.lightId,
+    statePacks: state.director.stateIds,
+    diffStrength: state.director.diffStrength,
+    parameterPreset: state.director.parameterPresetId,
+    customProps: state.director.customProps,
+  }
 
   const syncToPresets = useCallback(() => {
-    const mapped = directorToFacetSelections(selection)
-    setSharedFacetSelections(mapped)
+    const fwd = directorToFacetSelections(selection)
+    setLocalSelections(fwd)
   }, [selection])
 
   const syncFromPresets = useCallback(() => {
-    setSharedFacetSelections(prev => {
-      const update = facetToDirectorUpdate(prev)
-      setSelection(s => ({
-        ...s,
-        ...update,
-      }))
-      return prev
+    dispatch({
+      type: 'SET_FACET_SELECTIONS',
+      selections: localSelections,
     })
-  }, [])
+    dispatch({ type: 'SET_SOURCE', source: 'mixed' })
+  }, [dispatch, localSelections])
+
+  const setSharedFacetSelections: React.Dispatch<React.SetStateAction<FacetSelections>> = useCallback((action) => {
+    if (typeof action === 'function') {
+      setLocalSelections(prev => {
+        const next = action(prev)
+        dispatch({ type: 'SET_FACET_SELECTIONS', selections: next })
+        return next
+      })
+    } else {
+      setLocalSelections(action)
+      dispatch({ type: 'SET_FACET_SELECTIONS', selections: action })
+    }
+  }, [dispatch])
 
   const applyMasterTemplate = useCallback((id: string) => {
-    const tpl = MASTER_TEMPLATE_MAP[id]
-    if (!tpl) return
-    setSelection({
-      directorTemplate: tpl.id,
-      devicePreset: tpl.lockedCore.device,
-      scenePack: tpl.lockedCore.scene,
-      lightPack: tpl.lockedCore.light,
-      statePacks: [...tpl.randomPools.state],
-      diffStrength: 'normal',
-      parameterPreset: tpl.parameterPreset,
-      customProps: [...tpl.randomPools.props],
-    })
-  }, [])
+    dispatch({ type: 'APPLY_MASTER_TEMPLATE', templateId: id })
+    setLocalSelections({})
+  }, [dispatch])
 
   const setDevice = useCallback((id: string | null) => {
-    setSelection(prev => ({ ...prev, devicePreset: id }))
-  }, [])
+    dispatch({ type: 'UPDATE_DIRECTOR_DEVICE', deviceId: id })
+  }, [dispatch])
 
   const setScene = useCallback((id: string | null) => {
-    setSelection(prev => ({ ...prev, scenePack: id }))
-  }, [])
+    dispatch({ type: 'UPDATE_DIRECTOR_SCENE', sceneId: id })
+  }, [dispatch])
 
   const setLight = useCallback((id: string | null) => {
-    setSelection(prev => ({ ...prev, lightPack: id }))
-  }, [])
+    dispatch({ type: 'UPDATE_DIRECTOR_LIGHT', lightId: id })
+  }, [dispatch])
 
   const toggleState = useCallback((id: string) => {
-    setSelection(prev => {
-      const has = prev.statePacks.includes(id)
-      return {
-        ...prev,
-        statePacks: has ? prev.statePacks.filter(s => s !== id) : [...prev.statePacks, id],
-      }
-    })
-  }, [])
+    dispatch({ type: 'TOGGLE_DIRECTOR_STATE', stateId: id })
+  }, [dispatch])
 
   const setParamPreset = useCallback((id: string | null) => {
-    setSelection(prev => ({ ...prev, parameterPreset: id }))
-  }, [])
+    dispatch({ type: 'UPDATE_PARAMETER_PRESET', id })
+  }, [dispatch])
 
   const setDiffStrength = useCallback((s: 'light' | 'normal' | 'strict') => {
-    setSelection(prev => ({ ...prev, diffStrength: s }))
-  }, [])
+    dispatch({ type: 'UPDATE_DIFF_STRENGTH', strength: s })
+  }, [dispatch])
 
   const addCustomProp = useCallback((prop: string) => {
-    setSelection(prev => ({
-      ...prev,
-      customProps: prev.customProps.includes(prop) ? prev.customProps : [...prev.customProps, prop],
-    }))
-  }, [])
+    const next = state.director.customProps.includes(prop)
+      ? state.director.customProps
+      : [...state.director.customProps, prop]
+    dispatch({ type: 'SET_CUSTOM_PROPS', props: next })
+  }, [dispatch, state.director.customProps])
 
   const removeCustomProp = useCallback((prop: string) => {
-    setSelection(prev => ({
-      ...prev,
-      customProps: prev.customProps.filter(p => p !== prop),
-    }))
-  }, [])
+    dispatch({
+      type: 'SET_CUSTOM_PROPS',
+      props: state.director.customProps.filter(p => p !== prop),
+    })
+  }, [dispatch, state.director.customProps])
 
   const clearAll = useCallback(() => {
-    setSelection(defaultSelection)
-    setSharedFacetSelections({})
-  }, [])
+    dispatch({ type: 'CLEAR_ALL' })
+    setLocalSelections({})
+  }, [dispatch])
 
   return (
     <DirectorContext.Provider value={{
       selection, output,
-      sharedFacetSelections, setSharedFacetSelections, syncToPresets, syncFromPresets,
+      sharedFacetSelections: localSelections,
+      setSharedFacetSelections,
+      syncToPresets, syncFromPresets,
       applyMasterTemplate, setDevice, setScene, setLight, toggleState,
       setParamPreset, setDiffStrength, addCustomProp, removeCustomProp, clearAll,
     }}>

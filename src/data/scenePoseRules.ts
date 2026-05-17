@@ -14,7 +14,7 @@ export const SCENE_POSE_RULES: ScenePoseRule[] = [
     preferredMotion: ['静态', '极轻微动态']
   },
   {
-    sceneId: 'cafe-window-seat',
+    sceneId: 'cafe-window',
     allowedBasePoses: ['靠窗坐着', '身体微微前倾', '靠在椅背', '站在书架前'],
     allowedHandTasks: ['手拿咖啡', '翻书', '撑下巴', '拨头发', '手指轻触杯沿'],
     allowedGazes: ['看窗外', '看桌面', '看书', '不看镜头', '侧脸看远方'],
@@ -24,7 +24,7 @@ export const SCENE_POSE_RULES: ScenePoseRule[] = [
     preferredMotion: ['静态', '手部轻微动态']
   },
   {
-    sceneId: 'night-convenience-store',
+    sceneId: 'night-convenience-ccd',
     allowedBasePoses: ['朝镜头走来', '刚从便利店出来', '靠在玻璃门旁', '回头看镜头', '低头看手机'],
     allowedHandTasks: ['手拿饮料', '手拿购物袋', '整理头发', '单手插袋', '手举到一半'],
     allowedGazes: ['看镜头', '低头看手机', '余光看镜头', '不看镜头'],
@@ -34,7 +34,7 @@ export const SCENE_POSE_RULES: ScenePoseRule[] = [
     preferredMotion: ['轻微运动模糊', '边走边拍', '手部轻微虚焦']
   },
   {
-    sceneId: 'summer-tree-shade',
+    sceneId: 'summer-tree-candid',
     allowedBasePoses: ['站在树荫下', '边走边低头笑', '坐在草地上', '回头看镜头', '轻轻转身'],
     allowedHandTasks: ['手扶头发', '手拿一朵花', '手部前景虚焦', '手遮阳光', '双手自然摆动'],
     allowedGazes: ['眼睛朝下看', '看镜头', '看树叶间的光', '看画面外'],
@@ -44,7 +44,7 @@ export const SCENE_POSE_RULES: ScenePoseRule[] = [
     preferredMotion: ['轻微动态', '风吹头发', '自然走动']
   },
   {
-    sceneId: 'subway-station',
+    sceneId: 'subway-cold-street',
     allowedBasePoses: ['低头看手机', '边走边拍', '站在站台边', '靠在金属墙面', '手扶扶梯'],
     allowedHandTasks: ['手拿手机', '手插口袋', '整理外套', '单肩背包', '手扶栏杆'],
     allowedGazes: ['不看镜头', '看手机', '看远处', '侧脸'],
@@ -84,7 +84,7 @@ export const SCENE_POSE_RULES: ScenePoseRule[] = [
     preferredMotion: ['完全静态']
   },
   {
-    sceneId: 'seaside-beach',
+    sceneId: 'seaside-wind',
     allowedBasePoses: ['光脚走在沙滩上', '站在海边', '坐在礁石上', '回头看镜头', '迎着风站立'],
     allowedHandTasks: ['手扶帽子', '手拎鞋子', '手遮阳光', '手扶头发', '双手自然张开'],
     allowedGazes: ['看海', '侧脸看远方', '闭眼迎风', '回看镜头'],

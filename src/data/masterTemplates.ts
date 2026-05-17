@@ -23,7 +23,7 @@ export const masterTemplates: DirectorTemplate[] = [
     },
     diffPacks: ['real-photo-base', 'hand-fix', 'motion-fix', 'device-specific-fix'],
     avoid: [],
-    parameterPreset: 'standard',
+    parameterPreset: 'real-stable',
   },
   {
     id: 'purple-livingroom',
@@ -47,7 +47,7 @@ export const masterTemplates: DirectorTemplate[] = [
     },
     diffPacks: ['real-photo-base', 'skin-realism', 'hand-fix'],
     avoid: [],
-    parameterPreset: 'standard',
+    parameterPreset: 'real-stable',
   },
   {
     id: 'summer-tree-candid',
@@ -71,7 +71,7 @@ export const masterTemplates: DirectorTemplate[] = [
     },
     diffPacks: ['real-photo-base', 'hand-fix', 'motion-fix', 'skin-realism'],
     avoid: [],
-    parameterPreset: 'standard',
+    parameterPreset: 'real-stable',
   },
   {
     id: 'cafe-window',
@@ -95,7 +95,7 @@ export const masterTemplates: DirectorTemplate[] = [
     },
     diffPacks: ['real-photo-base', 'hand-fix', 'object-product-fix'],
     avoid: [],
-    parameterPreset: 'standard',
+    parameterPreset: 'real-stable',
   },
   {
     id: 'subway-cold-street',
@@ -119,7 +119,7 @@ export const masterTemplates: DirectorTemplate[] = [
     },
     diffPacks: ['real-photo-base', 'motion-fix', 'hand-fix'],
     avoid: [],
-    parameterPreset: 'standard',
+    parameterPreset: 'real-stable',
   },
   {
     id: 'rainy-neon-street',
@@ -143,7 +143,7 @@ export const masterTemplates: DirectorTemplate[] = [
     },
     diffPacks: ['real-photo-base', 'hand-fix', 'motion-fix'],
     avoid: [],
-    parameterPreset: 'cinematic',
+    parameterPreset: 'slight-variation',
   },
   {
     id: 'rooftop-blue-hour',
@@ -167,7 +167,7 @@ export const masterTemplates: DirectorTemplate[] = [
     },
     diffPacks: ['real-photo-base', 'face-fix'],
     avoid: [],
-    parameterPreset: 'cinematic',
+    parameterPreset: 'slight-variation',
   },
   {
     id: 'bedroom-lo-fi',
@@ -191,7 +191,7 @@ export const masterTemplates: DirectorTemplate[] = [
     },
     diffPacks: ['real-photo-base', 'hand-fix', 'skin-realism'],
     avoid: [],
-    parameterPreset: 'standard',
+    parameterPreset: 'real-stable',
   },
   {
     id: 'car-window-night',
@@ -215,7 +215,7 @@ export const masterTemplates: DirectorTemplate[] = [
     },
     diffPacks: ['real-photo-base', 'face-fix', 'skin-realism'],
     avoid: [],
-    parameterPreset: 'cinematic',
+    parameterPreset: 'slight-variation',
   },
   {
     id: 'elevator-mirror',
@@ -239,7 +239,7 @@ export const masterTemplates: DirectorTemplate[] = [
     },
     diffPacks: ['real-photo-base', 'hand-fix', 'device-specific-fix'],
     avoid: [],
-    parameterPreset: 'standard',
+    parameterPreset: 'real-stable',
   },
   {
     id: 'seaside-wind',
@@ -263,7 +263,7 @@ export const masterTemplates: DirectorTemplate[] = [
     },
     diffPacks: ['real-photo-base', 'hand-fix', 'motion-fix'],
     avoid: [],
-    parameterPreset: 'standard',
+    parameterPreset: 'real-stable',
   },
   {
     id: 'bookstore-silent',
@@ -287,7 +287,7 @@ export const masterTemplates: DirectorTemplate[] = [
     },
     diffPacks: ['real-photo-base', 'hand-fix', 'object-product-fix'],
     avoid: [],
-    parameterPreset: 'standard',
+    parameterPreset: 'real-stable',
   },
   {
     id: 'office-siren',
@@ -311,7 +311,7 @@ export const masterTemplates: DirectorTemplate[] = [
     },
     diffPacks: ['real-photo-base', 'face-fix', 'skin-realism'],
     avoid: [],
-    parameterPreset: 'standard',
+    parameterPreset: 'real-stable',
   },
   {
     id: 'hotel-lobby-old-money',
@@ -335,7 +335,7 @@ export const masterTemplates: DirectorTemplate[] = [
     },
     diffPacks: ['real-photo-base', 'skin-realism', 'face-fix'],
     avoid: [],
-    parameterPreset: 'standard',
+    parameterPreset: 'real-stable',
   },
   {
     id: 'gallery-minimal',
@@ -359,7 +359,7 @@ export const masterTemplates: DirectorTemplate[] = [
     },
     diffPacks: ['real-photo-base', 'skin-realism'],
     avoid: [],
-    parameterPreset: 'standard',
+    parameterPreset: 'real-stable',
   },
   {
     id: 'cyberpunk-alley',
@@ -383,7 +383,7 @@ export const masterTemplates: DirectorTemplate[] = [
     },
     diffPacks: ['real-photo-base', 'hand-fix', 'device-specific-fix'],
     avoid: [],
-    parameterPreset: 'standard',
+    parameterPreset: 'real-stable',
   },
   {
     id: 'spring-flowers-soft',
@@ -407,7 +407,7 @@ export const masterTemplates: DirectorTemplate[] = [
     },
     diffPacks: ['real-photo-base', 'hand-fix', 'object-product-fix', 'skin-realism'],
     avoid: [],
-    parameterPreset: 'standard',
+    parameterPreset: 'real-stable',
   },
   {
     id: 'ballet-studio',
@@ -431,7 +431,7 @@ export const masterTemplates: DirectorTemplate[] = [
     },
     diffPacks: ['real-photo-base', 'hand-fix', 'face-fix'],
     avoid: [],
-    parameterPreset: 'standard',
+    parameterPreset: 'real-stable',
   },
   {
     id: 'forest-magic',
@@ -455,7 +455,7 @@ export const masterTemplates: DirectorTemplate[] = [
     },
     diffPacks: ['real-photo-base', 'skin-realism'],
     avoid: [],
-    parameterPreset: 'standard',
+    parameterPreset: 'real-stable',
   },
   {
     id: 'city-walk',
@@ -479,7 +479,7 @@ export const masterTemplates: DirectorTemplate[] = [
     },
     diffPacks: ['real-photo-base', 'motion-fix', 'hand-fix'],
     avoid: [],
-    parameterPreset: 'standard',
+    parameterPreset: 'real-stable',
   },
   {
     id: 'night-market',
@@ -503,7 +503,7 @@ export const masterTemplates: DirectorTemplate[] = [
     },
     diffPacks: ['real-photo-base', 'hand-fix', 'motion-fix', 'object-product-fix'],
     avoid: [],
-    parameterPreset: 'standard',
+    parameterPreset: 'real-stable',
   },
   {
     id: 'rainy-window-broken',
@@ -527,7 +527,7 @@ export const masterTemplates: DirectorTemplate[] = [
     },
     diffPacks: ['real-photo-base', 'face-fix'],
     avoid: [],
-    parameterPreset: 'standard',
+    parameterPreset: 'real-stable',
   },
   {
     id: 'screen-light-night',
@@ -551,7 +551,7 @@ export const masterTemplates: DirectorTemplate[] = [
     },
     diffPacks: ['real-photo-base', 'hand-fix', 'face-fix'],
     avoid: [],
-    parameterPreset: 'standard',
+    parameterPreset: 'real-stable',
   },
   {
     id: 'convenience-freezer',
@@ -575,7 +575,7 @@ export const masterTemplates: DirectorTemplate[] = [
     },
     diffPacks: ['real-photo-base', 'hand-fix', 'object-product-fix', 'device-specific-fix'],
     avoid: [],
-    parameterPreset: 'standard',
+    parameterPreset: 'real-stable',
   },
   {
     id: 'fast-food-window',
@@ -599,7 +599,7 @@ export const masterTemplates: DirectorTemplate[] = [
     },
     diffPacks: ['real-photo-base', 'hand-fix', 'object-product-fix'],
     avoid: [],
-    parameterPreset: 'standard',
+    parameterPreset: 'real-stable',
   },
   {
     id: 'campus-sports',
@@ -623,7 +623,7 @@ export const masterTemplates: DirectorTemplate[] = [
     },
     diffPacks: ['real-photo-base', 'motion-fix', 'hand-fix'],
     avoid: [],
-    parameterPreset: 'standard',
+    parameterPreset: 'real-stable',
   },
   {
     id: 'bar-flash',
@@ -647,7 +647,7 @@ export const masterTemplates: DirectorTemplate[] = [
     },
     diffPacks: ['real-photo-base', 'hand-fix', 'device-specific-fix'],
     avoid: [],
-    parameterPreset: 'standard',
+    parameterPreset: 'real-stable',
   },
   {
     id: 'taxi-backseat',
@@ -671,7 +671,7 @@ export const masterTemplates: DirectorTemplate[] = [
     },
     diffPacks: ['real-photo-base', 'face-fix'],
     avoid: [],
-    parameterPreset: 'cinematic',
+    parameterPreset: 'slight-variation',
   },
   {
     id: 'bamboo-forest',
@@ -695,7 +695,7 @@ export const masterTemplates: DirectorTemplate[] = [
     },
     diffPacks: ['real-photo-base', 'face-fix'],
     avoid: [],
-    parameterPreset: 'standard',
+    parameterPreset: 'real-stable',
   },
   // ===== 12 Old Presets migrated from facetedPresets =====
   {
@@ -705,8 +705,8 @@ export const masterTemplates: DirectorTemplate[] = [
     lockedCore: {
       type: 'portrait',
       device: 'pro-camera',
-      scene: 'studio',
-      light: 'softbox',
+      scene: 'clean-girl-headshot',
+      light: 'daylight-clean',
       aspectRatio: '4:5',
       realismLevel: 'realistic',
     },
@@ -720,7 +720,7 @@ export const masterTemplates: DirectorTemplate[] = [
     },
     diffPacks: ['real-photo-base', 'face-fix', 'skin-realism'],
     avoid: [],
-    parameterPreset: 'standard',
+    parameterPreset: 'real-stable',
   },
   {
     id: 'template_outdoor_candid',
@@ -728,8 +728,8 @@ export const masterTemplates: DirectorTemplate[] = [
     description: '户外抓拍，自然光、35mm、三分法',
     lockedCore: {
       type: 'outdoor-candid',
-      device: 'dslr',
-      scene: 'park',
+      device: 'digital-camera',
+      scene: 'summer-tree-candid',
       light: 'golden-hour',
       aspectRatio: '3:2',
       realismLevel: 'realistic',
@@ -744,7 +744,7 @@ export const masterTemplates: DirectorTemplate[] = [
     },
     diffPacks: ['real-photo-base', 'motion-fix', 'hand-fix'],
     avoid: [],
-    parameterPreset: 'standard',
+    parameterPreset: 'real-stable',
   },
   {
     id: 'template_fashion_editorial',
@@ -768,7 +768,7 @@ export const masterTemplates: DirectorTemplate[] = [
     },
     diffPacks: ['real-photo-base', 'face-fix', 'skin-realism'],
     avoid: [],
-    parameterPreset: 'cinematic',
+    parameterPreset: 'slight-variation',
   },
   {
     id: 'template_headshot',
@@ -792,7 +792,7 @@ export const masterTemplates: DirectorTemplate[] = [
     },
     diffPacks: ['real-photo-base', 'face-fix', 'skin-realism'],
     avoid: [],
-    parameterPreset: 'standard',
+    parameterPreset: 'real-stable',
   },
   {
     id: 'template_fullbody_action',
@@ -800,8 +800,8 @@ export const masterTemplates: DirectorTemplate[] = [
     description: '运动抓拍，全身、35mm、深景深',
     lockedCore: {
       type: 'outdoor-candid',
-      device: 'dslr',
-      scene: 'park',
+      device: 'digital-camera',
+      scene: 'summer-tree-candid',
       light: 'daylight-clean',
       aspectRatio: '3:2',
       realismLevel: 'realistic',
@@ -816,7 +816,7 @@ export const masterTemplates: DirectorTemplate[] = [
     },
     diffPacks: ['real-photo-base', 'motion-fix', 'hand-fix'],
     avoid: [],
-    parameterPreset: 'standard',
+    parameterPreset: 'real-stable',
   },
   {
     id: 'template_group_photo',
@@ -824,7 +824,7 @@ export const masterTemplates: DirectorTemplate[] = [
     description: '团队合影，35mm、深景深、均匀光',
     lockedCore: {
       type: 'portrait',
-      device: 'dslr',
+      device: 'digital-camera',
       scene: 'studio',
       light: 'softbox',
       aspectRatio: '3:2',
@@ -840,7 +840,7 @@ export const masterTemplates: DirectorTemplate[] = [
     },
     diffPacks: ['real-photo-base', 'face-fix'],
     avoid: [],
-    parameterPreset: 'standard',
+    parameterPreset: 'real-stable',
   },
   {
     id: 'template_lifestyle',
@@ -848,8 +848,8 @@ export const masterTemplates: DirectorTemplate[] = [
     description: '居家咖啡店，窗光、35mm、暖色调',
     lockedCore: {
       type: 'lifestyle',
-      device: 'mirrorless',
-      scene: 'cafe',
+      device: 'pro-camera',
+      scene: 'cafe-window',
       light: 'window-natural',
       aspectRatio: '4:3',
       realismLevel: 'realistic',
@@ -864,7 +864,7 @@ export const masterTemplates: DirectorTemplate[] = [
     },
     diffPacks: ['real-photo-base', 'hand-fix', 'object-product-fix'],
     avoid: [],
-    parameterPreset: 'standard',
+    parameterPreset: 'real-stable',
   },
   {
     id: 'template_cosplay',
@@ -872,7 +872,7 @@ export const masterTemplates: DirectorTemplate[] = [
     description: '角色扮演，50mm、霓虹光、戏剧化',
     lockedCore: {
       type: 'portrait',
-      device: 'dslr',
+      device: 'digital-camera',
       scene: 'night-market',
       light: 'neon-sign',
       aspectRatio: '4:5',
@@ -888,7 +888,7 @@ export const masterTemplates: DirectorTemplate[] = [
     },
     diffPacks: ['real-photo-base', 'hand-fix', 'face-fix'],
     avoid: [],
-    parameterPreset: 'standard',
+    parameterPreset: 'real-stable',
   },
   {
     id: 'template_street_photo',
@@ -896,7 +896,7 @@ export const masterTemplates: DirectorTemplate[] = [
     description: '街拍纪实，35mm、深景深、胶片感',
     lockedCore: {
       type: 'street',
-      device: 'dslr',
+      device: 'digital-camera',
       scene: 'city-street',
       light: 'daylight-clean',
       aspectRatio: '3:2',
@@ -912,7 +912,7 @@ export const masterTemplates: DirectorTemplate[] = [
     },
     diffPacks: ['real-photo-base', 'motion-fix', 'hand-fix'],
     avoid: [],
-    parameterPreset: 'standard',
+    parameterPreset: 'real-stable',
   },
   {
     id: 'template_product_model',
@@ -936,7 +936,7 @@ export const masterTemplates: DirectorTemplate[] = [
     },
     diffPacks: ['real-photo-base', 'hand-fix', 'object-product-fix'],
     avoid: [],
-    parameterPreset: 'standard',
+    parameterPreset: 'real-stable',
   },
   {
     id: 'template_beauty_editorial',
@@ -960,7 +960,7 @@ export const masterTemplates: DirectorTemplate[] = [
     },
     diffPacks: ['real-photo-base', 'face-fix', 'skin-realism'],
     avoid: [],
-    parameterPreset: 'standard',
+    parameterPreset: 'real-stable',
   },
   {
     id: 'template_environmental',
@@ -968,8 +968,8 @@ export const masterTemplates: DirectorTemplate[] = [
     description: '场景融入，窗光、50mm、环境构图、放松',
     lockedCore: {
       type: 'portrait',
-      device: 'mirrorless',
-      scene: 'cafe',
+      device: 'pro-camera',
+      scene: 'cafe-window',
       light: 'window-natural',
       aspectRatio: '4:5',
       realismLevel: 'realistic',
@@ -984,7 +984,7 @@ export const masterTemplates: DirectorTemplate[] = [
     },
     diffPacks: ['real-photo-base', 'hand-fix', 'object-product-fix'],
     avoid: [],
-    parameterPreset: 'standard',
+    parameterPreset: 'real-stable',
   },
   // ===== 8 New Structured Director Templates =====
   {
@@ -993,8 +993,8 @@ export const masterTemplates: DirectorTemplate[] = [
     description: 'CCD质感 + 深夜便利店暖光 + 抓拍感',
     lockedCore: {
       type: 'casual-snap',
-      device: 'ccd',
-      scene: 'convenience-store-night',
+      device: 'ccd-flash',
+      scene: 'night-convenience-ccd',
       light: 'warm-fluorescent',
       aspectRatio: '4:3',
       realismLevel: 'cinematic',
@@ -1007,9 +1007,9 @@ export const masterTemplates: DirectorTemplate[] = [
       props: ['饮料罐', '购物篮', '耳机', '棒棒糖'],
       colorGrade: ['冷白CCD', '暖黄CCD', '复古CCD'],
     },
-    diffPacks: ['ccd-noise', 'motion-blur'],
+    diffPacks: ['device-specific-fix', 'motion-fix'],
     avoid: ['专业布光', '三脚架', '闪光灯直打'],
-    parameterPreset: 'standard',
+    parameterPreset: 'real-stable',
   },
   {
     id: 'living-room-phone-lifestyle',
@@ -1017,8 +1017,8 @@ export const masterTemplates: DirectorTemplate[] = [
     description: '自然光线 + 居家氛围 + 手机记录感',
     lockedCore: {
       type: 'lifestyle',
-      device: 'phone',
-      scene: 'living-room',
+      device: 'phone-natural',
+      scene: 'living-room-window',
       light: 'window-natural',
       aspectRatio: '4:3',
       realismLevel: 'realistic',
@@ -1031,9 +1031,9 @@ export const masterTemplates: DirectorTemplate[] = [
       props: ['咖啡杯', '书', '毛毯', '手机', '零食'],
       colorGrade: ['日系清新', '暖调居家', '原片直出'],
     },
-    diffPacks: ['natural-texture'],
+    diffPacks: ['skin-realism'],
     avoid: ['商业影棚', '浓妆', '专业灯光'],
-    parameterPreset: 'standard',
+    parameterPreset: 'real-stable',
   },
   {
     id: 'summer-tree-motion-candid',
@@ -1041,8 +1041,8 @@ export const masterTemplates: DirectorTemplate[] = [
     description: '阳光下树影斑驳 + 动态抓拍 + 胶片感',
     lockedCore: {
       type: 'outdoor-candid',
-      device: 'dslr',
-      scene: 'forest',
+      device: 'digital-camera',
+      scene: 'forest-magic',
       light: 'sunny-day',
       aspectRatio: '3:2',
       realismLevel: 'cinematic',
@@ -1055,9 +1055,9 @@ export const masterTemplates: DirectorTemplate[] = [
       props: ['草帽', '野餐篮', '气球', '花束', '泡泡机'],
       colorGrade: ['胶片暖调', '清新蓝调', '森系淡彩'],
     },
-    diffPacks: ['film-grain', 'motion-blur'],
+    diffPacks: ['real-photo-base', 'motion-fix'],
     avoid: ['正面摆拍', '僵硬姿势', '闪光灯'],
-    parameterPreset: 'standard',
+    parameterPreset: 'real-stable',
   },
   {
     id: 'cafe-window-soft-lifestyle',
@@ -1065,8 +1065,8 @@ export const masterTemplates: DirectorTemplate[] = [
     description: '窗边自然柔光 + 文艺氛围 + 安静感',
     lockedCore: {
       type: 'lifestyle',
-      device: 'mirrorless',
-      scene: 'cafe',
+      device: 'pro-camera',
+      scene: 'cafe-window',
       light: 'window-natural',
       aspectRatio: '4:3',
       realismLevel: 'realistic',
@@ -1079,9 +1079,9 @@ export const masterTemplates: DirectorTemplate[] = [
       props: ['咖啡杯', '书', '笔记本', '钢笔', '耳机', '眼镜'],
       colorGrade: ['暖调咖啡', '日系淡雅', '莫兰迪色'],
     },
-    diffPacks: ['film-grain'],
+    diffPacks: ['real-photo-base'],
     avoid: ['大动作', '嘈杂背景', '正面直视镜头'],
-    parameterPreset: 'standard',
+    parameterPreset: 'real-stable',
   },
   {
     id: 'subway-cold-street-snap',
@@ -1089,8 +1089,8 @@ export const masterTemplates: DirectorTemplate[] = [
     description: '地铁冷光 + 疏离感情绪人像 + 噪点质感',
     lockedCore: {
       type: 'street',
-      device: 'phone',
-      scene: 'subway-platform',
+      device: 'phone-natural',
+      scene: 'subway-cold-street',
       light: 'cold-fluorescent',
       aspectRatio: '16:9',
       realismLevel: 'cinematic',
@@ -1103,9 +1103,9 @@ export const masterTemplates: DirectorTemplate[] = [
       props: ['耳机', '包包', '地铁卡', '手机', '围巾', '口罩'],
       colorGrade: ['冷调噪点', '赛博朋克', '黑白高对比'],
     },
-    diffPacks: ['grain-noise', 'motion-blur'],
+    diffPacks: ['real-photo-base', 'motion-fix'],
     avoid: ['笑容', '暖色灯光', '多人同框'],
-    parameterPreset: 'street',
+    parameterPreset: 'slight-variation',
   },
   {
     id: 'rainy-neon-hk-cinematic',
@@ -1113,8 +1113,8 @@ export const masterTemplates: DirectorTemplate[] = [
     description: '雨夜 + 霓虹灯牌 + 港风电影氛围',
     lockedCore: {
       type: 'cinematic',
-      device: 'mirrorless',
-      scene: 'rainy-night-street',
+      device: 'pro-camera',
+      scene: 'rainy-neon-street',
       light: 'neon-sign',
       aspectRatio: '16:9',
       realismLevel: 'cinematic',
@@ -1127,9 +1127,9 @@ export const masterTemplates: DirectorTemplate[] = [
       props: ['透明伞', '风衣', '墨镜', '香烟', '皮包', '高跟鞋'],
       colorGrade: ['港风复古', '赛博朋克', '蓝紫调'],
     },
-    diffPacks: ['film-grain', 'grain-noise'],
+    diffPacks: ['real-photo-base'],
     avoid: ['阳光场景', '浅色衣服', '小清新', '白天拍摄'],
-    parameterPreset: 'cinematic',
+    parameterPreset: 'slight-variation',
   },
   {
     id: 'car-window-night-mood',
@@ -1137,8 +1137,8 @@ export const masterTemplates: DirectorTemplate[] = [
     description: '车内 + 窗外流动灯光 + 氛围感人像',
     lockedCore: {
       type: 'mood-portrait',
-      device: 'dslr',
-      scene: 'car-interior',
+      device: 'digital-camera',
+      scene: 'car-window-night',
       light: 'city-lights',
       aspectRatio: '16:9',
       realismLevel: 'cinematic',
@@ -1151,9 +1151,9 @@ export const masterTemplates: DirectorTemplate[] = [
       props: ['围巾', '大衣', '热饮', '墨镜', '围脖'],
       colorGrade: ['城市夜景', '蓝调忧郁', '暖黄怀旧'],
     },
-    diffPacks: ['grain-noise'],
+    diffPacks: ['real-photo-base'],
     avoid: ['白天场景', '户外背景', '灿烂笑容', '亮色衣服'],
-    parameterPreset: 'cinematic',
+    parameterPreset: 'slight-variation',
   },
   {
     id: 'clean-girl-headshot',
@@ -1161,7 +1161,7 @@ export const masterTemplates: DirectorTemplate[] = [
     description: '纯白背景 + 干净底妆 + 五官特写',
     lockedCore: {
       type: 'beauty',
-      device: 'dslr',
+      device: 'digital-camera',
       scene: 'studio',
       light: 'softbox',
       aspectRatio: '1:1',
@@ -1175,9 +1175,9 @@ export const masterTemplates: DirectorTemplate[] = [
       props: [],
       colorGrade: ['高保真', '清透白', '自然裸肌'],
     },
-    diffPacks: ['natural-texture'],
+    diffPacks: ['skin-realism'],
     avoid: ['浓妆', '大面积饰品', '复杂背景', '动态模糊', '多人'],
-    parameterPreset: 'standard',
+    parameterPreset: 'real-stable',
   },
 ]
 

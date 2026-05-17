@@ -2,6 +2,7 @@ import { ThemeProvider, useTheme } from './context/ThemeContext'
 import { useEffect, useState } from 'react'
 import { applyTheme } from './lib/applyTheme'
 import { PresetPackProvider } from './context/PresetPackContext'
+import { PromptStateProvider } from './context/PromptStateContext'
 import { DirectorProvider } from './context/DirectorContext'
 import ErrorBoundary from './components/ErrorBoundary'
 import AppHeader from './components/AppHeader'
@@ -46,6 +47,7 @@ function AppContent() {
 export default function App() {
   return (
     <ThemeProvider>
+      <PromptStateProvider>
       <PresetPackProvider>
         <DirectorProvider>
           <ErrorBoundary>
@@ -53,6 +55,7 @@ export default function App() {
           </ErrorBoundary>
         </DirectorProvider>
       </PresetPackProvider>
+      </PromptStateProvider>
     </ThemeProvider>
   )
 }
