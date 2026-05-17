@@ -40,60 +40,16 @@ export interface ConflictRule {
   check: (selections: Record<string, string | string[]>) => string | null
 }
 
-export interface SeriesSceneTemplate {
-  id: string
+export interface PresetPackMeta {
   name: string
-  categoryGroup: string
-  category: string
-  tags: string[]
-  description: string
-  baseDirector: Record<string, string>
-}
-
-export type ShowcaseCategory = 'daily' | 'outdoor' | 'travel' | 'portrait' | 'street' | 'seasonal' | 'fashion' | 'indoor' | 'product' | 'concept' | 'extra'
-
-export interface ShowcaseEntry {
-  id: string
-  name: string
-  subtitle: string
-  tags: string[]
-  category: ShowcaseCategory
-  model: 'GPT Image' | 'Midjourney' | 'Stable Diffusion'
-  score: number
-  director: {
-    model: string
-    subject: string
-    scene: string
-    composition: string
-    expression: string
-    face: string
-    hair: string
-    body: string
-    clothing: string
-    lighting: string
-    camera: string
-    depthOfField: string
-    background: string
-    atmosphere: string
-    caption: string
-    mustKeep: string
-    avoid: string
-    ratio: string
-  }
-}
-
-export interface DataPackMeta {
-  name: string
-  version: string
   author?: string
+  version?: string
   description?: string
 }
 
-export interface DataPack {
-  meta: DataPackMeta
-  facets?: Facet[]
-  templates?: TemplatePreset[]
-  showcaseEntries?: ShowcaseEntry[]
-  sceneTemplates?: SeriesSceneTemplate[]
-  slotMapping?: Record<string, string>
+export interface PresetPack {
+  id: string
+  meta: PresetPackMeta
+  values: FacetValue[]
+  templates: TemplatePreset[]
 }

@@ -1,6 +1,8 @@
 import { useTheme } from '../context/ThemeContext'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { THEMES, THEME_LIST } from '../lib/themes'
+import { usePresetPacks } from '../context/PresetPackContext'
+import { validatePack, prepareImportedPack } from '../utils/presetPackManager'
 
 const backgroundStyles: Record<string, { name: string }> = {
   solid: { name: 'Solid' },
@@ -208,6 +210,8 @@ export default function SettingsSection() {
         </div>
       </div>
 
+      <PackManager />
+
       <div className="rounded-xl border border-border/30 bg-card/30 backdrop-blur-sm p-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2 text-xs text-muted-foreground">
@@ -218,6 +222,107 @@ export default function SettingsSection() {
           </div>
           <div className="text-[10px] text-muted-foreground">Prompt Director Studio v0.1.0</div>
         </div>
+      </div>
+    </div>
+  )
+}
+
+function PackManager() {
+  const { packs, activePackIds, togglePack, importPack, mergePack, removeMergedPack, deletePack } = usePresetPacks()
+  const fileRef = useRef<HTMLInputElement>(null)
+  const [mergedIdsMap, setMergedIdsMap] = useState<Record<string, string[]>>({})
+
+  useEffect(() => {
+    try {
+      const raw = localStorage.getItem('prompt_market_merged_pack_ids')
+      setMergedIdsMap(raw ? JSON.parse(raw) : {})
+    } catch { setMergedIdsMap({}) }
+  }, [packs])
+
+  const handleImport = () => {
+    const input = document.createElement('input')
+    input.type = 'file'
+    input.accept = '.json'
+    input.onchange = async (e) => {
+      const file = (e.target as HTMLInputElement).files?.[0]
+      if (!file) return
+      try {
+        const text = await file.text()
+        const data = JSON.parse(text)
+        if (!validatePack(data)) { alert('无效的预设包格式'); return }
+        const pack = prepareImportedPack(data)
+        importPack(pack)
+        alert(`已导入：${pack.meta.name}`)
+      } catch { alert('解析失败，请检查 JSON 格式') }
+    }
+    input.click()
+  }
+
+  return (
+    <div className="rounded-xl border border-border/50 bg-card/50 backdrop-blur-sm p-5">
+      <div className="flex items-center justify-between mb-4">
+        <div className="flex items-center gap-2">
+          <span className="text-lg">📦</span>
+          <h2 className="text-sm font-bold text-foreground">预设包管理</h2>
+          <span className="rounded-full bg-primary/10 px-2 py-0.5 text-[10px] font-bold text-primary">{packs.length} 个包</span>
+        </div>
+        <button onClick={handleImport}
+          className="rounded-lg px-3 py-1.5 text-xs font-bold bg-primary text-primary-foreground hover:bg-primary/90 transition">
+          📤 导入 JSON
+        </button>
+      </div>
+
+      {packs.length === 0 && (
+        <p className="text-xs text-muted-foreground">暂无预设包。导入他人的 JSON 或从 Presets 面板导出。</p>
+      )}
+
+      <div className="space-y-3">
+        {packs.map(pack => {
+          const isActive = activePackIds.has(pack.id)
+          const isMerged = !!mergedIdsMap[pack.id]
+          return (
+            <div key={pack.id} className="rounded-lg border border-border/50 bg-card p-3">
+              <div className="flex items-center justify-between mb-2">
+                <div>
+                  <span className="text-sm font-bold text-foreground">{pack.meta.name}</span>
+                  {pack.meta.version && (
+                    <span className="ml-2 rounded bg-muted px-1.5 py-0.5 text-[10px] text-muted-foreground">v{pack.meta.version}</span>
+                  )}
+                </div>
+                <div className="flex items-center gap-1">
+                  {isMerged && <span className="rounded bg-green-100 px-1.5 py-0.5 text-[10px] font-bold text-green-700 dark:bg-green-900/30 dark:text-green-400">已合并</span>}
+                  <button onClick={() => deletePack(pack.id)}
+                    className="rounded p-1 text-xs text-destructive hover:bg-destructive/10" title="删除此包">❌</button>
+                </div>
+              </div>
+              {pack.meta.author && (
+                <p className="mb-2 text-[10px] text-muted-foreground">作者：{pack.meta.author}{pack.meta.description ? ` · ${pack.meta.description}` : ''}</p>
+              )}
+              <p className="mb-2 text-[10px] text-muted-foreground">
+                {pack.values.length} 个值 · {pack.templates.length} 个模板
+              </p>
+              <div className="flex flex-wrap gap-1.5">
+                <button onClick={() => togglePack(pack.id)}
+                  className={`rounded-lg px-2.5 py-1 text-xs font-bold transition ${
+                    isActive ? 'bg-primary text-primary-foreground' : 'bg-muted text-muted-foreground hover:bg-muted/80'
+                  }`}>
+                  {isActive ? '✅ 已启用' : '🔘 外挂'}
+                </button>
+                {!isMerged ? (
+                  <button onClick={() => mergePack(pack.id)}
+                    className="rounded-lg px-2.5 py-1 text-xs font-bold bg-muted text-muted-foreground hover:bg-muted/80 transition">
+                    📥 合并到主数据
+                  </button>
+                ) : (
+                  <button onClick={() => removeMergedPack(pack.id)}
+                    className="rounded-lg px-2.5 py-1 text-xs font-bold bg-amber-100 text-amber-700 hover:bg-amber-200 transition dark:bg-amber-900/30 dark:text-amber-400">
+                    🗑️ 从主数据移除
+                  </button>
+                )}
+              </div>
+            </div>
+          )
+        })}
       </div>
     </div>
   )
