@@ -93,6 +93,8 @@ export function composePrompt(
   const negativeParts: string[] = []
   const positiveRepairParts: string[] = []
 
+  const forcedPackIds: string[] = variantOverlay?.autoDiffPacks ?? []
+
   const selectionSlotKeys: string[] = []
   const selectedValueIds: string[] = []
 
@@ -108,14 +110,8 @@ export function composePrompt(
     selectionSlotKeys.push('handheld')
   }
 
-  if (variantOverlay) {
-    for (const packId of variantOverlay.autoDiffPacks) {
-      selectedValueIds.push(packId)
-    }
-  }
-
   for (const pack of Object.values(DIFF_MAP)) {
-    if (triggerMatchesPack(pack.triggerSlots, selectionSlotKeys, selectedValueIds)) {
+    if (forcedPackIds.includes(pack.id) || triggerMatchesPack(pack.triggerSlots, selectionSlotKeys, selectedValueIds)) {
       let reason = ''
       if (pack.id === 'real-photo-base') reason = '所有写实人像默认启用'
       else if (pack.id === 'no-random-text') reason = '默认防文字乱码'

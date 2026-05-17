@@ -1,6 +1,6 @@
 import type { PoseVariant, ComposedOutput } from './types'
 import { composePrompt } from './promptComposer'
-import { directorToFacetSelections, facetToDirectorUpdate } from './bridgeMapper'
+import { directorToFacetSelections, facetToDirectorUpdate, variantOverlayToFacetSelections } from './bridgeMapper'
 import { MASTER_TEMPLATE_MAP } from '../data/masterTemplates'
 
 export type PromptStateSource = 'director' | 'advanced' | 'variant' | 'mixed'
@@ -263,7 +263,7 @@ export function promptReducer(state: PromptState, action: PromptAction): PromptS
       if (!v) return state
       const next = { ...state, source: 'variant' as PromptStateSource }
       next.variants = { ...next.variants, appliedVariantId: action.variantId }
-      next.variantOverlay = {
+      const overlay = {
         shotId: v.shot.id,
         bodyPose: v.shot.bodyPose,
         bodyAngle: v.shot.bodyAngle,
@@ -276,6 +276,14 @@ export function promptReducer(state: PromptState, action: PromptAction): PromptS
         cameraAngle: v.shot.cameraAngle,
         motionCue: v.shot.motionCue,
         autoDiffPacks: v.autoDiffPacks,
+      }
+      next.variantOverlay = overlay
+      const fwdSelections = variantOverlayToFacetSelections(overlay)
+      next.advanced = {
+        facetSelections: {
+          ...next.advanced.facetSelections,
+          ...fwdSelections,
+        },
       }
       return next
     }

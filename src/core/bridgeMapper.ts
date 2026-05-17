@@ -268,6 +268,127 @@ export interface BridgeSyncUpdate {
   customProps?: string[]
 }
 
+const poseKeywordMap: Record<string, string> = {
+  '站': 'pose_standing',
+  '坐': 'pose_sitting',
+  '走': 'pose_walking',
+  '跑': 'pose_running',
+  '跳': 'pose_jumping',
+  '躺': 'pose_lying',
+  '卧': 'pose_lying',
+  '蹲': 'pose_squatting',
+  '靠': 'pose_leaning',
+  '倚': 'pose_leaning',
+  '回眸': 'pose_looking_back',
+  '转身': 'pose_turning',
+  '抱臂': 'pose_arms_crossed',
+  '叉腰': 'pose_hands_on_hips',
+  '插袋': 'pose_hands_in_pockets',
+  '持物': 'pose_one_hand_hold',
+  '伸手': 'pose_leaning_forward',
+  '前倾': 'pose_leaning_forward',
+  '蜷': 'pose_crouching',
+  '舞': 'pose_dancing',
+  '弯腰': 'pose_bending_over',
+  '翘脚': 'pose_cross_legged',
+  '托腮': 'pose_lean_on_elbow',
+  '抚胸': 'pose_hand_on_chest',
+  '抚脸': 'pose_hand_on_face',
+  '遮阳': 'pose_one_hand_hold',
+}
+
+const exprKeywordMap: Record<string, string> = {
+  '微笑': 'expr_smile',
+  '灿笑': 'expr_bright_smile',
+  '大笑': 'expr_laugh',
+  '自信': 'expr_confident',
+  '甜美': 'expr_sweet',
+  '冷酷': 'expr_cool',
+  '平静': 'expr_calm',
+  '沉思': 'expr_contemplative',
+  '忧郁': 'expr_melancholy',
+  '悲伤': 'expr_sad',
+  '疲惫': 'expr_tired',
+  '害羞': 'expr_shy',
+  '俏皮': 'expr_playful',
+  '专注': 'expr_focused',
+  '兴奋': 'expr_excited',
+  '若有所思': 'expr_thoughtful',
+  '慵懒': 'expr_languid',
+  '神秘': 'expr_mysterious',
+  '严肃': 'expr_serious',
+  '挑衅': 'expr_defiant',
+}
+
+const cropKeywordMap: Record<string, string> = {
+  '大特写': 'size_extreme_close',
+  '特写': 'size_close',
+  '近景': 'size_near',
+  '半身': 'size_half',
+  '七分身': 'size_three_quarter',
+  '全身': 'size_full',
+  '远景': 'size_wide',
+  '中景': 'size_half',
+}
+
+function matchKeyword(text: string, map: Record<string, string>): string | null {
+  for (const [kw, val] of Object.entries(map)) {
+    if (text.includes(kw)) return val
+  }
+  return null
+}
+
+export interface VariantOverlayInput {
+  bodyPose: string
+  bodyAngle: string
+  weightShift: string
+  handTask: string
+  gaze: string
+  expression: string
+  cameraCrop: string
+  cameraAngle: string
+  motionCue: string
+}
+
+export function variantOverlayToFacetSelections(overlay: VariantOverlayInput): FacetSelections {
+  const sels: FacetSelections = {}
+
+  const poseVal = matchKeyword(overlay.bodyPose, poseKeywordMap)
+  if (poseVal) sels['posePrimary'] = poseVal
+
+  const exprVal = matchKeyword(overlay.expression, exprKeywordMap)
+  if (exprVal) sels['expressionPrimary'] = exprVal
+
+  const cropVal = matchKeyword(overlay.cameraCrop, cropKeywordMap)
+  if (cropVal) sels['shotSize'] = cropVal
+
+  if (overlay.gaze && !overlay.gaze.includes('选一个')) {
+    if (overlay.gaze.includes('看镜头') || overlay.gaze.includes('看相机')) {
+      sels['expressionModifiers'] = ['emod_looking_at_camera']
+    } else if (overlay.gaze.includes('不看镜头') || overlay.gaze.includes('看远方') || overlay.gaze.includes('望')) {
+      sels['expressionModifiers'] = ['emod_looking_away']
+    } else if (overlay.gaze.includes('闭眼')) {
+      sels['expressionModifiers'] = ['emod_eyes_closed']
+    }
+  }
+
+  if (overlay.cameraAngle) {
+    if (overlay.cameraAngle.includes('俯')) sels['cameraAngle'] = 'angle_high'
+    else if (overlay.cameraAngle.includes('仰')) sels['cameraAngle'] = 'angle_low'
+    else if (overlay.cameraAngle.includes('平')) sels['cameraAngle'] = 'angle_eye'
+  }
+
+  if (overlay.weightShift) {
+    if (overlay.weightShift.includes('前倾')) sels['poseModifiers'] = ['pmod_shoulder_turn']
+  }
+
+  if (overlay.bodyAngle) {
+    if (overlay.bodyAngle.includes('侧')) sels['orientation'] = 'ori_three_quarter'
+  }
+
+  return sels
+}
+
 export function facetToDirectorUpdate(facetSel: FacetSelections): BridgeSyncUpdate {
   const update: BridgeSyncUpdate = {}
 

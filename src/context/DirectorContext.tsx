@@ -1,4 +1,4 @@
-import { createContext, useContext, useCallback, useMemo, type ReactNode, useState } from 'react'
+import { createContext, useContext, useCallback, useMemo, type ReactNode } from 'react'
 import type { DirectorSelection, ComposedOutput } from '../core/types'
 import { usePromptState, usePromptDispatch, usePromptOutput } from './PromptStateContext'
 import type { PromptState } from '../core/promptState'
@@ -10,7 +10,7 @@ interface DirectorContextType {
   selection: DirectorSelection
   output: ComposedOutput
   sharedFacetSelections: FacetSelections
-  setSharedFacetSelections: React.Dispatch<React.SetStateAction<FacetSelections>>
+  setSharedFacetSelections: (selections: FacetSelections | ((prev: FacetSelections) => FacetSelections)) => void
   syncToPresets: () => void
   syncFromPresets: () => void
   applyMasterTemplate: (id: string) => void
@@ -30,7 +30,6 @@ const DirectorContext = createContext<DirectorContextType>(null!)
 export function DirectorProvider({ children }: { children: ReactNode }) {
   const { state, dispatch } = usePromptState()
   const output = usePromptOutput()
-  const [localSelections, setLocalSelections] = useState<FacetSelections>({})
 
   const selection: DirectorSelection = {
     directorTemplate: state.director.templateId,
@@ -45,33 +44,24 @@ export function DirectorProvider({ children }: { children: ReactNode }) {
 
   const syncToPresets = useCallback(() => {
     const fwd = directorToFacetSelections(selection)
-    setLocalSelections(fwd)
-  }, [selection])
+    dispatch({ type: 'SET_FACET_SELECTIONS', selections: fwd })
+  }, [selection, dispatch])
 
   const syncFromPresets = useCallback(() => {
-    dispatch({
-      type: 'SET_FACET_SELECTIONS',
-      selections: localSelections,
-    })
     dispatch({ type: 'SET_SOURCE', source: 'mixed' })
-  }, [dispatch, localSelections])
+  }, [dispatch])
 
-  const setSharedFacetSelections: React.Dispatch<React.SetStateAction<FacetSelections>> = useCallback((action) => {
+  const setSharedFacetSelections = useCallback((action: FacetSelections | ((prev: FacetSelections) => FacetSelections)) => {
     if (typeof action === 'function') {
-      setLocalSelections(prev => {
-        const next = action(prev)
-        dispatch({ type: 'SET_FACET_SELECTIONS', selections: next })
-        return next
-      })
+      const next = action(state.advanced.facetSelections)
+      dispatch({ type: 'SET_FACET_SELECTIONS', selections: next })
     } else {
-      setLocalSelections(action)
       dispatch({ type: 'SET_FACET_SELECTIONS', selections: action })
     }
-  }, [dispatch])
+  }, [dispatch, state.advanced.facetSelections])
 
   const applyMasterTemplate = useCallback((id: string) => {
     dispatch({ type: 'APPLY_MASTER_TEMPLATE', templateId: id })
-    setLocalSelections({})
   }, [dispatch])
 
   const setDevice = useCallback((id: string | null) => {
@@ -114,13 +104,12 @@ export function DirectorProvider({ children }: { children: ReactNode }) {
 
   const clearAll = useCallback(() => {
     dispatch({ type: 'CLEAR_ALL' })
-    setLocalSelections({})
   }, [dispatch])
 
   return (
     <DirectorContext.Provider value={{
       selection, output,
-      sharedFacetSelections: localSelections,
+      sharedFacetSelections: state.advanced.facetSelections,
       setSharedFacetSelections,
       syncToPresets, syncFromPresets,
       applyMasterTemplate, setDevice, setScene, setLight, toggleState,

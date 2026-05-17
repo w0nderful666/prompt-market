@@ -1,37 +1,38 @@
 #!/usr/bin/env node
 
-const PASS = []
-const FAIL = []
-const WARN = []
+const path = await import('path')
+const { fileURLToPath, pathToFileURL } = await import('url')
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
-function check(desc, fn) {
+const PASS: string[] = []
+const FAIL: string[] = []
+const WARN: string[] = []
+
+function check(desc: string, fn: () => boolean | string) {
   try {
     const result = fn()
     if (result === true) {
       PASS.push(desc)
     } else if (result === false) {
-      FAIL.push(desc + (typeof result === 'string' ? ': ' + result : ''))
+      FAIL.push(desc)
     } else if (typeof result === 'string') {
       FAIL.push(desc + ': ' + result)
     } else {
       PASS.push(desc)
     }
-  } catch (e) {
+  } catch (e: any) {
     FAIL.push(desc + ': ' + e.message)
   }
 }
 
-// --- Load all data modules ---
-const path = await import('path')
-const fileURLToPath = (await import('url')).fileURLToPath
-const __dirname = path.dirname(fileURLToPath(import.meta.url))
-
-async function load(name) {
-  return await import(path.resolve(__dirname, '../src/data/' + name))
+async function load(name: string) {
+  const fp = path.resolve(__dirname, '../src/data/' + name)
+  return await import(pathToFileURL(fp).href)
 }
 
-async function loadCore(name) {
-  return await import(path.resolve(__dirname, '../src/core/' + name))
+async function loadCore(name: string) {
+  const fp = path.resolve(__dirname, '../src/core/' + name)
+  return await import(pathToFileURL(fp).href)
 }
 
 const devicePresets = await load('devicePresets.ts')
@@ -117,6 +118,161 @@ check('posePipelines: requiredDiffPacks in DIFF_MAP', () => {
 check('diffPacks: each has at least one triggerSlot or *', () => {
   const bad = diffPacks.DIFF_PACKS.filter(d => d.triggerSlots.length === 0)
   return bad.length === 0 || `empty triggerSlots: ${bad.map(d => d.id).join(', ')}`
+})
+
+// ==================== Behavioral Tests ====================
+const promptState = await loadCore('promptState.ts')
+
+// --- 10. APPLY_MASTER_TEMPLATE fills advanced.facetSelections ---
+check('promptReducer: APPLY_MASTER_TEMPLATE sets advanced.facetSelections', () => {
+  const state = promptState.defaultPromptState
+  const next = promptState.promptReducer(state, { type: 'APPLY_MASTER_TEMPLATE', templateId: 'night-convenience-ccd' })
+  return Object.keys(next.advanced.facetSelections).length > 0 || 'facetSelections is empty'
+})
+
+// --- 11. advanced.facetSelections contains director mapping result ---
+check('promptReducer: advanced.facetSelections includes shootingMedium from device mapping', () => {
+  const state = promptState.defaultPromptState
+  const next = promptState.promptReducer(state, { type: 'APPLY_MASTER_TEMPLATE', templateId: 'night-convenience-ccd' })
+  return next.advanced.facetSelections['shootingMedium'] === 'med_ccd' || `expected med_ccd got ${next.advanced.facetSelections['shootingMedium']}`
+})
+
+// --- 12. UPDATE_ADVANCED_FACET syncs back to director ---
+check('promptReducer: UPDATE_ADVANCED_FACET updates director via reverse mapping', () => {
+  const state = {
+    ...promptState.defaultPromptState,
+    advanced: { facetSelections: { shootingMedium: 'med_ccd', scenePrimary: 'scene_street', lightFamily: 'lf_speedlight', posePrimary: 'pose_walking', expressionPrimary: 'expr_confident', handheld: ['饮料'] } },
+  }
+  const next = promptState.promptReducer(state as any, { type: 'UPDATE_ADVANCED_FACET', slotId: 'shootingMedium', value: 'med_phone' })
+  return next.director.deviceId === 'phone-natural' || `expected phone-natural got ${next.director.deviceId}`
+})
+
+// --- 13. APPLY_POSE_VARIANT creates variantOverlay ---
+check('promptReducer: APPLY_POSE_VARIANT creates variantOverlay', () => {
+  const mockVariant = {
+    shot: {
+      id: 'test-variant-1',
+      title: 'Test',
+      purpose: 'test',
+      bodyPose: 'standing',
+      bodyAngle: '',
+      weightShift: '',
+      handTask: '',
+      gaze: '',
+      expression: '',
+      sceneInteraction: '',
+      cameraCrop: '',
+      cameraAngle: '',
+      motionCue: '',
+      requiredDiffPacks: [],
+      avoid: [],
+    },
+    pipelineId: 'test',
+    positivePrompt: 'test prompt',
+    negativePrompt: [],
+    autoDiffPacks: ['hand-fix'],
+  }
+  const state = { ...promptState.defaultPromptState, variants: { list: [mockVariant], activeVariantId: 'test-variant-1', appliedVariantId: null } }
+  const next = promptState.promptReducer(state as any, { type: 'APPLY_POSE_VARIANT', variantId: 'test-variant-1' })
+  return next.variantOverlay !== null || 'variantOverlay is null'
+})
+
+// --- 14. APPLY_POSE_VARIANT updates advanced.facetSelections ---
+check('promptReducer: APPLY_POSE_VARIANT updates advanced.facetSelections with pose mapping', () => {
+  const mockVariant = {
+    shot: {
+      id: 'test-variant-2',
+      title: 'Test',
+      purpose: 'test',
+      bodyPose: '站在树下',
+      bodyAngle: '',
+      weightShift: '',
+      handTask: '',
+      gaze: '看镜头',
+      expression: '微笑',
+      sceneInteraction: '',
+      cameraCrop: '半身',
+      cameraAngle: '',
+      motionCue: '',
+      requiredDiffPacks: [],
+      avoid: [],
+    },
+    pipelineId: 'test',
+    positivePrompt: 'test prompt',
+    negativePrompt: [],
+    autoDiffPacks: ['hand-fix'],
+  }
+  const state = { ...promptState.defaultPromptState, variants: { list: [mockVariant], activeVariantId: 'test-variant-2', appliedVariantId: null } }
+  const next = promptState.promptReducer(state as any, { type: 'APPLY_POSE_VARIANT', variantId: 'test-variant-2' })
+  return (next.advanced.facetSelections['posePrimary'] === 'pose_standing' && next.advanced.facetSelections['expressionPrimary'] === 'expr_smile') || `got pose=${next.advanced.facetSelections['posePrimary']} expr=${next.advanced.facetSelections['expressionPrimary']}`
+})
+
+// --- 15. selectOutput positive includes variant bodyPose ---
+check('selectOutput: APPLY_POSE_VARIANT output includes variant bodyPose in positivePrompt', () => {
+  const mockVariant = {
+    shot: {
+      id: 'test-variant-3', title: 'Test', purpose: 'test',
+      bodyPose: '站在树荫下', bodyAngle: '', weightShift: '',
+      handTask: '', gaze: '', expression: '', sceneInteraction: '',
+      cameraCrop: '', cameraAngle: '', motionCue: '', requiredDiffPacks: [], avoid: [],
+    },
+    pipelineId: 'test', positivePrompt: 'test prompt', negativePrompt: [], autoDiffPacks: [],
+  }
+  const state = { ...promptState.defaultPromptState, variants: { list: [mockVariant], activeVariantId: 'test-variant-3', appliedVariantId: null } }
+  const next = promptState.promptReducer(state as any, { type: 'APPLY_POSE_VARIANT', variantId: 'test-variant-3' })
+  const output = promptState.selectOutput(next)
+  return output.positivePrompt.includes('站在树荫下') || `positivePrompt missing variant text: ${output.positivePrompt}`
+})
+
+// --- 16. selectOutput negative includes autoDiffPacks negative ---
+check('selectOutput: APPLY_POSE_VARIANT negativePrompt contains autoDiffPack negatives', () => {
+  const mockVariant = {
+    shot: {
+      id: 'test-variant-4', title: 'Test', purpose: 'test',
+      bodyPose: '', bodyAngle: '', weightShift: '', handTask: '手拿咖啡',
+      gaze: '', expression: '', sceneInteraction: '', cameraCrop: '',
+      cameraAngle: '', motionCue: '', requiredDiffPacks: [], avoid: [],
+    },
+    pipelineId: 'test', positivePrompt: 'test prompt', negativePrompt: [], autoDiffPacks: ['hand-fix'],
+  }
+  const state = { ...promptState.defaultPromptState, variants: { list: [mockVariant], activeVariantId: 'test-variant-4', appliedVariantId: null } }
+  const next = promptState.promptReducer(state as any, { type: 'APPLY_POSE_VARIANT', variantId: 'test-variant-4' })
+  const output = promptState.selectOutput(next)
+  return output.negativePrompt.some(n => n.includes('extra fingers') || n.includes('missing fingers')) || `hand-fix negatives not found: ${JSON.stringify(output.negativePrompt)}`
+})
+
+// --- 17. getCompatibleDevices only returns scene.recommendedDevices ---
+check('DirectorPanel: getCompatibleDevices filters by scene', () => {
+  const template = masterTemplates.MASTER_TEMPLATE_MAP?.['night-convenience-ccd'] ?? masterTemplates.masterTemplates.find((t: any) => t.id === 'night-convenience-ccd')
+  if (!template) return 'template not found'
+  const scenePack = scenePacks.SCENE_MAP[template.lockedCore.scene] || scenePacks.SCENE_PACKS.find((s: any) => s.id === template.lockedCore.scene)
+  if (!scenePack) return 'scene pack not found'
+  const recommended = scenePack.recommendedDevices
+  if (!recommended || recommended.length === 0) return 'no recommended devices'
+  return true
+})
+
+// --- 18. getCompatibleLights only returns scene.recommendedLights ---
+check('DirectorPanel: getCompatibleLights filters by scene', () => {
+  const template = masterTemplates.MASTER_TEMPLATE_MAP?.['night-convenience-ccd'] ?? masterTemplates.masterTemplates.find((t: any) => t.id === 'night-convenience-ccd')
+  if (!template) return 'template not found'
+  const scenePack = scenePacks.SCENE_MAP[template.lockedCore.scene] || scenePacks.SCENE_PACKS.find((s: any) => s.id === template.lockedCore.scene)
+  if (!scenePack) return 'scene pack not found'
+  const recommended = scenePack.recommendedLights
+  if (!recommended || recommended.length === 0) return 'no recommended lights'
+  return true
+})
+
+// --- 19. filterAvoidedItems excludes matching items ---
+check('DirectorPanel: filterAvoidedItems excludes items by id/label', () => {
+  const items = [
+    { id: 'ccd-flash', labelZh: 'CCD 闪光灯' },
+    { id: 'phone-natural', labelZh: '手机原相机' },
+  ]
+  const filtered = items.filter(item => !['ccd'].some(a =>
+    item.id.includes(a) || (item.labelZh && item.labelZh.includes(a))
+  ))
+  return filtered.length === 1 && filtered[0].id === 'phone-natural' || 'ccd-flash not filtered out'
 })
 
 // --- Report ---

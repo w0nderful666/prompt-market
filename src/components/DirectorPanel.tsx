@@ -252,6 +252,27 @@ function pickRandom<T>(arr: T[]): T {
   return arr[Math.floor(Math.random() * arr.length)]
 }
 
+function getCompatibleDevices(template: { lockedCore: { scene: string }; avoid?: string[] }) {
+  const scenePack = SCENE_PACKS.find(s => s.id === template.lockedCore.scene)
+  if (!scenePack) return DEVICE_PRESETS
+  const compatible = DEVICE_PRESETS.filter(d => scenePack.recommendedDevices.includes(d.id))
+  return filterAvoidedItems(compatible.length > 0 ? compatible : DEVICE_PRESETS, template.avoid ?? [])
+}
+
+function getCompatibleLights(template: { lockedCore: { scene: string }; avoid?: string[] }) {
+  const scenePack = SCENE_PACKS.find(s => s.id === template.lockedCore.scene)
+  if (!scenePack) return LIGHT_PACKS
+  const compatible = LIGHT_PACKS.filter(l => scenePack.recommendedLights.includes(l.id))
+  return filterAvoidedItems(compatible.length > 0 ? compatible : LIGHT_PACKS, template.avoid ?? [])
+}
+
+function filterAvoidedItems<T extends { id: string; labelZh?: string }>(items: T[], avoid: string[]): T[] {
+  if (avoid.length === 0) return items
+  return items.filter(item => !avoid.some(a =>
+    item.id.includes(a) || (item.labelZh && item.labelZh.includes(a))
+  ))
+}
+
 function TemplateSection() {
   const { selection, applyMasterTemplate, toggleState, setDevice, setLight } = useDirector()
   const dispatch = usePromptDispatch()
@@ -276,7 +297,10 @@ function TemplateSection() {
     if (!selection.directorTemplate) return
     const tpl = MASTER_TEMPLATE_MAP[selection.directorTemplate]
     if (!tpl) return
-    const light = pickRandom(tpl.lockedCore.light ? LIGHT_PACKS.filter(l => l.id !== selection.lightPack) : LIGHT_PACKS)
+    const compatLights = getCompatibleLights(tpl)
+    const filtered = compatLights.filter(l => l.id !== selection.lightPack)
+    const pool = filtered.length > 0 ? filtered : compatLights
+    const light = pickRandom(pool)
     setLight(light ? light.id : null)
   }
 
@@ -284,7 +308,8 @@ function TemplateSection() {
     if (!selection.directorTemplate) return
     const tpl = MASTER_TEMPLATE_MAP[selection.directorTemplate]
     if (!tpl) return
-    const device = pickRandom(DEVICE_PRESETS)
+    const compatDevices = getCompatibleDevices(tpl)
+    const device = pickRandom(compatDevices)
     setDevice(device.id)
   }
 
