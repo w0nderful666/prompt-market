@@ -1,0 +1,149 @@
+{
+  "meta": {
+    "id": "evolink:phone-camera",
+    "sourceId": "evolink",
+    "normalizedCategory": "phone-camera",
+    "label": "EvoLinkAI 大型案例库 · 手机感",
+    "path": "/external-library-chunks-v2/evolink/phone-camera.json",
+    "entryCount": 3
+  },
+  "entries": [
+    {
+      "id": "evolink-portrait-mirror-selfie-bedroom-portrait",
+      "sourceId": "evolink",
+      "sourceRepo": "EvoLinkAI/awesome-gpt-image-2-API-and-Prompts",
+      "sourceUrl": "https://x.com/Shinning1010/status/2045002808903020962",
+      "title": "Mirror Selfie Bedroom Portrait",
+      "author": "Shinning1010",
+      "license": "See source repository",
+      "category": "portrait",
+      "styleTags": [
+        "portrait",
+        "selfie",
+        "cinematic",
+        "35mm",
+        "realistic",
+        "phone camera",
+        "studio"
+      ],
+      "sceneTags": [
+        "studio",
+        "bedroom",
+        "mirror"
+      ],
+      "prompt": "A stunning 18-year-old Chinese girl with a youthful, pure face and realistic skin texture, sitting on a cozy, slightly messy bed in her bedroom. She is taking a mirror selfie with a smartphone, capturing a natural and intimate moment. Wearing casual gray loungewear and neat white crew socks. Soft natural light (golden hour) streams in from a side window, creating a warm, moody, and cinematic atmosphere. 35mm lens, sharp focus on the subject in the mirror, depth of field with a beautifully blurred background (bokeh). Photorealistic, 8K, high resolution, studio quality, masterpiece.\n\nNegative Prompts: no extra limbs, no deformed hands, no blur, no noise, no watermark, no text, no cartoon/anime style. Aspect Ratio: 3:4.",
+      "description": "",
+      "displayTitleZh": "镜前 自拍 Bedroom 人像",
+      "displaySummaryZh": "来自EvoLinkAI 大型案例库的手机感条目《Mirror Selfie Bedroom Portrait》。 关键词：portrait、selfie、studio、bedroom。结构更完整，适合直接导入高级编辑。",
+      "displayCategoryZh": "手机感",
+      "language": "en",
+      "importHints": {
+        "shootingMedium": "med_phone",
+        "trendAesthetic": [
+          "trend_story_documentary"
+        ]
+      },
+      "sourceTier": "large-gallery-secondary",
+      "qualityTier": "curated",
+      "recommendedForCurrentProduct": true,
+      "chunkId": "evolink:phone-camera",
+      "searchText": "mirror selfie bedroom portrait a stunning 18-year-old chinese girl with a youthful, pure face and realistic skin texture, sitting on a cozy, slightly messy bed in her bedroom. she is taking a mirror selfie with a smartphone, capturing a natural and intimate moment. wearing casual gray loungewear and neat white crew socks. soft natural light (golden hour) streams in from a side window, creating a warm, moody, and cinematic atmosphere. 35mm lens, sharp focus on the subject in the mirror, depth of field with a beautifully blurred background (bokeh). photorealistic, 8k, high resolution, studio quality, masterpiece. negative prompts: no extra limbs, no deformed hands, no blur, no noise, no watermark, no text, no cartoon/anime style. aspect ratio: 3:4. portrait shinning1010 portrait selfie cinematic 35mm realistic phone camera studio studio bedroom mirror",
+      "originalCategory": "portrait",
+      "normalizedCategory": "phone-camera",
+      "importConfidence": 0.95,
+      "portraitFocused": true,
+      "entryKind": "case"
+    },
+    {
+      "id": "evolink-poster-vintage-paper-collage-set",
+      "sourceId": "evolink",
+      "sourceRepo": "EvoLinkAI/awesome-gpt-image-2-API-and-Prompts",
+      "sourceUrl": "https://x.com/Sairah_0/status/2054502531628486758",
+      "title": "Vintage Paper Collage Set",
+      "author": "Sairah_0",
+      "license": "See source repository",
+      "category": "poster",
+      "styleTags": [
+        "portrait",
+        "cinematic",
+        "editorial",
+        "analog",
+        "fashion",
+        "realistic",
+        "phone camera",
+        "selfie"
+      ],
+      "sceneTags": [
+        "mirror"
+      ],
+      "prompt": "Aesthetic vintage paper collage portrait of a stylish woman taking a mirror selfie, made entirely from torn magazine and newspaper pieces, layered mixed-media artwork, neutral beige and brown tones, Vogue-inspired fashion editorial style, black sunglasses, sleek ponytail hairstyle, white corset top, silver jewelry, purple smartphone, textured ripped paper edges, handcrafted mosaic effect, realistic shadows and depth, chic typography cutouts, inspirational quotes scattered around, cozy luxury aesthetic, highly detailed analog collage art, soft warm lighting, Instagram moodboard vibe, premium editorial composition, ultra detailed, 4k Prompt : Vintage breakfast aesthetic collage made from torn magazine and newspaper clippings, artistic mixed-media paper mosaic style, croissants on a plate with jam, black coffee in a dark cup, fresh fruits and berries, butter dish with knife, café table atmosphere, dark green textured background, ripped paper layers with visible cracks and folds, lifestyle editorial typography, cozy European café vibe, warm earthy tones, handcrafted scrapbook look, realistic paper texture, aesthetic Pinterest moodboard composition, soft cinematic lighting, luxury brunch aesthetic, ultra detailed, high realism, 4k collage art style",
+      "description": "",
+      "displaySummaryZh": "来自EvoLinkAI 大型案例库的手机感条目《Vintage Paper Collage Set》。 关键词：portrait、cinematic、mirror。结构更完整，适合直接导入高级编辑。",
+      "displayCategoryZh": "手机感",
+      "language": "en",
+      "importHints": {
+        "shootingMedium": "med_phone",
+        "trendAesthetic": [
+          "trend_story_documentary"
+        ]
+      },
+      "sourceTier": "large-gallery-secondary",
+      "qualityTier": "curated",
+      "recommendedForCurrentProduct": true,
+      "chunkId": "evolink:phone-camera",
+      "searchText": "vintage paper collage set aesthetic vintage paper collage portrait of a stylish woman taking a mirror selfie, made entirely from torn magazine and newspaper pieces, layered mixed-media artwork, neutral beige and brown tones, vogue-inspired fashion editorial style, black sunglasses, sleek ponytail hairstyle, white corset top, silver jewelry, purple smartphone, textured ripped paper edges, handcrafted mosaic effect, realistic shadows and depth, chic typography cutouts, inspirational quotes scattered around, cozy luxury aesthetic, highly detailed analog collage art, soft warm lighting, instagram moodboard vibe, premium editorial composition, ultra detailed, 4k prompt : vintage breakfast aesthetic collage made from torn magazine and newspaper clippings, artistic mixed-media paper mosaic style, croissants on a plate with jam, black coffee in a dark cup, fresh fruits and berries, butter dish with knife, café table atmosphere, dark green textured background, ripped paper layers with visible cracks and folds, lifestyle editorial typography, cozy european café vibe, warm earthy tones, handcrafted scrapbook look, realistic paper texture, aesthetic pinterest moodboard composition, soft cinematic lighting, luxury brunch aesthetic, ultra detailed, high realism, 4k collage art style poster sairah_0 portrait cinematic editorial analog fashion realistic phone camera selfie mirror",
+      "originalCategory": "poster",
+      "normalizedCategory": "phone-camera",
+      "importConfidence": 0.95,
+      "portraitFocused": true,
+      "entryKind": "case"
+    },
+    {
+      "id": "evolink-ui-anime-girl-and-man-date-photo-collage",
+      "sourceId": "evolink",
+      "sourceRepo": "EvoLinkAI/awesome-gpt-image-2-API-and-Prompts",
+      "sourceUrl": "https://x.com/AIillust_studio/status/2048099186214900130",
+      "title": "Anime Girl and Man Date Photo Collage",
+      "author": "AIillust_studio",
+      "license": "See source repository",
+      "category": "ui",
+      "styleTags": [
+        "portrait",
+        "cinematic",
+        "realistic",
+        "phone camera",
+        "selfie",
+        "street",
+        "snapshot"
+      ],
+      "sceneTags": [
+        "cafe",
+        "street",
+        "seaside",
+        "city",
+        "mirror"
+      ],
+      "prompt": "A 4x4 photo collage of 16 warm, cinematic lifestyle snapshots featuring a real adult man and an anime-style young woman companion posed together as if in casual date photos. The man has short dark hair, light skin, an average build, and wears a plain dark navy or black long-sleeve shirt; his face is intentionally obscured and softly blurred in every frame. The anime girl has long blonde twin ponytails, large blue eyes, light skin, and a slim petite build, wearing a black sleeveless top, layered silver necklaces including a cross pendant, black wrist accessories, a red plaid pleated mini skirt, and black-and-white striped thigh-high socks. Blend realistic photography with a convincingly integrated 2D anime character, keeping her clean cel-shaded look while matching the scene lighting, perspective, focus, and color grading so she appears naturally present beside him. Use moody evening tones, soft bokeh, shallow depth of field, and intimate candid couple energy. The 16 panels are: 1) close indoor portrait with both seated close together, the girl resting beside him; 2) nighttime city street side profile conversation under blurred streetlights; 3) indoors, both reading a book together, the girl leaning on his shoulder; 4) outdoor cafe table, both holding takeaway coffee cups; 5) restaurant table with multiple dishes visible, dining together; 6) mirror selfie in an elevator, the man holding a smartphone while the girl makes a peace sign; 7) car interior road-trip shot, the man driving and the anime girl in the passenger seat; 8) seaside sunset from behind, both sitting side by side watching the ocean; 9) neon-lit city night portrait, the girl pointing toward the camera; 10) intimate elevator close-up, the girl with eyes closed leaning affectionately against him; 11) full mirror selfie in an elevator showing more of both outfits; 12) night city skyline portrait with a lit tower in the background; 13) camera selfie close-up, the man holding a compact camera toward a mirror or reflective surface; 14) cozy indoor lounge moment, the man holding a glass of red wine while the girl smiles and makes a peace sign; 15) rear full-body rainy night street shot, the pair walking away hand in hand under glowing streetlights; 16) extreme close-up night portrait with the girl flashing a peace sign. Keep the collage tightly gridded with thin white dividers, square overall format, consistent amber-brown color grading, romantic urban realism, and subtle social-media photo-dump aesthetics.",
+      "description": "",
+      "displaySummaryZh": "来自EvoLinkAI 大型案例库的手机感条目《Anime Girl and Man Date Photo Collage》。 关键词：portrait、cinematic、cafe、street。结构更完整，适合直接导入高级编辑。",
+      "displayCategoryZh": "手机感",
+      "language": "en",
+      "importHints": {
+        "shootingMedium": "med_phone",
+        "trendAesthetic": [
+          "trend_story_documentary"
+        ]
+      },
+      "sourceTier": "large-gallery-secondary",
+      "qualityTier": "curated",
+      "recommendedForCurrentProduct": true,
+      "chunkId": "evolink:phone-camera",
+      "searchText": "anime girl and man date photo collage a 4x4 photo collage of 16 warm, cinematic lifestyle snapshots featuring a real adult man and an anime-style young woman companion posed together as if in casual date photos. the man has short dark hair, light skin, an average build, and wears a plain dark navy or black long-sleeve shirt; his face is intentionally obscured and softly blurred in every frame. the anime girl has long blonde twin ponytails, large blue eyes, light skin, and a slim petite build, wearing a black sleeveless top, layered silver necklaces including a cross pendant, black wrist accessories, a red plaid pleated mini skirt, and black-and-white striped thigh-high socks. blend realistic photography with a convincingly integrated 2d anime character, keeping her clean cel-shaded look while matching the scene lighting, perspective, focus, and color grading so she appears naturally present beside him. use moody evening tones, soft bokeh, shallow depth of field, and intimate candid couple energy. the 16 panels are: 1) close indoor portrait with both seated close together, the girl resting beside him; 2) nighttime city street side profile conversation under blurred streetlights; 3) indoors, both reading a book together, the girl leaning on his shoulder; 4) outdoor cafe table, both holding takeaway coffee cups; 5) restaurant table with multiple dishes visible, dining together; 6) mirror selfie in an elevator, the man holding a smartphone while the girl makes a peace sign; 7) car interior road-trip shot, the man driving and the anime girl in the passenger seat; 8) seaside sunset from behind, both sitting side by side watching the ocean; 9) neon-lit city night portrait, the girl pointing toward the camera; 10) intimate elevator close-up, the girl with eyes closed leaning affectionately against him; 11) full mirror selfie in an elevator showing more of both outfits; 12) night city skyline portrait with a lit tower in the background; 13) camera selfie close-up, the man holding a compact camera toward a mirror or reflective surface; 14) cozy indoor lounge moment, the man holding a glass of red wine while the girl smiles and makes a peace sign; 15) rear full-body rainy night street shot, the pair walking away hand in hand under glowing streetlights; 16) extreme close-up night portrait with the girl flashing a peace sign. keep the collage tightly gridded with thin white dividers, square overall format, consistent amber-brown color grading, romantic urban realism, and subtle social-media photo-dump aesthetics. ui aiillust_studio portrait cinematic realistic phone camera selfie street snapshot cafe street seaside city mirror",
+      "originalCategory": "ui",
+      "normalizedCategory": "phone-camera",
+      "importConfidence": 0.95,
+      "portraitFocused": true,
+      "entryKind": "case"
+    }
+  ]
+}

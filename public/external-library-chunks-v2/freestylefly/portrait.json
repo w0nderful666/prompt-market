@@ -1,0 +1,86 @@
+{
+  "meta": {
+    "id": "freestylefly:portrait",
+    "sourceId": "freestylefly",
+    "normalizedCategory": "portrait",
+    "label": "FreestyleFly 结构化词库 · 人像",
+    "path": "/external-library-chunks-v2/freestylefly/portrait.json",
+    "entryCount": 2
+  },
+  "entries": [
+    {
+      "id": "freestylefly-character-design-sheet",
+      "sourceId": "freestylefly",
+      "sourceRepo": "freestylefly/awesome-gpt-image-2",
+      "sourceUrl": "https://github.com/freestylefly/awesome-gpt-image-2/blob/main/data/style-library.json",
+      "title": "Character Design Sheet",
+      "author": "freestylefly",
+      "license": "See source repository",
+      "category": "Characters & People",
+      "styleTags": [
+        "Character",
+        "Illustration",
+        "Pose",
+        "Style"
+      ],
+      "sceneTags": [
+        "Story"
+      ],
+      "prompt": "Characters, pose sheets, action grids, and identity consistency.\n\nDefine identity anchors, outfit, proportions, pose count, and sheet layout.\nKeep face, hairstyle, and costume details consistent.\nAvoid changing costume details between poses.\nLimit pose count if the sheet becomes crowded.",
+      "description": "Characters, pose sheets, action grids, and identity consistency.",
+      "displaySummaryZh": "来自FreestyleFly 结构化词库的人像条目《Character Design Sheet》。 关键词：Character、Illustration、Story。结构更完整，适合直接导入高级编辑。",
+      "displayCategoryZh": "人像",
+      "language": "en",
+      "importHints": {
+        "shotType": "shot_studio_portrait"
+      },
+      "sourceTier": "structured-primary",
+      "qualityTier": "curated",
+      "recommendedForCurrentProduct": true,
+      "chunkId": "freestylefly:portrait",
+      "searchText": "character design sheet characters, pose sheets, action grids, and identity consistency. characters, pose sheets, action grids, and identity consistency. define identity anchors, outfit, proportions, pose count, and sheet layout. keep face, hairstyle, and costume details consistent. avoid changing costume details between poses. limit pose count if the sheet becomes crowded. characters & people character illustration pose style story",
+      "originalCategory": "Characters & People",
+      "normalizedCategory": "portrait",
+      "importConfidence": 0.98,
+      "portraitFocused": true,
+      "entryKind": "template"
+    },
+    {
+      "id": "freestylefly-3d-collectible-toy",
+      "sourceId": "freestylefly",
+      "sourceRepo": "freestylefly/awesome-gpt-image-2",
+      "sourceUrl": "https://github.com/freestylefly/awesome-gpt-image-2/blob/main/data/style-library.json",
+      "title": "3D Collectible Toy",
+      "author": "freestylefly",
+      "license": "See source repository",
+      "category": "Characters & People",
+      "styleTags": [
+        "3D",
+        "Character",
+        "Style"
+      ],
+      "sceneTags": [
+        "Commerce",
+        "Creative"
+      ],
+      "prompt": "Reference photo to premium 3D collectible figure prompts.\n\nPreserve face and outfit anchors from the reference.\nSpecify material, packaging, base, lighting, and collectible scale.\nAvoid generic toy bodies without identity details.\nKeep packaging text minimal and accurate.",
+      "description": "Reference photo to premium 3D collectible figure prompts.",
+      "displaySummaryZh": "来自FreestyleFly 结构化词库的人像条目《3D Collectible Toy》。 关键词：3D、Character、Commerce、Creative。结构更完整，适合直接导入高级编辑。",
+      "displayCategoryZh": "人像",
+      "language": "en",
+      "importHints": {
+        "shotType": "shot_studio_portrait"
+      },
+      "sourceTier": "structured-primary",
+      "qualityTier": "curated",
+      "recommendedForCurrentProduct": true,
+      "chunkId": "freestylefly:portrait",
+      "searchText": "3d collectible toy reference photo to premium 3d collectible figure prompts. reference photo to premium 3d collectible figure prompts. preserve face and outfit anchors from the reference. specify material, packaging, base, lighting, and collectible scale. avoid generic toy bodies without identity details. keep packaging text minimal and accurate. characters & people 3d character style commerce creative",
+      "originalCategory": "Characters & People",
+      "normalizedCategory": "portrait",
+      "importConfidence": 0.98,
+      "portraitFocused": true,
+      "entryKind": "template"
+    }
+  ]
+}

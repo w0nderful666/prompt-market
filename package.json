@@ -7,7 +7,10 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "sync-external-library": "node --experimental-strip-types --experimental-specifier-resolution=node scripts/sync-external-library.ts",
+    "self-test": "node --experimental-strip-types --experimental-specifier-resolution=node scripts/self-test.ts",
+    "preflight": "node --experimental-strip-types --experimental-specifier-resolution=node scripts/preflight.ts"
   },
   "dependencies": {
     "react": "^19.2.6",

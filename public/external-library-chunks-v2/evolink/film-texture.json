@@ -1,0 +1,583 @@
+{
+  "meta": {
+    "id": "evolink:film-texture",
+    "sourceId": "evolink",
+    "normalizedCategory": "film-texture",
+    "label": "EvoLinkAI 大型案例库 · 胶片感",
+    "path": "/external-library-chunks-v2/evolink/film-texture.json",
+    "entryCount": 14
+  },
+  "entries": [
+    {
+      "id": "evolink-character-mecha-girl-sea-city-key-visual",
+      "sourceId": "evolink",
+      "sourceRepo": "EvoLinkAI/awesome-gpt-image-2-API-and-Prompts",
+      "sourceUrl": "https://x.com/old_pgmrs_will/status/2046144801071079612",
+      "title": "Mecha Girl Sea-City Key Visual",
+      "author": "old_pgmrs_will",
+      "license": "See source repository",
+      "category": "character",
+      "styleTags": [
+        "cinematic",
+        "editorial",
+        "35mm",
+        "film"
+      ],
+      "sceneTags": [
+        "city"
+      ],
+      "prompt": "A mecha girl mid-teens, pale skin smudged with soot and salt spray, sharp amber eyes with glowing HUD reticles, waist-length ash-white hair tied in a high ponytail whipping in the sea wind, matte gunmetal exoskeleton armor plating her shoulders, forearms and shins, exposed hydraulic pistons at the joints, chest rig with glowing cyan coolant lines, oversized oil-stained hangar jacket half slipping off one shoulder, a massive rail cannon resting on her right shoulder, dog tags and frayed red ribbon at her collar , standing off-center to the left on the rusted edge of a tilted steel platform jutting out over dark water, weight shifted onto one leg, left hand gripping the cannon strap, head turned slightly toward camera with a quiet defiant stare, steam venting from her back thrusters, her ponytail and jacket streaming sideways in the salt wind , a vast derelict sea-city at dusk, colossal megastructures of unknown purpose rising from the ocean in staggered silhouettes, bone-white monolithic towers fused with barnacled steel, cyclopean ring-shaped constructs canted at broken angles, rusted skeletal gantries threaded with dead cables, dark swells rolling between the pylons, shipwrecks half-swallowed at their feet, thick sea fog clinging to the bases while the upper structures pierce into a bruised sky, scattered faint lights blinking high in the towers like distant eyes , moody low-key lighting, cold teal ambient from the overcast sky, warm amber sodium glow leaking from a distant structure camera-right, hard backlight from a low sun behind the towers carving her silhouette, volumetric god rays cutting through sea mist, wet specular highlights on her armor , 35mm anamorphic lens, slight low angle looking up past her shoulder toward the structures, medium-wide shot, shallow depth of field with foreground rust in soft focus, horizontal lens flares, fine atmospheric haze compressing the distant megastructures into layered silhouettes , cinematic anime key visual, painterly digital illustration with crisp line art, desaturated oceanic palette of teal, bone-white and rust punched by small warm accent lights, film grain, high-contrast editorial poster aesthetic . Format 16:9.",
+      "description": "",
+      "displaySummaryZh": "来自EvoLinkAI 大型案例库的胶片感条目《Mecha Girl Sea-City Key Visual》。 关键词：cinematic、editorial、city。结构更完整，适合直接导入高级编辑。",
+      "displayCategoryZh": "胶片感",
+      "language": "en",
+      "importHints": {
+        "colorGradePrimary": "color_film",
+        "trendAesthetic": [
+          "trend_story_documentary"
+        ]
+      },
+      "sourceTier": "large-gallery-secondary",
+      "qualityTier": "curated",
+      "recommendedForCurrentProduct": true,
+      "chunkId": "evolink:film-texture",
+      "searchText": "mecha girl sea-city key visual a mecha girl mid-teens, pale skin smudged with soot and salt spray, sharp amber eyes with glowing hud reticles, waist-length ash-white hair tied in a high ponytail whipping in the sea wind, matte gunmetal exoskeleton armor plating her shoulders, forearms and shins, exposed hydraulic pistons at the joints, chest rig with glowing cyan coolant lines, oversized oil-stained hangar jacket half slipping off one shoulder, a massive rail cannon resting on her right shoulder, dog tags and frayed red ribbon at her collar , standing off-center to the left on the rusted edge of a tilted steel platform jutting out over dark water, weight shifted onto one leg, left hand gripping the cannon strap, head turned slightly toward camera with a quiet defiant stare, steam venting from her back thrusters, her ponytail and jacket streaming sideways in the salt wind , a vast derelict sea-city at dusk, colossal megastructures of unknown purpose rising from the ocean in staggered silhouettes, bone-white monolithic towers fused with barnacled steel, cyclopean ring-shaped constructs canted at broken angles, rusted skeletal gantries threaded with dead cables, dark swells rolling between the pylons, shipwrecks half-swallowed at their feet, thick sea fog clinging to the bases while the upper structures pierce into a bruised sky, scattered faint lights blinking high in the towers like distant eyes , moody low-key lighting, cold teal ambient from the overcast sky, warm amber sodium glow leaking from a distant structure camera-right, hard backlight from a low sun behind the towers carving her silhouette, volumetric god rays cutting through sea mist, wet specular highlights on her armor , 35mm anamorphic lens, slight low angle looking up past her shoulder toward the structures, medium-wide shot, shallow depth of field with foreground rust in soft focus, horizontal lens flares, fine atmospheric haze compressing the distant megastructures into layered silhouettes , cinematic anime key visual, painterly digital illustration with crisp line art, desaturated oceanic palette of teal, bone-white and rust punched by small warm accent lights, film grain, high-contrast editorial poster aesthetic . format 16:9. character old_pgmrs_will cinematic editorial 35mm film city",
+      "originalCategory": "character",
+      "normalizedCategory": "film-texture",
+      "importConfidence": 0.95,
+      "portraitFocused": true,
+      "entryKind": "case"
+    },
+    {
+      "id": "evolink-portrait-convenience-store-neon-portrait",
+      "sourceId": "evolink",
+      "sourceRepo": "EvoLinkAI/awesome-gpt-image-2-API-and-Prompts",
+      "sourceUrl": "https://x.com/BubbleBrain/status/2045167461147042202",
+      "title": "Convenience Store Neon Portrait",
+      "author": "BubbleBrain",
+      "license": "See source repository",
+      "category": "portrait",
+      "styleTags": [
+        "portrait",
+        "cinematic",
+        "editorial",
+        "35mm",
+        "film",
+        "realistic",
+        "street"
+      ],
+      "sceneTags": [
+        "street"
+      ],
+      "prompt": "35mm film photography with harsh convenience store fluorescent lighting mixed with colorful neon signs from outside, authentic film grain, high contrast, slight color cast, cinematic street editorial style, intimate medium shot, early 20s sexy Chinese female idol with ultra-realistic delicate refined Chinese features, seductive almond-shaped fox eyes with natural double eyelids, high nose bridge, small sharp V-shaped jawline, flawless porcelain skin with cool ivory undertone and visible specular highlights from fluorescent light, subtle skin texture and micro pores, natural dewy makeup with soft flush on cheeks, glossy natural pink lips slightly parted, subtle natural freckles across nose and cheeks, long dark brown hair in a messy high ponytail with many loose strands falling around face and neck, wearing an oversized white button-up shirt as the only top, unbuttoned at the top with deep cleavage and loosely tied at the waist, paired with a tiny black pleated mini skirt, barefoot in simple white slides, seductive casual leaning pose against the glass door of a 24-hour convenience store at late night, body slightly arched, one leg bent with foot resting against the door frame, the other leg straight, one hand holding a bottle of iced drink, the other hand lightly pulling the hem of her mini skirt, intensely seductive playful yet slightly vulnerable gaze straight at the viewer with soft doe eyes full of quiet temptation and teasing smile, bright cold fluorescent store light from inside mixed with pink and blue neon glow from outside signs, realistic reflections on glass door, blurred convenience store interior with shelves and snacks in background, authentic 35mm film color grading with harsh lighting and neon accents, extremely sharp yet soft skin rendering, natural hair strands, realistic fabric wrinkles and drape on the oversized shirt and mini skirt, no plastic skin, no digital over-sharpening, no airbrushing, no blemishes, no moles, no oily skin, no watermark, no text, authentic late-night convenience store atmosphere",
+      "description": "",
+      "displayTitleZh": "Convenience Store Neon 人像",
+      "displaySummaryZh": "来自EvoLinkAI 大型案例库的胶片感条目《Convenience Store Neon Portrait》。 关键词：portrait、cinematic、street。结构更完整，适合直接导入高级编辑。",
+      "displayCategoryZh": "胶片感",
+      "language": "en",
+      "importHints": {
+        "colorGradePrimary": "color_film",
+        "trendAesthetic": [
+          "trend_story_documentary"
+        ]
+      },
+      "sourceTier": "large-gallery-secondary",
+      "qualityTier": "curated",
+      "recommendedForCurrentProduct": true,
+      "chunkId": "evolink:film-texture",
+      "searchText": "convenience store neon portrait 35mm film photography with harsh convenience store fluorescent lighting mixed with colorful neon signs from outside, authentic film grain, high contrast, slight color cast, cinematic street editorial style, intimate medium shot, early 20s sexy chinese female idol with ultra-realistic delicate refined chinese features, seductive almond-shaped fox eyes with natural double eyelids, high nose bridge, small sharp v-shaped jawline, flawless porcelain skin with cool ivory undertone and visible specular highlights from fluorescent light, subtle skin texture and micro pores, natural dewy makeup with soft flush on cheeks, glossy natural pink lips slightly parted, subtle natural freckles across nose and cheeks, long dark brown hair in a messy high ponytail with many loose strands falling around face and neck, wearing an oversized white button-up shirt as the only top, unbuttoned at the top with deep cleavage and loosely tied at the waist, paired with a tiny black pleated mini skirt, barefoot in simple white slides, seductive casual leaning pose against the glass door of a 24-hour convenience store at late night, body slightly arched, one leg bent with foot resting against the door frame, the other leg straight, one hand holding a bottle of iced drink, the other hand lightly pulling the hem of her mini skirt, intensely seductive playful yet slightly vulnerable gaze straight at the viewer with soft doe eyes full of quiet temptation and teasing smile, bright cold fluorescent store light from inside mixed with pink and blue neon glow from outside signs, realistic reflections on glass door, blurred convenience store interior with shelves and snacks in background, authentic 35mm film color grading with harsh lighting and neon accents, extremely sharp yet soft skin rendering, natural hair strands, realistic fabric wrinkles and drape on the oversized shirt and mini skirt, no plastic skin, no digital over-sharpening, no airbrushing, no blemishes, no moles, no oily skin, no watermark, no text, authentic late-night convenience store atmosphere portrait bubblebrain portrait cinematic editorial 35mm film realistic street street",
+      "originalCategory": "portrait",
+      "normalizedCategory": "film-texture",
+      "importConfidence": 0.95,
+      "portraitFocused": true,
+      "entryKind": "case"
+    },
+    {
+      "id": "evolink-portrait-japanese-onsen-ryokan-portrait",
+      "sourceId": "evolink",
+      "sourceRepo": "EvoLinkAI/awesome-gpt-image-2-API-and-Prompts",
+      "sourceUrl": "https://x.com/BubbleBrain/status/2045092449803284923",
+      "title": "Japanese Onsen Ryokan Portrait",
+      "author": "BubbleBrain",
+      "license": "See source repository",
+      "category": "portrait",
+      "styleTags": [
+        "portrait",
+        "editorial",
+        "35mm",
+        "film",
+        "realistic"
+      ],
+      "sceneTags": [],
+      "prompt": "35mm film photography, warm vintage Japanese onsen ryokan aesthetic, soft ambient wooden lantern lighting mixed with gentle natural window light, subtle film grain, gentle color shift, high atmosphere editorial style, intimate medium shot, early 20s beautiful Chinese female idol with ultra-realistic delicate refined Chinese features, seductive almond-shaped fox eyes with natural double eyelids, high nose bridge, small sharp V-shaped jawline, flawless porcelain skin with warm ivory undertone, visible subtle skin texture and micro pores, soft natural makeup with dewy glow, subtle rosy flush on cheeks, natural soft pink lips slightly parted, long dark brown hair tied in a loose low bun with some messy strands falling around face and neck, wearing a loose white yukata (traditional Japanese bathrobe) deliberately slipped off one shoulder and loosely tied at the waist, the fabric slightly open revealing smooth skin and subtle cleavage, barefoot, seductive relaxed sitting pose on the edge of a traditional wooden engawa veranda at a vintage onsen ryokan, body slightly turned toward the camera, one leg bent with foot resting on the wooden floor, the other leg gently dangling, one hand lightly holding the yukata collar, the other hand resting on the wooden floor behind her for support, softly arched back to gently accentuate curves, intensely seductive yet gentle and inviting gaze straight at the viewer with soft doe eyes full of quiet temptation and warmth, warm wooden interior with paper sliding doors and distant steaming hot spring in soft focus, gentle rim lighting highlighting skin and fabric texture, authentic vintage film color grading with warm tones, extremely sharp yet soft skin rendering, natural hair strands, realistic fabric wrinkles and drape on the yukata, no plastic skin, no digital over-sharpening, no airbrushing, no blemishes, no moles, no oily skin, no watermark, no text, authentic 35mm film Japanese onsen ryokan atmosphere",
+      "description": "",
+      "displayTitleZh": "Japanese Onsen Ryokan 人像",
+      "displaySummaryZh": "来自EvoLinkAI 大型案例库的胶片感条目《Japanese Onsen Ryokan Portrait》。 关键词：portrait、editorial。结构更完整，适合直接导入高级编辑。",
+      "displayCategoryZh": "胶片感",
+      "language": "en",
+      "importHints": {
+        "colorGradePrimary": "color_film"
+      },
+      "sourceTier": "large-gallery-secondary",
+      "qualityTier": "curated",
+      "recommendedForCurrentProduct": true,
+      "chunkId": "evolink:film-texture",
+      "searchText": "japanese onsen ryokan portrait 35mm film photography, warm vintage japanese onsen ryokan aesthetic, soft ambient wooden lantern lighting mixed with gentle natural window light, subtle film grain, gentle color shift, high atmosphere editorial style, intimate medium shot, early 20s beautiful chinese female idol with ultra-realistic delicate refined chinese features, seductive almond-shaped fox eyes with natural double eyelids, high nose bridge, small sharp v-shaped jawline, flawless porcelain skin with warm ivory undertone, visible subtle skin texture and micro pores, soft natural makeup with dewy glow, subtle rosy flush on cheeks, natural soft pink lips slightly parted, long dark brown hair tied in a loose low bun with some messy strands falling around face and neck, wearing a loose white yukata (traditional japanese bathrobe) deliberately slipped off one shoulder and loosely tied at the waist, the fabric slightly open revealing smooth skin and subtle cleavage, barefoot, seductive relaxed sitting pose on the edge of a traditional wooden engawa veranda at a vintage onsen ryokan, body slightly turned toward the camera, one leg bent with foot resting on the wooden floor, the other leg gently dangling, one hand lightly holding the yukata collar, the other hand resting on the wooden floor behind her for support, softly arched back to gently accentuate curves, intensely seductive yet gentle and inviting gaze straight at the viewer with soft doe eyes full of quiet temptation and warmth, warm wooden interior with paper sliding doors and distant steaming hot spring in soft focus, gentle rim lighting highlighting skin and fabric texture, authentic vintage film color grading with warm tones, extremely sharp yet soft skin rendering, natural hair strands, realistic fabric wrinkles and drape on the yukata, no plastic skin, no digital over-sharpening, no airbrushing, no blemishes, no moles, no oily skin, no watermark, no text, authentic 35mm film japanese onsen ryokan atmosphere portrait bubblebrain portrait editorial 35mm film realistic",
+      "originalCategory": "portrait",
+      "normalizedCategory": "film-texture",
+      "importConfidence": 0.95,
+      "portraitFocused": true,
+      "entryKind": "case"
+    },
+    {
+      "id": "evolink-portrait-35mm-flash-editorial-portrait",
+      "sourceId": "evolink",
+      "sourceRepo": "EvoLinkAI/awesome-gpt-image-2-API-and-Prompts",
+      "sourceUrl": "https://x.com/BubbleBrain/status/2045052982728016131",
+      "title": "35mm Flash Editorial Portrait",
+      "author": "BubbleBrain",
+      "license": "See source repository",
+      "category": "portrait",
+      "styleTags": [
+        "portrait",
+        "editorial",
+        "35mm",
+        "film",
+        "fashion",
+        "realistic"
+      ],
+      "sceneTags": [
+        "basketball court"
+      ],
+      "prompt": "35mm color film photography with harsh direct on-camera flash, specular highlights on skin and clothing, strong catchlights in eyes, high contrast flash illumination, authentic film grain and color shift, high fashion fresh innocent basketball court editorial style, intimate first-person low-angle POV shot from below, early 20s sexy Chinese female idol with ultra-realistic delicate refined Chinese features, seductive almond-shaped fox eyes with natural double eyelids, high nose bridge, small sharp V-shaped jawline, flawless realistic porcelain skin with cool ivory undertone and visible flash specular highlights, fine delicate skin texture with subtle pores micro details and natural dewy glow under flash, fresh natural sporty makeup with soft dewy glow, subtle natural flush on cheeks, natural pink lips slightly parted, subtle natural freckles across nose and cheeks, long dark brown hair tied in a high playful ponytail with some loose strands framing the face and realistic loose strands, wearing a loose white tank top and white high-waisted basketball shorts, white knee-high sports socks, seductive natural leaning pose against the basketball hoop pole on the outdoor court at dusk, body angled sideways with naturally arched back and hips gently pushed back to accentuate perky round hips and sexy butt curve, one leg naturally extended forward toward the camera and the other leg slightly bent to emphasize long sexy legs, both hands lightly resting on the basketball pole at shoulder height, intensely seductive playful yet pitiable doe-eyed gaze straight at the viewer with soft vulnerable longing eyes and a gentle teasing smile full of quiet temptation and desire, harsh direct on-camera flash creating sharp specular highlights and strong catchlights, background with blurred basketball court and hoop under dusk sky, high contrast film color grading with natural flash look, extremely sharp yet soft skin rendering with authentic 35mm direct flash aesthetic, natural hair strands, realistic fabric texture on tank top and shorts with socks detail, no plastic skin, no digital over-sharpening, no airbrushing, no blemishes, no moles, no oily skin, no watermark, no text, authentic 35mm direct flash film basketball court look --ar 9:16",
+      "description": "",
+      "displayTitleZh": "35mm Flash 编辑感 人像",
+      "displaySummaryZh": "来自EvoLinkAI 大型案例库的胶片感条目《35mm Flash Editorial Portrait》。 关键词：portrait、editorial、basketball court。结构更完整，适合直接导入高级编辑。",
+      "displayCategoryZh": "胶片感",
+      "language": "en",
+      "importHints": {
+        "colorGradePrimary": "color_film"
+      },
+      "sourceTier": "large-gallery-secondary",
+      "qualityTier": "curated",
+      "recommendedForCurrentProduct": true,
+      "chunkId": "evolink:film-texture",
+      "searchText": "35mm flash editorial portrait 35mm color film photography with harsh direct on-camera flash, specular highlights on skin and clothing, strong catchlights in eyes, high contrast flash illumination, authentic film grain and color shift, high fashion fresh innocent basketball court editorial style, intimate first-person low-angle pov shot from below, early 20s sexy chinese female idol with ultra-realistic delicate refined chinese features, seductive almond-shaped fox eyes with natural double eyelids, high nose bridge, small sharp v-shaped jawline, flawless realistic porcelain skin with cool ivory undertone and visible flash specular highlights, fine delicate skin texture with subtle pores micro details and natural dewy glow under flash, fresh natural sporty makeup with soft dewy glow, subtle natural flush on cheeks, natural pink lips slightly parted, subtle natural freckles across nose and cheeks, long dark brown hair tied in a high playful ponytail with some loose strands framing the face and realistic loose strands, wearing a loose white tank top and white high-waisted basketball shorts, white knee-high sports socks, seductive natural leaning pose against the basketball hoop pole on the outdoor court at dusk, body angled sideways with naturally arched back and hips gently pushed back to accentuate perky round hips and sexy butt curve, one leg naturally extended forward toward the camera and the other leg slightly bent to emphasize long sexy legs, both hands lightly resting on the basketball pole at shoulder height, intensely seductive playful yet pitiable doe-eyed gaze straight at the viewer with soft vulnerable longing eyes and a gentle teasing smile full of quiet temptation and desire, harsh direct on-camera flash creating sharp specular highlights and strong catchlights, background with blurred basketball court and hoop under dusk sky, high contrast film color grading with natural flash look, extremely sharp yet soft skin rendering with authentic 35mm direct flash aesthetic, natural hair strands, realistic fabric texture on tank top and shorts with socks detail, no plastic skin, no digital over-sharpening, no airbrushing, no blemishes, no moles, no oily skin, no watermark, no text, authentic 35mm direct flash film basketball court look --ar 9:16 portrait bubblebrain portrait editorial 35mm film fashion realistic basketball court",
+      "originalCategory": "portrait",
+      "normalizedCategory": "film-texture",
+      "importConfidence": 0.95,
+      "portraitFocused": true,
+      "entryKind": "case"
+    },
+    {
+      "id": "evolink-portrait-soft-airy-35mm-portrait",
+      "sourceId": "evolink",
+      "sourceRepo": "EvoLinkAI/awesome-gpt-image-2-API-and-Prompts",
+      "sourceUrl": "https://x.com/BubbleBrain/status/2046115431144902732",
+      "title": "Soft Airy 35mm Portrait",
+      "author": "BubbleBrain",
+      "license": "See source repository",
+      "category": "portrait",
+      "styleTags": [
+        "portrait",
+        "35mm",
+        "film",
+        "analog",
+        "realistic"
+      ],
+      "sceneTags": [],
+      "prompt": "Analog 35mm film photography, soft airy Japanese-style aesthetic, gentle diffused natural window light, slight overexposure, pastel tones, low contrast, soft highlights, minimal indoor setting near a window with white curtains, clean light-colored wall, natural composition, eye-level, slightly closer full-body framing (mid-thigh to head), young East Asian woman, natural minimal makeup, soft realistic skin texture, long slightly messy dark hair, oversized white button-up shirt, light casual shorts, barefoot, simple and relaxed styling, standing naturally with relaxed posture, arms loosely at sides or slightly behind, facing camera, gentle soft smile, subtle stillness, focus on light, air, and quiet everyday mood, soft film grain, dreamy and understated atmosphere --ar 9:16",
+      "description": "",
+      "displayTitleZh": "Soft Airy 35mm 人像",
+      "displaySummaryZh": "来自EvoLinkAI 大型案例库的胶片感条目《Soft Airy 35mm Portrait》。 关键词：portrait、35mm。结构更完整，适合直接导入高级编辑。",
+      "displayCategoryZh": "胶片感",
+      "language": "en",
+      "importHints": {
+        "colorGradePrimary": "color_film"
+      },
+      "sourceTier": "large-gallery-secondary",
+      "qualityTier": "curated",
+      "recommendedForCurrentProduct": true,
+      "chunkId": "evolink:film-texture",
+      "searchText": "soft airy 35mm portrait analog 35mm film photography, soft airy japanese-style aesthetic, gentle diffused natural window light, slight overexposure, pastel tones, low contrast, soft highlights, minimal indoor setting near a window with white curtains, clean light-colored wall, natural composition, eye-level, slightly closer full-body framing (mid-thigh to head), young east asian woman, natural minimal makeup, soft realistic skin texture, long slightly messy dark hair, oversized white button-up shirt, light casual shorts, barefoot, simple and relaxed styling, standing naturally with relaxed posture, arms loosely at sides or slightly behind, facing camera, gentle soft smile, subtle stillness, focus on light, air, and quiet everyday mood, soft film grain, dreamy and understated atmosphere --ar 9:16 portrait bubblebrain portrait 35mm film analog realistic",
+      "originalCategory": "portrait",
+      "normalizedCategory": "film-texture",
+      "importConfidence": 0.95,
+      "portraitFocused": true,
+      "entryKind": "case"
+    },
+    {
+      "id": "evolink-portrait-korean-idol-3x3-collage-portrait",
+      "sourceId": "evolink",
+      "sourceRepo": "EvoLinkAI/awesome-gpt-image-2-API-and-Prompts",
+      "sourceUrl": "https://x.com/BubbleBrain/status/2046151898621993364",
+      "title": "Korean Idol 3x3 Collage Portrait",
+      "author": "BubbleBrain",
+      "license": "See source repository",
+      "category": "portrait",
+      "styleTags": [
+        "portrait",
+        "film",
+        "analog",
+        "realistic",
+        "studio"
+      ],
+      "sceneTags": [
+        "studio"
+      ],
+      "prompt": "9:16 vertical - a 3x3 grid collage (nine images) forming a Korean idol portrait photoshoot series. Each frame features the same young Korean female idol, maintaining 100% consistency in facial features, proportions, hairstyle, and identity across all nine shots. Natural, ultra-realistic skin texture, no retouching, no smoothing. Clean idol-style minimal makeup, soft glow, subtle imperfections. Hair: long, voluminous dark hair, slightly tousled, consistent across all frames (natural loose flow, slight movement). Outfit: cohesive Korean idol photoshoot styling - white shirt + short bottoms (or simple neutral-toned outfit), youthful, clean, slightly casual but styled. Same outfit across all frames. Setting: minimal studio or simple indoor environment (plain wall, soft window light, clean background). Focus on subject, not environment. Lighting: soft diffused natural light, gentle highlights, low contrast, slightly airy tones, subtle film-like softness. Camera style: intimate portrait photography, slightly handheld feel, subtle imperfections (minor grain, slight blur in motion frames, imperfect framing). Frame breakdown (3x3 grid): Top row: - Top left: standing naturally, looking slightly away, relaxed expression - Top center: facing camera, casual mid-motion (hair or body slight movement) - Top right: slight side angle, soft gaze, natural candid feel Middle row: - Center left: looking slightly upward, soft thoughtful expression - Center: close-up portrait, direct eye contact, gentle idol smile - Center right: turning body slightly, mid-motion candid frame Bottom row: - Bottom left: seated or leaning casually, relaxed posture - Bottom center: back partially turned, looking over shoulder toward camera - Bottom right: standing close to frame, slightly playful or soft expression Mood: Korean idol photobook / photocard aesthetic, intimate, soft, natural, everyday charm. Quality: ultra-realistic, 8K detail, subtle analog film grain, natural imperfections, soft dreamy tone",
+      "description": "",
+      "displayTitleZh": "Korean Idol 3x3 Collage 人像",
+      "displaySummaryZh": "来自EvoLinkAI 大型案例库的胶片感条目《Korean Idol 3x3 Collage Portrait》。 关键词：portrait、film、studio。结构更完整，适合直接导入高级编辑。",
+      "displayCategoryZh": "胶片感",
+      "language": "en",
+      "importHints": {
+        "colorGradePrimary": "color_film"
+      },
+      "sourceTier": "large-gallery-secondary",
+      "qualityTier": "curated",
+      "recommendedForCurrentProduct": true,
+      "chunkId": "evolink:film-texture",
+      "searchText": "korean idol 3x3 collage portrait 9:16 vertical - a 3x3 grid collage (nine images) forming a korean idol portrait photoshoot series. each frame features the same young korean female idol, maintaining 100% consistency in facial features, proportions, hairstyle, and identity across all nine shots. natural, ultra-realistic skin texture, no retouching, no smoothing. clean idol-style minimal makeup, soft glow, subtle imperfections. hair: long, voluminous dark hair, slightly tousled, consistent across all frames (natural loose flow, slight movement). outfit: cohesive korean idol photoshoot styling - white shirt + short bottoms (or simple neutral-toned outfit), youthful, clean, slightly casual but styled. same outfit across all frames. setting: minimal studio or simple indoor environment (plain wall, soft window light, clean background). focus on subject, not environment. lighting: soft diffused natural light, gentle highlights, low contrast, slightly airy tones, subtle film-like softness. camera style: intimate portrait photography, slightly handheld feel, subtle imperfections (minor grain, slight blur in motion frames, imperfect framing). frame breakdown (3x3 grid): top row: - top left: standing naturally, looking slightly away, relaxed expression - top center: facing camera, casual mid-motion (hair or body slight movement) - top right: slight side angle, soft gaze, natural candid feel middle row: - center left: looking slightly upward, soft thoughtful expression - center: close-up portrait, direct eye contact, gentle idol smile - center right: turning body slightly, mid-motion candid frame bottom row: - bottom left: seated or leaning casually, relaxed posture - bottom center: back partially turned, looking over shoulder toward camera - bottom right: standing close to frame, slightly playful or soft expression mood: korean idol photobook / photocard aesthetic, intimate, soft, natural, everyday charm. quality: ultra-realistic, 8k detail, subtle analog film grain, natural imperfections, soft dreamy tone portrait bubblebrain portrait film analog realistic studio studio",
+      "originalCategory": "portrait",
+      "normalizedCategory": "film-texture",
+      "importConfidence": 0.95,
+      "portraitFocused": true,
+      "entryKind": "case"
+    },
+    {
+      "id": "evolink-portrait-fujifilm-strawberry-school-portrait",
+      "sourceId": "evolink",
+      "sourceRepo": "EvoLinkAI/awesome-gpt-image-2-API-and-Prompts",
+      "sourceUrl": "https://x.com/BubbleBrain/status/2046483268019884384",
+      "title": "Fujifilm Strawberry School Portrait",
+      "author": "BubbleBrain",
+      "license": "See source repository",
+      "category": "portrait",
+      "styleTags": [
+        "portrait",
+        "film",
+        "analog",
+        "realistic"
+      ],
+      "sceneTags": [],
+      "prompt": "9:16 vertical - Japanese Fuji film style portrait, single subject Fujifilm analog aesthetic (Pro 400H / Superia feel), soft pastel tones, slight green-magenta shift, low contrast, gentle highlight roll-off, fine film grain, subtle halation, slight vignette bright natural daylight, diffused sunlight through window, soft shadows, airy atmosphere young Japanese female idol, natural minimal makeup, fresh glowing skin, realistic texture, slight imperfections outfit: Japanese school uniform (sailor-style or blazer uniform), neatly styled, non-revealing, youthful and clean hair: natural dark hair, straight or softly flowing, a few loose strands pose: front-facing or slight angle toward camera, relaxed posture; one hand gently holding a strawberry near lips, mid-action as if about to take a bite; shoulders relaxed, subtle natural body curve expression: soft playful gaze, light smile or neutral lips, gentle eye contact with camera setting: minimal indoor near window or simple outdoor corner, clean background, everyday atmosphere composition: slightly off-center framing, intimate distance, candid feel mood: fresh, youthful, sweet everyday moment, understated charm quality: ultra-realistic, analog film look, natural imperfections, soft dreamy finish",
+      "description": "",
+      "displayTitleZh": "Fujifilm Strawberry School 人像",
+      "displaySummaryZh": "来自EvoLinkAI 大型案例库的胶片感条目《Fujifilm Strawberry School Portrait》。 关键词：portrait、film。结构更完整，适合直接导入高级编辑。",
+      "displayCategoryZh": "胶片感",
+      "language": "en",
+      "importHints": {
+        "colorGradePrimary": "color_film"
+      },
+      "sourceTier": "large-gallery-secondary",
+      "qualityTier": "curated",
+      "recommendedForCurrentProduct": true,
+      "chunkId": "evolink:film-texture",
+      "searchText": "fujifilm strawberry school portrait 9:16 vertical - japanese fuji film style portrait, single subject fujifilm analog aesthetic (pro 400h / superia feel), soft pastel tones, slight green-magenta shift, low contrast, gentle highlight roll-off, fine film grain, subtle halation, slight vignette bright natural daylight, diffused sunlight through window, soft shadows, airy atmosphere young japanese female idol, natural minimal makeup, fresh glowing skin, realistic texture, slight imperfections outfit: japanese school uniform (sailor-style or blazer uniform), neatly styled, non-revealing, youthful and clean hair: natural dark hair, straight or softly flowing, a few loose strands pose: front-facing or slight angle toward camera, relaxed posture; one hand gently holding a strawberry near lips, mid-action as if about to take a bite; shoulders relaxed, subtle natural body curve expression: soft playful gaze, light smile or neutral lips, gentle eye contact with camera setting: minimal indoor near window or simple outdoor corner, clean background, everyday atmosphere composition: slightly off-center framing, intimate distance, candid feel mood: fresh, youthful, sweet everyday moment, understated charm quality: ultra-realistic, analog film look, natural imperfections, soft dreamy finish portrait bubblebrain portrait film analog realistic",
+      "originalCategory": "portrait",
+      "normalizedCategory": "film-texture",
+      "importConfidence": 0.95,
+      "portraitFocused": true,
+      "entryKind": "case"
+    },
+    {
+      "id": "evolink-portrait-fujifilm-couple-portrait",
+      "sourceId": "evolink",
+      "sourceRepo": "EvoLinkAI/awesome-gpt-image-2-API-and-Prompts",
+      "sourceUrl": "https://x.com/BubbleBrain/status/2046502288102170757",
+      "title": "Fujifilm Couple Portrait",
+      "author": "BubbleBrain",
+      "license": "See source repository",
+      "category": "portrait",
+      "styleTags": [
+        "portrait",
+        "film",
+        "analog",
+        "realistic"
+      ],
+      "sceneTags": [],
+      "prompt": "9:16 vertical - Japanese Fuji film style couple portrait, two subjects Fujifilm analog aesthetic (Pro 400H / Superia feel), soft pastel tones, slight green-magenta shift, low contrast, gentle highlight roll-off, fine film grain, subtle halation bright natural daylight, diffused sunlight through window, soft shadows, airy atmosphere young Japanese couple, natural minimal makeup, realistic skin texture, slight imperfections female outfit: oversized button-up shirt with loose shorts, relaxed fit, soft casual styling male outfit: simple t-shirt or light shirt, clean and understated hair: natural, slightly tousled for both pose: close intimate distance - sitting or standing close together; the girl gently leaning toward him, one hand lightly resting on his shoulder or chest; the boy slightly leaning in, faces close, almost touching, capturing the moment just before a kiss expression: soft smiles or gentle gaze toward each other, relaxed and natural, emotional connection visible camera: close framing (waist-up), eye-level, intimate distance, slight handheld feel setting: minimal indoor near window, light curtains, clean soft background lighting: diffused daylight, gentle highlight bloom, soft shadow transitions mood: warm, romantic, intimate everyday moment, natural affection quality: ultra-realistic, analog film look, fine grain, slight softness, natural imperfections",
+      "description": "",
+      "displayTitleZh": "Fujifilm Couple 人像",
+      "displaySummaryZh": "来自EvoLinkAI 大型案例库的胶片感条目《Fujifilm Couple Portrait》。 关键词：portrait、film。结构更完整，适合直接导入高级编辑。",
+      "displayCategoryZh": "胶片感",
+      "language": "en",
+      "importHints": {
+        "colorGradePrimary": "color_film"
+      },
+      "sourceTier": "large-gallery-secondary",
+      "qualityTier": "curated",
+      "recommendedForCurrentProduct": true,
+      "chunkId": "evolink:film-texture",
+      "searchText": "fujifilm couple portrait 9:16 vertical - japanese fuji film style couple portrait, two subjects fujifilm analog aesthetic (pro 400h / superia feel), soft pastel tones, slight green-magenta shift, low contrast, gentle highlight roll-off, fine film grain, subtle halation bright natural daylight, diffused sunlight through window, soft shadows, airy atmosphere young japanese couple, natural minimal makeup, realistic skin texture, slight imperfections female outfit: oversized button-up shirt with loose shorts, relaxed fit, soft casual styling male outfit: simple t-shirt or light shirt, clean and understated hair: natural, slightly tousled for both pose: close intimate distance - sitting or standing close together; the girl gently leaning toward him, one hand lightly resting on his shoulder or chest; the boy slightly leaning in, faces close, almost touching, capturing the moment just before a kiss expression: soft smiles or gentle gaze toward each other, relaxed and natural, emotional connection visible camera: close framing (waist-up), eye-level, intimate distance, slight handheld feel setting: minimal indoor near window, light curtains, clean soft background lighting: diffused daylight, gentle highlight bloom, soft shadow transitions mood: warm, romantic, intimate everyday moment, natural affection quality: ultra-realistic, analog film look, fine grain, slight softness, natural imperfections portrait bubblebrain portrait film analog realistic",
+      "originalCategory": "portrait",
+      "normalizedCategory": "film-texture",
+      "importConfidence": 0.95,
+      "portraitFocused": true,
+      "entryKind": "case"
+    },
+    {
+      "id": "evolink-portrait-musician-leaving-bodega-night-cinematic-portrait",
+      "sourceId": "evolink",
+      "sourceRepo": "EvoLinkAI/awesome-gpt-image-2-API-and-Prompts",
+      "sourceUrl": "https://x.com/commanderdgr8/status/2047934886124867684",
+      "title": "Musician Leaving Bodega Night Cinematic Portrait",
+      "author": "commanderdgr8",
+      "license": "See source repository",
+      "category": "portrait",
+      "styleTags": [
+        "portrait",
+        "cinematic",
+        "35mm",
+        "film",
+        "realistic",
+        "documentary",
+        "street",
+        "magazine"
+      ],
+      "sceneTags": [
+        "street"
+      ],
+      "prompt": "A candid, magazine-cover quality documentary photograph of a young musician with curly hair, casually carrying a worn guitar case, stepping out of a classic downtown bodega at 11 PM. The lighting features a complex mixed color temperature: a bright neon \"OPEN\" sign casts an intense, warm red glow across his face, while a yellow streetlamp provides a striking backlight behind him. The image perfectly emulates 35mm film shot on a Canon AE-1 with a 50mm f/1.4 lens wide open, exhibiting a shallow depth of field with the background beautifully blurred. It captures the exact aesthetics of CineStill 800T film, specifically featuring the distinctive soft red halation bloom radiating outward from the neon light sources, a tungsten white balance, and moody, slightly green-tinted shadows in the darkest areas. Cinematic night photography, photorealistic, highly detailed.",
+      "description": "",
+      "displayTitleZh": "Musician Leaving Bodega Night 电影感 人像",
+      "displaySummaryZh": "来自EvoLinkAI 大型案例库的胶片感条目《Musician Leaving Bodega Night Cinematic Portrait》。 关键词：portrait、cinematic、street。结构更完整，适合直接导入高级编辑。",
+      "displayCategoryZh": "胶片感",
+      "language": "en",
+      "importHints": {
+        "colorGradePrimary": "color_film",
+        "trendAesthetic": [
+          "trend_story_documentary"
+        ]
+      },
+      "sourceTier": "large-gallery-secondary",
+      "qualityTier": "curated",
+      "recommendedForCurrentProduct": true,
+      "chunkId": "evolink:film-texture",
+      "searchText": "musician leaving bodega night cinematic portrait a candid, magazine-cover quality documentary photograph of a young musician with curly hair, casually carrying a worn guitar case, stepping out of a classic downtown bodega at 11 pm. the lighting features a complex mixed color temperature: a bright neon \"open\" sign casts an intense, warm red glow across his face, while a yellow streetlamp provides a striking backlight behind him. the image perfectly emulates 35mm film shot on a canon ae-1 with a 50mm f/1.4 lens wide open, exhibiting a shallow depth of field with the background beautifully blurred. it captures the exact aesthetics of cinestill 800t film, specifically featuring the distinctive soft red halation bloom radiating outward from the neon light sources, a tungsten white balance, and moody, slightly green-tinted shadows in the darkest areas. cinematic night photography, photorealistic, highly detailed. portrait commanderdgr8 portrait cinematic 35mm film realistic documentary street magazine street",
+      "originalCategory": "portrait",
+      "normalizedCategory": "film-texture",
+      "importConfidence": 0.95,
+      "portraitFocused": true,
+      "entryKind": "case"
+    },
+    {
+      "id": "evolink-portrait-analog-idol-portrait",
+      "sourceId": "evolink",
+      "sourceRepo": "EvoLinkAI/awesome-gpt-image-2-API-and-Prompts",
+      "sourceUrl": "https://x.com/BubbleBrain/status/2051253854516478082",
+      "title": "Analog Idol Portrait",
+      "author": "BubbleBrain",
+      "license": "See source repository",
+      "category": "portrait",
+      "styleTags": [
+        "portrait",
+        "analog",
+        "cinematic",
+        "editorial",
+        "35mm",
+        "film",
+        "fashion",
+        "realistic"
+      ],
+      "sceneTags": [],
+      "prompt": "Realistic analog 35mm film photography, intimate upper-body portrait of a beautiful Japanese female idol with an elegant and subtly sensual aura, side-facing toward the camera, gently turning her head back with a calm, confident yet slightly distant gaze.\n\nShe lifts her high ponytail using both hands symmetrically - each hand positioned on opposite sides of her head, naturally gathering and holding the hair. Her elbows extend outward, creating a balanced and elegant silhouette, while emphasizing her shoulder line, neck, and collarbone. The pose feels natural and unposed, like a fleeting candid moment rather than intentional modeling.\n\nFraming: close medium shot from head to waist, slightly imperfect composition, subject slightly off-center, intimate and cinematic.\n\nOutfit: fitted off-shoulder knit top or thin-strap satin camisole, minimal and tasteful, softly contouring the body without being revealing. Delicate earrings, natural glossy lips, clean Korean-style makeup, porcelain skin with visible real texture, micro pores, no over-retouching.\n\nScene: quiet indoor apartment corner, soft curtains, minimal background, warm ambient tungsten light mixed with faint natural window light, subtle shadow gradients on wall, slightly hazy air catching light.\n\nLighting: soft side lighting with gentle falloff, natural facial fill, subtle rim light on hair and shoulders, slight highlight bloom, warm cinematic tones.\n\nStyle: authentic analog film look (Kodak Portra 400 or Fujifilm Pro 400H feel), soft contrast, muted warm palette, visible organic film grain, fine noise texture, slight lens imperfection, nostalgic cinematic mood, high-end fashion editorial with documentary realism.\n\nCamera: 50mm lens, shallow depth of field, natural skin rendering, realistic proportions, slight focus falloff.\n\nAdd a small handwritten signature text \"BubbleBrain\" at the bottom right corner, subtle and integrated.\n\n--ar 2:3",
+      "description": "",
+      "displayTitleZh": "模拟胶片 Idol 人像",
+      "displaySummaryZh": "来自EvoLinkAI 大型案例库的胶片感条目《Analog Idol Portrait》。 关键词：portrait、analog。结构更完整，适合直接导入高级编辑。",
+      "displayCategoryZh": "胶片感",
+      "language": "en",
+      "importHints": {
+        "colorGradePrimary": "color_film",
+        "trendAesthetic": [
+          "trend_story_documentary"
+        ]
+      },
+      "sourceTier": "large-gallery-secondary",
+      "qualityTier": "curated",
+      "recommendedForCurrentProduct": true,
+      "chunkId": "evolink:film-texture",
+      "searchText": "analog idol portrait realistic analog 35mm film photography, intimate upper-body portrait of a beautiful japanese female idol with an elegant and subtly sensual aura, side-facing toward the camera, gently turning her head back with a calm, confident yet slightly distant gaze. she lifts her high ponytail using both hands symmetrically - each hand positioned on opposite sides of her head, naturally gathering and holding the hair. her elbows extend outward, creating a balanced and elegant silhouette, while emphasizing her shoulder line, neck, and collarbone. the pose feels natural and unposed, like a fleeting candid moment rather than intentional modeling. framing: close medium shot from head to waist, slightly imperfect composition, subject slightly off-center, intimate and cinematic. outfit: fitted off-shoulder knit top or thin-strap satin camisole, minimal and tasteful, softly contouring the body without being revealing. delicate earrings, natural glossy lips, clean korean-style makeup, porcelain skin with visible real texture, micro pores, no over-retouching. scene: quiet indoor apartment corner, soft curtains, minimal background, warm ambient tungsten light mixed with faint natural window light, subtle shadow gradients on wall, slightly hazy air catching light. lighting: soft side lighting with gentle falloff, natural facial fill, subtle rim light on hair and shoulders, slight highlight bloom, warm cinematic tones. style: authentic analog film look (kodak portra 400 or fujifilm pro 400h feel), soft contrast, muted warm palette, visible organic film grain, fine noise texture, slight lens imperfection, nostalgic cinematic mood, high-end fashion editorial with documentary realism. camera: 50mm lens, shallow depth of field, natural skin rendering, realistic proportions, slight focus falloff. add a small handwritten signature text \"bubblebrain\" at the bottom right corner, subtle and integrated. --ar 2:3 portrait bubblebrain portrait analog cinematic editorial 35mm film fashion realistic",
+      "originalCategory": "portrait",
+      "normalizedCategory": "film-texture",
+      "importConfidence": 0.95,
+      "portraitFocused": true,
+      "entryKind": "case"
+    },
+    {
+      "id": "evolink-portrait-golden-hour-street-side-profile-portrait",
+      "sourceId": "evolink",
+      "sourceRepo": "EvoLinkAI/awesome-gpt-image-2-API-and-Prompts",
+      "sourceUrl": "https://x.com/Professor_134/status/2049701241287311561",
+      "title": "Golden Hour Street Side-Profile Portrait",
+      "author": "Professor_134",
+      "license": "See source repository",
+      "category": "portrait",
+      "styleTags": [
+        "portrait",
+        "street",
+        "cinematic",
+        "editorial",
+        "35mm",
+        "film",
+        "realistic"
+      ],
+      "sceneTags": [
+        "street",
+        "city"
+      ],
+      "prompt": "- Cinematic golden hour street portrait of a young woman in side profile, walking through a busy city crowd, soft wind blowing through her long light-brown hair, individual strands glowing in backlight, warm sunlight flaring through her hair creating a natural halo effect, dreamy atmosphere, shallow depth of field, strong subject separation, background filled with softly blurred pedestrians and urban motion bokeh.\n\nShe has delicate facial features, natural skin texture, subtle makeup, calm introspective expression, slightly parted lips, looking off-frame. Wearing a minimal outfit (dark neutral tones), possibly a light jacket, modern casual style.\n\nLighting is rich golden hour sunlight, strong backlighting with lens flare, cinematic highlights, warm orange and amber tones, high dynamic range, soft shadows, volumetric light rays passing through hair and environment.\n\nShot on a telephoto lens (85mm-135mm look), f/1.8 aperture, ultra-realistic, high detail, film still quality, natural color grading, slight film grain, soft bloom, editorial photography style, Vogue aesthetic.\n\nComposition: rule of thirds, subject slightly off-center, crowd motion blur behind her, dynamic yet intimate framing.\n\nMood: nostalgic, dreamy, romantic, fleeting moment, poetic realism.\n\nStyle keywords: cinematic, photorealistic, golden hour glow, bokeh, volumetric lighting, shallow depth of field, editorial portrait, soft focus highlights, warm tones, natural skin texture\n\nNegative prompt: low quality, overexposed face, harsh shadows, distorted facial features, extra limbs, blur on subject, noise, oversharpening, artificial skin, cartoonish look\n\nGenerate image using uploaded image as reference",
+      "description": "",
+      "displayTitleZh": "黄金时刻 街拍 Side-Profile 人像",
+      "displaySummaryZh": "来自EvoLinkAI 大型案例库的胶片感条目《Golden Hour Street Side-Profile Portrait》。 关键词：portrait、street、street、city。结构更完整，适合直接导入高级编辑。",
+      "displayCategoryZh": "胶片感",
+      "language": "en",
+      "importHints": {
+        "colorGradePrimary": "color_film",
+        "trendAesthetic": [
+          "trend_story_documentary"
+        ]
+      },
+      "sourceTier": "large-gallery-secondary",
+      "qualityTier": "curated",
+      "recommendedForCurrentProduct": true,
+      "chunkId": "evolink:film-texture",
+      "searchText": "golden hour street side-profile portrait - cinematic golden hour street portrait of a young woman in side profile, walking through a busy city crowd, soft wind blowing through her long light-brown hair, individual strands glowing in backlight, warm sunlight flaring through her hair creating a natural halo effect, dreamy atmosphere, shallow depth of field, strong subject separation, background filled with softly blurred pedestrians and urban motion bokeh. she has delicate facial features, natural skin texture, subtle makeup, calm introspective expression, slightly parted lips, looking off-frame. wearing a minimal outfit (dark neutral tones), possibly a light jacket, modern casual style. lighting is rich golden hour sunlight, strong backlighting with lens flare, cinematic highlights, warm orange and amber tones, high dynamic range, soft shadows, volumetric light rays passing through hair and environment. shot on a telephoto lens (85mm-135mm look), f/1.8 aperture, ultra-realistic, high detail, film still quality, natural color grading, slight film grain, soft bloom, editorial photography style, vogue aesthetic. composition: rule of thirds, subject slightly off-center, crowd motion blur behind her, dynamic yet intimate framing. mood: nostalgic, dreamy, romantic, fleeting moment, poetic realism. style keywords: cinematic, photorealistic, golden hour glow, bokeh, volumetric lighting, shallow depth of field, editorial portrait, soft focus highlights, warm tones, natural skin texture negative prompt: low quality, overexposed face, harsh shadows, distorted facial features, extra limbs, blur on subject, noise, oversharpening, artificial skin, cartoonish look generate image using uploaded image as reference portrait professor_134 portrait street cinematic editorial 35mm film realistic street city",
+      "originalCategory": "portrait",
+      "normalizedCategory": "film-texture",
+      "importConfidence": 0.95,
+      "portraitFocused": true,
+      "entryKind": "case"
+    },
+    {
+      "id": "evolink-portrait-retro-newsstand-fashion-scene",
+      "sourceId": "evolink",
+      "sourceRepo": "EvoLinkAI/awesome-gpt-image-2-API-and-Prompts",
+      "sourceUrl": "https://x.com/harboriis/status/2054484765001306285",
+      "title": "Retro Newsstand Fashion Scene",
+      "author": "harboriis",
+      "license": "See source repository",
+      "category": "portrait",
+      "styleTags": [
+        "fashion",
+        "cinematic",
+        "editorial",
+        "35mm",
+        "film",
+        "realistic",
+        "street",
+        "magazine"
+      ],
+      "sceneTags": [
+        "street"
+      ],
+      "prompt": "A cinematic fashion editorial scene of 8 diverse young adults gathered around a vintage urban newsstand kiosk with a bold \"NEWSSTAND\" sign, set in a gritty indoor street environment with worn concrete floors, dark industrial walls, and subtle urban details. Newspapers fly dynamically through the air in mid-motion, creating layered depth and energy with natural motion blur. The group is styled in coordinated 90s-inspired retro streetwear - oversized jackets, layered fits, sunglasses, caps, and muted earth tones. (olive green, brown, cream, navy). Composition is carefully balanced: one subject leans casually against the kiosk holding a newspaper, one sits confidently on a cream vintage scooter in the foreground, another rests on a teal scooter, while others stand or sit on chairs with relaxed, confident poses and subtle attitude. Shot from a slightly elevated angle (top-down perspective), wide 35mm lens, maintaining natural proportions. Lighting is soft cinematic with warm highlights and diffused shadows, creating a premium fashion campaign mood. Background includes scattered newspapers, a red fire hydrant, and industrial textures for realism. Ultra-detailed, photorealistic, shallow depth of field, crisp subject focus, soft film grain, natural color grading, high-end magazine aesthetic, 4K quality.",
+      "description": "",
+      "displayTitleZh": "Retro Newsstand 时尚 Scene",
+      "displaySummaryZh": "来自EvoLinkAI 大型案例库的胶片感条目《Retro Newsstand Fashion Scene》。 关键词：fashion、cinematic、street。结构更完整，适合直接导入高级编辑。",
+      "displayCategoryZh": "胶片感",
+      "language": "en",
+      "importHints": {
+        "colorGradePrimary": "color_film",
+        "trendAesthetic": [
+          "trend_story_documentary"
+        ]
+      },
+      "sourceTier": "large-gallery-secondary",
+      "qualityTier": "curated",
+      "recommendedForCurrentProduct": true,
+      "chunkId": "evolink:film-texture",
+      "searchText": "retro newsstand fashion scene a cinematic fashion editorial scene of 8 diverse young adults gathered around a vintage urban newsstand kiosk with a bold \"newsstand\" sign, set in a gritty indoor street environment with worn concrete floors, dark industrial walls, and subtle urban details. newspapers fly dynamically through the air in mid-motion, creating layered depth and energy with natural motion blur. the group is styled in coordinated 90s-inspired retro streetwear - oversized jackets, layered fits, sunglasses, caps, and muted earth tones. (olive green, brown, cream, navy). composition is carefully balanced: one subject leans casually against the kiosk holding a newspaper, one sits confidently on a cream vintage scooter in the foreground, another rests on a teal scooter, while others stand or sit on chairs with relaxed, confident poses and subtle attitude. shot from a slightly elevated angle (top-down perspective), wide 35mm lens, maintaining natural proportions. lighting is soft cinematic with warm highlights and diffused shadows, creating a premium fashion campaign mood. background includes scattered newspapers, a red fire hydrant, and industrial textures for realism. ultra-detailed, photorealistic, shallow depth of field, crisp subject focus, soft film grain, natural color grading, high-end magazine aesthetic, 4k quality. portrait harboriis fashion cinematic editorial 35mm film realistic street magazine street",
+      "originalCategory": "portrait",
+      "normalizedCategory": "film-texture",
+      "importConfidence": 0.95,
+      "portraitFocused": true,
+      "entryKind": "case"
+    },
+    {
+      "id": "evolink-poster-urban-alley-mural-artist",
+      "sourceId": "evolink",
+      "sourceRepo": "EvoLinkAI/awesome-gpt-image-2-API-and-Prompts",
+      "sourceUrl": "https://x.com/Professor_134/status/2048066672398102896",
+      "title": "Urban Alley Mural Artist",
+      "author": "Professor_134",
+      "license": "See source repository",
+      "category": "poster",
+      "styleTags": [
+        "cinematic",
+        "35mm",
+        "film",
+        "realistic",
+        "street"
+      ],
+      "sceneTags": [
+        "street"
+      ],
+      "prompt": "A cinematic, ultra-realistic night scene of a young male street artist painting a large-scale mural of a woman's face in a narrow urban alley. The camera angle is slightly low, creating a dramatic, powerful perspective. The artist has medium-length, slightly messy dark hair and light stubble or a short beard, giving him a rugged, creative look.\n\nHe wears a loose white t-shirt and casual jeans, slightly oversized, with a relaxed streetwear vibe. His posture is focused and engaged as he stands close to the wall, actively spray-painting.\n\nHe is creating a massive, hyper-realistic mural of a woman's face on a textured brick wall. The mural is incredibly detailed-smooth skin tones, realistic lighting, expressive eyes, and glossy lips-appearing almost like a photograph. Fine mist from the spray paint is visible in the air, catching light and adding motion and atmosphere.\n\nThe setting is a narrow urban alley at night, surrounded by tall buildings. The environment is gritty and textured-aged brick walls, paint splashes, subtle grime, and urban wear. Neon signs and distant streetlights cast vibrant reflections in teal, magenta, and blue tones, creating a cinematic, slightly cyberpunk mood.\n\nLighting is dramatic and layered: cool ambient light fills the alley, while warmer neon highlights create contrast. A subtle rim light outlines the artist's silhouette, separating him from the dark background. The mural is partially illuminated, acting as a strong focal point.\n\nAtmosphere includes light fog or mist, enhancing depth and making the lighting glow softly. The scene feels immersive, quiet, and artistically intense.\n\nDepth of field is moderately shallow: the artist and mural are in sharp focus, while the background fades into soft blur with bokeh highlights.\n\nStyle: hyper-realistic, cinematic photography, street art aesthetic, ultra-detailed textures, high dynamic range, subtle film grain.\n\nCamera details: 35mm or 50mm lens, f/1.8-f/2.8 aperture, low-light photography, slight low-angle shot, natural perspective.\n\nComposition: vertical frame (4:5 or 9:16), subject slightly off-center, mural dominating the frame for strong visual storytelling.\n\nGenerate image using uploaded image as reference",
+      "description": "",
+      "displaySummaryZh": "来自EvoLinkAI 大型案例库的胶片感条目《Urban Alley Mural Artist》。 关键词：cinematic、35mm、street。结构更完整，适合直接导入高级编辑。",
+      "displayCategoryZh": "胶片感",
+      "language": "en",
+      "importHints": {
+        "colorGradePrimary": "color_film",
+        "trendAesthetic": [
+          "trend_story_documentary"
+        ]
+      },
+      "sourceTier": "large-gallery-secondary",
+      "qualityTier": "curated",
+      "recommendedForCurrentProduct": true,
+      "chunkId": "evolink:film-texture",
+      "searchText": "urban alley mural artist a cinematic, ultra-realistic night scene of a young male street artist painting a large-scale mural of a woman's face in a narrow urban alley. the camera angle is slightly low, creating a dramatic, powerful perspective. the artist has medium-length, slightly messy dark hair and light stubble or a short beard, giving him a rugged, creative look. he wears a loose white t-shirt and casual jeans, slightly oversized, with a relaxed streetwear vibe. his posture is focused and engaged as he stands close to the wall, actively spray-painting. he is creating a massive, hyper-realistic mural of a woman's face on a textured brick wall. the mural is incredibly detailed-smooth skin tones, realistic lighting, expressive eyes, and glossy lips-appearing almost like a photograph. fine mist from the spray paint is visible in the air, catching light and adding motion and atmosphere. the setting is a narrow urban alley at night, surrounded by tall buildings. the environment is gritty and textured-aged brick walls, paint splashes, subtle grime, and urban wear. neon signs and distant streetlights cast vibrant reflections in teal, magenta, and blue tones, creating a cinematic, slightly cyberpunk mood. lighting is dramatic and layered: cool ambient light fills the alley, while warmer neon highlights create contrast. a subtle rim light outlines the artist's silhouette, separating him from the dark background. the mural is partially illuminated, acting as a strong focal point. atmosphere includes light fog or mist, enhancing depth and making the lighting glow softly. the scene feels immersive, quiet, and artistically intense. depth of field is moderately shallow: the artist and mural are in sharp focus, while the background fades into soft blur with bokeh highlights. style: hyper-realistic, cinematic photography, street art aesthetic, ultra-detailed textures, high dynamic range, subtle film grain. camera details: 35mm or 50mm lens, f/1.8-f/2.8 aperture, low-light photography, slight low-angle shot, natural perspective. composition: vertical frame (4:5 or 9:16), subject slightly off-center, mural dominating the frame for strong visual storytelling. generate image using uploaded image as reference poster professor_134 cinematic 35mm film realistic street street",
+      "originalCategory": "poster",
+      "normalizedCategory": "film-texture",
+      "importConfidence": 0.95,
+      "portraitFocused": true,
+      "entryKind": "case"
+    },
+    {
+      "id": "evolink-ui-nostalgic-16-photo-couple-grid",
+      "sourceId": "evolink",
+      "sourceRepo": "EvoLinkAI/awesome-gpt-image-2-API-and-Prompts",
+      "sourceUrl": "https://x.com/zenkaiAI/status/2048051889460437351",
+      "title": "Nostalgic 16-Photo Couple Grid",
+      "author": "zenkaiAI",
+      "license": "See source repository",
+      "category": "ui",
+      "styleTags": [
+        "portrait",
+        "35mm",
+        "film",
+        "analog",
+        "realistic",
+        "selfie",
+        "street",
+        "snapshot"
+      ],
+      "sceneTags": [
+        "street",
+        "beach",
+        "city"
+      ],
+      "prompt": "{\"type\":\"16-photo nostalgic contact sheet collage\",\"style\":\"dreamy film photography, soft blur, slightly underexposed, candid youthful romance, flash snapshots mixed with ambient dusk light, subtle grain, sentimental and bittersweet mood\",\"subject\":{\"people_count\":2,\"relationship\":\"young couple or former lovers spending time together\",\"ages\":\"early 20s\",\"appearance\":{\"male\":{\"build\":\"slim\",\"hair\":\"short dark hair\",\"clothing\":\"loose white short-sleeve shirt, camera strap around neck in several shots\"},\"female\":{\"build\":\"slim\",\"hair\":\"shoulder-length dark hair\",\"clothing\":\"light sleeveless tops or soft casual summer clothes\"}},\"faces\":\"intentionally obscured by soft rectangular blur blocks over every visible face\"},\"layout\":{\"grid\":{\"rows\":4,\"columns\":4,\"count\":16,\"border\":\"thin white dividers, equal square cells\"},\"images\":[{\"position\":\"row 1 col 1\",\"description\":\"close cropped portrait of the woman in a white top at night, soft flash, dark background\"},{\"position\":\"row 1 col 2\",\"description\":\"close cropped blurred two-person selfie framing, both subjects partially visible, dark nighttime setting\"},{\"position\":\"row 1 col 3\",\"description\":\"young man standing at night and holding a compact silver camera up to his face, white shirt, distant lights behind him\"},{\"position\":\"row 1 col 4\",\"description\":\"woman on a beach or shoreline in low light, softly blurred, ocean horizon behind her\"},{\"position\":\"row 2 col 1\",\"description\":\"street candid of the man holding a camera near his face while walking outdoors in the evening, urban background with motion blur\"},{\"position\":\"row 2 col 2\",\"description\":\"close-up of the woman indoors or in a dim warm setting, hand raised near her face, flash-lit snapshot\"},{\"position\":\"row 2 col 3\",\"description\":\"blurred two-shot of the couple sitting close together by water at dusk, intimate candid composition\"},{\"position\":\"row 2 col 4\",\"description\":\"young man outdoors in greenery during daytime or early evening, looking down at a camera in his hands, white shirt and camera strap visible\"},{\"position\":\"row 3 col 1\",\"description\":\"woman close to the camera giving a peace sign, casual sleeveless top, sandy or beachlike background\"},{\"position\":\"row 3 col 2\",\"description\":\"back view of the man in a white shirt looking out over a cityscape at night from a high vantage point\"},{\"position\":\"row 3 col 3\",\"description\":\"woman indoors at night holding a compact camera directly toward the viewer, city lights beyond a window, flash aesthetic\"},{\"position\":\"row 3 col 4\",\"description\":\"tight cropped two-person selfie-like frame with both subjects partially visible, dark background\"},{\"position\":\"row 4 col 1\",\"description\":\"young man at the waterfront at dusk holding a camera to his eye, cloudy blue sky and distant shoreline behind him\"},{\"position\":\"row 4 col 2\",\"description\":\"soft night portrait of the woman on a city street with warm bokeh lights in the background\"},{\"position\":\"row 4 col 3\",\"description\":\"close intimate couple snapshot with both faces near each other, one subject making a peace sign, heavy blur and flash look\"},{\"position\":\"row 4 col 4\",\"description\":\"rear view of the woman walking alone down a warmly lit narrow street at night, shoulder-length hair and light top visible\"}]},\"composition\":\"each square feels like a memory fragment from one summer evening and a few nearby outings, varied framing, natural imperfection, casual amateur photography\",\"color_palette\":\"muted blues, warm tungsten yellows, soft skin tones, dark greens, charcoal night shadows, faded white clothing\",\"camera_look\":\"35mm point-and-shoot or disposable camera feel, shallow focus, motion blur, bloom around lights, occasional flash overexposure\",\"quality\":\"high-resolution collage with authentic analog softness, emotionally evocative and realistic\"}",
+      "description": "",
+      "displaySummaryZh": "来自EvoLinkAI 大型案例库的胶片感条目《Nostalgic 16-Photo Couple Grid》。 关键词：portrait、35mm、street、beach。结构更完整，适合直接导入高级编辑。",
+      "displayCategoryZh": "胶片感",
+      "language": "en",
+      "importHints": {
+        "colorGradePrimary": "color_film"
+      },
+      "sourceTier": "large-gallery-secondary",
+      "qualityTier": "curated",
+      "recommendedForCurrentProduct": true,
+      "chunkId": "evolink:film-texture",
+      "searchText": "nostalgic 16-photo couple grid {\"type\":\"16-photo nostalgic contact sheet collage\",\"style\":\"dreamy film photography, soft blur, slightly underexposed, candid youthful romance, flash snapshots mixed with ambient dusk light, subtle grain, sentimental and bittersweet mood\",\"subject\":{\"people_count\":2,\"relationship\":\"young couple or former lovers spending time together\",\"ages\":\"early 20s\",\"appearance\":{\"male\":{\"build\":\"slim\",\"hair\":\"short dark hair\",\"clothing\":\"loose white short-sleeve shirt, camera strap around neck in several shots\"},\"female\":{\"build\":\"slim\",\"hair\":\"shoulder-length dark hair\",\"clothing\":\"light sleeveless tops or soft casual summer clothes\"}},\"faces\":\"intentionally obscured by soft rectangular blur blocks over every visible face\"},\"layout\":{\"grid\":{\"rows\":4,\"columns\":4,\"count\":16,\"border\":\"thin white dividers, equal square cells\"},\"images\":[{\"position\":\"row 1 col 1\",\"description\":\"close cropped portrait of the woman in a white top at night, soft flash, dark background\"},{\"position\":\"row 1 col 2\",\"description\":\"close cropped blurred two-person selfie framing, both subjects partially visible, dark nighttime setting\"},{\"position\":\"row 1 col 3\",\"description\":\"young man standing at night and holding a compact silver camera up to his face, white shirt, distant lights behind him\"},{\"position\":\"row 1 col 4\",\"description\":\"woman on a beach or shoreline in low light, softly blurred, ocean horizon behind her\"},{\"position\":\"row 2 col 1\",\"description\":\"street candid of the man holding a camera near his face while walking outdoors in the evening, urban background with motion blur\"},{\"position\":\"row 2 col 2\",\"description\":\"close-up of the woman indoors or in a dim warm setting, hand raised near her face, flash-lit snapshot\"},{\"position\":\"row 2 col 3\",\"description\":\"blurred two-shot of the couple sitting close together by water at dusk, intimate candid composition\"},{\"position\":\"row 2 col 4\",\"description\":\"young man outdoors in greenery during daytime or early evening, looking down at a camera in his hands, white shirt and camera strap visible\"},{\"position\":\"row 3 col 1\",\"description\":\"woman close to the camera giving a peace sign, casual sleeveless top, sandy or beachlike background\"},{\"position\":\"row 3 col 2\",\"description\":\"back view of the man in a white shirt looking out over a cityscape at night from a high vantage point\"},{\"position\":\"row 3 col 3\",\"description\":\"woman indoors at night holding a compact camera directly toward the viewer, city lights beyond a window, flash aesthetic\"},{\"position\":\"row 3 col 4\",\"description\":\"tight cropped two-person selfie-like frame with both subjects partially visible, dark background\"},{\"position\":\"row 4 col 1\",\"description\":\"young man at the waterfront at dusk holding a camera to his eye, cloudy blue sky and distant shoreline behind him\"},{\"position\":\"row 4 col 2\",\"description\":\"soft night portrait of the woman on a city street with warm bokeh lights in the background\"},{\"position\":\"row 4 col 3\",\"description\":\"close intimate couple snapshot with both faces near each other, one subject making a peace sign, heavy blur and flash look\"},{\"position\":\"row 4 col 4\",\"description\":\"rear view of the woman walking alone down a warmly lit narrow street at night, shoulder-length hair and light top visible\"}]},\"composition\":\"each square feels like a memory fragment from one summer evening and a few nearby outings, varied framing, natural imperfection, casual amateur photography\",\"color_palette\":\"muted blues, warm tungsten yellows, soft skin tones, dark greens, charcoal night shadows, faded white clothing\",\"camera_look\":\"35mm point-and-shoot or disposable camera feel, shallow focus, motion blur, bloom around lights, occasional flash overexposure\",\"quality\":\"high-resolution collage with authentic analog softness, emotionally evocative and realistic\"} ui zenkaiai portrait 35mm film analog realistic selfie street snapshot street beach city",
+      "originalCategory": "ui",
+      "normalizedCategory": "film-texture",
+      "importConfidence": 0.95,
+      "portraitFocused": true,
+      "entryKind": "case"
+    }
+  ]
+}

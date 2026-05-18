@@ -1,0 +1,156 @@
+{
+  "meta": {
+    "id": "freestylefly:commercial",
+    "sourceId": "freestylefly",
+    "normalizedCategory": "commercial",
+    "label": "FreestyleFly 结构化词库 · 商业",
+    "path": "/external-library-chunks-v2/freestylefly/commercial.json",
+    "entryCount": 4
+  },
+  "entries": [
+    {
+      "id": "freestylefly-personalized-beauty-report",
+      "sourceId": "freestylefly",
+      "sourceRepo": "freestylefly/awesome-gpt-image-2",
+      "sourceUrl": "https://github.com/freestylefly/awesome-gpt-image-2/blob/main/data/style-library.json",
+      "title": "Personalized Beauty Report",
+      "author": "freestylefly",
+      "license": "See source repository",
+      "category": "Products & E-commerce",
+      "styleTags": [
+        "Product",
+        "UI",
+        "Layout",
+        "Style"
+      ],
+      "sceneTags": [
+        "Commerce",
+        "Fashion"
+      ],
+      "prompt": "Recommendation-report layouts for beauty and lifestyle products.\n\nUse a report-like hierarchy with diagnosis, recommendation, and product cards.\nKeep product images, labels, and ratings aligned.\nAvoid medical claims and unreadable dense notes.\nKeep recommendation logic simple.",
+      "description": "Recommendation-report layouts for beauty and lifestyle products.",
+      "displayTitleZh": "Personalized 美妆 Report",
+      "displaySummaryZh": "来自FreestyleFly 结构化词库的商业条目《Personalized Beauty Report》。 关键词：Product、UI、Commerce、Fashion。结构更完整，适合直接导入高级编辑。",
+      "displayCategoryZh": "商业",
+      "language": "en",
+      "importHints": {},
+      "sourceTier": "structured-primary",
+      "qualityTier": "curated",
+      "recommendedForCurrentProduct": true,
+      "chunkId": "freestylefly:commercial",
+      "searchText": "personalized beauty report recommendation-report layouts for beauty and lifestyle products. recommendation-report layouts for beauty and lifestyle products. use a report-like hierarchy with diagnosis, recommendation, and product cards. keep product images, labels, and ratings aligned. avoid medical claims and unreadable dense notes. keep recommendation logic simple. products & e-commerce product ui layout style commerce fashion",
+      "originalCategory": "Products & E-commerce",
+      "normalizedCategory": "commercial",
+      "importConfidence": 0.94,
+      "portraitFocused": true,
+      "entryKind": "template"
+    },
+    {
+      "id": "freestylefly-brand-touchpoint-board",
+      "sourceId": "freestylefly",
+      "sourceRepo": "freestylefly/awesome-gpt-image-2",
+      "sourceUrl": "https://github.com/freestylefly/awesome-gpt-image-2/blob/main/data/style-library.json",
+      "title": "Brand Touchpoint Board",
+      "author": "freestylefly",
+      "license": "See source repository",
+      "category": "Brand & Logos",
+      "styleTags": [
+        "Brand",
+        "Product",
+        "Identity",
+        "Campaign"
+      ],
+      "sceneTags": [
+        "Commerce",
+        "Social"
+      ],
+      "prompt": "Campaign boards across packaging, social, web, and display contexts.\n\nSpecify touchpoint list, shared visual rules, and mockup arrangement.\nUse one palette and one typography logic across all panels.\nAvoid mixing many unrelated campaign styles.\nLimit touchpoints if readability drops.",
+      "description": "Campaign boards across packaging, social, web, and display contexts.",
+      "displaySummaryZh": "来自FreestyleFly 结构化词库的商业条目《Brand Touchpoint Board》。 关键词：Brand、Product、Commerce、Social。结构更完整，适合直接导入高级编辑。",
+      "displayCategoryZh": "商业",
+      "language": "en",
+      "importHints": {},
+      "sourceTier": "structured-primary",
+      "qualityTier": "curated",
+      "recommendedForCurrentProduct": true,
+      "chunkId": "freestylefly:commercial",
+      "searchText": "brand touchpoint board campaign boards across packaging, social, web, and display contexts. campaign boards across packaging, social, web, and display contexts. specify touchpoint list, shared visual rules, and mockup arrangement. use one palette and one typography logic across all panels. avoid mixing many unrelated campaign styles. limit touchpoints if readability drops. brand & logos brand product identity campaign commerce social",
+      "originalCategory": "Brand & Logos",
+      "normalizedCategory": "commercial",
+      "importConfidence": 0.94,
+      "portraitFocused": true,
+      "entryKind": "template"
+    },
+    {
+      "id": "freestylefly-product-commerce-visual",
+      "sourceId": "freestylefly",
+      "sourceRepo": "freestylefly/awesome-gpt-image-2",
+      "sourceUrl": "https://github.com/freestylefly/awesome-gpt-image-2/blob/main/data/style-library.json",
+      "title": "Product Commerce Visual",
+      "author": "freestylefly",
+      "license": "See source repository",
+      "category": "Products & E-commerce",
+      "styleTags": [
+        "Product",
+        "Realistic",
+        "Commerce",
+        "Packaging"
+      ],
+      "sceneTags": [
+        "Commerce",
+        "Food"
+      ],
+      "prompt": "Product shots, packaging, detail pages, and selling-point layouts.\n\nDefine product, selling points, material, scene, lighting, and layout blocks.\nSeparate hero product, benefit labels, and supporting props.\nAvoid random props that weaken product recognition.\nConstrain packaging text and claim wording.",
+      "description": "Product shots, packaging, detail pages, and selling-point layouts.",
+      "displayTitleZh": "产品 Commerce Visual",
+      "displaySummaryZh": "来自FreestyleFly 结构化词库的商业条目《Product Commerce Visual》。 关键词：Product、Realistic、Commerce、Food。结构更完整，适合直接导入高级编辑。",
+      "displayCategoryZh": "商业",
+      "language": "en",
+      "importHints": {},
+      "sourceTier": "structured-primary",
+      "qualityTier": "curated",
+      "recommendedForCurrentProduct": false,
+      "chunkId": "freestylefly:commercial",
+      "searchText": "product commerce visual product shots, packaging, detail pages, and selling-point layouts. product shots, packaging, detail pages, and selling-point layouts. define product, selling points, material, scene, lighting, and layout blocks. separate hero product, benefit labels, and supporting props. avoid random props that weaken product recognition. constrain packaging text and claim wording. products & e-commerce product realistic commerce packaging commerce food",
+      "originalCategory": "Products & E-commerce",
+      "normalizedCategory": "commercial",
+      "importConfidence": 0.92,
+      "portraitFocused": false,
+      "entryKind": "template"
+    },
+    {
+      "id": "freestylefly-brand-identity-package",
+      "sourceId": "freestylefly",
+      "sourceRepo": "freestylefly/awesome-gpt-image-2",
+      "sourceUrl": "https://github.com/freestylefly/awesome-gpt-image-2/blob/main/data/style-library.json",
+      "title": "Brand Identity Package",
+      "author": "freestylefly",
+      "license": "See source repository",
+      "category": "Brand & Logos",
+      "styleTags": [
+        "Brand",
+        "Logo",
+        "Identity"
+      ],
+      "sceneTags": [
+        "Commerce"
+      ],
+      "prompt": "Logo, palette, typography, applications, and brand touchpoints.\n\nDefine brand name, positioning, palette, typography, logo usage, and touchpoints.\nAsk for a coherent board with aligned applications.\nAvoid unrelated logo variants and inconsistent palettes.\nKeep brand text accurate.",
+      "description": "Logo, palette, typography, applications, and brand touchpoints.",
+      "displaySummaryZh": "来自FreestyleFly 结构化词库的商业条目《Brand Identity Package》。 关键词：Brand、Logo、Commerce。结构更完整，适合直接导入高级编辑。",
+      "displayCategoryZh": "商业",
+      "language": "en",
+      "importHints": {},
+      "sourceTier": "structured-primary",
+      "qualityTier": "curated",
+      "recommendedForCurrentProduct": false,
+      "chunkId": "freestylefly:commercial",
+      "searchText": "brand identity package logo, palette, typography, applications, and brand touchpoints. logo, palette, typography, applications, and brand touchpoints. define brand name, positioning, palette, typography, logo usage, and touchpoints. ask for a coherent board with aligned applications. avoid unrelated logo variants and inconsistent palettes. keep brand text accurate. brand & logos brand logo identity commerce",
+      "originalCategory": "Brand & Logos",
+      "normalizedCategory": "commercial",
+      "importConfidence": 0.92,
+      "portraitFocused": false,
+      "entryKind": "template"
+    }
+  ]
+}

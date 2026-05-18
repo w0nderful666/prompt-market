@@ -1,0 +1,287 @@
+{
+  "meta": {
+    "id": "youmind:realism",
+    "sourceId": "youmind",
+    "normalizedCategory": "realism",
+    "label": "YouMind 全量搜索库 · 写实",
+    "path": "/external-library-chunks-v2/youmind/realism.json",
+    "entryCount": 8
+  },
+  "entries": [
+    {
+      "id": "youmind-others-20866",
+      "sourceId": "youmind",
+      "sourceRepo": "YouMind-OpenLab/gpt-image-2-prompts-search",
+      "sourceUrl": "https://github.com/YouMind-OpenLab/gpt-image-2-prompts-search/blob/main/references/others.json",
+      "title": "Dalí-Style Surreal Coastal Transformation",
+      "author": "YouMind",
+      "license": "See source repository",
+      "category": "Uncategorized",
+      "styleTags": [
+        "realistic"
+      ],
+      "sceneTags": [
+        "seaside"
+      ],
+      "prompt": "Using the provided reference image as the stylistic base, transform it into a new surreal Salvador Dalí-inspired coastal dreamscape rather than copying the melting-clock composition. Keep the same oil-painting feel, warm desert-seaside horizon, long shadows, and uncanny realism, but replace the original clock scene with an ornate architectural still-life arrangement: a tall eroded stone facade with multiple circular openings on the left, classical urns and small decorative figures on top, a distant garden/temple view framed through one opening, a draped white cloth at the base, and a large chalice-like reflective basin on the right containing a tiny island. Add a floating cracked egg/parachute form with dangling strings in the sky, a small suspended sphere, a rocky coastline in the distance, and a small pedestal with an egg and dark draped cloth in the lower right. Include exactly 2 flat opaque rectangular mask blocks over the image: 1 large vertical olive-gray rectangle covering the central structure and 1 smaller olive-gray rectangle near the upper-right floating object. Maintain a muted antique palette, precise surrealist lighting, and painterly canvas texture; avoid modern objects, text, or photorealistic digital effects.",
+      "description": "Transforms a Dalí reference painting into a new surreal coastal oil-painting scene with architectural forms, floating objects, and masked rectangular overlays.",
+      "displaySummaryZh": "来自YouMind 全量搜索库的写实条目《Dalí-Style Surreal Coastal Transformation》。 关键词：realistic、seaside。可直接作为灵感底稿，再去高级编辑细调。",
+      "displayCategoryZh": "写实",
+      "previewImage": "https://cms-assets.youmind.com/media/1779008274985_zeogqm_HIdo0gMXYAA6oa2.jpg",
+      "language": "en",
+      "importHints": {
+        "referenceMode": "identity-reference"
+      },
+      "sourceTier": "large-gallery-secondary",
+      "qualityTier": "usable",
+      "recommendedForCurrentProduct": true,
+      "chunkId": "youmind:realism",
+      "searchText": "dalí-style surreal coastal transformation transforms a dalí reference painting into a new surreal coastal oil-painting scene with architectural forms, floating objects, and masked rectangular overlays. using the provided reference image as the stylistic base, transform it into a new surreal salvador dalí-inspired coastal dreamscape rather than copying the melting-clock composition. keep the same oil-painting feel, warm desert-seaside horizon, long shadows, and uncanny realism, but replace the original clock scene with an ornate architectural still-life arrangement: a tall eroded stone facade with multiple circular openings on the left, classical urns and small decorative figures on top, a distant garden/temple view framed through one opening, a draped white cloth at the base, and a large chalice-like reflective basin on the right containing a tiny island. add a floating cracked egg/parachute form with dangling strings in the sky, a small suspended sphere, a rocky coastline in the distance, and a small pedestal with an egg and dark draped cloth in the lower right. include exactly 2 flat opaque rectangular mask blocks over the image: 1 large vertical olive-gray rectangle covering the central structure and 1 smaller olive-gray rectangle near the upper-right floating object. maintain a muted antique palette, precise surrealist lighting, and painterly canvas texture; avoid modern objects, text, or photorealistic digital effects. uncategorized realistic seaside",
+      "originalCategory": "Uncategorized",
+      "normalizedCategory": "realism",
+      "importConfidence": 0.79,
+      "portraitFocused": true,
+      "entryKind": "case"
+    },
+    {
+      "id": "youmind-others-20670",
+      "sourceId": "youmind",
+      "sourceRepo": "YouMind-OpenLab/gpt-image-2-prompts-search",
+      "sourceUrl": "https://github.com/YouMind-OpenLab/gpt-image-2-prompts-search/blob/main/references/others.json",
+      "title": "Misty Lotus Pond Heron Sunrise",
+      "author": "YouMind",
+      "license": "See source repository",
+      "category": "Uncategorized",
+      "styleTags": [
+        "cinematic",
+        "realistic"
+      ],
+      "sceneTags": [],
+      "prompt": "Create a serene cinematic nature landscape at sunrise: a mist-covered lotus pond with a single elegant heron standing in the shallow reflective water at the center, its long neck upright and its reflection visible beneath it. Surround the foreground with large green lily pads and exactly 8 prominent pink lotus flowers: 5 fully open blossoms, 2 closed buds, and 1 small distant blossom on the right side of the pond. On the left, a large old weeping cherry tree with a dark twisting trunk leans over the water, its long drooping branches filled with pale pink blossoms cascading like curtains. In the distance, show a softly glowing forested hillside of pine and flowering trees, a small traditional lakeside pavilion on the right bank, and faint water birds far back in the mist. The sun should be low near the upper center-right, casting warm golden-orange rays across the fog and water, with peach, rose, lavender, and teal tones. Use ultra-detailed photorealistic fantasy realism, atmospheric depth, soft volumetric fog, glassy reflections, delicate bloom, tranquil composition, wide 16:9 aspect ratio, no people, no text, no watermark.",
+      "description": "A cinematic photorealistic fantasy landscape prompt for creating a peaceful lotus pond with a heron, cherry blossoms, mist, and golden sunrise.",
+      "displaySummaryZh": "来自YouMind 全量搜索库的写实条目《Misty Lotus Pond Heron Sunrise》。 关键词：cinematic、realistic。可直接作为灵感底稿，再去高级编辑细调。",
+      "displayCategoryZh": "写实",
+      "previewImage": "https://cms-assets.youmind.com/media/1778922002150_z8yjto_HIXnG_7WwAApX3H.jpg",
+      "language": "en",
+      "importHints": {
+        "trendAesthetic": [
+          "trend_story_documentary"
+        ],
+        "referenceMode": "identity-reference"
+      },
+      "sourceTier": "large-gallery-secondary",
+      "qualityTier": "usable",
+      "recommendedForCurrentProduct": true,
+      "chunkId": "youmind:realism",
+      "searchText": "misty lotus pond heron sunrise a cinematic photorealistic fantasy landscape prompt for creating a peaceful lotus pond with a heron, cherry blossoms, mist, and golden sunrise. create a serene cinematic nature landscape at sunrise: a mist-covered lotus pond with a single elegant heron standing in the shallow reflective water at the center, its long neck upright and its reflection visible beneath it. surround the foreground with large green lily pads and exactly 8 prominent pink lotus flowers: 5 fully open blossoms, 2 closed buds, and 1 small distant blossom on the right side of the pond. on the left, a large old weeping cherry tree with a dark twisting trunk leans over the water, its long drooping branches filled with pale pink blossoms cascading like curtains. in the distance, show a softly glowing forested hillside of pine and flowering trees, a small traditional lakeside pavilion on the right bank, and faint water birds far back in the mist. the sun should be low near the upper center-right, casting warm golden-orange rays across the fog and water, with peach, rose, lavender, and teal tones. use ultra-detailed photorealistic fantasy realism, atmospheric depth, soft volumetric fog, glassy reflections, delicate bloom, tranquil composition, wide 16:9 aspect ratio, no people, no text, no watermark. uncategorized cinematic realistic",
+      "originalCategory": "Uncategorized",
+      "normalizedCategory": "realism",
+      "importConfidence": 0.79,
+      "portraitFocused": true,
+      "entryKind": "case"
+    },
+    {
+      "id": "youmind-others-20675",
+      "sourceId": "youmind",
+      "sourceRepo": "YouMind-OpenLab/gpt-image-2-prompts-search",
+      "sourceUrl": "https://github.com/YouMind-OpenLab/gpt-image-2-prompts-search/blob/main/references/others.json",
+      "title": "Funny Doodle Photo Transformation",
+      "author": "YouMind",
+      "license": "See source repository",
+      "category": "Uncategorized",
+      "styleTags": [
+        "street",
+        "realistic",
+        "phone camera"
+      ],
+      "sceneTags": [
+        "street"
+      ],
+      "prompt": "Using the provided reference image, transform the photo into a funny childlike doodle drawing while preserving the same basic scene and subject: the child in a blue raincoat and boots holding the jellyfish-style umbrella on the rainy street. Make it look like a quick sketch drawn with cheap marker, crayon, or colored pencil on off-white paper: messy scribbled outlines, uneven coloring, bad perspective, awkward proportions, and intentionally amateur linework. Exaggerate the child's face into a silly cartoon expression with big eyes, buck teeth, rosy cheeks, and tongue out. Add a simple cartoon background based on the reference street, including exactly 5 distinct background elements: a gray rain cloud, blue falling rain streaks, a glowing black streetlamp, a red phone booth labeled \"PHONE,\" and a brick building with windows and flowers. Keep the wet pavement as loose scribbled reflections and puddles. Do not make it realistic, polished, painterly, or photorealistic.",
+      "description": "Transforms a rainy street photo into a messy childlike crayon doodle with exaggerated cartoon features and a simple sketched background.",
+      "displaySummaryZh": "来自YouMind 全量搜索库的写实条目《Funny Doodle Photo Transformation》。 关键词：street、realistic、street。可直接作为灵感底稿，再去高级编辑细调。",
+      "displayCategoryZh": "写实",
+      "previewImage": "https://cms-assets.youmind.com/media/1778922005686_zcgvdx_HIXCcs8agAAvG2g.jpg",
+      "language": "en",
+      "importHints": {
+        "referenceMode": "identity-reference"
+      },
+      "sourceTier": "large-gallery-secondary",
+      "qualityTier": "usable",
+      "recommendedForCurrentProduct": true,
+      "chunkId": "youmind:realism",
+      "searchText": "funny doodle photo transformation transforms a rainy street photo into a messy childlike crayon doodle with exaggerated cartoon features and a simple sketched background. using the provided reference image, transform the photo into a funny childlike doodle drawing while preserving the same basic scene and subject: the child in a blue raincoat and boots holding the jellyfish-style umbrella on the rainy street. make it look like a quick sketch drawn with cheap marker, crayon, or colored pencil on off-white paper: messy scribbled outlines, uneven coloring, bad perspective, awkward proportions, and intentionally amateur linework. exaggerate the child's face into a silly cartoon expression with big eyes, buck teeth, rosy cheeks, and tongue out. add a simple cartoon background based on the reference street, including exactly 5 distinct background elements: a gray rain cloud, blue falling rain streaks, a glowing black streetlamp, a red phone booth labeled \"phone,\" and a brick building with windows and flowers. keep the wet pavement as loose scribbled reflections and puddles. do not make it realistic, polished, painterly, or photorealistic. uncategorized street realistic phone camera street",
+      "originalCategory": "Uncategorized",
+      "normalizedCategory": "realism",
+      "importConfidence": 0.79,
+      "portraitFocused": true,
+      "entryKind": "case"
+    },
+    {
+      "id": "youmind-others-19147",
+      "sourceId": "youmind",
+      "sourceRepo": "YouMind-OpenLab/gpt-image-2-prompts-search",
+      "sourceUrl": "https://github.com/YouMind-OpenLab/gpt-image-2-prompts-search/blob/main/references/others.json",
+      "title": "Embroidered Empress Tarot Cockatoo",
+      "author": "YouMind",
+      "license": "See source repository",
+      "category": "Uncategorized",
+      "styleTags": [
+        "portrait",
+        "realistic"
+      ],
+      "sceneTags": [],
+      "prompt": "Create a highly detailed photorealistic macro photograph of an ornate hand embroidery artwork in a round wooden embroidery hoop lying on a rustic wooden craft table. The embroidered design is a tarot-card-inspired portrait of a pink galah cockatoo as THE EMPRESS: the bird sits regally on a plush red-and-gold throne, wearing a jeweled gold crown topped with red, yellow, and white feathers, a delicate necklace with a red gemstone, and holding a golden scepter. The tapestry has a warm antique-gold background with stitched clouds, rolling fields of wheat, distant green hills, a small blue river, floral bouquets beside the throne, ornate filigree borders, the Roman numeral III at the top, and a bottom banner reading THE EMPRESS. Include one heart-shaped shield at the lower front of the throne with a Venus symbol embroidered in gold. The embroidery should look tangible and dimensional, with visible satin stitch, chain stitch, French knots, metallic gold thread, raised thread texture, and tiny variations in fiber direction. Surround the hoop with real craft supplies: a cardboard tray at upper left holding 12 visible embroidery floss bobbins in red, pink, yellow, white, olive green, dark green, gray, black, brown, rust, tan, and cream; 3 loose skeins of floss at lower left in peach, coral pink, and green; 1 paper color chart at the top with 6 heart-shaped stitched swatches labeled 742, 744, 745, 783, 780, and 3853; 1 pair of vintage gold scissors at upper right; 1 metal thimble; 1 small round brass bowl containing a pincushion; and a few stray golden and peach threads near the lower right edge. Use warm natural window light, shallow depth of field, crisp focus on the hoop, cozy artisan workspace mood, muted earthy colors, ultra-realistic textile detail, no digital illustration look.",
+      "description": "A photorealistic craft-table scene featuring an ornate embroidered tarot card portrait, useful for generating whimsical textile art concepts.",
+      "displaySummaryZh": "来自YouMind 全量搜索库的写实条目《Embroidered Empress Tarot Cockatoo》。 关键词：portrait、realistic。可直接作为灵感底稿，再去高级编辑细调。",
+      "displayCategoryZh": "写实",
+      "previewImage": "https://cms-assets.youmind.com/media/1778315826975_wdopbm_HH1dJwZasAAyRRV.jpg",
+      "language": "en",
+      "importHints": {
+        "referenceMode": "identity-reference"
+      },
+      "sourceTier": "large-gallery-secondary",
+      "qualityTier": "usable",
+      "recommendedForCurrentProduct": true,
+      "chunkId": "youmind:realism",
+      "searchText": "embroidered empress tarot cockatoo a photorealistic craft-table scene featuring an ornate embroidered tarot card portrait, useful for generating whimsical textile art concepts. create a highly detailed photorealistic macro photograph of an ornate hand embroidery artwork in a round wooden embroidery hoop lying on a rustic wooden craft table. the embroidered design is a tarot-card-inspired portrait of a pink galah cockatoo as the empress: the bird sits regally on a plush red-and-gold throne, wearing a jeweled gold crown topped with red, yellow, and white feathers, a delicate necklace with a red gemstone, and holding a golden scepter. the tapestry has a warm antique-gold background with stitched clouds, rolling fields of wheat, distant green hills, a small blue river, floral bouquets beside the throne, ornate filigree borders, the roman numeral iii at the top, and a bottom banner reading the empress. include one heart-shaped shield at the lower front of the throne with a venus symbol embroidered in gold. the embroidery should look tangible and dimensional, with visible satin stitch, chain stitch, french knots, metallic gold thread, raised thread texture, and tiny variations in fiber direction. surround the hoop with real craft supplies: a cardboard tray at upper left holding 12 visible embroidery floss bobbins in red, pink, yellow, white, olive green, dark green, gray, black, brown, rust, tan, and cream; 3 loose skeins of floss at lower left in peach, coral pink, and green; 1 paper color chart at the top with 6 heart-shaped stitched swatches labeled 742, 744, 745, 783, 780, and 3853; 1 pair of vintage gold scissors at upper right; 1 metal thimble; 1 small round brass bowl containing a pincushion; and a few stray golden and peach threads near the lower right edge. use warm natural window light, shallow depth of field, crisp focus on the hoop, cozy artisan workspace mood, muted earthy colors, ultra-realistic textile detail, no digital illustration look. uncategorized portrait realistic",
+      "originalCategory": "Uncategorized",
+      "normalizedCategory": "realism",
+      "importConfidence": 0.79,
+      "portraitFocused": true,
+      "entryKind": "case"
+    },
+    {
+      "id": "youmind-others-19016",
+      "sourceId": "youmind",
+      "sourceRepo": "YouMind-OpenLab/gpt-image-2-prompts-search",
+      "sourceUrl": "https://github.com/YouMind-OpenLab/gpt-image-2-prompts-search/blob/main/references/others.json",
+      "title": "Existential Exhaustion Photorealistic Portrait",
+      "author": "YouMind",
+      "license": "See source repository",
+      "category": "Uncategorized",
+      "styleTags": [
+        "portrait",
+        "realistic"
+      ],
+      "sceneTags": [],
+      "prompt": "photorealistic. [character]. sitting at [environment]. expression of complete existential exhaustion. staring at [frustration object]. warm lighting. 9:16 vertical.",
+      "description": "A conceptual prompt for generating photorealistic vertical images of characters expressing extreme existential exhaustion in specific environments.",
+      "displayTitleZh": "Existential Exhaustion Photorealistic 人像",
+      "displaySummaryZh": "来自YouMind 全量搜索库的写实条目《Existential Exhaustion Photorealistic Portrait》。 关键词：portrait、realistic。可直接作为灵感底稿，再去高级编辑细调。",
+      "displayCategoryZh": "写实",
+      "previewImage": "https://cms-assets.youmind.com/media/1778315758811_qwcsq6_HH1TZMaXkAgHkGN.jpg",
+      "language": "en",
+      "importHints": {},
+      "sourceTier": "large-gallery-secondary",
+      "qualityTier": "usable",
+      "recommendedForCurrentProduct": true,
+      "chunkId": "youmind:realism",
+      "searchText": "existential exhaustion photorealistic portrait a conceptual prompt for generating photorealistic vertical images of characters expressing extreme existential exhaustion in specific environments. photorealistic. [character]. sitting at [environment]. expression of complete existential exhaustion. staring at [frustration object]. warm lighting. 9:16 vertical. uncategorized portrait realistic",
+      "originalCategory": "Uncategorized",
+      "normalizedCategory": "realism",
+      "importConfidence": 0.79,
+      "portraitFocused": true,
+      "entryKind": "case"
+    },
+    {
+      "id": "youmind-others-19047",
+      "sourceId": "youmind",
+      "sourceRepo": "YouMind-OpenLab/gpt-image-2-prompts-search",
+      "sourceUrl": "https://github.com/YouMind-OpenLab/gpt-image-2-prompts-search/blob/main/references/others.json",
+      "title": "Penrose Impossible Triangle Structure",
+      "author": "YouMind",
+      "license": "See source repository",
+      "category": "Uncategorized",
+      "styleTags": [
+        "realistic"
+      ],
+      "sceneTags": [],
+      "prompt": "The Penrose impossible triangle built as a real concrete structure, aerial view, an architect standing on it casting a real shadow, extreme photorealism, no trace of digital manipulation.",
+      "description": "A prompt to generate a photorealistic Penrose impossible triangle built as a real concrete structure, viewed from an aerial perspective.",
+      "displaySummaryZh": "来自YouMind 全量搜索库的写实条目《Penrose Impossible Triangle Structure》。 关键词：realistic。可直接作为灵感底稿，再去高级编辑细调。",
+      "displayCategoryZh": "写实",
+      "previewImage": "https://cms-assets.youmind.com/media/1778315777998_aoa5ky_HHz2Ze_a0AI7r51.jpg",
+      "language": "en",
+      "importHints": {},
+      "sourceTier": "large-gallery-secondary",
+      "qualityTier": "usable",
+      "recommendedForCurrentProduct": true,
+      "chunkId": "youmind:realism",
+      "searchText": "penrose impossible triangle structure a prompt to generate a photorealistic penrose impossible triangle built as a real concrete structure, viewed from an aerial perspective. the penrose impossible triangle built as a real concrete structure, aerial view, an architect standing on it casting a real shadow, extreme photorealism, no trace of digital manipulation. uncategorized realistic",
+      "originalCategory": "Uncategorized",
+      "normalizedCategory": "realism",
+      "importConfidence": 0.79,
+      "portraitFocused": true,
+      "entryKind": "case"
+    },
+    {
+      "id": "youmind-others-17058",
+      "sourceId": "youmind",
+      "sourceRepo": "YouMind-OpenLab/gpt-image-2-prompts-search",
+      "sourceUrl": "https://github.com/YouMind-OpenLab/gpt-image-2-prompts-search/blob/main/references/others.json",
+      "title": "Technical Cross-Section Diagram",
+      "author": "YouMind",
+      "license": "See source repository",
+      "category": "Uncategorized",
+      "styleTags": [
+        "realistic"
+      ],
+      "sceneTags": [],
+      "prompt": "Hyper-detailed technical cross-section diagram of a [type here object] rendered in a dark engineering blueprint style. The cutaway view reveals all internal components, layers, and mechanisms with precision. Every part is labeled with clean white annotation lines, callout boxes, and technical measurements. Include a title header at the top, a materials/components legend, dimensional specifications, and small detail insets showing close-up views of key sections. Style: professional technical illustration mixed with photorealistic rendering. Dense, information-rich layout. No empty space. 1:1 dimension.",
+      "description": "A highly detailed blueprint-style prompt for creating technical illustrations and internal mechanism diagrams",
+      "displaySummaryZh": "来自YouMind 全量搜索库的写实条目《Technical Cross-Section Diagram》。 关键词：realistic。可直接作为灵感底稿，再去高级编辑细调。",
+      "displayCategoryZh": "写实",
+      "previewImage": "https://cms-assets.youmind.com/media/1777539320782_lipcbg_HHEf1rVbUAEy-2z.jpg",
+      "language": "en",
+      "importHints": {},
+      "sourceTier": "large-gallery-secondary",
+      "qualityTier": "usable",
+      "recommendedForCurrentProduct": true,
+      "chunkId": "youmind:realism",
+      "searchText": "technical cross-section diagram a highly detailed blueprint-style prompt for creating technical illustrations and internal mechanism diagrams hyper-detailed technical cross-section diagram of a [type here object] rendered in a dark engineering blueprint style. the cutaway view reveals all internal components, layers, and mechanisms with precision. every part is labeled with clean white annotation lines, callout boxes, and technical measurements. include a title header at the top, a materials/components legend, dimensional specifications, and small detail insets showing close-up views of key sections. style: professional technical illustration mixed with photorealistic rendering. dense, information-rich layout. no empty space. 1:1 dimension. uncategorized realistic",
+      "originalCategory": "Uncategorized",
+      "normalizedCategory": "realism",
+      "importConfidence": 0.79,
+      "portraitFocused": true,
+      "entryKind": "case"
+    },
+    {
+      "id": "youmind-others-13816",
+      "sourceId": "youmind",
+      "sourceRepo": "YouMind-OpenLab/gpt-image-2-prompts-search",
+      "sourceUrl": "https://github.com/YouMind-OpenLab/gpt-image-2-prompts-search/blob/main/references/others.json",
+      "title": "Intimidating Press Conference Meme",
+      "author": "YouMind",
+      "license": "See source repository",
+      "category": "Uncategorized",
+      "styleTags": [
+        "realistic",
+        "cinematic"
+      ],
+      "sceneTags": [],
+      "prompt": "A photorealistic, cinematic shot set in the White House press briefing room. At the podium sits Sam Altman, wearing a dark suit and blue tie, looking visibly uncomfortable and nervous, staring blankly ahead. Standing directly behind him is Homelander from The Boys, wearing his signature blue superhero suit with red gloves and gold eagle shoulder pads. The standing character has one red-gloved hand resting heavily and intimidatingly on the seated character's shoulder, while using his other hand to drink from a glass bottle of milk with a confident, slightly unhinged smirk. In the background, there is a US flag on the left and a blue oval White House seal on the wall behind them. The podium has a sign reading \"THE WHITE HOUSE WASHINGTON\".",
+      "description": "A photorealistic satirical image of a superhero intimidating a tech CEO at a White House press briefing.",
+      "displaySummaryZh": "来自YouMind 全量搜索库的写实条目《Intimidating Press Conference Meme》。 关键词：realistic、cinematic。可直接作为灵感底稿，再去高级编辑细调。",
+      "displayCategoryZh": "写实",
+      "previewImage": "https://cms-assets.youmind.com/media/1776695122015_9zpq6q_HF_rI0ga8AAer1f.jpg",
+      "language": "en",
+      "importHints": {
+        "trendAesthetic": [
+          "trend_story_documentary"
+        ],
+        "referenceMode": "identity-reference"
+      },
+      "sourceTier": "large-gallery-secondary",
+      "qualityTier": "usable",
+      "recommendedForCurrentProduct": true,
+      "chunkId": "youmind:realism",
+      "searchText": "intimidating press conference meme a photorealistic satirical image of a superhero intimidating a tech ceo at a white house press briefing. a photorealistic, cinematic shot set in the white house press briefing room. at the podium sits sam altman, wearing a dark suit and blue tie, looking visibly uncomfortable and nervous, staring blankly ahead. standing directly behind him is homelander from the boys, wearing his signature blue superhero suit with red gloves and gold eagle shoulder pads. the standing character has one red-gloved hand resting heavily and intimidatingly on the seated character's shoulder, while using his other hand to drink from a glass bottle of milk with a confident, slightly unhinged smirk. in the background, there is a us flag on the left and a blue oval white house seal on the wall behind them. the podium has a sign reading \"the white house washington\". uncategorized realistic cinematic",
+      "originalCategory": "Uncategorized",
+      "normalizedCategory": "realism",
+      "importConfidence": 0.79,
+      "portraitFocused": true,
+      "entryKind": "case"
+    }
+  ]
+}

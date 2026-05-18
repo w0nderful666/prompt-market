@@ -1,0 +1,53 @@
+{
+  "meta": {
+    "id": "freestylefly:cinematic",
+    "sourceId": "freestylefly",
+    "normalizedCategory": "cinematic",
+    "label": "FreestyleFly 结构化词库 · 电影感",
+    "path": "/external-library-chunks-v2/freestylefly/cinematic.json",
+    "entryCount": 1
+  },
+  "entries": [
+    {
+      "id": "freestylefly-scene-storytelling",
+      "sourceId": "freestylefly",
+      "sourceRepo": "freestylefly/awesome-gpt-image-2",
+      "sourceUrl": "https://github.com/freestylefly/awesome-gpt-image-2/blob/main/data/style-library.json",
+      "title": "Scene Storytelling",
+      "author": "freestylefly",
+      "license": "See source repository",
+      "category": "Scenes & Storytelling",
+      "styleTags": [
+        "Scenes",
+        "Illustration",
+        "Scene",
+        "Story",
+        "Storyboard"
+      ],
+      "sceneTags": [
+        "Story",
+        "Social"
+      ],
+      "prompt": "Storyboards, worldbuilding, narrative scenes, and emotional pacing.\n\nDefine who, where, when, conflict, emotion, and camera framing.\nUse scene details to support narrative rather than decoration.\nAvoid generic fantasy backgrounds.\nKeep narrative cues visible in the frame.",
+      "description": "Storyboards, worldbuilding, narrative scenes, and emotional pacing.",
+      "displaySummaryZh": "来自FreestyleFly 结构化词库的电影感条目《Scene Storytelling》。 关键词：Scenes、Illustration、Story、Social。结构更完整，适合直接导入高级编辑。",
+      "displayCategoryZh": "电影感",
+      "language": "en",
+      "importHints": {
+        "trendAesthetic": [
+          "trend_story_documentary"
+        ]
+      },
+      "sourceTier": "structured-primary",
+      "qualityTier": "curated",
+      "recommendedForCurrentProduct": true,
+      "chunkId": "freestylefly:cinematic",
+      "searchText": "scene storytelling storyboards, worldbuilding, narrative scenes, and emotional pacing. storyboards, worldbuilding, narrative scenes, and emotional pacing. define who, where, when, conflict, emotion, and camera framing. use scene details to support narrative rather than decoration. avoid generic fantasy backgrounds. keep narrative cues visible in the frame. scenes & storytelling scenes illustration scene story storyboard story social",
+      "originalCategory": "Scenes & Storytelling",
+      "normalizedCategory": "cinematic",
+      "importConfidence": 0.98,
+      "portraitFocused": true,
+      "entryKind": "template"
+    }
+  ]
+}

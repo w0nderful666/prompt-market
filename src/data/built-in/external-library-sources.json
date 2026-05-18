@@ -1,0 +1,402 @@
+{
+  "sources": [
+    {
+      "id": "freestylefly",
+      "label": "FreestyleFly Structured Library",
+      "repo": "freestylefly/awesome-gpt-image-2",
+      "sourceUrl": "https://github.com/freestylefly/awesome-gpt-image-2",
+      "license": "See source repository",
+      "kind": "structured",
+      "description": "Structured awesome-gpt-image-2 source used as the primary offline scaffold for portrait-friendly prompts."
+    },
+    {
+      "id": "evolink",
+      "label": "EvoLinkAI Curated Portrait Cases",
+      "repo": "EvoLinkAI/awesome-gpt-image-2-API-and-Prompts",
+      "sourceUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-API-and-Prompts",
+      "license": "See source repository",
+      "kind": "curated",
+      "description": "Large prompt gallery used only for hand-picked portrait and lifestyle cases."
+    },
+    {
+      "id": "youmind",
+      "label": "YouMind OpenLab Curated Picks",
+      "repo": "YouMind-OpenLab/awesome-gpt-image-2",
+      "sourceUrl": "https://github.com/YouMind-OpenLab/awesome-gpt-image-2",
+      "license": "See source repository",
+      "kind": "curated",
+      "description": "Broad gallery source kept as a small curated supplement instead of a full import."
+    }
+  ],
+  "entries": [
+    {
+      "id": "freestylefly-realistic-portrait-starter",
+      "sourceId": "freestylefly",
+      "sourceRepo": "freestylefly/awesome-gpt-image-2",
+      "sourceUrl": "https://github.com/freestylefly/awesome-gpt-image-2",
+      "title": "Realistic Portrait Starter",
+      "author": "freestylefly",
+      "license": "See source repository",
+      "category": "realism",
+      "styleTags": ["portrait", "realistic", "clean skin", "photography"],
+      "sceneTags": ["studio", "street", "cafe"],
+      "prompt": "Ultra realistic portrait photography, believable skin texture, grounded styling, photographic lighting, subtle micro-expression, no fantasy rendering, keep the image like a real editorial portrait.",
+      "language": "en",
+      "importHints": {
+        "shotType": "shot_studio_portrait",
+        "realismLevel": "real_natural",
+        "mood": ["mood_clean", "mood_professional"]
+      },
+      "portraitFocused": true,
+      "entryKind": "template"
+    },
+    {
+      "id": "freestylefly-cinematic-scene-storytelling",
+      "sourceId": "freestylefly",
+      "sourceRepo": "freestylefly/awesome-gpt-image-2",
+      "sourceUrl": "https://github.com/freestylefly/awesome-gpt-image-2",
+      "title": "Scene Storytelling Portrait",
+      "author": "freestylefly",
+      "license": "See source repository",
+      "category": "cinematic",
+      "styleTags": ["cinematic", "storytelling", "documentary", "moody"],
+      "sceneTags": ["street", "subway", "rooftop"],
+      "prompt": "Story-driven cinematic portrait, environment matters as much as the subject, a real place with lived detail, layered foreground and background, restrained drama, documentary realism, emotional but not theatrical.",
+      "language": "en",
+      "importHints": {
+        "shotType": "shot_environmental",
+        "scenePrimary": "scene_street",
+        "mood": ["mood_cinematic", "mood_documentary"],
+        "trendAesthetic": ["trend_story_documentary"]
+      },
+      "portraitFocused": true,
+      "entryKind": "template"
+    },
+    {
+      "id": "freestylefly-social-snapshot-phone-camera",
+      "sourceId": "freestylefly",
+      "sourceRepo": "freestylefly/awesome-gpt-image-2",
+      "sourceUrl": "https://github.com/freestylefly/awesome-gpt-image-2",
+      "title": "Phone Camera Social Snapshot",
+      "author": "freestylefly",
+      "license": "See source repository",
+      "category": "social snapshot",
+      "styleTags": ["phone camera", "snapshot", "lifestyle", "real life"],
+      "sceneTags": ["bedroom", "living room", "cafe"],
+      "prompt": "A casual phone-camera social snapshot, immediate and unforced, natural posture, small imperfections kept, friendly real-life framing, everyday lighting, made to feel like a post rather than a polished campaign.",
+      "language": "en",
+      "importHints": {
+        "shotType": "shot_selfie",
+        "shootingMedium": "med_phone",
+        "imageTexture": ["tex_noise_light", "tex_compression"],
+        "mood": ["mood_daily", "mood_relaxed"]
+      },
+      "portraitFocused": true,
+      "entryKind": "template"
+    },
+    {
+      "id": "freestylefly-analog-film-candid",
+      "sourceId": "freestylefly",
+      "sourceRepo": "freestylefly/awesome-gpt-image-2",
+      "sourceUrl": "https://github.com/freestylefly/awesome-gpt-image-2",
+      "title": "Analog Film Texture Candid",
+      "author": "freestylefly",
+      "license": "See source repository",
+      "category": "film texture",
+      "styleTags": ["analog", "film", "35mm", "candid"],
+      "sceneTags": ["street", "park", "beach"],
+      "prompt": "35mm analog portrait, gentle grain, slight halation, human timing, candid expression, imperfect but memorable composition, nostalgic warmth, documentary movement, keep it photographic and tactile.",
+      "language": "en",
+      "importHints": {
+        "shootingMedium": "med_film",
+        "colorGradePrimary": "color_film",
+        "trendAesthetic": ["trend_analog_imperfection"],
+        "mood": ["mood_nostalgic", "mood_documentary"]
+      },
+      "portraitFocused": true,
+      "entryKind": "template"
+    },
+    {
+      "id": "freestylefly-fashion-editorial-clean",
+      "sourceId": "freestylefly",
+      "sourceRepo": "freestylefly/awesome-gpt-image-2",
+      "sourceUrl": "https://github.com/freestylefly/awesome-gpt-image-2",
+      "title": "Clean Fashion Editorial",
+      "author": "freestylefly",
+      "license": "See source repository",
+      "category": "fashion",
+      "styleTags": ["fashion", "editorial", "quiet luxury", "clean"],
+      "sceneTags": ["gallery", "studio", "hotel"],
+      "prompt": "High-end fashion portrait with clean lines, premium styling, controlled pose, polished composition, restrained luxury, believable texture, elegant negative space, editorial but still natural enough for portrait use.",
+      "language": "en",
+      "importHints": {
+        "shotType": "shot_fashion",
+        "trendAesthetic": ["trend_quiet_luxury"],
+        "mood": ["mood_premium", "mood_sophisticated"]
+      },
+      "portraitFocused": true,
+      "entryKind": "template"
+    },
+    {
+      "id": "freestylefly-character-consistency-sheet",
+      "sourceId": "freestylefly",
+      "sourceRepo": "freestylefly/awesome-gpt-image-2",
+      "sourceUrl": "https://github.com/freestylefly/awesome-gpt-image-2",
+      "title": "Character Consistency Portrait Sheet",
+      "author": "freestylefly",
+      "license": "See source repository",
+      "category": "character consistency",
+      "styleTags": ["character consistency", "portrait sheet", "look lock"],
+      "sceneTags": ["studio", "plain background"],
+      "prompt": "Portrait consistency sheet for the same character, stable face structure, repeatable styling, front and three-quarter portrait logic, clean background, reliable expression control, useful for returning to the same persona later.",
+      "language": "en",
+      "importHints": {
+        "shotType": "shot_headshot",
+        "scenePrimary": "scene_studio_grey",
+        "expressionModifiers": ["emod_looking_at_camera"],
+        "compositionPrimary": "comp_center"
+      },
+      "portraitFocused": true,
+      "entryKind": "template"
+    },
+    {
+      "id": "evolink-mirror-selfie-bedroom",
+      "sourceId": "evolink",
+      "sourceRepo": "EvoLinkAI/awesome-gpt-image-2-API-and-Prompts",
+      "sourceUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-API-and-Prompts/blob/main/cases/portrait.md",
+      "title": "Mirror Selfie Bedroom Portrait",
+      "author": "EvoLinkAI",
+      "license": "See source repository",
+      "category": "portrait",
+      "styleTags": ["mirror selfie", "bedroom", "phone camera", "soft realism"],
+      "sceneTags": ["bedroom", "mirror"],
+      "prompt": "Mirror selfie bedroom portrait, realistic skin texture, soft indoor daylight, a youthful everyday feeling, subtle styling, phone held naturally, clean but not over-retouched.",
+      "language": "en",
+      "importHints": {
+        "shotType": "shot_selfie",
+        "scenePrimary": "scene_bedroom",
+        "specialAngles": ["sang_mirror"],
+        "handheld": ["prop_phone"],
+        "shootingMedium": "med_iphone"
+      },
+      "portraitFocused": true,
+      "entryKind": "case"
+    },
+    {
+      "id": "evolink-soft-airy-35mm",
+      "sourceId": "evolink",
+      "sourceRepo": "EvoLinkAI/awesome-gpt-image-2-API-and-Prompts",
+      "sourceUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-API-and-Prompts/blob/main/cases/portrait.md",
+      "title": "Soft Airy 35mm Portrait",
+      "author": "EvoLinkAI",
+      "license": "See source repository",
+      "category": "portrait",
+      "styleTags": ["35mm", "airy", "soft", "film"],
+      "sceneTags": ["park", "outdoor"],
+      "prompt": "Analog 35mm portrait, soft airy mood, gentle natural light, quiet Japanese magazine feeling, relaxed expression, breathable frame, graceful imperfection, light film grain, --ar 9:16",
+      "language": "en",
+      "importHints": {
+        "shootingMedium": "med_film",
+        "colorGradePrimary": "color_film",
+        "scenePrimary": "scene_park",
+        "lightingPrimary": "light_golden_hour"
+      },
+      "portraitFocused": true,
+      "entryKind": "case"
+    },
+    {
+      "id": "evolink-urban-turn-back-street",
+      "sourceId": "evolink",
+      "sourceRepo": "EvoLinkAI/awesome-gpt-image-2-API-and-Prompts",
+      "sourceUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-API-and-Prompts/blob/main/cases/portrait.md",
+      "title": "Urban Turn-Back Street Portrait",
+      "author": "EvoLinkAI",
+      "license": "See source repository",
+      "category": "street",
+      "styleTags": ["street", "turn back", "natural light", "urban"],
+      "sceneTags": ["street", "city"],
+      "prompt": "城市街拍，回眸瞬间，自然光，人物走动中回头看镜头，画面保留生活感和街头空间，表情真实，不要摆拍得太满。",
+      "language": "zh",
+      "importHints": {
+        "scenePrimary": "scene_street",
+        "posePrimary": "pose_looking_back",
+        "mood": ["mood_daily", "mood_documentary"]
+      },
+      "portraitFocused": true,
+      "entryKind": "case"
+    },
+    {
+      "id": "evolink-ccd-flash-korean-idol",
+      "sourceId": "evolink",
+      "sourceRepo": "EvoLinkAI/awesome-gpt-image-2-API-and-Prompts",
+      "sourceUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-API-and-Prompts/blob/main/cases/portrait.md",
+      "title": "CCD Flash Korean Idol",
+      "author": "EvoLinkAI",
+      "license": "See source repository",
+      "category": "social snapshot",
+      "styleTags": ["ccd", "flash", "k idol", "y2k"],
+      "sceneTags": ["indoor", "club", "room"],
+      "prompt": "mobile phone photo, old CCD camera aesthetic, harsh flash, grainy texture, dim messy indoor lighting, Korean idol snapshot energy, slightly chaotic but charming.",
+      "language": "en",
+      "importHints": {
+        "shootingMedium": "med_ccd",
+        "imageTexture": ["tex_flash", "tex_grain"],
+        "trendAesthetic": ["trend_y2k", "trend_kdrama"]
+      },
+      "portraitFocused": true,
+      "entryKind": "case"
+    },
+    {
+      "id": "evolink-phone-reflection-mirror",
+      "sourceId": "evolink",
+      "sourceRepo": "EvoLinkAI/awesome-gpt-image-2-API-and-Prompts",
+      "sourceUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-API-and-Prompts/blob/main/cases/portrait.md",
+      "title": "Phone Reflection Mirror Portrait",
+      "author": "EvoLinkAI",
+      "license": "See source repository",
+      "category": "portrait",
+      "styleTags": ["mirror", "reflection", "iphone", "creative"],
+      "sceneTags": ["mirror", "indoor"],
+      "prompt": "Ultra-realistic mirror portrait taken with an iPhone, the phone itself becomes part of the composition, real-time screen reflection, modern social-media framing, intimate and clever without becoming gimmicky.",
+      "language": "en",
+      "importHints": {
+        "shotType": "shot_selfie",
+        "specialAngles": ["sang_mirror"],
+        "handheld": ["prop_phone"],
+        "shootingMedium": "med_iphone"
+      },
+      "portraitFocused": true,
+      "entryKind": "case"
+    },
+    {
+      "id": "evolink-korean-convenience-store",
+      "sourceId": "evolink",
+      "sourceRepo": "EvoLinkAI/awesome-gpt-image-2-API-and-Prompts",
+      "sourceUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-API-and-Prompts/blob/main/cases/portrait.md",
+      "title": "Korean Convenience Store Portrait",
+      "author": "EvoLinkAI",
+      "license": "See source repository",
+      "category": "lifestyle",
+      "styleTags": ["convenience store", "kdrama", "phone flash"],
+      "sceneTags": ["street", "night", "storefront"],
+      "prompt": "Ultra-realistic convenience store portrait, warm fluorescent light mixed with iPhone flash, casual pose, everyday Korean drama atmosphere, snack run energy, cute but still photographic.",
+      "language": "en",
+      "importHints": {
+        "scenePrimary": "scene_street",
+        "sceneModifiers": ["scmod_night"],
+        "shootingMedium": "med_iphone",
+        "trendAesthetic": ["trend_kdrama"]
+      },
+      "portraitFocused": true,
+      "entryKind": "case"
+    },
+    {
+      "id": "evolink-blush-pink-editorial",
+      "sourceId": "evolink",
+      "sourceRepo": "EvoLinkAI/awesome-gpt-image-2-API-and-Prompts",
+      "sourceUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-API-and-Prompts/blob/main/cases/portrait.md",
+      "title": "Blush Pink Korean Editorial",
+      "author": "EvoLinkAI",
+      "license": "See source repository",
+      "category": "fashion",
+      "styleTags": ["editorial", "pink", "golden hour", "k style"],
+      "sceneTags": ["outdoor", "golden hour"],
+      "prompt": "Elegant blush-pink editorial portrait, over-the-shoulder pose, golden-hour backlight, refined Korean fashion mood, polished but soft, premium skin rendering, not overly glam.",
+      "language": "en",
+      "importHints": {
+        "shotType": "shot_fashion",
+        "posePrimary": "pose_looking_back",
+        "lightingPrimary": "light_backlight",
+        "colorTrend": ["ct_soft_pink"],
+        "trendAesthetic": ["trend_kdrama"]
+      },
+      "portraitFocused": true,
+      "entryKind": "case"
+    },
+    {
+      "id": "evolink-rainy-street-golden",
+      "sourceId": "evolink",
+      "sourceRepo": "EvoLinkAI/awesome-gpt-image-2-API-and-Prompts",
+      "sourceUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-API-and-Prompts/blob/main/cases/portrait.md",
+      "title": "Rainy Street Golden Portrait",
+      "author": "EvoLinkAI",
+      "license": "See source repository",
+      "category": "cinematic",
+      "styleTags": ["rainy street", "golden hour", "cinematic"],
+      "sceneTags": ["street", "rain", "sunset"],
+      "prompt": "Cinematic rainy street portrait during golden hour, reflective road surface, warm light breaking through damp air, solitary subject, emotional but grounded street photography.",
+      "language": "en",
+      "importHints": {
+        "scenePrimary": "scene_street",
+        "sceneModifiers": ["scmod_rainy", "scmod_golden_hour"],
+        "mood": ["mood_cinematic", "mood_mysterious"]
+      },
+      "portraitFocused": true,
+      "entryKind": "case"
+    },
+    {
+      "id": "evolink-cozy-cafe-editorial",
+      "sourceId": "evolink",
+      "sourceRepo": "EvoLinkAI/awesome-gpt-image-2-API-and-Prompts",
+      "sourceUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-API-and-Prompts/blob/main/cases/portrait.md",
+      "title": "Cozy Cafe Editorial",
+      "author": "EvoLinkAI",
+      "license": "See source repository",
+      "category": "lifestyle",
+      "styleTags": ["cafe", "editorial", "cozy", "couple"],
+      "sceneTags": ["cafe", "window seat"],
+      "prompt": "Cozy Japanese-Korean cafe portrait mood, soft window light, warm drink, intimate everyday styling, editorial polish on top of a believable social moment.",
+      "language": "en",
+      "importHints": {
+        "scenePrimary": "scene_cafe",
+        "sceneModifiers": ["scmod_window_side"],
+        "lightingPrimary": "light_natural_window",
+        "activities": ["act_drinking_coffee"]
+      },
+      "portraitFocused": true,
+      "entryKind": "case"
+    },
+    {
+      "id": "evolink-early-1990s-flash",
+      "sourceId": "evolink",
+      "sourceRepo": "EvoLinkAI/awesome-gpt-image-2-API-and-Prompts",
+      "sourceUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-API-and-Prompts/blob/main/cases/portrait.md",
+      "title": "Early 1990s Flash Portrait",
+      "author": "EvoLinkAI",
+      "license": "See source repository",
+      "category": "social snapshot",
+      "styleTags": ["1990s", "digital flash", "throwback"],
+      "sceneTags": ["indoor", "snapshot"],
+      "prompt": "Realistic candid portrait with an early 1990s digital-camera flash aesthetic, direct flash, nostalgic skin tone, slightly imperfect composition, honest social snapshot feeling.",
+      "language": "en",
+      "importHints": {
+        "shootingMedium": "med_ccd",
+        "imageTexture": ["tex_flash", "tex_grain"],
+        "trendAesthetic": ["trend_throwback_moodboard"]
+      },
+      "portraitFocused": true,
+      "entryKind": "case"
+    },
+    {
+      "id": "youmind-color-walking-portrait",
+      "sourceId": "youmind",
+      "sourceRepo": "YouMind-OpenLab/awesome-gpt-image-2",
+      "sourceUrl": "https://github.com/YouMind-OpenLab/awesome-gpt-image-2",
+      "title": "Color Walking Street Portrait",
+      "author": "YouMind-OpenLab",
+      "license": "See source repository",
+      "category": "street",
+      "styleTags": ["color walking", "street", "daily fashion"],
+      "sceneTags": ["street", "city", "walking"],
+      "prompt": "A color-walking inspired city portrait, outfit and surroundings echo the same palette, everyday pace, fashionable but not stiff, urban rhythm, strong social-media readability.",
+      "language": "en",
+      "importHints": {
+        "scenePrimary": "scene_street",
+        "posePrimary": "pose_walking",
+        "trendAesthetic": ["trend_color_walking"]
+      },
+      "portraitFocused": true,
+      "entryKind": "case"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
-import type { Facet, FacetValue, FacetSlot, TemplatePreset, ConflictRule, SelectionMode, ShowcaseCategory, ShowcaseEntry, SeriesSceneTemplate } from './types'
+import type { Facet, FacetValue, FacetSlot, TemplatePreset, ConflictRule, SelectionMode } from './types'
 
-export type { Facet, FacetValue, FacetSlot, TemplatePreset, ConflictRule, SelectionMode, ShowcaseCategory, ShowcaseEntry, SeriesSceneTemplate }
+export type { Facet, FacetValue, FacetSlot, TemplatePreset, ConflictRule, SelectionMode }
 
 // ==================== IMAGE LAYER ====================
 const imageFacet: Facet = {
@@ -45,7 +45,7 @@ const imageFacet: Facet = {
     { id: 'shot_product', label: '产品带模特', slot: 'shotType' },
     { id: 'shot_editorial_beauty', label: '美妆 Editorial', slot: 'shotType' },
     { id: 'shot_couple', label: '情侣双人', slot: 'shotType' },
-    { id: 'shot_family', label: '家庭亲子', slot: 'shotType' },
+    { id: 'shot_family', label: '家庭合照', slot: 'shotType' },
     { id: 'shot_selfie', label: '自拍/随手拍', slot: 'shotType' },
     { id: 'shot_pet_with_person', label: '人与宠物', slot: 'shotType' },
     { id: 'count_single', label: '单人', slot: 'subjectCount' },
@@ -55,7 +55,6 @@ const imageFacet: Facet = {
     { id: 'rel_couple', label: '情侣', slot: 'subjectRelationship' },
     { id: 'rel_married', label: '夫妻', slot: 'subjectRelationship' },
     { id: 'rel_family', label: '家庭', slot: 'subjectRelationship' },
-    { id: 'rel_parent_child', label: '亲子', slot: 'subjectRelationship' },
     { id: 'rel_siblings', label: '兄弟姊妹', slot: 'subjectRelationship' },
     { id: 'rel_friends', label: '朋友', slot: 'subjectRelationship' },
     { id: 'rel_colleagues', label: '同事', slot: 'subjectRelationship' },
@@ -70,18 +69,18 @@ const imageFacet: Facet = {
     { id: 'scene_bedroom', label: '睡房', slot: 'scenePrimary' },
     { id: 'scene_kitchen', label: '厨房', slot: 'scenePrimary' },
     { id: 'scene_bathroom', label: '浴室/洗手间', slot: 'scenePrimary' },
-    { id: 'scene_cafe', label: '咖啡店', slot: 'scenePrimary' },
-    { id: 'scene_bookstore', label: '书店', slot: 'scenePrimary' },
+    { id: 'scene_cafe', label: '咖啡店', slot: 'scenePrimary', aliases: ['cafe', 'coffee shop'] },
+    { id: 'scene_bookstore', label: '书店', slot: 'scenePrimary', aliases: ['bookstore'] },
     { id: 'scene_retail', label: '零售店', slot: 'scenePrimary' },
     { id: 'scene_hotel_lobby', label: '酒店大堂', slot: 'scenePrimary' },
-    { id: 'scene_street', label: '城市街头', slot: 'scenePrimary' },
-    { id: 'scene_alley', label: '后巷', slot: 'scenePrimary' },
-    { id: 'scene_rooftop', label: '天台', slot: 'scenePrimary' },
-    { id: 'scene_subway', label: '地铁站', slot: 'scenePrimary' },
+    { id: 'scene_street', label: '城市街头', slot: 'scenePrimary', aliases: ['street', 'city street'] },
+    { id: 'scene_alley', label: '后巷', slot: 'scenePrimary', aliases: ['alley'] },
+    { id: 'scene_rooftop', label: '天台', slot: 'scenePrimary', aliases: ['rooftop'] },
+    { id: 'scene_subway', label: '地铁站', slot: 'scenePrimary', aliases: ['subway', 'metro station'] },
     { id: 'scene_parking', label: '停车场', slot: 'scenePrimary' },
     { id: 'scene_park', label: '公园', slot: 'scenePrimary' },
-    { id: 'scene_beach', label: '海边/沙滩', slot: 'scenePrimary' },
-    { id: 'scene_forest', label: '森林', slot: 'scenePrimary' },
+    { id: 'scene_beach', label: '海边/沙滩', slot: 'scenePrimary', aliases: ['beach', 'seaside'] },
+    { id: 'scene_forest', label: '森林', slot: 'scenePrimary', aliases: ['forest'] },
     { id: 'scene_mountain', label: '山野', slot: 'scenePrimary' },
     { id: 'scene_grassland', label: '草地', slot: 'scenePrimary' },
     { id: 'scene_campus', label: '校园', slot: 'scenePrimary' },
@@ -137,12 +136,12 @@ const imageFacet: Facet = {
     { id: 'lf_natural', label: '自然光', slot: 'lightFamily' },
     { id: 'lf_window', label: '窗光', slot: 'lightFamily' },
     { id: 'lf_overcast', label: '阴天漫射光', slot: 'lightFamily' },
-    { id: 'lf_golden_hour', label: '金色时刻', slot: 'lightFamily' },
+    { id: 'lf_golden_hour', label: '金色时刻', slot: 'lightFamily', aliases: ['golden hour'] },
     { id: 'lf_sunset_backlight', label: '逆光日落', slot: 'lightFamily' },
     { id: 'lf_studio_strobe', label: '棚灯/影室闪灯', slot: 'lightFamily' },
     { id: 'lf_speedlight', label: '机顶闪灯', slot: 'lightFamily' },
     { id: 'lf_continuous', label: '持续灯/LED', slot: 'lightFamily' },
-    { id: 'lf_neon', label: '霓虹灯光', slot: 'lightFamily' },
+    { id: 'lf_neon', label: '霓虹灯光', slot: 'lightFamily', aliases: ['neon'] },
     { id: 'lf_street_lamp', label: '街灯', slot: 'lightFamily' },
     { id: 'lf_mixed', label: '混合光', slot: 'lightFamily' },
     { id: 'light_flat', label: '平光', slot: 'lightingPrimary' },
@@ -323,15 +322,11 @@ const personFacet: Facet = {
     { id: 'hairColorSecondary', label: '发色副值', icon: '🎯', mode: 'multi', maxSelect: 2, parentFacet: 'person' },
     { id: 'makeupIntensity', label: '妆感强度', icon: '💄', mode: 'single', parentFacet: 'person' },
     { id: 'makeupRegions', label: '妆部位', icon: '💋', mode: 'multi', maxSelect: 5, parentFacet: 'person' },
+    { id: 'ethnicity', label: '人种', icon: '🌏', mode: 'single', parentFacet: 'person' },
     { id: 'accessories', label: '配件', icon: '👛', mode: 'multi', maxSelect: 6, parentFacet: 'person' },
     { id: 'activities', label: '活动', icon: '🏃', mode: 'multi', maxSelect: 3, parentFacet: 'person' },
   ],
   values: [
-    { id: 'age_baby', label: '婴儿', slot: 'ageBand' },
-    { id: 'age_toddler', label: '幼儿', slot: 'ageBand' },
-    { id: 'age_child', label: '儿童', slot: 'ageBand' },
-    { id: 'age_school', label: '学童', slot: 'ageBand' },
-    { id: 'age_teen', label: '少年', slot: 'ageBand' },
     { id: 'age_young', label: '青年', slot: 'ageBand' },
     { id: 'age_20s', label: '二十代', slot: 'ageBand' },
     { id: 'age_30s', label: '三十代', slot: 'ageBand' },
@@ -345,6 +340,14 @@ const personFacet: Facet = {
     { id: 'gender_neutral', label: '中性', slot: 'genderPresentation' },
     { id: 'gender_androgynous', label: '雌雄莫辨', slot: 'genderPresentation' },
     { id: 'gender_unspecified', label: '不指明', slot: 'genderPresentation' },
+    { id: 'eth_east_asian', label: '东亚', slot: 'ethnicity' },
+    { id: 'eth_south_asian', label: '南亚', slot: 'ethnicity' },
+    { id: 'eth_southeast_asian', label: '东南亚', slot: 'ethnicity' },
+    { id: 'eth_white', label: '白种', slot: 'ethnicity' },
+    { id: 'eth_black', label: '黑种', slot: 'ethnicity' },
+    { id: 'eth_latino', label: '拉丁', slot: 'ethnicity' },
+    { id: 'eth_middle_eastern', label: '中东', slot: 'ethnicity' },
+    { id: 'eth_mixed', label: '混血', slot: 'ethnicity' },
     { id: 'body_slim', label: '纤瘦', slot: 'bodyType' },
     { id: 'body_standard', label: '标准', slot: 'bodyType' },
     { id: 'body_athletic', label: '健美', slot: 'bodyType' },
@@ -1012,8 +1015,335 @@ const fixFacet: Facet = {
   ]
 }
 
-// ==================== EXPORT MAPS ====================
-export const ALL_FACETS: Facet[] = [imageFacet, personFacet, garmentFacet, propFacet, fixFacet]
+// ==================== OUTPUT PARAM LAYER ====================
+const outputFacet: Facet = {
+  id: 'output',
+  label: '输出参数层',
+  icon: '⚙️',
+  description: 'AI 生图最终输出控制：画幅、质量、风格强度、语言',
+  slots: [
+    { id: 'aspectRatio', label: '画幅比例', icon: '🖼️', mode: 'single', parentFacet: 'output' },
+    { id: 'genTarget', label: '生成目标', icon: '🎯', mode: 'single', parentFacet: 'output' },
+    { id: 'realismLevel', label: '真实感强度', icon: '🔍', mode: 'single', parentFacet: 'output' },
+    { id: 'detailDensity', label: '细节密度', icon: '✨', mode: 'single', parentFacet: 'output' },
+    { id: 'styleStrength', label: '风格强度', icon: '💪', mode: 'single', parentFacet: 'output' },
+    { id: 'randomnessLevel', label: '随机程度', icon: '🎲', mode: 'single', parentFacet: 'output' },
+    { id: 'outputLang', label: '输出语言', icon: '🌐', mode: 'single', parentFacet: 'output' },
+  ],
+  values: [
+    { id: 'ar_1_1', label: '1:1 正方形', slot: 'aspectRatio' },
+    { id: 'ar_3_4', label: '3:4 竖版', slot: 'aspectRatio' },
+    { id: 'ar_4_5', label: '4:5 竖版', slot: 'aspectRatio' },
+    { id: 'ar_9_16', label: '9:16 手机竖屏', slot: 'aspectRatio' },
+    { id: 'ar_16_9', label: '16:9 横屏', slot: 'aspectRatio' },
+    { id: 'ar_21_9', label: '21:9 超宽', slot: 'aspectRatio' },
+    { id: 'ar_2_3', label: '2:3 竖版', slot: 'aspectRatio' },
+    { id: 'ar_3_2', label: '3:2 横版', slot: 'aspectRatio' },
+    { id: 'target_realistic', label: '写实照片', slot: 'genTarget' },
+    { id: 'target_commercial', label: '商业大片', slot: 'genTarget' },
+    { id: 'target_snap', label: '手机随拍', slot: 'genTarget' },
+    { id: 'target_movie', label: '电影剧照', slot: 'genTarget' },
+    { id: 'target_social', label: '社交媒体封面', slot: 'genTarget' },
+    { id: 'target_xiaohongshu', label: '小红书封面', slot: 'genTarget' },
+    { id: 'target_avatar', label: '头像', slot: 'genTarget' },
+    { id: 'target_wallpaper', label: '壁纸', slot: 'genTarget' },
+    { id: 'target_poster', label: '海报', slot: 'genTarget' },
+    { id: 'real_natural', label: '自然真实', slot: 'realismLevel' },
+    { id: 'real_slight_retouch', label: '轻微修图', slot: 'realismLevel' },
+    { id: 'real_commercial', label: '商业精修', slot: 'realismLevel' },
+    { id: 'real_cinematic', label: '电影级', slot: 'realismLevel' },
+    { id: 'real_hyper', label: '超写实', slot: 'realismLevel' },
+    { id: 'real_lo_fi', label: '低清手机感', slot: 'realismLevel' },
+    { id: 'detail_minimal', label: '简洁', slot: 'detailDensity' },
+    { id: 'detail_medium', label: '普通', slot: 'detailDensity' },
+    { id: 'detail_rich', label: '丰富', slot: 'detailDensity' },
+    { id: 'detail_high', label: '高密度细节', slot: 'detailDensity' },
+    { id: 'style_weak', label: '弱风格', slot: 'styleStrength' },
+    { id: 'style_medium', label: '中等风格', slot: 'styleStrength' },
+    { id: 'style_strong', label: '强风格', slot: 'styleStrength' },
+    { id: 'style_extreme', label: '极端风格', slot: 'styleStrength' },
+    { id: 'rand_conservative', label: '稳定保守', slot: 'randomnessLevel' },
+    { id: 'rand_slight', label: '轻微变化', slot: 'randomnessLevel' },
+    { id: 'rand_high', label: '高变化', slot: 'randomnessLevel' },
+    { id: 'rand_experimental', label: '实验性', slot: 'randomnessLevel' },
+    { id: 'lang_zh', label: '中文提示词', slot: 'outputLang' },
+    { id: 'lang_en', label: '英文提示词', slot: 'outputLang' },
+    { id: 'lang_mix', label: '中英混合', slot: 'outputLang' },
+  ]
+}
+
+// ==================== SHOOTING MEDIA / IMAGE TEXTURE ====================
+const mediaFacet: Facet = {
+  id: 'media',
+  label: '拍摄媒介',
+  icon: '📱',
+  description: '照片来自什么设备、成像质感风格',
+  slots: [
+    { id: 'shootingMedium', label: '拍摄设备', icon: '📷', mode: 'single', parentFacet: 'media' },
+    { id: 'imageTexture', label: '成像质感', icon: '🎞️', mode: 'multi', maxSelect: 3, parentFacet: 'media' },
+  ],
+  values: [
+    { id: 'med_phone', label: '手机原相机', slot: 'shootingMedium', aliases: ['phone camera', 'real phone camera', 'phone photo'] },
+    { id: 'med_iphone', label: 'iPhone 随手拍', slot: 'shootingMedium', aliases: ['iphone', 'iphone photo'] },
+    { id: 'med_android_lo', label: '低清安卓手机', slot: 'shootingMedium', aliases: ['android low res', 'android phone', 'low resolution android'] },
+    { id: 'med_ccd', label: 'CCD 数码相机', slot: 'shootingMedium', aliases: ['ccd', 'ccd camera'] },
+    { id: 'med_compact', label: '老式卡片机', slot: 'shootingMedium' },
+    { id: 'med_film', label: '胶片相机', slot: 'shootingMedium', aliases: ['film camera', '35mm film'] },
+    { id: 'med_polaroid', label: '宝丽来', slot: 'shootingMedium' },
+    { id: 'med_disposable', label: '一次性胶片相机', slot: 'shootingMedium' },
+    { id: 'med_cctv', label: '监控摄像头', slot: 'shootingMedium' },
+    { id: 'med_action', label: '运动相机', slot: 'shootingMedium' },
+    { id: 'med_webcam', label: 'WebCam', slot: 'shootingMedium' },
+    { id: 'med_live', label: '直播截图', slot: 'shootingMedium' },
+    { id: 'med_magazine', label: '杂志摄影', slot: 'shootingMedium', aliases: ['magazine photography', 'editorial photography'] },
+    { id: 'med_paparazzi', label: 'Paparazzi 街拍', slot: 'shootingMedium' },
+    { id: 'med_movie', label: '电影剧照', slot: 'shootingMedium', aliases: ['movie still', 'cinematic still'] },
+    { id: 'med_mv', label: 'MV 截图', slot: 'shootingMedium' },
+    { id: 'med_doc', label: '纪录片截图', slot: 'shootingMedium' },
+    { id: 'tex_noise_light', label: '轻微噪点', slot: 'imageTexture' },
+    { id: 'tex_grain', label: '胶片颗粒', slot: 'imageTexture' },
+    { id: 'tex_high_iso', label: '高 ISO 噪点', slot: 'imageTexture' },
+    { id: 'tex_compression', label: '轻微压缩感', slot: 'imageTexture' },
+    { id: 'tex_motion_blur', label: '运动模糊', slot: 'imageTexture' },
+    { id: 'tex_shutter_drag', label: '快门拖影', slot: 'imageTexture' },
+    { id: 'tex_soft_focus', label: '轻微失焦', slot: 'imageTexture' },
+    { id: 'tex_vignette', label: '边缘暗角', slot: 'imageTexture' },
+    { id: 'tex_lens_flare', label: '镜头眩光', slot: 'imageTexture' },
+    { id: 'tex_chromatic', label: '色散', slot: 'imageTexture' },
+    { id: 'tex_bloom', label: '泛光 Bloom', slot: 'imageTexture' },
+    { id: 'tex_halation', label: 'Halation 胶片光晕', slot: 'imageTexture' },
+    { id: 'tex_flash', label: '闪光灯直打', slot: 'imageTexture' },
+    { id: 'tex_overexposed', label: '过曝高光', slot: 'imageTexture' },
+    { id: 'tex_shadow_crush', label: '阴影压暗', slot: 'imageTexture' },
+    { id: 'tex_lo_fi', label: '低清生活照', slot: 'imageTexture' },
+  ]
+}
+
+// ==================== TRENDING AESTHETICS ====================
+const aestheticFacet: Facet = {
+  id: 'aesthetic',
+  label: '热门审美标签',
+  icon: '🏷️',
+  description: '流行趋势、风格标签、色彩趋势',
+  slots: [
+    { id: 'trendAesthetic', label: '热门审美', icon: '🌐', mode: 'multi', maxSelect: 3, parentFacet: 'aesthetic' },
+    { id: 'colorTrend', label: '流行色趋势', icon: '🎨', mode: 'multi', maxSelect: 2, parentFacet: 'aesthetic' },
+  ],
+  values: [
+    { id: 'trend_clean_girl', label: 'Clean Girl', slot: 'trendAesthetic' },
+    { id: 'trend_soft_girl', label: 'Soft Girl', slot: 'trendAesthetic' },
+    { id: 'trend_balletcore', label: 'Balletcore', slot: 'trendAesthetic' },
+    { id: 'trend_coquette', label: 'Coquette', slot: 'trendAesthetic' },
+    { id: 'trend_cottagecore', label: 'Cottagecore', slot: 'trendAesthetic' },
+    { id: 'trend_fairycore', label: 'Fairycore', slot: 'trendAesthetic' },
+    { id: 'trend_mermaidcore', label: 'Mermaidcore', slot: 'trendAesthetic' },
+    { id: 'trend_angelcore', label: 'Angelcore', slot: 'trendAesthetic' },
+    { id: 'trend_dark_academia', label: 'Dark Academia', slot: 'trendAesthetic' },
+    { id: 'trend_light_academia', label: 'Light Academia', slot: 'trendAesthetic' },
+    { id: 'trend_poetcore', label: 'Poetcore', slot: 'trendAesthetic', aliases: ['poet-core'] },
+    { id: 'trend_office_siren', label: 'Office Siren', slot: 'trendAesthetic' },
+    { id: 'trend_mob_wife', label: 'Mob Wife', slot: 'trendAesthetic' },
+    { id: 'trend_old_money', label: 'Old Money', slot: 'trendAesthetic' },
+    { id: 'trend_quiet_luxury', label: 'Quiet Luxury', slot: 'trendAesthetic' },
+    { id: 'trend_y2k', label: 'Y2K', slot: 'trendAesthetic' },
+    { id: 'trend_cyber_y2k', label: 'Cyber Y2K', slot: 'trendAesthetic' },
+    { id: 'trend_blokecore', label: 'Blokecore', slot: 'trendAesthetic' },
+    { id: 'trend_gorpcore', label: 'Gorpcore', slot: 'trendAesthetic' },
+    { id: 'trend_normcore', label: 'Normcore', slot: 'trendAesthetic' },
+    { id: 'trend_techwear', label: 'Techwear', slot: 'trendAesthetic' },
+    { id: 'trend_cyberpunk', label: 'Cyberpunk', slot: 'trendAesthetic' },
+    { id: 'trend_solarpunk', label: 'Solarpunk', slot: 'trendAesthetic' },
+    { id: 'trend_vaporwave', label: 'Vaporwave', slot: 'trendAesthetic' },
+    { id: 'trend_city_pop', label: 'City Pop', slot: 'trendAesthetic' },
+    { id: 'trend_retro_futurism', label: 'Retro Futurism', slot: 'trendAesthetic' },
+    { id: 'trend_glitchy_glam', label: 'Glitchy Glam', slot: 'trendAesthetic' },
+    { id: 'trend_aliencore', label: 'Aliencore', slot: 'trendAesthetic' },
+    { id: 'trend_forest_magic', label: 'Forest Magic', slot: 'trendAesthetic' },
+    { id: 'trend_glacier', label: 'Glacier Aesthetic', slot: 'trendAesthetic' },
+    { id: 'trend_1980s_luxury', label: '1980s Luxury', slot: 'trendAesthetic' },
+    { id: 'trend_glamoratti', label: 'Glamoratti', slot: 'trendAesthetic' },
+    { id: 'trend_film_noir', label: 'Film Noir', slot: 'trendAesthetic' },
+    { id: 'trend_hk_movie', label: 'Hong Kong Movie Still', slot: 'trendAesthetic' },
+    { id: 'trend_kdrama', label: 'Korean Drama Still', slot: 'trendAesthetic' },
+    { id: 'trend_jp_magazine', label: 'Japanese Magazine', slot: 'trendAesthetic' },
+    { id: 'trend_xiaohongshu', label: 'Xiaohongshu Lifestyle', slot: 'trendAesthetic' },
+    { id: 'trend_douyin', label: 'Douyin Viral Portrait', slot: 'trendAesthetic' },
+    { id: 'trend_throwback_moodboard', label: 'Throwback Moodboard', slot: 'trendAesthetic', aliases: ['retro moodboard', 'throwback'] },
+    { id: 'trend_color_walking', label: 'Color Walking', slot: 'trendAesthetic', aliases: ['colour walking'] },
+    { id: 'trend_story_documentary', label: 'Story-driven Documentary', slot: 'trendAesthetic', aliases: ['documentary storytelling', 'story driven documentary'] },
+    { id: 'trend_analog_imperfection', label: 'Analog Imperfection', slot: 'trendAesthetic', aliases: ['analog imperfection', 'analog imperfections', 'imperfect analog'] },
+    { id: 'ct_icy_blue', label: 'Icy Blue', slot: 'colorTrend' },
+    { id: 'ct_cool_blue', label: 'Cool Blue', slot: 'colorTrend' },
+    { id: 'ct_jade_green', label: 'Jade Green', slot: 'colorTrend' },
+    { id: 'ct_plum_noir', label: 'Plum Noir', slot: 'colorTrend' },
+    { id: 'ct_wasabi', label: 'Wasabi Green', slot: 'colorTrend' },
+    { id: 'ct_persimmon', label: 'Persimmon Orange', slot: 'colorTrend' },
+    { id: 'ct_butter_yellow', label: 'Butter Yellow', slot: 'colorTrend' },
+    { id: 'ct_cherry_red', label: 'Cherry Red', slot: 'colorTrend' },
+    { id: 'ct_espresso', label: 'Espresso Brown', slot: 'colorTrend' },
+    { id: 'ct_burgundy', label: 'Burgundy', slot: 'colorTrend' },
+    { id: 'ct_silver_chrome', label: 'Silver Chrome', slot: 'colorTrend' },
+    { id: 'ct_milky_white', label: 'Milky White', slot: 'colorTrend' },
+    { id: 'ct_soft_pink', label: 'Soft Pink', slot: 'colorTrend' },
+  ]
+}
+
+// ==================== POSE MICRO-ADJUSTMENT ====================
+const poseAdjustFacet: Facet = {
+  id: 'poseAdjust',
+  label: '姿态微调',
+  icon: '🧍',
+  description: '身体姿态细节微调，让 AI 图更自然',
+  slots: [
+    { id: 'microPose', label: '姿态微调', icon: '🫂', mode: 'multi', maxSelect: 4, parentFacet: 'poseAdjust' },
+  ],
+  values: [
+    { id: 'mp_body_forward', label: '身体微微前倾', slot: 'microPose' },
+    { id: 'mp_body_back', label: '身体微微后仰', slot: 'microPose' },
+    { id: 'mp_shoulders_relax', label: '肩膀放松', slot: 'microPose' },
+    { id: 'mp_one_shoulder_low', label: '一侧肩膀略低', slot: 'microPose' },
+    { id: 'mp_weight_one_leg', label: '重心落在一条腿上', slot: 'microPose' },
+    { id: 'mp_one_foot_forward', label: '一脚向前半步', slot: 'microPose' },
+    { id: 'mp_knee_bent', label: '膝盖自然微弯', slot: 'microPose' },
+    { id: 'mp_waist_turn', label: '腰部轻微转向', slot: 'microPose' },
+    { id: 'mp_hip_turn', label: '胯部轻微侧转', slot: 'microPose' },
+    { id: 'mp_head_tilt', label: '头部轻轻歪向一侧', slot: 'microPose' },
+    { id: 'mp_chin_slight_in', label: '下巴微收', slot: 'microPose' },
+    { id: 'mp_neck_lengthen', label: '脖颈自然拉长', slot: 'microPose' },
+    { id: 'mp_back_straight', label: '背部自然挺直', slot: 'microPose' },
+    { id: 'mp_s_curve', label: '身体呈 S 曲线', slot: 'microPose' },
+    { id: 'mp_turning_moment', label: '正在转身的一瞬间', slot: 'microPose' },
+    { id: 'mp_walk_caught', label: '行走中被抓拍', slot: 'microPose' },
+    { id: 'mp_turn_look_back', label: '停下回头的一瞬间', slot: 'microPose' },
+    { id: 'mp_hand_half_up', label: '手刚抬起一半', slot: 'microPose' },
+    { id: 'mp_hand_near_face', label: '手部靠近脸但未遮挡五官', slot: 'microPose' },
+    { id: 'mp_hand_fg_blur', label: '手部在前景轻微虚焦', slot: 'microPose' },
+    { id: 'mp_fingers_curved', label: '手指自然弯曲', slot: 'microPose' },
+    { id: 'mp_palm_not_camera', label: '手掌不要正对镜头', slot: 'microPose' },
+    { id: 'mp_arms_no_flatten', label: '手臂不要压扁身体轮廓', slot: 'microPose' },
+  ]
+}
+
+// ==================== EYE & MICRO-EXPRESSION ====================
+const eyeExprFacet: Facet = {
+  id: 'eyeExpr',
+  label: '眼神微表情',
+  icon: '👁️',
+  description: '眼神与细腻表情状态，打破 AI 同质化',
+  slots: [
+    { id: 'microExpr', label: '眼神与微表情', icon: '👀', mode: 'multi', maxSelect: 3, parentFacet: 'eyeExpr' },
+  ],
+  values: [
+    { id: 'me_eye_dodge', label: '眼神略微躲闪', slot: 'microExpr' },
+    { id: 'me_eye_clear', label: '眼神清澈', slot: 'microExpr' },
+    { id: 'me_eye_story', label: '眼神有故事感', slot: 'microExpr' },
+    { id: 'me_eye_empty', label: '眼神放空', slot: 'microExpr' },
+    { id: 'me_eye_down', label: '眼睛朝下看', slot: 'microExpr' },
+    { id: 'me_eye_off', label: '眼睛看向画面外', slot: 'microExpr' },
+    { id: 'me_side_glance', label: '余光看镜头', slot: 'microExpr' },
+    { id: 'me_just_noticed', label: '刚注意到镜头', slot: 'microExpr' },
+    { id: 'me_caught_off_guard', label: '像被突然抓拍', slot: 'microExpr' },
+    { id: 'me_shy', label: '有点害羞', slot: 'microExpr' },
+    { id: 'me_slight_tired', label: '轻微疲惫', slot: 'microExpr' },
+    { id: 'me_restrained_smile', label: '克制的笑', slot: 'microExpr' },
+    { id: 'me_mouth_corner_up', label: '嘴角轻轻上扬', slot: 'microExpr' },
+    { id: 'me_wry_smile', label: '歪嘴笑', slot: 'microExpr' },
+    { id: 'me_half_open_breath', label: '半开口呼吸感', slot: 'microExpr' },
+    { id: 'me_lip_relaxed', label: '唇部自然放松', slot: 'microExpr' },
+    { id: 'me_not_posed', label: '表情不摆拍', slot: 'microExpr' },
+    { id: 'me_not_perform', label: '不刻意营业', slot: 'microExpr' },
+    { id: 'me_relaxed_natural', label: '松弛自然', slot: 'microExpr' },
+    { id: 'me_life_state', label: '生活化状态', slot: 'microExpr' },
+    { id: 'me_emotion_in_eyes', label: '情绪藏在眼神里', slot: 'microExpr' },
+  ]
+}
+
+// ==================== SCENE DETAIL PACK ====================
+const sceneDetailFacet: Facet = {
+  id: 'sceneDetail',
+  label: '场景细节',
+  icon: '🏠',
+  description: '家居、城市、自然等场景细节词包',
+  slots: [
+    { id: 'homeDetail', label: '家居细节', icon: '🪑', mode: 'multi', maxSelect: 5, parentFacet: 'sceneDetail' },
+    { id: 'urbanDetail', label: '城市场景细节', icon: '🏙️', mode: 'multi', maxSelect: 5, parentFacet: 'sceneDetail' },
+    { id: 'natureDetail', label: '自然场景细节', icon: '🌿', mode: 'multi', maxSelect: 5, parentFacet: 'sceneDetail' },
+  ],
+  values: [
+    { id: 'sd_home_white_curtain', label: '白色窗帘', slot: 'homeDetail' },
+    { id: 'sd_home_beige_sofa', label: '米色沙发', slot: 'homeDetail' },
+    { id: 'sd_home_plant_corner', label: '绿植角落', slot: 'homeDetail' },
+    { id: 'sd_home_low_table', label: '低矮茶几', slot: 'homeDetail' },
+    { id: 'sd_home_wood_floor', label: '木地板', slot: 'homeDetail' },
+    { id: 'sd_home_rug', label: '毛绒地毯', slot: 'homeDetail' },
+    { id: 'sd_home_warm_lamp', label: '暖色台灯', slot: 'homeDetail' },
+    { id: 'sd_home_purple_light', label: '紫粉氛围灯', slot: 'homeDetail' },
+    { id: 'sd_home_messy_desk', label: '凌乱但真实的桌面', slot: 'homeDetail' },
+    { id: 'sd_home_half_window', label: '半开的窗户', slot: 'homeDetail' },
+    { id: 'sd_home_light_spot', label: '投影光斑', slot: 'homeDetail' },
+    { id: 'sd_home_night_microlight', label: '夜晚室内微光', slot: 'homeDetail' },
+    { id: 'sd_urban_convenience', label: '便利店门口', slot: 'urbanDetail' },
+    { id: 'sd_urban_glass_reflect', label: '玻璃橱窗反光', slot: 'urbanDetail' },
+    { id: 'sd_urban_neon_sign', label: '霓虹招牌', slot: 'urbanDetail' },
+    { id: 'sd_urban_wet_road', label: '湿润柏油路', slot: 'urbanDetail' },
+    { id: 'sd_urban_zebra', label: '斑马线', slot: 'urbanDetail' },
+    { id: 'sd_urban_subway_exit', label: '地铁出口', slot: 'urbanDetail' },
+    { id: 'sd_urban_vending', label: '自动售货机旁', slot: 'urbanDetail' },
+    { id: 'sd_urban_parking_cold', label: '停车场冷光', slot: 'urbanDetail' },
+    { id: 'sd_urban_alley_graffiti', label: '后巷墙面涂鸦', slot: 'urbanDetail' },
+    { id: 'sd_urban_night_stall', label: '夜市摊位灯光', slot: 'urbanDetail' },
+    { id: 'sd_urban_billboard', label: '路边广告牌', slot: 'urbanDetail' },
+    { id: 'sd_nature_tree_shade', label: '树荫斑驳', slot: 'natureDetail' },
+    { id: 'sd_nature_bamboo', label: '竹林小径', slot: 'natureDetail' },
+    { id: 'sd_nature_grass_backlight', label: '草地逆光', slot: 'natureDetail' },
+    { id: 'sd_nature_sea_wind', label: '海风吹动头发', slot: 'natureDetail' },
+    { id: 'sd_nature_lake_reflect', label: '湖面反光', slot: 'natureDetail' },
+    { id: 'sd_nature_fog_mountain', label: '雾气山林', slot: 'natureDetail' },
+    { id: 'sd_nature_flower_fg', label: '花丛前景虚化', slot: 'natureDetail' },
+    { id: 'sd_nature_leaves_floor', label: '落叶铺地', slot: 'natureDetail' },
+    { id: 'sd_nature_after_rain', label: '雨后潮湿空气', slot: 'natureDetail' },
+    { id: 'sd_nature_sun_through', label: '阳光穿过树叶', slot: 'natureDetail' },
+  ]
+}
+
+// ==================== NEGATIVE PROMPT STRATEGY ====================
+const negativeStrategyFacet: Facet = {
+  id: 'negative',
+  label: '负面词策略',
+  icon: '🛡️',
+  description: '组合式负面词策略，一键防御常见 AI 缺陷',
+  slots: [
+    { id: 'negStrategy', label: '防御策略', icon: '⚔️', mode: 'multi', maxSelect: 3, parentFacet: 'negative' },
+  ],
+  values: [
+    { id: 'neg_standard', label: '标准人像防错', slot: 'negStrategy' },
+    { id: 'neg_hand_focus', label: '手部重点防错', slot: 'negStrategy' },
+    { id: 'neg_face_focus', label: '面部重点防错', slot: 'negStrategy' },
+    { id: 'neg_anti_ai', label: '写实照片防 AI 感', slot: 'negStrategy' },
+    { id: 'neg_lo_fi_protect', label: '低清手机照防过度精修', slot: 'negStrategy' },
+    { id: 'neg_commercial_protect', label: '商业大片防廉价感', slot: 'negStrategy' },
+    { id: 'neg_group_protect', label: '群像防多人融合', slot: 'negStrategy' },
+    { id: 'neg_motion_protect', label: '动态动作防肢体扭曲', slot: 'negStrategy' },
+    { id: 'neg_product_text', label: '产品图防文字乱码', slot: 'negStrategy' },
+    { id: 'neg_cloth_intersect', label: '服装图防布料穿插', slot: 'negStrategy' },
+  ]
+}
+
+// ==================== NEGATIVE PROMPT MAPPING ====================
+const NEGATIVE_PROMPT_MAP: Record<string, string[]> = {
+  neg_standard: ['extra fingers', 'missing fingers', 'fused fingers', 'deformed hands', 'distorted face', 'asymmetrical eyes', 'bad anatomy', 'extra limbs', 'plastic skin', 'waxy skin', 'over-smoothed skin'],
+  neg_hand_focus: ['extra fingers', 'missing fingers', 'fused fingers', 'deformed hands', 'claw hand', 'backwards hand', 'finger growing from palm', 'wrong finger count'],
+  neg_face_focus: ['asymmetrical face', 'deformed face', 'bad eyes', 'cross eyes', 'extra eyes', 'missing eyes', 'bad teeth', 'extra teeth', 'melting face', 'distorted mouth'],
+  neg_anti_ai: ['overly perfect', 'artificial skin', 'doll-like face', 'uncanny valley', 'plastic texture', 'excessive retouching', 'fake studio lighting', 'unrealistic symmetry'],
+  neg_lo_fi_protect: ['over-sharpened', 'excessive detail', 'perfect skin', 'too clean', 'hdr effect', 'professional lighting', 'over-processed'],
+  neg_commercial_protect: ['cheap look', 'low quality', 'blurry', 'pixelated', 'amateur', 'poor lighting', 'unprofessional', 'hastily made'],
+  neg_group_protect: ['merged people', 'fused bodies', 'extra arms between people', 'blended faces', 'conjoined', 'overlapping bodies'],
+  neg_motion_protect: ['contorted pose', 'impossible angle', 'broken anatomy', 'twisted spine', 'dislocated joints', 'stretched limbs'],
+  neg_product_text: ['gibberish text', 'wrong characters', 'scrambled letters', 'misspelled words', 'random symbols', 'jumbled writing'],
+  neg_cloth_intersect: ['cloth clipping', 'fabric clipping through body', 'transparent clothing', 'cloth merging with skin', 'wardrobe malfunction', 'wrong cloth physics'],
+}
+export const NEW_FACETS: Facet[] = [outputFacet, mediaFacet, aestheticFacet, poseAdjustFacet, eyeExprFacet, sceneDetailFacet, negativeStrategyFacet]
+export const ALL_FACETS: Facet[] = [imageFacet, personFacet, garmentFacet, propFacet, fixFacet, ...NEW_FACETS]
 
 export const FACET_MAP: Record<string, Facet> = {}
 ALL_FACETS.forEach(f => { FACET_MAP[f.id] = f })
@@ -1099,33 +1429,84 @@ export const CONFLICT_RULES: ConflictRule[] = [
     }
     return null
   }},
+  // -- new v0.2.0 conflict rules --
+  { type: 'hard', description: '白天强日光与夜晚霓虹冲突', check: (s) => {
+    const mods = s['sceneModifiers']
+    if (Array.isArray(mods) && mods.includes('scmod_daylight') && mods.includes('scmod_neon')) return '白天强日光与夜晚霓虹同时出现不合理'
+    return null
+  }},
+  { type: 'hard', description: '低清手机感与高清商业精修冲突', check: (s) => {
+    const real = s['realismLevel']
+    if (typeof real === 'string' && real === 'real_lo_fi') {
+      const gt = s['genTarget']
+      if (typeof gt === 'string' && gt === 'target_commercial') return '低清手机感与商业大片不兼容'
+    }
+    return null
+  }},
+  { type: 'soft', description: '商务 Headshot 与大幅运动模糊冲突', check: (s) => {
+    const st = s['shotType']
+    const tex = s['imageTexture']
+    if (typeof st === 'string' && st === 'shot_headshot' && Array.isArray(tex) && tex.includes('tex_motion_blur')) return '商务头像不适合大幅运动模糊'
+    return null
+  }},
+  { type: 'hard', description: '极浅景深与全员清晰群像冲突', check: (s) => {
+    const dof = s['depthOfField']
+    const sc = s['subjectCount']
+    if (typeof dof === 'string' && dof === 'dof_extreme_shallow' && typeof sc === 'string' && (sc === 'count_group_small' || sc === 'count_group_large')) return '极浅景深下无法保证群像全员清晰'
+    return null
+  }},
+  { type: 'soft', description: '自然裸妆与舞台浓妆冲突', check: (s) => {
+    const makeup = s['makeupIntensity']
+    if (typeof makeup === 'string' && (makeup === 'mint_none' || makeup === 'mint_nude') && Array.isArray(s['makeupRegions']) && s['makeupRegions'].includes('mreg_smokey_eye')) return '自然裸妆不适合烟熏眼妆'
+    return null
+  }},
+  { type: 'soft', description: '极简背景与夜市复杂场景冲突', check: (s) => {
+    const mods = s['sceneModifiers']
+    const sp = s['scenePrimary']
+    if (Array.isArray(mods) && mods.includes('scmod_minimal_bg') && typeof sp === 'string' && sp === 'scene_night_market') return '极简背景与夜市复杂场景矛盾'
+    return null
+  }},
+  { type: 'soft', description: '冷调冰蓝与暖黄复古可提示', check: (s) => {
+    const cg = s['colorGradePrimary']
+    if (typeof cg === 'string' && cg === 'color_cool') {
+      const ct = Array.isArray(s['colorTrend']) ? s['colorTrend'] : []
+      if (ct.includes('ct_butter_yellow') || ct.includes('ct_persimmon')) return '冷调冰蓝与暖色趋势风格冲突，请确认'
+    }
+    return null
+  }},
+  { type: 'soft', description: '手部前景虚焦与手部产品展示冲突', check: (s) => {
+    const mp = Array.isArray(s['microPose']) ? s['microPose'] : []
+    const handheld = Array.isArray(s['handheld']) ? s['handheld'] : []
+    if (mp.includes('mp_hand_fg_blur') && handheld.length > 0) return '手部前景虚焦时不宜展示手持物品'
+    return null
+  }},
 ]
 
 export const TEMPLATES: TemplatePreset[] = [
   {
     id: 'template_studio_portrait',
     name: 'Studio Portrait', description: '经典棚拍人像，半身、85mm、浅景深、蝴蝶光',
-    selections: { shotType: 'shot_studio_portrait', subjectCount: 'count_single', shotSize: 'size_half', orientation: 'ori_three_quarter', cameraAngle: 'angle_eye', focalLength: 'fl_85mm', depthOfField: 'dof_shallow', lightFamily: 'lf_studio_strobe', lightingPrimary: 'light_butterfly', lightingModifiers: ['lmod_soft'], compositionPrimary: 'comp_center', colorGradePrimary: 'color_natural', mood: ['mood_professional', 'mood_clean'], ageBand: 'age_young', bodyType: 'body_standard', posePrimary: 'pose_standing', expressionPrimary: 'expr_confident', expressionModifiers: ['emod_looking_at_camera'], makeupIntensity: 'mint_natural' }
+    selections: { shotType: 'shot_studio_portrait', subjectCount: 'count_single', shotSize: 'size_half', orientation: 'ori_three_quarter', cameraAngle: 'angle_eye', focalLength: 'fl_85mm', depthOfField: 'dof_shallow', lightFamily: 'lf_studio_strobe', lightingPrimary: 'light_butterfly', lightingModifiers: ['lmod_soft'], compositionPrimary: 'comp_center', colorGradePrimary: 'color_natural', mood: ['mood_professional', 'mood_clean'], ageBand: 'age_20s', genderPresentation: 'gender_female', ethnicity: 'eth_east_asian', bodyType: 'body_standard', posePrimary: 'pose_standing', expressionPrimary: 'expr_confident', expressionModifiers: ['emod_looking_at_camera'], makeupIntensity: 'mint_natural' }
   },
   {
     id: 'template_outdoor_candid',
     name: 'Outdoor Candid', description: '户外抓拍，自然光、35mm、三分法',
-    selections: { shotType: 'shot_candid', subjectCount: 'count_single', shotSize: 'size_environmental', cameraAngle: 'angle_eye', orientation: 'ori_front', focalLength: 'fl_35mm', depthOfField: 'dof_medium', lightFamily: 'lf_golden_hour', lightingPrimary: 'light_golden_hour', lightingModifiers: ['lmod_soft'], compositionPrimary: 'comp_rule_of_thirds', colorGradePrimary: 'color_warm', mood: ['mood_daily', 'mood_youthful', 'mood_energetic'], scenePrimary: 'scene_park', sceneModifiers: ['scmod_golden_hour'], bodyType: 'body_standard', posePrimary: 'pose_walking', expressionPrimary: 'expr_smile', expressionModifiers: ['emod_looking_away'], style: ['sty_casual'] }
+    selections: { shotType: 'shot_candid', subjectCount: 'count_single', shotSize: 'size_environmental', cameraAngle: 'angle_eye', orientation: 'ori_front', focalLength: 'fl_35mm', depthOfField: 'dof_medium', lightFamily: 'lf_golden_hour', lightingPrimary: 'light_golden_hour', lightingModifiers: ['lmod_soft'], compositionPrimary: 'comp_rule_of_thirds', colorGradePrimary: 'color_warm', mood: ['mood_daily', 'mood_youthful', 'mood_energetic'], scenePrimary: 'scene_park', sceneModifiers: ['scmod_golden_hour'], ageBand: 'age_20s', genderPresentation: 'gender_female', ethnicity: 'eth_east_asian', bodyType: 'body_standard', posePrimary: 'pose_walking', expressionPrimary: 'expr_smile', expressionModifiers: ['emod_looking_away'], style: ['sty_casual'] }
   },
   {
     id: 'template_fashion_editorial',
     name: 'Fashion Editorial', description: '时尚大片，全身、高冷、电影感',
-    selections: { shotType: 'shot_fashion', subjectCount: 'count_single', shotSize: 'size_full', cameraAngle: 'angle_low', orientation: 'ori_three_quarter', focalLength: 'fl_50mm', depthOfField: 'dof_medium', lightFamily: 'lf_studio_strobe', lightingPrimary: 'light_rim', lightingModifiers: ['lmod_high_contrast'], compositionPrimary: 'comp_diagonal', colorGradePrimary: 'color_cool', colorModifiers: ['cmod_cool_shadows'], mood: ['mood_fashionable', 'mood_premium', 'mood_cinematic'], bodyType: 'body_tall', bodyModifiers: ['bmod_elongated'], posePrimary: 'pose_standing', expressionPrimary: 'expr_cool', expressionModifiers: ['emod_side_glance'], makeupIntensity: 'mint_refined', makeupRegions: ['mreg_contour', 'mreg_highlight'] }
+    selections: { shotType: 'shot_fashion', subjectCount: 'count_single', shotSize: 'size_full', cameraAngle: 'angle_low', orientation: 'ori_three_quarter', focalLength: 'fl_50mm', depthOfField: 'dof_medium', lightFamily: 'lf_studio_strobe', lightingPrimary: 'light_rim', lightingModifiers: ['lmod_high_contrast'], compositionPrimary: 'comp_diagonal', colorGradePrimary: 'color_cool', colorModifiers: ['cmod_cool_shadows'], mood: ['mood_fashionable', 'mood_premium', 'mood_cinematic'], ageBand: 'age_20s', genderPresentation: 'gender_female', ethnicity: 'eth_east_asian', bodyType: 'body_tall', bodyModifiers: ['bmod_elongated'], posePrimary: 'pose_standing', expressionPrimary: 'expr_cool', expressionModifiers: ['emod_side_glance'], makeupIntensity: 'mint_refined', makeupRegions: ['mreg_contour', 'mreg_highlight'] }
   },
   {
     id: 'template_headshot',
     name: '专业 Headshot', description: '商务头像，特写、85mm、浅景深、柔光',
-    selections: { shotType: 'shot_headshot', subjectCount: 'count_single', shotSize: 'size_close', cameraAngle: 'angle_eye', orientation: 'ori_front', focalLength: 'fl_85mm', depthOfField: 'dof_shallow', lightFamily: 'lf_studio_strobe', lightingPrimary: 'light_butterfly', lightingModifiers: ['lmod_soft', 'lmod_high_key'], compositionPrimary: 'comp_center', colorGradePrimary: 'color_natural', mood: ['mood_professional', 'mood_clean'], ageBand: 'age_unspecified', expressionPrimary: 'expr_neutral', expressionModifiers: ['emod_looking_at_camera'], scenePrimary: 'scene_studio_grey', makeupIntensity: 'mint_nude' }
+    selections: { shotType: 'shot_headshot', subjectCount: 'count_single', shotSize: 'size_close', cameraAngle: 'angle_eye', orientation: 'ori_front', focalLength: 'fl_85mm', depthOfField: 'dof_shallow', lightFamily: 'lf_studio_strobe', lightingPrimary: 'light_butterfly', lightingModifiers: ['lmod_soft', 'lmod_high_key'], compositionPrimary: 'comp_center', colorGradePrimary: 'color_natural', mood: ['mood_professional', 'mood_clean'], ageBand: 'age_20s', genderPresentation: 'gender_female', ethnicity: 'eth_east_asian', expressionPrimary: 'expr_neutral', expressionModifiers: ['emod_looking_at_camera'], scenePrimary: 'scene_studio_grey', makeupIntensity: 'mint_nude' }
   },
   {
     id: 'template_fullbody_action',
     name: '全身动态', description: '运动抓拍，全身、35mm、深景深',
-    selections: { shotType: 'shot_fullbody_action', subjectCount: 'count_single', shotSize: 'size_full', cameraAngle: 'angle_eye', orientation: 'ori_front', focalLength: 'fl_35mm', depthOfField: 'dof_deep', lightFamily: 'lf_natural', lightingPrimary: 'light_flat', compositionPrimary: 'comp_leading_lines', colorGradePrimary: 'color_high_contrast', mood: ['mood_energetic', 'mood_youthful'], bodyType: 'body_athletic', posePrimary: 'pose_running', expressionPrimary: 'expr_bright_smile', style: ['sty_sporty'] }
+    selections: { shotType: 'shot_fullbody_action', subjectCount: 'count_single', shotSize: 'size_full', cameraAngle: 'angle_eye', orientation: 'ori_front', focalLength: 'fl_35mm', depthOfField: 'dof_deep', lightFamily: 'lf_natural', lightingPrimary: 'light_flat', compositionPrimary: 'comp_leading_lines', colorGradePrimary: 'color_high_contrast', mood: ['mood_energetic', 'mood_youthful'], ageBand: 'age_20s', genderPresentation: 'gender_female', ethnicity: 'eth_east_asian', bodyType: 'body_athletic', posePrimary: 'pose_running', expressionPrimary: 'expr_bright_smile', style: ['sty_sporty'] }
   },
   {
     id: 'template_group_photo',
@@ -1135,31 +1516,247 @@ export const TEMPLATES: TemplatePreset[] = [
   {
     id: 'template_lifestyle',
     name: 'Lifestyle 日常', description: '居家咖啡店，窗光、35mm、暖色调',
-    selections: { shotType: 'shot_lifestyle', subjectCount: 'count_single', shotSize: 'size_environmental', scenePrimary: 'scene_cafe', sceneModifiers: ['scmod_window_side'], cameraAngle: 'angle_eye', lightFamily: 'lf_window', lightingPrimary: 'light_natural_window', focalLength: 'fl_35mm', depthOfField: 'dof_medium', compositionPrimary: 'comp_rule_of_thirds', colorGradePrimary: 'color_warm', mood: ['mood_warm', 'mood_relaxed', 'mood_daily'], bodyType: 'body_standard', posePrimary: 'pose_sitting', poseModifiers: ['pmod_chin_rest'], expressionPrimary: 'expr_smile', activities: ['act_drinking_coffee'], style: ['sty_casual'] }
+    selections: { shotType: 'shot_lifestyle', subjectCount: 'count_single', shotSize: 'size_environmental', scenePrimary: 'scene_cafe', sceneModifiers: ['scmod_window_side'], cameraAngle: 'angle_eye', lightFamily: 'lf_window', lightingPrimary: 'light_natural_window', focalLength: 'fl_35mm', depthOfField: 'dof_medium', compositionPrimary: 'comp_rule_of_thirds', colorGradePrimary: 'color_warm', mood: ['mood_warm', 'mood_relaxed', 'mood_daily'], ageBand: 'age_20s', genderPresentation: 'gender_female', ethnicity: 'eth_east_asian', bodyType: 'body_standard', posePrimary: 'pose_sitting', poseModifiers: ['pmod_chin_rest'], expressionPrimary: 'expr_smile', activities: ['act_drinking_coffee'], style: ['sty_casual'] }
   },
   {
     id: 'template_cosplay',
     name: 'Cosplay 人像', description: '角色扮演，50mm、霓虹光、戏剧化',
-    selections: { shotType: 'shot_cosplay', subjectCount: 'count_single', shotSize: 'size_half', scenePrimary: 'scene_night_market', sceneModifiers: ['scmod_neon'], lightFamily: 'lf_neon', lightingPrimary: 'light_split', lightingModifiers: ['lmod_gel_light'], focalLength: 'fl_50mm', depthOfField: 'dof_medium', compositionPrimary: 'comp_diagonal', colorGradePrimary: 'color_high_contrast', mood: ['mood_dramatic', 'mood_mysterious'], makeupIntensity: 'mint_character', makeupRegions: ['mreg_color_eyeshadow', 'mreg_glitter_eye'] }
+    selections: { shotType: 'shot_cosplay', subjectCount: 'count_single', shotSize: 'size_half', scenePrimary: 'scene_night_market', sceneModifiers: ['scmod_neon'], lightFamily: 'lf_neon', lightingPrimary: 'light_split', lightingModifiers: ['lmod_gel_light'], focalLength: 'fl_50mm', depthOfField: 'dof_medium', compositionPrimary: 'comp_diagonal', colorGradePrimary: 'color_high_contrast', mood: ['mood_dramatic', 'mood_mysterious'], ageBand: 'age_20s', genderPresentation: 'gender_female', ethnicity: 'eth_east_asian', makeupIntensity: 'mint_character', makeupRegions: ['mreg_color_eyeshadow', 'mreg_glitter_eye'] }
   },
   {
     id: 'template_street_photo',
     name: '街头摄影', description: '街拍纪实，35mm、深景深、胶片感',
-    selections: { shotType: 'shot_candid', subjectCount: 'count_single', shotSize: 'size_full', scenePrimary: 'scene_street', sceneModifiers: ['scmod_golden_hour'], lightFamily: 'lf_golden_hour', lightingPrimary: 'light_golden_hour', focalLength: 'fl_35mm', depthOfField: 'dof_deep', compositionPrimary: 'comp_leading_lines', colorGradePrimary: 'color_film', mood: ['mood_documentary', 'mood_nostalgic'], posePrimary: 'pose_walking', expressionPrimary: 'expr_neutral' }
+    selections: { shotType: 'shot_candid', subjectCount: 'count_single', shotSize: 'size_full', scenePrimary: 'scene_street', sceneModifiers: ['scmod_golden_hour'], lightFamily: 'lf_golden_hour', lightingPrimary: 'light_golden_hour', focalLength: 'fl_35mm', depthOfField: 'dof_deep', compositionPrimary: 'comp_leading_lines', colorGradePrimary: 'color_film', mood: ['mood_documentary', 'mood_nostalgic'], ageBand: 'age_20s', genderPresentation: 'gender_female', ethnicity: 'eth_east_asian', posePrimary: 'pose_walking', expressionPrimary: 'expr_neutral' }
   },
   {
     id: 'template_product_model',
     name: '产品带模特', description: '展示产品，白背景、平光、清晰',
-    selections: { shotType: 'shot_product', subjectCount: 'count_single', shotSize: 'size_three_quarter', scenePrimary: 'scene_studio_white', lightFamily: 'lf_studio_strobe', lightingPrimary: 'light_flat', lightingModifiers: ['lmod_soft', 'lmod_fill_light'], focalLength: 'fl_85mm', depthOfField: 'dof_medium', compositionPrimary: 'comp_negative_space', colorGradePrimary: 'color_commercial', mood: ['mood_professional', 'mood_clean'], expressionPrimary: 'expr_confident', expressionModifiers: ['emod_looking_at_camera'] }
+    selections: { shotType: 'shot_product', subjectCount: 'count_single', shotSize: 'size_three_quarter', scenePrimary: 'scene_studio_white', lightFamily: 'lf_studio_strobe', lightingPrimary: 'light_flat', lightingModifiers: ['lmod_soft', 'lmod_fill_light'], focalLength: 'fl_85mm', depthOfField: 'dof_medium', compositionPrimary: 'comp_negative_space', colorGradePrimary: 'color_commercial', mood: ['mood_professional', 'mood_clean'], ageBand: 'age_20s', genderPresentation: 'gender_female', ethnicity: 'eth_east_asian', expressionPrimary: 'expr_confident', expressionModifiers: ['emod_looking_at_camera'] }
   },
   {
     id: 'template_beauty_editorial',
     name: '美妆 Editorial', description: '美妆特写，大特写、105mm、柔光、精致妆',
-    selections: { shotType: 'shot_editorial_beauty', subjectCount: 'count_single', shotSize: 'size_extreme_close', cameraAngle: 'angle_eye', orientation: 'ori_front', focalLength: 'fl_105mm', depthOfField: 'dof_extreme_shallow', lightFamily: 'lf_studio_strobe', lightingPrimary: 'light_butterfly', lightingModifiers: ['lmod_soft', 'lmod_fill_light'], compositionPrimary: 'comp_center', compositionModifiers: ['cmod_negative_space'], colorGradePrimary: 'color_commercial', mood: ['mood_premium', 'mood_clean'], makeupIntensity: 'mint_refined', makeupRegions: ['mreg_dewy_base', 'mreg_highlight', 'mreg_red_lip'], expressionPrimary: 'expr_neutral', expressionModifiers: ['emod_looking_at_camera', 'emod_lips_pressed'] }
+    selections: { shotType: 'shot_editorial_beauty', subjectCount: 'count_single', shotSize: 'size_extreme_close', cameraAngle: 'angle_eye', orientation: 'ori_front', focalLength: 'fl_105mm', depthOfField: 'dof_extreme_shallow', lightFamily: 'lf_studio_strobe', lightingPrimary: 'light_butterfly', lightingModifiers: ['lmod_soft', 'lmod_fill_light'], compositionPrimary: 'comp_center', compositionModifiers: ['cmod_negative_space'], colorGradePrimary: 'color_commercial', mood: ['mood_premium', 'mood_clean'], ageBand: 'age_20s', genderPresentation: 'gender_female', ethnicity: 'eth_east_asian', makeupIntensity: 'mint_refined', makeupRegions: ['mreg_dewy_base', 'mreg_highlight', 'mreg_red_lip'], expressionPrimary: 'expr_neutral', expressionModifiers: ['emod_looking_at_camera', 'emod_lips_pressed'] }
   },
   {
     id: 'template_environmental',
     name: '环境人像', description: '场景融入，窗光、50mm、环境构图、放松',
-    selections: { shotType: 'shot_environmental', subjectCount: 'count_single', shotSize: 'size_environmental', cameraAngle: 'angle_eye', orientation: 'ori_three_quarter', focalLength: 'fl_50mm', depthOfField: 'dof_medium', lightFamily: 'lf_window', lightingPrimary: 'light_natural_window', compositionPrimary: 'comp_environmental', colorGradePrimary: 'color_natural', mood: ['mood_relaxed', 'mood_warm', 'mood_daily'], ageBand: 'age_young', bodyType: 'body_standard', posePrimary: 'pose_leaning', expressionPrimary: 'expr_smile', expressionModifiers: ['emod_looking_away'], style: ['sty_casual'] }
+    selections: { shotType: 'shot_environmental', subjectCount: 'count_single', shotSize: 'size_environmental', cameraAngle: 'angle_eye', orientation: 'ori_three_quarter', focalLength: 'fl_50mm', depthOfField: 'dof_medium', lightFamily: 'lf_window', lightingPrimary: 'light_natural_window', compositionPrimary: 'comp_environmental', colorGradePrimary: 'color_natural', mood: ['mood_relaxed', 'mood_warm', 'mood_daily'], ageBand: 'age_20s', genderPresentation: 'gender_female', ethnicity: 'eth_east_asian', bodyType: 'body_standard', posePrimary: 'pose_leaning', expressionPrimary: 'expr_smile', expressionModifiers: ['emod_looking_away'], style: ['sty_casual'] }
+  },
+  // -- v0.2.0 expanded templates --
+  {
+    id: 'template_convenience_ccd',
+    name: '夜晚便利店 CCD 抓拍', description: '便利店门口霓虹光，CCD 质感，闪灯直打',
+    selections: { shotType: 'shot_candid', subjectCount: 'count_single', shotSize: 'size_half', scenePrimary: 'scene_street', sceneModifiers: ['scmod_neon', 'scmod_night'], lightFamily: 'lf_neon', lightingPrimary: 'light_flat', lightingModifiers: ['lmod_neon_glow'], focalLength: 'fl_35mm', depthOfField: 'dof_medium', compositionPrimary: 'comp_rule_of_thirds', colorGradePrimary: 'color_cool', mood: ['mood_daily', 'mood_mysterious'], ageBand: 'age_20s', genderPresentation: 'gender_female', ethnicity: 'eth_east_asian', bodyType: 'body_standard', posePrimary: 'pose_standing', expressionPrimary: 'expr_neutral', make: 'med_ccd', imageTexture: ['tex_flash', 'tex_grain'], shootingMedium: 'med_ccd', microPose: ['mp_caught_off_guard'], trendAesthetic: ['trend_y2k'], colorTrend: ['ct_icy_blue'] }
+  },
+  {
+    id: 'template_purple_livingroom',
+    name: '客厅窗边紫粉氛围灯', description: '居家窗光 + 紫粉氛围灯，柔和梦幻',
+    selections: { shotType: 'shot_lifestyle', subjectCount: 'count_single', shotSize: 'size_half', scenePrimary: 'scene_livingroom', sceneModifiers: ['scmod_window_side', 'scmod_indoor_warm'], lightFamily: 'lf_mixed', lightingPrimary: 'light_natural_window', lightingModifiers: ['lmod_gel_light', 'lmod_soft'], focalLength: 'fl_50mm', depthOfField: 'dof_shallow', compositionPrimary: 'comp_rule_of_thirds', colorGradePrimary: 'color_warm', colorModifiers: ['cmod_warm_highlights'], mood: ['mood_warm', 'mood_dreamy', 'mood_intimate'], ageBand: 'age_20s', genderPresentation: 'gender_female', ethnicity: 'eth_east_asian', bodyType: 'body_standard', posePrimary: 'pose_sitting', expressionPrimary: 'expr_smile', microPose: ['mp_body_forward'], homeDetail: ['sd_home_purple_light', 'sd_home_white_curtain', 'sd_home_warm_lamp'], trendAesthetic: ['trend_cottagecore'] }
+  },
+  {
+    id: 'template_summer_tree_mblur',
+    name: '夏日树下运动模糊人像', description: '树荫下抓拍，运动模糊，自然阳光',
+    selections: { shotType: 'shot_candid', subjectCount: 'count_single', shotSize: 'size_full', scenePrimary: 'scene_park', sceneModifiers: ['scmod_summer', 'scmod_golden_hour'], lightFamily: 'lf_golden_hour', lightingPrimary: 'light_backlight', lightingModifiers: ['lmod_edge_light'], focalLength: 'fl_35mm', depthOfField: 'dof_medium', compositionPrimary: 'comp_leading_lines', colorGradePrimary: 'color_warm', mood: ['mood_youthful', 'mood_energetic'], ageBand: 'age_20s', genderPresentation: 'gender_female', ethnicity: 'eth_east_asian', bodyType: 'body_standard', posePrimary: 'pose_walking', expressionPrimary: 'expr_bright_smile', shootingMedium: 'med_phone', imageTexture: ['tex_motion_blur', 'tex_flare'], natureDetail: ['sd_nature_tree_shade', 'sd_nature_sun_through'] }
+  },
+  {
+    id: 'template_cafe_window',
+    name: '咖啡店窗光随手拍', description: '咖啡店窗边，暖光、35mm、休闲慵懒',
+    selections: { shotType: 'shot_lifestyle', subjectCount: 'count_single', shotSize: 'size_half', scenePrimary: 'scene_cafe', sceneModifiers: ['scmod_window_side'], lightFamily: 'lf_window', lightingPrimary: 'light_natural_window', lightingModifiers: ['lmod_soft'], focalLength: 'fl_35mm', depthOfField: 'dof_shallow', compositionPrimary: 'comp_rule_of_thirds', colorGradePrimary: 'color_warm', mood: ['mood_warm', 'mood_relaxed', 'mood_daily'], ageBand: 'age_20s', genderPresentation: 'gender_female', ethnicity: 'eth_east_asian', bodyType: 'body_standard', posePrimary: 'pose_sitting', poseModifiers: ['pmod_chin_rest'], expressionPrimary: 'expr_smile', microExpr: ['me_relaxed_natural'], shootingMedium: 'med_iphone', activities: ['act_drinking_coffee'] }
+  },
+  {
+    id: 'template_subway_cool',
+    name: '地铁站冷调街拍', description: '地铁站冷光环境，抓拍感，蓝色调',
+    selections: { shotType: 'shot_candid', subjectCount: 'count_single', shotSize: 'size_full', scenePrimary: 'scene_subway', sceneModifiers: ['scmod_indoor_cool'], lightFamily: 'lf_mixed', lightingPrimary: 'light_flat', lightingModifiers: ['lmod_cool'], focalLength: 'fl_28mm', depthOfField: 'dof_medium', compositionPrimary: 'comp_leading_lines', colorGradePrimary: 'color_cool', mood: ['mood_cool', 'mood_documentary'], ageBand: 'age_20s', genderPresentation: 'gender_female', ethnicity: 'eth_east_asian', posePrimary: 'pose_walking', expressionPrimary: 'expr_neutral', microPose: ['mp_walk_caught'], urbanDetail: ['sd_urban_subway_exit', 'sd_urban_parking_cold'], trendAesthetic: ['trend_kdrama'] }
+  },
+  {
+    id: 'template_rain_neon',
+    name: '雨夜霓虹街头人像', description: '雨夜霓虹，湿润路面反射，电影感',
+    selections: { shotType: 'shot_environmental', subjectCount: 'count_single', shotSize: 'size_full', scenePrimary: 'scene_street', sceneModifiers: ['scmod_night', 'scmod_neon', 'scmod_rainy'], lightFamily: 'lf_neon', lightingPrimary: 'light_split', lightingModifiers: ['lmod_neon_glow', 'lmod_high_contrast'], focalLength: 'fl_50mm', depthOfField: 'dof_medium', compositionPrimary: 'comp_diagonal', colorGradePrimary: 'color_teal_orange', colorModifiers: ['cmod_rich_color'], mood: ['mood_cinematic', 'mood_nostalgic', 'mood_mysterious'], ageBand: 'age_20s', genderPresentation: 'gender_female', ethnicity: 'eth_east_asian', bodyType: 'body_standard', posePrimary: 'pose_looking_back', expressionPrimary: 'expr_mysterious', urbanDetail: ['sd_urban_wet_road', 'sd_urban_neon_sign', 'sd_urban_alley_graffiti'], shootingMedium: 'med_ccd', imageTexture: ['tex_lens_flare'] }
+  },
+  {
+    id: 'template_rooftop_blue',
+    name: '天台蓝调时刻电影感', description: '天台黄昏蓝调，剪影或逆光，电影感',
+    selections: { shotType: 'shot_environmental', subjectCount: 'count_single', shotSize: 'size_full', scenePrimary: 'scene_rooftop', sceneModifiers: ['scmod_blue_hour', 'scmod_cityscape'], lightFamily: 'lf_golden_hour', lightingPrimary: 'light_backlight', lightingModifiers: ['lmod_edge_light', 'lmod_silhouette'], focalLength: 'fl_50mm', depthOfField: 'dof_medium', compositionPrimary: 'comp_negative_space', compositionModifiers: ['cmod_leading_room'], colorGradePrimary: 'color_cool', colorModifiers: ['cmod_cool_shadows'], mood: ['mood_cinematic', 'mood_serene', 'mood_dreamy'], ageBand: 'age_20s', genderPresentation: 'gender_female', ethnicity: 'eth_east_asian', posePrimary: 'pose_standing', expressionPrimary: 'expr_contemplative', microExpr: ['me_eye_off'] }
+  },
+  {
+    id: 'template_bedroom_lo_fi',
+    name: '卧室低清手机自拍感', description: '卧室自然光，手机感，真实生活',
+    selections: { shotType: 'shot_selfie', subjectCount: 'count_single', shotSize: 'size_close', scenePrimary: 'scene_bedroom', sceneModifiers: ['scmod_morning_light'], lightFamily: 'lf_window', lightingPrimary: 'light_natural_window', lightingModifiers: ['lmod_soft'], focalLength: 'fl_28mm', depthOfField: 'dof_medium', compositionPrimary: 'comp_fill_frame', colorGradePrimary: 'color_natural', mood: ['mood_daily', 'mood_warm'], ageBand: 'age_20s', genderPresentation: 'gender_female', ethnicity: 'eth_east_asian', bodyType: 'body_standard', posePrimary: 'pose_lying', expressionPrimary: 'expr_smile', microPose: ['mp_head_tilt'], microExpr: ['me_just_noticed'], shootingMedium: 'med_phone', realismLevel: 'real_lo_fi', homeDetail: ['sd_home_white_curtain'] }
+  },
+  {
+    id: 'template_white_curtain_dream',
+    name: '白窗帘旁梦幻生活照', description: '白窗帘透光，梦幻暖调，浅景深',
+    selections: { shotType: 'shot_lifestyle', subjectCount: 'count_single', shotSize: 'size_half', scenePrimary: 'scene_livingroom', sceneModifiers: ['scmod_window_side'], lightFamily: 'lf_window', lightingPrimary: 'light_backlight', lightingModifiers: ['lmod_soft', 'lmod_edge_light'], focalLength: 'fl_85mm', depthOfField: 'dof_shallow', compositionPrimary: 'comp_center', colorGradePrimary: 'color_warm', colorModifiers: ['cmod_warm_highlights'], mood: ['mood_dreamy', 'mood_warm'], ageBand: 'age_20s', genderPresentation: 'gender_female', ethnicity: 'eth_east_asian', bodyType: 'body_standard', posePrimary: 'pose_standing', expressionPrimary: 'expr_sweet', homeDetail: ['sd_home_white_curtain', 'sd_home_plant_corner', 'sd_home_wood_floor'] }
+  },
+  {
+    id: 'template_office_headshot',
+    name: '办公室通勤 Headshot', description: '办公室人像，正式但不僵硬',
+    selections: { shotType: 'shot_headshot', subjectCount: 'count_single', shotSize: 'size_close', scenePrimary: 'scene_office', sceneModifiers: ['scmod_indoor_warm'], lightFamily: 'lf_window', lightingPrimary: 'light_butterfly', lightingModifiers: ['lmod_soft', 'lmod_high_key'], focalLength: 'fl_85mm', depthOfField: 'dof_shallow', compositionPrimary: 'comp_center', colorGradePrimary: 'color_natural', mood: ['mood_professional', 'mood_confident'], ageBand: 'age_20s', genderPresentation: 'gender_female', ethnicity: 'eth_east_asian', expressionPrimary: 'expr_confident', expressionModifiers: ['emod_looking_at_camera'] }
+  },
+  {
+    id: 'template_grey_portrait',
+    name: '高级灰棚拍肖像', description: '灰背景棚拍，简洁高级',
+    selections: { shotType: 'shot_studio_portrait', subjectCount: 'count_single', shotSize: 'size_half', scenePrimary: 'scene_studio_grey', lightFamily: 'lf_studio_strobe', lightingPrimary: 'light_45_degree', lightingModifiers: ['lmod_soft'], focalLength: 'fl_85mm', depthOfField: 'dof_shallow', compositionPrimary: 'comp_center', colorGradePrimary: 'color_matte', mood: ['mood_premium', 'mood_sophisticated'], ageBand: 'age_20s', genderPresentation: 'gender_female', ethnicity: 'eth_east_asian', expressionPrimary: 'expr_neutral' }
+  },
+  {
+    id: 'template_black_dramatic',
+    name: '黑背景低调戏剧光', description: '黑背景，低调光，戏剧感',
+    selections: { shotType: 'shot_studio_portrait', subjectCount: 'count_single', shotSize: 'size_close', scenePrimary: 'scene_studio_black', lightFamily: 'lf_studio_strobe', lightingPrimary: 'light_split', lightingModifiers: ['lmod_low_key', 'lmod_dramatic'], focalLength: 'fl_85mm', depthOfField: 'dof_shallow', compositionPrimary: 'comp_negative_space', colorGradePrimary: 'color_bw', mood: ['mood_dramatic', 'mood_mysterious'], ageBand: 'age_20s', genderPresentation: 'gender_female', ethnicity: 'eth_east_asian', expressionPrimary: 'expr_cool' }
+  },
+  {
+    id: 'template_editorial_old_money',
+    name: 'Old Money 酒店大堂', description: '高级酒店大堂，Old Money 穿搭',
+    selections: { shotType: 'shot_fashion', subjectCount: 'count_single', shotSize: 'size_full', scenePrimary: 'scene_hotel_lobby', sceneModifiers: ['scmod_indoor_warm'], lightFamily: 'lf_mixed', lightingPrimary: 'light_clam_shell', lightingModifiers: ['lmod_soft'], focalLength: 'fl_35mm', depthOfField: 'dof_medium', compositionPrimary: 'comp_symmetry', colorGradePrimary: 'color_warm', mood: ['mood_premium', 'mood_sophisticated'], ageBand: 'age_20s', genderPresentation: 'gender_female', ethnicity: 'eth_east_asian', posePrimary: 'pose_standing', expressionPrimary: 'expr_confident', microExpr: ['me_not_perform'], trendAesthetic: ['trend_quiet_luxury'] }
+  },
+  {
+    id: 'template_quiet_street',
+    name: 'Quiet Luxury 街头通勤', description: '低调奢华风，通勤抓拍，自然光',
+    selections: { shotType: 'shot_candid', subjectCount: 'count_single', shotSize: 'size_three_quarter', scenePrimary: 'scene_street', sceneModifiers: ['scmod_golden_hour'], lightFamily: 'lf_natural', lightingPrimary: 'light_natural_window', lightingModifiers: ['lmod_soft'], focalLength: 'fl_50mm', depthOfField: 'dof_medium', compositionPrimary: 'comp_rule_of_thirds', colorGradePrimary: 'color_natural', mood: ['mood_sophisticated', 'mood_calm'], ageBand: 'age_20s', genderPresentation: 'gender_female', ethnicity: 'eth_east_asian', posePrimary: 'pose_walking', expressionPrimary: 'expr_neutral', trendAesthetic: ['trend_quiet_luxury'] }
+  },
+  {
+    id: 'template_y2k_flash',
+    name: 'Y2K 闪光灯派对照', description: '闪光灯直打，Y2K 派对氛围',
+    selections: { shotType: 'shot_candid', subjectCount: 'count_single', shotSize: 'size_half', scenePrimary: 'scene_club', sceneModifiers: ['scmod_neon'], lightFamily: 'lf_speedlight', lightingPrimary: 'light_flat', lightingModifiers: ['lmod_neon_glow', 'lmod_gel_light'], focalLength: 'fl_24mm', depthOfField: 'dof_medium', compositionPrimary: 'comp_center', colorGradePrimary: 'color_high_contrast', colorModifiers: ['cmod_rich_color'], mood: ['mood_energetic', 'mood_rebellious'], ageBand: 'age_20s', genderPresentation: 'gender_female', ethnicity: 'eth_east_asian', bodyType: 'body_standard', posePrimary: 'pose_dancing', expressionPrimary: 'expr_playful', shootingMedium: 'med_ccd', imageTexture: ['tex_flash', 'tex_grain'], trendAesthetic: ['trend_y2k', 'trend_cyber_y2k'] }
+  },
+  {
+    id: 'template_cyberpunk_alley',
+    name: 'Cyberpunk 后巷霓虹', description: '后巷霓虹，赛博朋克，紫蓝调',
+    selections: { shotType: 'shot_fashion', subjectCount: 'count_single', shotSize: 'size_full', scenePrimary: 'scene_alley', sceneModifiers: ['scmod_neon', 'scmod_night'], lightFamily: 'lf_neon', lightingPrimary: 'light_split', lightingModifiers: ['lmod_gel_light', 'lmod_neon_glow', 'lmod_high_contrast'], focalLength: 'fl_24mm', depthOfField: 'dof_deep', compositionPrimary: 'comp_leading_lines', colorGradePrimary: 'color_teal_orange', colorModifiers: ['cmod_cool_shadows', 'cmod_rich_color'], mood: ['mood_rebellious', 'mood_cool'], ageBand: 'age_20s', genderPresentation: 'gender_female', ethnicity: 'eth_east_asian', bodyType: 'body_standard', style: ['sty_techwear'], trendAesthetic: ['trend_cyberpunk', 'trend_glitchy_glam'], colorTrend: ['ct_plum_noir'] }
+  },
+  {
+    id: 'template_dark_academia',
+    name: 'Dark Academia 图书馆', description: '图书馆暖光，复古学院调',
+    selections: { shotType: 'shot_lifestyle', subjectCount: 'count_single', shotSize: 'size_half', scenePrimary: 'scene_library', sceneModifiers: ['scmod_indoor_warm', 'scmod_moody'], lightFamily: 'lf_mixed', lightingPrimary: 'light_45_degree', lightingModifiers: ['lmod_moody'], focalLength: 'fl_50mm', depthOfField: 'dof_medium', compositionPrimary: 'comp_frame_in_frame', colorGradePrimary: 'color_vintage', colorModifiers: ['cmod_warm_highlights'], mood: ['mood_contemplative', 'mood_nostalgic', 'mood_intimate'], ageBand: 'age_20s', genderPresentation: 'gender_female', ethnicity: 'eth_east_asian', posePrimary: 'pose_sitting', activities: ['act_reading'], trendAesthetic: ['trend_dark_academia'] }
+  },
+  {
+    id: 'template_poetcore_bookstore',
+    name: 'Poetcore 书店人像', description: '书店内，文艺、沉静、柔和光',
+    selections: { shotType: 'shot_lifestyle', subjectCount: 'count_single', shotSize: 'size_half', scenePrimary: 'scene_bookstore', sceneModifiers: ['scmod_indoor_warm'], lightFamily: 'lf_mixed', lightingPrimary: 'light_45_degree', lightingModifiers: ['lmod_soft'], focalLength: 'fl_50mm', depthOfField: 'dof_shallow', compositionPrimary: 'comp_rule_of_thirds', colorGradePrimary: 'color_warm', mood: ['mood_serene', 'mood_contemplative'], ageBand: 'age_20s', genderPresentation: 'gender_female', ethnicity: 'eth_east_asian', posePrimary: 'pose_leaning', expressionPrimary: 'expr_thoughtful', microExpr: ['me_eye_down', 'me_not_posed'], trendAesthetic: ['trend_poetcore', 'trend_light_academia'] }
+  },
+  {
+    id: 'template_forest_magic',
+    name: 'Forest Magic 森林逆光', description: '森林逆光，光斑散落，梦幻',
+    selections: { shotType: 'shot_environmental', subjectCount: 'count_single', shotSize: 'size_full', scenePrimary: 'scene_forest', sceneModifiers: ['scmod_golden_hour', 'scmod_ethereal'], lightFamily: 'lf_golden_hour', lightingPrimary: 'light_backlight', lightingModifiers: ['lmod_edge_light', 'lmod_soft'], focalLength: 'fl_50mm', depthOfField: 'dof_medium', compositionPrimary: 'comp_leading_lines', colorGradePrimary: 'color_warm', colorModifiers: ['cmod_hazy', 'cmod_warm_highlights'], mood: ['mood_dreamy', 'mood_ethereal', 'mood_romantic'], ageBand: 'age_20s', genderPresentation: 'gender_female', ethnicity: 'eth_east_asian', bodyType: 'body_standard', posePrimary: 'pose_standing', expressionPrimary: 'expr_calm', natureDetail: ['sd_nature_sun_through', 'sd_nature_tree_shade', 'sd_nature_flower_fg'], trendAesthetic: ['trend_forest_magic'] }
+  },
+  {
+    id: 'template_glacier_cool',
+    name: 'Glacier Aesthetic 冷蓝大片', description: '冷蓝调，冰感，清冽高级',
+    selections: { shotType: 'shot_fashion', subjectCount: 'count_single', shotSize: 'size_full', scenePrimary: 'scene_studio_grey', lightFamily: 'lf_continuous', lightingPrimary: 'light_flat', lightingModifiers: ['lmod_cool', 'lmod_high_key'], focalLength: 'fl_50mm', depthOfField: 'dof_medium', compositionPrimary: 'comp_negative_space', colorGradePrimary: 'color_cool', colorModifiers: ['cmod_cool_shadows'], mood: ['mood_cool', 'mood_premium'], ageBand: 'age_20s', genderPresentation: 'gender_female', ethnicity: 'eth_east_asian', expressionPrimary: 'expr_neutral', trendAesthetic: ['trend_glacier'], colorTrend: ['ct_icy_blue', 'ct_cool_blue'] }
+  },
+  {
+    id: 'template_hk_retro',
+    name: '复古港风夜景', description: '港风霓虹，暖红调，复古电影感',
+    selections: { shotType: 'shot_environmental', subjectCount: 'count_single', shotSize: 'size_full', scenePrimary: 'scene_night_market', sceneModifiers: ['scmod_neon', 'scmod_night'], lightFamily: 'lf_neon', lightingPrimary: 'light_split', lightingModifiers: ['lmod_gel_light', 'lmod_neon_glow'], focalLength: 'fl_35mm', depthOfField: 'dof_deep', compositionPrimary: 'comp_leading_lines', colorGradePrimary: 'color_vintage', colorModifiers: ['cmod_rich_color', 'cmod_warm_highlights'], mood: ['mood_nostalgic', 'mood_cinematic'], ageBand: 'age_20s', genderPresentation: 'gender_female', ethnicity: 'eth_east_asian', posePrimary: 'pose_standing', expressionPrimary: 'expr_mysterious', trendAesthetic: ['trend_hk_movie'] }
+  },
+  {
+    id: 'template_jp_clean',
+    name: '日杂清透生活照', description: '日系杂志风，清透感，自然妆',
+    selections: { shotType: 'shot_lifestyle', subjectCount: 'count_single', shotSize: 'size_half', scenePrimary: 'scene_livingroom', sceneModifiers: ['scmod_window_side', 'scmod_spring'], lightFamily: 'lf_window', lightingPrimary: 'light_natural_window', lightingModifiers: ['lmod_soft', 'lmod_high_key'], focalLength: 'fl_50mm', depthOfField: 'dof_shallow', compositionPrimary: 'comp_rule_of_thirds', colorGradePrimary: 'color_pastel', colorModifiers: ['cmod_soft_skin'], mood: ['mood_clean', 'mood_fresh', 'mood_daily'], ageBand: 'age_20s', genderPresentation: 'gender_female', ethnicity: 'eth_east_asian', bodyType: 'body_standard', posePrimary: 'pose_sitting', expressionPrimary: 'expr_sweet', makeupIntensity: 'mint_glass_skin', trendAesthetic: ['trend_jp_magazine'], colorTrend: ['ct_milky_white', 'ct_soft_pink'] }
+  },
+  {
+    id: 'template_kdrama_female',
+    name: '韩剧女主氛围照', description: '韩剧氛围，温暖光，柔美',
+    selections: { shotType: 'shot_lifestyle', subjectCount: 'count_single', shotSize: 'size_half', scenePrimary: 'scene_cafe', sceneModifiers: ['scmod_window_side'], lightFamily: 'lf_window', lightingPrimary: 'light_natural_window', lightingModifiers: ['lmod_soft'], focalLength: 'fl_50mm', depthOfField: 'dof_shallow', compositionPrimary: 'comp_rule_of_thirds', colorGradePrimary: 'color_warm', mood: ['mood_romantic', 'mood_warm'], ageBand: 'age_20s', genderPresentation: 'gender_female', ethnicity: 'eth_east_asian', bodyType: 'body_standard', posePrimary: 'pose_sitting', expressionPrimary: 'expr_sweet', trendAesthetic: ['trend_kdrama'] }
+  },
+  {
+    id: 'template_seaside_wind',
+    name: '海边风吹头发抓拍', description: '海边风吹动头发，自然光，广阔感',
+    selections: { shotType: 'shot_candid', subjectCount: 'count_single', shotSize: 'size_environmental', scenePrimary: 'scene_beach', sceneModifiers: ['scmod_golden_hour', 'scmod_summer'], lightFamily: 'lf_golden_hour', lightingPrimary: 'light_backlight', lightingModifiers: ['lmod_edge_light', 'lmod_soft'], focalLength: 'fl_50mm', depthOfField: 'dof_deep', compositionPrimary: 'comp_rule_of_thirds', colorGradePrimary: 'color_warm', mood: ['mood_energetic', 'mood_youthful', 'mood_romantic'], ageBand: 'age_20s', genderPresentation: 'gender_female', ethnicity: 'eth_east_asian', posePrimary: 'pose_walking', expressionPrimary: 'expr_bright_smile', natureDetail: ['sd_nature_sea_wind'] }
+  },
+  {
+    id: 'template_park_picnic',
+    name: '公园春日野餐', description: '公园野餐场景，春日阳光，清新',
+    selections: { shotType: 'shot_lifestyle', subjectCount: 'count_single', shotSize: 'size_environmental', scenePrimary: 'scene_park', sceneModifiers: ['scmod_spring', 'scmod_golden_hour'], lightFamily: 'lf_natural', lightingPrimary: 'light_flat', lightingModifiers: ['lmod_soft'], focalLength: 'fl_35mm', depthOfField: 'dof_medium', compositionPrimary: 'comp_rule_of_thirds', colorGradePrimary: 'color_natural', mood: ['mood_relaxed', 'mood_warm', 'mood_youthful'], ageBand: 'age_20s', genderPresentation: 'gender_female', ethnicity: 'eth_east_asian', posePrimary: 'pose_sitting', expressionPrimary: 'expr_smile', activities: ['act_picnic'] }
+  },
+  {
+    id: 'template_car_night',
+    name: '车内夜晚氛围照', description: '车内夜晚，窗外光，氛围感',
+    selections: { shotType: 'shot_lifestyle', subjectCount: 'count_single', shotSize: 'size_close', scenePrimary: 'scene_parking', sceneModifiers: ['scmod_night'], lightFamily: 'lf_mixed', lightingPrimary: 'light_split', lightingModifiers: ['lmod_moody'], focalLength: 'fl_35mm', depthOfField: 'dof_shallow', compositionPrimary: 'comp_fill_frame', colorGradePrimary: 'color_cool', colorModifiers: ['cmod_cool_shadows'], mood: ['mood_intimate', 'mood_mysterious'], ageBand: 'age_20s', genderPresentation: 'gender_female', ethnicity: 'eth_east_asian', posePrimary: 'pose_sitting', expressionPrimary: 'expr_contemplative', microExpr: ['me_eye_dodge'] }
+  },
+  {
+    id: 'template_gallery_minimal',
+    name: '画廊极简高级感', description: '画廊极简空间，艺术感，高级灰',
+    selections: { shotType: 'shot_fashion', subjectCount: 'count_single', shotSize: 'size_three_quarter', scenePrimary: 'scene_art_gallery', sceneModifiers: ['scmod_minimal_bg'], lightFamily: 'lf_continuous', lightingPrimary: 'light_flat', lightingModifiers: ['lmod_high_key'], focalLength: 'fl_50mm', depthOfField: 'dof_medium', compositionPrimary: 'comp_negative_space', colorGradePrimary: 'color_matte', mood: ['mood_sophisticated', 'mood_premium'], ageBand: 'age_20s', genderPresentation: 'gender_female', ethnicity: 'eth_east_asian', posePrimary: 'pose_standing', expressionPrimary: 'expr_neutral' }
+  },
+  {
+    id: 'template_backstage_flash',
+    name: '舞台后台闪光灯抓拍', description: '后台抓拍，闪光灯，朋克感',
+    selections: { shotType: 'shot_candid', subjectCount: 'count_single', shotSize: 'size_half', scenePrimary: 'scene_stage', sceneModifiers: ['scmod_neon'], lightFamily: 'lf_speedlight', lightingPrimary: 'light_flat', lightingModifiers: ['lmod_neon_glow'], focalLength: 'fl_28mm', depthOfField: 'dof_medium', compositionPrimary: 'comp_center', colorGradePrimary: 'color_high_contrast', mood: ['mood_energetic', 'mood_dramatic'], ageBand: 'age_20s', genderPresentation: 'gender_female', ethnicity: 'eth_east_asian', posePrimary: 'pose_standing', expressionPrimary: 'expr_excited', imageTexture: ['tex_flash', 'tex_grain'], shootingMedium: 'med_ccd' }
+  },
+  {
+    id: 'template_wedding_guest',
+    name: '婚礼宾客纪实人像', description: '婚礼现场，自然光，纪实感',
+    selections: { shotType: 'shot_candid', subjectCount: 'count_single', shotSize: 'size_half', scenePrimary: 'scene_wedding', sceneModifiers: ['scmod_golden_hour'], lightFamily: 'lf_natural', lightingPrimary: 'light_backlight', lightingModifiers: ['lmod_soft'], focalLength: 'fl_85mm', depthOfField: 'dof_shallow', compositionPrimary: 'comp_rule_of_thirds', colorGradePrimary: 'color_warm', mood: ['mood_warm', 'mood_romantic', 'mood_documentary'], ageBand: 'age_20s', genderPresentation: 'gender_female', ethnicity: 'eth_east_asian', bodyType: 'body_standard', posePrimary: 'pose_standing', expressionPrimary: 'expr_grateful' }
+  },
+  {
+    id: 'template_pool_summer',
+    name: '泳池夏日阳光', description: '泳池边，夏日阳光，水蓝色调',
+    selections: { shotType: 'shot_lifestyle', subjectCount: 'count_single', shotSize: 'size_full', scenePrimary: 'scene_pool', sceneModifiers: ['scmod_summer'], lightFamily: 'lf_natural', lightingPrimary: 'light_backlight', lightingModifiers: ['lmod_soft', 'lmod_high_key'], focalLength: 'fl_35mm', depthOfField: 'dof_medium', compositionPrimary: 'comp_leading_lines', colorGradePrimary: 'color_cool', mood: ['mood_energetic', 'mood_youthful'], ageBand: 'age_20s', genderPresentation: 'gender_female', ethnicity: 'eth_east_asian', bodyType: 'body_standard', posePrimary: 'pose_sitting', expressionPrimary: 'expr_bright_smile' }
+  },
+  {
+    id: 'template_balcony_morning',
+    name: '阳台晨光咖啡', description: '阳台晨光，咖啡，晨间日常',
+    selections: { shotType: 'shot_lifestyle', subjectCount: 'count_single', shotSize: 'size_half', scenePrimary: 'scene_balcony', sceneModifiers: ['scmod_sunrise', 'scmod_spring'], lightFamily: 'lf_natural', lightingPrimary: 'light_natural_window', lightingModifiers: ['lmod_soft'], focalLength: 'fl_50mm', depthOfField: 'dof_shallow', compositionPrimary: 'comp_rule_of_thirds', colorGradePrimary: 'color_warm', mood: ['mood_warm', 'mood_relaxed', 'mood_daily'], ageBand: 'age_20s', genderPresentation: 'gender_female', ethnicity: 'eth_east_asian', posePrimary: 'pose_leaning', expressionPrimary: 'expr_calm', activities: ['act_drinking_coffee'] }
+  },
+  {
+    id: 'template_garden_spring',
+    name: '花园春日人像', description: '花园，春日花卉，柔和光',
+    selections: { shotType: 'shot_environmental', subjectCount: 'count_single', shotSize: 'size_full', scenePrimary: 'scene_garden', sceneModifiers: ['scmod_spring', 'scmod_golden_hour'], lightFamily: 'lf_natural', lightingPrimary: 'light_backlight', lightingModifiers: ['lmod_soft'], focalLength: 'fl_85mm', depthOfField: 'dof_shallow', compositionPrimary: 'comp_rule_of_thirds', colorGradePrimary: 'color_pastel', mood: ['mood_romantic', 'mood_warm', 'mood_ethereal'], ageBand: 'age_20s', genderPresentation: 'gender_female', ethnicity: 'eth_east_asian', bodyType: 'body_standard', posePrimary: 'pose_standing', expressionPrimary: 'expr_smile', trendAesthetic: ['trend_cottagecore'], natureDetail: ['sd_nature_flower_fg', 'sd_nature_tree_shade'] }
+  },
+  {
+    id: 'template_lake_misty',
+    name: '湖边晨雾人像', description: '湖边晨雾，朦胧感，冷调',
+    selections: { shotType: 'shot_environmental', subjectCount: 'count_single', shotSize: 'size_environmental', scenePrimary: 'scene_lake', sceneModifiers: ['scmod_foggy', 'scmod_sunrise'], lightFamily: 'lf_natural', lightingPrimary: 'light_flat', lightingModifiers: ['lmod_diffuse'], focalLength: 'fl_50mm', depthOfField: 'dof_deep', compositionPrimary: 'comp_negative_space', colorGradePrimary: 'color_cool', colorModifiers: ['cmod_hazy'], mood: ['mood_serene', 'mood_ethereal', 'mood_mysterious'], ageBand: 'age_20s', genderPresentation: 'gender_female', ethnicity: 'eth_east_asian', posePrimary: 'pose_standing', expressionPrimary: 'expr_calm', natureDetail: ['sd_nature_fog_mountain', 'sd_nature_lake_reflect'] }
+  },
+  {
+    id: 'template_rooftop_bar',
+    name: '天台酒吧城市夜景', description: '天台酒吧，城市天际线，夜晚霓虹',
+    selections: { shotType: 'shot_lifestyle', subjectCount: 'count_single', shotSize: 'size_half', scenePrimary: 'scene_rooftop_bar', sceneModifiers: ['scmod_night', 'scmod_cityscape'], lightFamily: 'lf_mixed', lightingPrimary: 'light_rim', lightingModifiers: ['lmod_neon_glow'], focalLength: 'fl_35mm', depthOfField: 'dof_medium', compositionPrimary: 'comp_rule_of_thirds', colorGradePrimary: 'color_cool', colorModifiers: ['cmod_cool_shadows'], mood: ['mood_cool', 'mood_cinematic'], ageBand: 'age_20s', genderPresentation: 'gender_female', ethnicity: 'eth_east_asian', posePrimary: 'pose_leaning', expressionPrimary: 'expr_cool' }
+  },
+  {
+    id: 'template_library_study',
+    name: '图书馆自习室专注', description: '自习室，专注学习，自然窗光',
+    selections: { shotType: 'shot_lifestyle', subjectCount: 'count_single', shotSize: 'size_half', scenePrimary: 'scene_library', sceneModifiers: ['scmod_window_side'], lightFamily: 'lf_window', lightingPrimary: 'light_natural_window', lightingModifiers: ['lmod_soft'], focalLength: 'fl_35mm', depthOfField: 'dof_medium', compositionPrimary: 'comp_rule_of_thirds', colorGradePrimary: 'color_natural', mood: ['mood_serene', 'mood_focused'], ageBand: 'age_20s', genderPresentation: 'gender_female', ethnicity: 'eth_east_asian', posePrimary: 'pose_sitting', expressionPrimary: 'expr_focused', activities: ['act_writing'] }
+  },
+  {
+    id: 'template_staircase_fashion',
+    name: '楼梯间时尚大片', description: '楼梯间，俯拍或仰拍，几何线条',
+    selections: { shotType: 'shot_fashion', subjectCount: 'count_single', shotSize: 'size_full', scenePrimary: 'scene_studio_cyclorama', sceneModifiers: ['scmod_minimal_bg'], lightFamily: 'lf_continuous', lightingPrimary: 'light_top', lightingModifiers: ['lmod_dramatic', 'lmod_high_contrast'], focalLength: 'fl_24mm', depthOfField: 'dof_medium', compositionPrimary: 'comp_diagonal', colorGradePrimary: 'color_bw', mood: ['mood_fashionable', 'mood_cool'], ageBand: 'age_20s', genderPresentation: 'gender_female', ethnicity: 'eth_east_asian', bodyType: 'body_tall', posePrimary: 'pose_sitting', expressionPrimary: 'expr_cool' }
+  },
+  {
+    id: 'template_mountain_hiking',
+    name: '山野远足自然风', description: '山野，远足，自然粗粝感',
+    selections: { shotType: 'shot_environmental', subjectCount: 'count_single', shotSize: 'size_environmental', scenePrimary: 'scene_mountain', sceneModifiers: ['scmod_golden_hour', 'scmod_summer'], lightFamily: 'lf_natural', lightingPrimary: 'light_backlight', lightingModifiers: ['lmod_edge_light'], focalLength: 'fl_35mm', depthOfField: 'dof_deep', compositionPrimary: 'comp_leading_lines', colorGradePrimary: 'color_warm', mood: ['mood_energetic', 'mood_natural'], ageBand: 'age_20s', genderPresentation: 'gender_female', ethnicity: 'eth_east_asian', bodyType: 'body_athletic', posePrimary: 'pose_standing', expressionPrimary: 'expr_bright_smile', activities: ['act_hiking'] }
+  },
+  {
+    id: 'template_train_window',
+    name: '列车窗边旅拍', description: '列车窗口透光，流动感，旅途氛围',
+    selections: { shotType: 'shot_environmental', subjectCount: 'count_single', shotSize: 'size_half', scenePrimary: 'scene_subway', sceneModifiers: ['scmod_window_side', 'scmod_moody'], lightFamily: 'lf_window', lightingPrimary: 'light_split', lightingModifiers: ['lmod_moody'], focalLength: 'fl_35mm', depthOfField: 'dof_medium', compositionPrimary: 'comp_rule_of_thirds', colorGradePrimary: 'color_cool', mood: ['mood_contemplative', 'mood_nostalgic'], ageBand: 'age_20s', genderPresentation: 'gender_female', ethnicity: 'eth_east_asian', posePrimary: 'pose_sitting', expressionPrimary: 'expr_contemplative', microExpr: ['me_eye_off'] }
+  },
+  {
+    id: 'template_morning_run',
+    name: '晨跑街头抓拍', description: '清晨街头，运动抓拍，动态感',
+    selections: { shotType: 'shot_fullbody_action', subjectCount: 'count_single', shotSize: 'size_full', scenePrimary: 'scene_street', sceneModifiers: ['scmod_sunrise', 'scmod_spring'], lightFamily: 'lf_natural', lightingPrimary: 'light_backlight', lightingModifiers: ['lmod_edge_light'], focalLength: 'fl_35mm', depthOfField: 'dof_deep', compositionPrimary: 'comp_leading_lines', colorGradePrimary: 'color_natural', mood: ['mood_energetic', 'mood_youthful'], ageBand: 'age_20s', genderPresentation: 'gender_female', ethnicity: 'eth_east_asian', bodyType: 'body_athletic', posePrimary: 'pose_jumping', expressionPrimary: 'expr_bright_smile', imageTexture: ['tex_motion_blur'] }
+  },
+  {
+    id: 'template_gym_athletic',
+    name: '健身房运动人像', description: '健身房，运动光，力量感',
+    selections: { shotType: 'shot_lifestyle', subjectCount: 'count_single', shotSize: 'size_three_quarter', scenePrimary: 'scene_gym', sceneModifiers: ['scmod_indoor_cool'], lightFamily: 'lf_continuous', lightingPrimary: 'light_top', lightingModifiers: ['lmod_hard'], focalLength: 'fl_24mm', depthOfField: 'dof_medium', compositionPrimary: 'comp_diagonal', colorGradePrimary: 'color_high_contrast', mood: ['mood_energetic', 'mood_determined'], ageBand: 'age_20s', genderPresentation: 'gender_female', ethnicity: 'eth_east_asian', bodyType: 'body_athletic', posePrimary: 'pose_standing', expressionPrimary: 'expr_determined' }
+  },
+  {
+    id: 'template_night_market_snack',
+    name: '夜市小吃街生活', description: '夜市，摊贩灯光，生活烟火气',
+    selections: { shotType: 'shot_candid', subjectCount: 'count_single', shotSize: 'size_half', scenePrimary: 'scene_night_market', sceneModifiers: ['scmod_night'], lightFamily: 'lf_mixed', lightingPrimary: 'light_flat', lightingModifiers: ['lmod_warm_glow'], focalLength: 'fl_35mm', depthOfField: 'dof_deep', compositionPrimary: 'comp_rule_of_thirds', colorGradePrimary: 'color_warm', colorModifiers: ['cmod_rich_color'], mood: ['mood_warm', 'mood_daily', 'mood_playful'], ageBand: 'age_20s', genderPresentation: 'gender_female', ethnicity: 'eth_east_asian', posePrimary: 'pose_walking', expressionPrimary: 'expr_smile', urbanDetail: ['sd_urban_night_stall', 'sd_urban_neon_sign'] }
+  },
+  {
+    id: 'template_snow_winter',
+    name: '雪景冬日人像', description: '雪地场景，冷白调，纯净',
+    selections: { shotType: 'shot_environmental', subjectCount: 'count_single', shotSize: 'size_full', scenePrimary: 'scene_park', sceneModifiers: ['scmod_snow', 'scmod_winter'], lightFamily: 'lf_overcast', lightingPrimary: 'light_flat', lightingModifiers: ['lmod_high_key'], focalLength: 'fl_50mm', depthOfField: 'dof_medium', compositionPrimary: 'comp_negative_space', colorGradePrimary: 'color_cool', mood: ['mood_serene', 'mood_clean'], ageBand: 'age_20s', genderPresentation: 'gender_female', ethnicity: 'eth_east_asian', posePrimary: 'pose_standing', expressionPrimary: 'expr_calm' }
+  },
+  {
+    id: 'template_campus_autumn',
+    name: '校园秋日林荫', description: '校园秋叶，金色暖光，青春感',
+    selections: { shotType: 'shot_lifestyle', subjectCount: 'count_single', shotSize: 'size_full', scenePrimary: 'scene_campus', sceneModifiers: ['scmod_autumn', 'scmod_golden_hour'], lightFamily: 'lf_golden_hour', lightingPrimary: 'light_backlight', lightingModifiers: ['lmod_edge_light', 'lmod_soft'], focalLength: 'fl_50mm', depthOfField: 'dof_medium', compositionPrimary: 'comp_leading_lines', colorGradePrimary: 'color_warm', colorModifiers: ['cmod_warm_highlights'], mood: ['mood_nostalgic', 'mood_youthful', 'mood_romantic'], ageBand: 'age_20s', genderPresentation: 'gender_female', ethnicity: 'eth_east_asian', bodyType: 'body_standard', posePrimary: 'pose_walking', expressionPrimary: 'expr_smile' }
   },
 ]

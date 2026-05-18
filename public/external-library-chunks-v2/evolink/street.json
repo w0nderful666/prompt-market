@@ -1,0 +1,245 @@
+{
+  "meta": {
+    "id": "evolink:street",
+    "sourceId": "evolink",
+    "normalizedCategory": "street",
+    "label": "EvoLinkAI 大型案例库 · 街拍",
+    "path": "/external-library-chunks-v2/evolink/street.json",
+    "entryCount": 6
+  },
+  "entries": [
+    {
+      "id": "evolink-ad-creative-luxury-miniature-dubai-city-model",
+      "sourceId": "evolink",
+      "sourceRepo": "EvoLinkAI/awesome-gpt-image-2-API-and-Prompts",
+      "sourceUrl": "https://x.com/silentempiredev/status/2048086378383384773",
+      "title": "Luxury Miniature Dubai City Model",
+      "author": "silentempiredev",
+      "license": "See source repository",
+      "category": "ad-creative",
+      "styleTags": [
+        "cinematic",
+        "realistic",
+        "street"
+      ],
+      "sceneTags": [
+        "street",
+        "city"
+      ],
+      "prompt": "A hyper-detailed cinematic isometric miniature city model of Burj Khalifa rising dramatically from the center of a square architectural master-plan board, presented like a luxury urban planning maquette on a black background. The composition shows one dominant ultra-tall silver skyscraper in the exact center, surrounded by a dense ring of modern high-rise towers, illuminated roads, bridges, and glowing warm city lights. Curving turquoise-blue water features and artificial lakes wrap around the central district in multiple connected pools and canals, with one large circular fountain-like feature near the tower base and several small island shapes visible in the water. In the lower right quadrant, include a large low-rise complex with rounded geometric roofs and subtle green-lit sections, connected by multilane roads and looping interchanges. The entire city sits on one square beige map board engraved with faint street grids and planning lines, with the board edges clearly visible and slightly raised. Viewpoint is a high three-quarter isometric angle, centered and symmetrical, with the tower extending far upward into negative space. Lighting is dramatic and luxurious: warm golden edge lights on buildings and roads, cool reflections in the water, crisp metallic highlights on the central tower, and a deep black void surrounding the model. Style should feel like a photorealistic architectural visualization mixed with a premium collectible scale model, extremely intricate, sharp, polished, and elegant.",
+      "description": "",
+      "displayTitleZh": "轻奢 Miniature Dubai City Model",
+      "displaySummaryZh": "来自EvoLinkAI 大型案例库的街拍条目《Luxury Miniature Dubai City Model》。 关键词：cinematic、realistic、street、city。结构更完整，适合直接导入高级编辑。",
+      "displayCategoryZh": "街拍",
+      "language": "en",
+      "importHints": {
+        "scenePrimary": "scene_street",
+        "trendAesthetic": [
+          "trend_story_documentary"
+        ]
+      },
+      "sourceTier": "large-gallery-secondary",
+      "qualityTier": "curated",
+      "recommendedForCurrentProduct": true,
+      "chunkId": "evolink:street",
+      "searchText": "luxury miniature dubai city model a hyper-detailed cinematic isometric miniature city model of burj khalifa rising dramatically from the center of a square architectural master-plan board, presented like a luxury urban planning maquette on a black background. the composition shows one dominant ultra-tall silver skyscraper in the exact center, surrounded by a dense ring of modern high-rise towers, illuminated roads, bridges, and glowing warm city lights. curving turquoise-blue water features and artificial lakes wrap around the central district in multiple connected pools and canals, with one large circular fountain-like feature near the tower base and several small island shapes visible in the water. in the lower right quadrant, include a large low-rise complex with rounded geometric roofs and subtle green-lit sections, connected by multilane roads and looping interchanges. the entire city sits on one square beige map board engraved with faint street grids and planning lines, with the board edges clearly visible and slightly raised. viewpoint is a high three-quarter isometric angle, centered and symmetrical, with the tower extending far upward into negative space. lighting is dramatic and luxurious: warm golden edge lights on buildings and roads, cool reflections in the water, crisp metallic highlights on the central tower, and a deep black void surrounding the model. style should feel like a photorealistic architectural visualization mixed with a premium collectible scale model, extremely intricate, sharp, polished, and elegant. ad-creative silentempiredev cinematic realistic street street city",
+      "originalCategory": "ad-creative",
+      "normalizedCategory": "street",
+      "importConfidence": 0.95,
+      "portraitFocused": true,
+      "entryKind": "case"
+    },
+    {
+      "id": "evolink-ad-creative-parody-luxury-product-advertisement",
+      "sourceId": "evolink",
+      "sourceRepo": "EvoLinkAI/awesome-gpt-image-2-API-and-Prompts",
+      "sourceUrl": "https://x.com/tonysimons_/status/2048057490940596595",
+      "title": "Parody Luxury Product Advertisement",
+      "author": "tonysimons_",
+      "license": "See source repository",
+      "category": "ad-creative",
+      "styleTags": [
+        "studio"
+      ],
+      "sceneTags": [
+        "studio",
+        "city"
+      ],
+      "prompt": "High-impact parody e-commerce infographic for \"Four Loko\" malt beverage. Foreground: An extreme close-up of a rough, weathered hand holding a tall, brightly colored can of Four Loko toward the camera. The can is slightly cold with visible condensation droplets and a loud, chaotic flavor design. The hand and can have a slight macro-lens blur for depth, with the can still reading clearly as the hero product. Central Subject: In the mid-ground, a funny, disheveled homeless-looking man sitting casually on a milk crate in an urban alley. He has a scruffy beard, messy hair, layered worn clothing, and a huge unbothered grin. He should look chaotic but oddly charismatic, like the accidental king of bad decisions. He is posed like a confident lifestyle-ad model, proudly showing off the can. Background & Lighting: A ridiculously polished ad-style backdrop mixed with a grimy city alley setting. Soft-focus urban textures, dumpster shapes, graffiti hints, and scattered clutter in the distance. Add dramatic studio lighting, soft glow, rainbow prism flares, and subtle light leaks to make the whole thing look way too premium for the subject matter. A few blurred Four Loko cans can float artistically in the background for extra absurdity. Typography & Layout (Bold sans-serif, white and neon accent styling): Top Center (Background): Massive, bold text reading \"FOUR LOKO\" positioned behind the subject. Top Right: Bold text reading \"The Champagne of Bad Ideas\". Mid-Left: \"Premium chaos and zero self-control\" Mid-Right: Large, bold \"23\" with the text \"ounces of terrible decisions.\" Bottom-Right: Large, bold \"1\" with the text \"can to ruin tomorrow.\" Optional small callout text near the bottom: \"Now with more regret.\" Style: Ultra-detailed, 8k parody commercial photography, sharp focus on the can, shallow depth of field, vibrant trashy color palette, clean advertising composition, exaggerated premium product-ad aesthetic, funny visual contrast between polished branding and the wrecked subject.",
+      "description": "",
+      "displayTitleZh": "Parody 轻奢 产品 Advertisement",
+      "displaySummaryZh": "来自EvoLinkAI 大型案例库的街拍条目《Parody Luxury Product Advertisement》。 关键词：studio、studio、city。结构更完整，适合直接导入高级编辑。",
+      "displayCategoryZh": "街拍",
+      "language": "en",
+      "importHints": {
+        "scenePrimary": "scene_street"
+      },
+      "sourceTier": "large-gallery-secondary",
+      "qualityTier": "curated",
+      "recommendedForCurrentProduct": true,
+      "chunkId": "evolink:street",
+      "searchText": "parody luxury product advertisement high-impact parody e-commerce infographic for \"four loko\" malt beverage. foreground: an extreme close-up of a rough, weathered hand holding a tall, brightly colored can of four loko toward the camera. the can is slightly cold with visible condensation droplets and a loud, chaotic flavor design. the hand and can have a slight macro-lens blur for depth, with the can still reading clearly as the hero product. central subject: in the mid-ground, a funny, disheveled homeless-looking man sitting casually on a milk crate in an urban alley. he has a scruffy beard, messy hair, layered worn clothing, and a huge unbothered grin. he should look chaotic but oddly charismatic, like the accidental king of bad decisions. he is posed like a confident lifestyle-ad model, proudly showing off the can. background & lighting: a ridiculously polished ad-style backdrop mixed with a grimy city alley setting. soft-focus urban textures, dumpster shapes, graffiti hints, and scattered clutter in the distance. add dramatic studio lighting, soft glow, rainbow prism flares, and subtle light leaks to make the whole thing look way too premium for the subject matter. a few blurred four loko cans can float artistically in the background for extra absurdity. typography & layout (bold sans-serif, white and neon accent styling): top center (background): massive, bold text reading \"four loko\" positioned behind the subject. top right: bold text reading \"the champagne of bad ideas\". mid-left: \"premium chaos and zero self-control\" mid-right: large, bold \"23\" with the text \"ounces of terrible decisions.\" bottom-right: large, bold \"1\" with the text \"can to ruin tomorrow.\" optional small callout text near the bottom: \"now with more regret.\" style: ultra-detailed, 8k parody commercial photography, sharp focus on the can, shallow depth of field, vibrant trashy color palette, clean advertising composition, exaggerated premium product-ad aesthetic, funny visual contrast between polished branding and the wrecked subject. ad-creative tonysimons_ studio studio city",
+      "originalCategory": "ad-creative",
+      "normalizedCategory": "street",
+      "importConfidence": 0.95,
+      "portraitFocused": true,
+      "entryKind": "case"
+    },
+    {
+      "id": "evolink-portrait-urban-turn-back-street-portrait",
+      "sourceId": "evolink",
+      "sourceRepo": "EvoLinkAI/awesome-gpt-image-2-API-and-Prompts",
+      "sourceUrl": "https://x.com/Tz_2022/status/2045892003775361198",
+      "title": "Urban Turn-Back Street Portrait",
+      "author": "Tz_2022",
+      "license": "See source repository",
+      "category": "portrait",
+      "styleTags": [
+        "portrait",
+        "street"
+      ],
+      "sceneTags": [
+        "street"
+      ],
+      "prompt": "该画面为中近景,采用平视镜头,聚焦于一位年轻女性。她以七分身镜头呈现,身体坐姿略带倾斜,臀部向后撅起,双腿自然交叠,左腿在前,右腿在后,膝盖微屈。她将上半身向右后方扭转,头部则转向镜头方向,形成一个经典的\"回眸\"姿态,目光直视镜头,眼神清澈而略带一丝俏皮。她的发型是蓬松的棕色齐肩短发,刘海自然垂落,发尾微卷,妆容清淡自然,仅在眼部有轻微眼线勾勒,唇色为自然裸粉。画面整体采用自然日光滤镜,光线从画面左上方斜射入,形成柔和的逆光轮廓,面部和身体右侧被温暖的金色光线照亮,左侧则形成自然的阴影过渡,增强了立体感。灯光效果是明亮的自然光,带有轻微的镜头眩光,营造出午后阳光的氛围。拍摄角度为平视,构图上,人物主体位于画面中偏右位置,背景中的斑马线与道路线条形成自然的引导线,将视线引向人物。背景为城市街道,包含道路、斑马线、绿化带和远处的车辆,背景被适度虚化,但依然可辨识出树木、护栏和停放的电动车等元素,构图上利用了三分法,人物位于右侧三分之一处,增强了画面的平衡感。主体穿着一件军绿色迷彩图案的连帽卫衣,下身搭配黑色短裤,脚穿白色高帮运动鞋配白色中筒袜。背包为黑色,带有橙黄色装饰条纹和一个橙色毛绒挂件,材质为帆布和皮革拼接。整体风格为街头休闲风,肢体语言放松自然,表情略带好奇与俏皮,整体呈现出一种随性、青春、充满活力的都市少女形象。",
+      "description": "",
+      "displayTitleZh": "Urban Turn-Back 街拍 人像",
+      "displaySummaryZh": "来自EvoLinkAI 大型案例库的街拍条目《Urban Turn-Back Street Portrait》。 关键词：portrait、street、street。结构更完整，适合直接导入高级编辑。",
+      "displayCategoryZh": "街拍",
+      "language": "mixed",
+      "importHints": {
+        "scenePrimary": "scene_street"
+      },
+      "sourceTier": "large-gallery-secondary",
+      "qualityTier": "curated",
+      "recommendedForCurrentProduct": true,
+      "chunkId": "evolink:street",
+      "searchText": "urban turn-back street portrait 该画面为中近景,采用平视镜头,聚焦于一位年轻女性。她以七分身镜头呈现,身体坐姿略带倾斜,臀部向后撅起,双腿自然交叠,左腿在前,右腿在后,膝盖微屈。她将上半身向右后方扭转,头部则转向镜头方向,形成一个经典的\"回眸\"姿态,目光直视镜头,眼神清澈而略带一丝俏皮。她的发型是蓬松的棕色齐肩短发,刘海自然垂落,发尾微卷,妆容清淡自然,仅在眼部有轻微眼线勾勒,唇色为自然裸粉。画面整体采用自然日光滤镜,光线从画面左上方斜射入,形成柔和的逆光轮廓,面部和身体右侧被温暖的金色光线照亮,左侧则形成自然的阴影过渡,增强了立体感。灯光效果是明亮的自然光,带有轻微的镜头眩光,营造出午后阳光的氛围。拍摄角度为平视,构图上,人物主体位于画面中偏右位置,背景中的斑马线与道路线条形成自然的引导线,将视线引向人物。背景为城市街道,包含道路、斑马线、绿化带和远处的车辆,背景被适度虚化,但依然可辨识出树木、护栏和停放的电动车等元素,构图上利用了三分法,人物位于右侧三分之一处,增强了画面的平衡感。主体穿着一件军绿色迷彩图案的连帽卫衣,下身搭配黑色短裤,脚穿白色高帮运动鞋配白色中筒袜。背包为黑色,带有橙黄色装饰条纹和一个橙色毛绒挂件,材质为帆布和皮革拼接。整体风格为街头休闲风,肢体语言放松自然,表情略带好奇与俏皮,整体呈现出一种随性、青春、充满活力的都市少女形象。 portrait tz_2022 portrait street street",
+      "originalCategory": "portrait",
+      "normalizedCategory": "street",
+      "importConfidence": 0.95,
+      "portraitFocused": true,
+      "entryKind": "case"
+    },
+    {
+      "id": "evolink-portrait-rainy-street-golden-portrait",
+      "sourceId": "evolink",
+      "sourceRepo": "EvoLinkAI/awesome-gpt-image-2-API-and-Prompts",
+      "sourceUrl": "https://x.com/harboriis/status/2054238941482733685",
+      "title": "Rainy Street Golden Portrait",
+      "author": "harboriis",
+      "license": "See source repository",
+      "category": "portrait",
+      "styleTags": [
+        "portrait",
+        "street",
+        "cinematic",
+        "editorial",
+        "35mm",
+        "realistic",
+        "phone camera"
+      ],
+      "sceneTags": [
+        "street",
+        "city"
+      ],
+      "prompt": "Ultra-realistic cinematic street photography of a young man standing alone on a rainy urban sidewalk during golden hour sunset in Mumbai, India. He is leaning casually against a black metal roadside railing while looking down at his smartphone, wearing an oversized black hoodie, loose dark blue cargo jeans, and clean white sneakers. Messy textured black hair moving slightly in the wind. Moody introspective vibe.\n\nWide-angle composition with dramatic depth and strong leading lines from the wet pavement and railings. Reflective rain-soaked street surface glowing with warm sunset light. Vintage street lamps lining the sidewalk. Historic Gothic architecture inspired by Chhatrapati Shivaji Maharaj Terminus visible on the right side, detailed stone textures and clock tower. Modern skyscrapers fading into atmospheric haze in the distant background, creating a blend of old and new Mumbai cityscape.\n\nSoft cinematic clouds filling the sky with warm orange, peach, and golden tones. A flying bird silhouette crossing the sky. Light traffic with black-and-yellow taxis and blurred cars moving through the street. Realistic puddle reflections, subtle motion blur, volumetric lighting, atmospheric perspective, ultra-detailed textures, natural shadows, realistic skin tones.\n\nShot on Sony A7R IV, 35mm lens, f/1.8, shallow depth of field, HDR photography, photorealistic, cinematic color grading, warm highlights with cool shadows, highly detailed urban realism, editorial photography style, 8K ultra resolution.",
+      "description": "",
+      "displayTitleZh": "Rainy 街拍 Golden 人像",
+      "displaySummaryZh": "来自EvoLinkAI 大型案例库的街拍条目《Rainy Street Golden Portrait》。 关键词：portrait、street、street、city。结构更完整，适合直接导入高级编辑。",
+      "displayCategoryZh": "街拍",
+      "language": "en",
+      "importHints": {
+        "scenePrimary": "scene_street",
+        "trendAesthetic": [
+          "trend_story_documentary"
+        ]
+      },
+      "sourceTier": "large-gallery-secondary",
+      "qualityTier": "curated",
+      "recommendedForCurrentProduct": true,
+      "chunkId": "evolink:street",
+      "searchText": "rainy street golden portrait ultra-realistic cinematic street photography of a young man standing alone on a rainy urban sidewalk during golden hour sunset in mumbai, india. he is leaning casually against a black metal roadside railing while looking down at his smartphone, wearing an oversized black hoodie, loose dark blue cargo jeans, and clean white sneakers. messy textured black hair moving slightly in the wind. moody introspective vibe. wide-angle composition with dramatic depth and strong leading lines from the wet pavement and railings. reflective rain-soaked street surface glowing with warm sunset light. vintage street lamps lining the sidewalk. historic gothic architecture inspired by chhatrapati shivaji maharaj terminus visible on the right side, detailed stone textures and clock tower. modern skyscrapers fading into atmospheric haze in the distant background, creating a blend of old and new mumbai cityscape. soft cinematic clouds filling the sky with warm orange, peach, and golden tones. a flying bird silhouette crossing the sky. light traffic with black-and-yellow taxis and blurred cars moving through the street. realistic puddle reflections, subtle motion blur, volumetric lighting, atmospheric perspective, ultra-detailed textures, natural shadows, realistic skin tones. shot on sony a7r iv, 35mm lens, f/1.8, shallow depth of field, hdr photography, photorealistic, cinematic color grading, warm highlights with cool shadows, highly detailed urban realism, editorial photography style, 8k ultra resolution. portrait harboriis portrait street cinematic editorial 35mm realistic phone camera street city",
+      "originalCategory": "portrait",
+      "normalizedCategory": "street",
+      "importConfidence": 0.95,
+      "portraitFocused": true,
+      "entryKind": "case"
+    },
+    {
+      "id": "evolink-ui-cinematic-city-explosion-chase",
+      "sourceId": "evolink",
+      "sourceRepo": "EvoLinkAI/awesome-gpt-image-2-API-and-Prompts",
+      "sourceUrl": "https://x.com/Gugombly/status/2047310862428303636",
+      "title": "Cinematic City Explosion Chase",
+      "author": "Gugombly",
+      "license": "See source repository",
+      "category": "ui",
+      "styleTags": [
+        "cinematic",
+        "realistic",
+        "street"
+      ],
+      "sceneTags": [
+        "street",
+        "city"
+      ],
+      "prompt": "A cinematic photorealistic action scene in a rainy downtown city street canyon, showing a dark-haired man in his 30s sprinting directly toward the camera in the center foreground with a tense survival expression, wearing a soaked dark jacket, dark shirt, and dark pants, mid-stride with one arm pumping forward. Behind him, a massive urban explosion tears through the street and lower facade of a high-rise building, sending a huge cloud of smoke, fire, dust, shattered concrete, glass, and metal debris outward in all directions. The scene includes exactly 3 visible damaged vehicles: 1 dark sedan in the left foreground with headlights on and a crumpled hood splashing through rainwater, 1 wrecked dark car in the right midground with severe front-end damage, and 1 overturned or airborne black SUV tilted upward behind it on the right side. Wet asphalt reflects headlights, firelight, and gray skyscrapers. Dense debris fills the air, with chunks of rubble frozen in motion. Overcast stormy daylight, desaturated blue-gray color palette with orange fire accents, dramatic motion blur in flying debris but sharp focus on the running figure, low-angle wide-lens composition, blockbuster disaster-movie realism, ultra-detailed textures, high contrast, dynamic depth, volumetric smoke, rain spray, cinematic lighting. Add a white Pollo.ai logo in the top-right corner.",
+      "description": "",
+      "displayTitleZh": "电影感 City Explosion Chase",
+      "displaySummaryZh": "来自EvoLinkAI 大型案例库的街拍条目《Cinematic City Explosion Chase》。 关键词：cinematic、realistic、street、city。结构更完整，适合直接导入高级编辑。",
+      "displayCategoryZh": "街拍",
+      "language": "en",
+      "importHints": {
+        "scenePrimary": "scene_street",
+        "trendAesthetic": [
+          "trend_story_documentary"
+        ]
+      },
+      "sourceTier": "large-gallery-secondary",
+      "qualityTier": "curated",
+      "recommendedForCurrentProduct": true,
+      "chunkId": "evolink:street",
+      "searchText": "cinematic city explosion chase a cinematic photorealistic action scene in a rainy downtown city street canyon, showing a dark-haired man in his 30s sprinting directly toward the camera in the center foreground with a tense survival expression, wearing a soaked dark jacket, dark shirt, and dark pants, mid-stride with one arm pumping forward. behind him, a massive urban explosion tears through the street and lower facade of a high-rise building, sending a huge cloud of smoke, fire, dust, shattered concrete, glass, and metal debris outward in all directions. the scene includes exactly 3 visible damaged vehicles: 1 dark sedan in the left foreground with headlights on and a crumpled hood splashing through rainwater, 1 wrecked dark car in the right midground with severe front-end damage, and 1 overturned or airborne black suv tilted upward behind it on the right side. wet asphalt reflects headlights, firelight, and gray skyscrapers. dense debris fills the air, with chunks of rubble frozen in motion. overcast stormy daylight, desaturated blue-gray color palette with orange fire accents, dramatic motion blur in flying debris but sharp focus on the running figure, low-angle wide-lens composition, blockbuster disaster-movie realism, ultra-detailed textures, high contrast, dynamic depth, volumetric smoke, rain spray, cinematic lighting. add a white pollo.ai logo in the top-right corner. ui gugombly cinematic realistic street street city",
+      "originalCategory": "ui",
+      "normalizedCategory": "street",
+      "importConfidence": 0.95,
+      "portraitFocused": true,
+      "entryKind": "case"
+    },
+    {
+      "id": "evolink-comparison-subway-candid-phone-snapshot",
+      "sourceId": "evolink",
+      "sourceRepo": "EvoLinkAI/awesome-gpt-image-2-API-and-Prompts",
+      "sourceUrl": "https://x.com/AntCaveClub/status/2047136306485133428",
+      "title": "Subway Candid Phone Snapshot",
+      "author": "AntCaveClub",
+      "license": "See source repository",
+      "category": "comparison",
+      "styleTags": [
+        "phone camera",
+        "snapshot"
+      ],
+      "sceneTags": [],
+      "prompt": "地铁上低头看手机的美丽女人,偷拍照片。\n\n能免费试一次 ⬇️",
+      "description": "",
+      "displayTitleZh": "Subway Candid Phone 抓拍",
+      "displaySummaryZh": "来自EvoLinkAI 大型案例库的街拍条目《Subway Candid Phone Snapshot》。 关键词：phone camera、snapshot。原始文本噪音偏多，导入后建议顺手清理一下。",
+      "displayCategoryZh": "街拍",
+      "language": "mixed",
+      "importHints": {
+        "scenePrimary": "scene_street"
+      },
+      "sourceTier": "large-gallery-secondary",
+      "qualityTier": "noisy",
+      "recommendedForCurrentProduct": true,
+      "chunkId": "evolink:street",
+      "searchText": "subway candid phone snapshot 地铁上低头看手机的美丽女人,偷拍照片。 能免费试一次 ⬇️ comparison antcaveclub phone camera snapshot",
+      "originalCategory": "comparison",
+      "normalizedCategory": "street",
+      "importConfidence": 0.75,
+      "portraitFocused": true,
+      "entryKind": "case"
+    }
+  ]
+}

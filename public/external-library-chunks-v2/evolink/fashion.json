@@ -1,0 +1,654 @@
+{
+  "meta": {
+    "id": "evolink:fashion",
+    "sourceId": "evolink",
+    "normalizedCategory": "fashion",
+    "label": "EvoLinkAI 大型案例库 · 时尚",
+    "path": "/external-library-chunks-v2/evolink/fashion.json",
+    "entryCount": 17
+  },
+  "entries": [
+    {
+      "id": "evolink-ad-creative-editorial-perfume-bottle-in-golden-fur",
+      "sourceId": "evolink",
+      "sourceRepo": "EvoLinkAI/awesome-gpt-image-2-API-and-Prompts",
+      "sourceUrl": "https://x.com/Salmaaboukarr/status/2048103506125463983",
+      "title": "Editorial Perfume Bottle in Golden Fur",
+      "author": "Salmaaboukarr",
+      "license": "See source repository",
+      "category": "ad-creative",
+      "styleTags": [
+        "editorial",
+        "cinematic",
+        "fashion",
+        "beauty",
+        "studio"
+      ],
+      "sceneTags": [
+        "studio"
+      ],
+      "prompt": "A luxurious editorial product photograph of a single perfume bottle nestled into dense, plush faux fur in rich golden caramel and honey-brown tones. Center the composition on one clear oval glass bottle filled with warm amber liquid, with a glossy rounded black cap and a clean white rectangular label. The label text should read BYREDO at the top, BAL D'AFRIQUE large in the middle, and EAU DE PARFUM in small text near the bottom. Shoot it as a close-up still life with soft studio lighting, subtle highlights on the glass and cap, gentle shadows in the folds of the fur, and a warm cinematic color palette. The bottle should sit slightly embedded in the fur so the surrounding texture frames it from all sides, creating a premium fashion editorial mood, minimal composition, shallow depth of field, crisp focus on the label, and a high-end beauty campaign aesthetic.",
+      "description": "",
+      "displayTitleZh": "编辑感 Perfume Bottle in Golden Fur",
+      "displaySummaryZh": "来自EvoLinkAI 大型案例库的时尚条目《Editorial Perfume Bottle in Golden Fur》。 关键词：editorial、cinematic、studio。结构更完整，适合直接导入高级编辑。",
+      "displayCategoryZh": "时尚",
+      "language": "en",
+      "importHints": {
+        "trendAesthetic": [
+          "trend_story_documentary"
+        ],
+        "shotType": "shot_beauty_closeup"
+      },
+      "sourceTier": "large-gallery-secondary",
+      "qualityTier": "curated",
+      "recommendedForCurrentProduct": true,
+      "chunkId": "evolink:fashion",
+      "searchText": "editorial perfume bottle in golden fur a luxurious editorial product photograph of a single perfume bottle nestled into dense, plush faux fur in rich golden caramel and honey-brown tones. center the composition on one clear oval glass bottle filled with warm amber liquid, with a glossy rounded black cap and a clean white rectangular label. the label text should read byredo at the top, bal d'afrique large in the middle, and eau de parfum in small text near the bottom. shoot it as a close-up still life with soft studio lighting, subtle highlights on the glass and cap, gentle shadows in the folds of the fur, and a warm cinematic color palette. the bottle should sit slightly embedded in the fur so the surrounding texture frames it from all sides, creating a premium fashion editorial mood, minimal composition, shallow depth of field, crisp focus on the label, and a high-end beauty campaign aesthetic. ad-creative salmaaboukarr editorial cinematic fashion beauty studio studio",
+      "originalCategory": "ad-creative",
+      "normalizedCategory": "fashion",
+      "importConfidence": 0.95,
+      "portraitFocused": true,
+      "entryKind": "case"
+    },
+    {
+      "id": "evolink-ecommerce-e-commerce-main-image-luxury-fur-lined-loafer-lifestyle-photo",
+      "sourceId": "evolink",
+      "sourceRepo": "EvoLinkAI/awesome-gpt-image-2-API-and-Prompts",
+      "sourceUrl": "https://x.com/dynamicwangs/status/2047580984342925545",
+      "title": "E-commerce Main Image - Luxury Fur-Lined Loafer Lifestyle Photo",
+      "author": "dynamicwangs",
+      "license": "See source repository",
+      "category": "ecommerce",
+      "styleTags": [
+        "editorial",
+        "film",
+        "fashion",
+        "realistic"
+      ],
+      "sceneTags": [
+        "mirror"
+      ],
+      "prompt": "A warm, editorial-style lifestyle product photo shot indoors from a low close-up angle, focused on a woman's lower legs and feet as she tries on 1 pair of black leather backless loafers with tan faux-fur lining. One loafer is worn on the right foot and the left foot is bare, hovering just above the textured cream shag rug, while the second matching loafer lies on the rug in the lower left foreground. The shoes have smooth black leather uppers, a rounded almond toe, open mule-style heel, plush brown fur spilling out around the opening, and a small polished gold horsebit hardware detail across the vamp. The model wears cropped medium-blue denim jeans with a raw frayed hem. The setting is a cozy minimalist interior with a cream rug featuring 2 thin irregular black lines, a neutral wall, and a leaning rectangular mirror with a medium wood frame in the upper right background, softly reflecting the rug and part of the scene. Use soft natural window light, shallow depth of field, subtle film grain, realistic skin texture, muted beige and black palette, relaxed candid composition, premium fashion catalog mood, high detail, photorealistic.",
+      "description": "",
+      "displayTitleZh": "E-commerce Main Image - 轻奢 Fur-Lined Loafer Lifestyle Photo",
+      "displaySummaryZh": "来自EvoLinkAI 大型案例库的时尚条目《E-commerce Main Image - Luxury Fur-Lined Loafer Lifestyle Photo》。 关键词：editorial、film、mirror。结构更完整，适合直接导入高级编辑。",
+      "displayCategoryZh": "时尚",
+      "language": "en",
+      "importHints": {},
+      "sourceTier": "large-gallery-secondary",
+      "qualityTier": "curated",
+      "recommendedForCurrentProduct": true,
+      "chunkId": "evolink:fashion",
+      "searchText": "e-commerce main image - luxury fur-lined loafer lifestyle photo a warm, editorial-style lifestyle product photo shot indoors from a low close-up angle, focused on a woman's lower legs and feet as she tries on 1 pair of black leather backless loafers with tan faux-fur lining. one loafer is worn on the right foot and the left foot is bare, hovering just above the textured cream shag rug, while the second matching loafer lies on the rug in the lower left foreground. the shoes have smooth black leather uppers, a rounded almond toe, open mule-style heel, plush brown fur spilling out around the opening, and a small polished gold horsebit hardware detail across the vamp. the model wears cropped medium-blue denim jeans with a raw frayed hem. the setting is a cozy minimalist interior with a cream rug featuring 2 thin irregular black lines, a neutral wall, and a leaning rectangular mirror with a medium wood frame in the upper right background, softly reflecting the rug and part of the scene. use soft natural window light, shallow depth of field, subtle film grain, realistic skin texture, muted beige and black palette, relaxed candid composition, premium fashion catalog mood, high detail, photorealistic. ecommerce dynamicwangs editorial film fashion realistic mirror",
+      "originalCategory": "ecommerce",
+      "normalizedCategory": "fashion",
+      "importConfidence": 0.95,
+      "portraitFocused": true,
+      "entryKind": "case"
+    },
+    {
+      "id": "evolink-ecommerce-premium-food-photography-template",
+      "sourceId": "evolink",
+      "sourceRepo": "EvoLinkAI/awesome-gpt-image-2-API-and-Prompts",
+      "sourceUrl": "https://x.com/PrometheanAIX/status/2049122713722106161",
+      "title": "Premium food photography template",
+      "author": "PrometheanAIX",
+      "license": "See source repository",
+      "category": "ecommerce",
+      "styleTags": [
+        "cinematic",
+        "editorial",
+        "realistic"
+      ],
+      "sceneTags": [],
+      "prompt": "Create a square [ASPECT RATIO] premium food photography image of a steaming [FOOD] served in a dark black stone bowl or cast-iron skillet on a wooden board. The dish should look hot, glossy, spicy, and freshly served, with bite-sized pieces of browned protein, dried red chilies, green scallions, white onion, garlic, chili flakes, and visible Sichuan peppercorns coated in a deep red, oily Szechuan sauce. Use a slightly elevated close-up camera angle with shallow depth of field. Make the food the clear hero of the image, centered and richly detailed. Add visible steam rising naturally from the dish. Surround the bowl with subtle restaurant-style props like a dark red tray, scattered dried chilies, peppercorns, a small sauce bowl, or a blurred teapot in the background. Lighting should feel warm, moody, and editorial, like a high-end restaurant food shoot. Emphasize realistic textures and keep the image appetizing, realistic, cinematic, and polished. Avoid text, logos, hands, people, utensils covering the food, cartoon styling, fake plastic textures, excessive symmetry, or an overly clean stock-photo look.",
+      "description": "",
+      "displaySummaryZh": "来自EvoLinkAI 大型案例库的时尚条目《Premium food photography template》。 关键词：cinematic、editorial。结构更完整，适合直接导入高级编辑。",
+      "displayCategoryZh": "时尚",
+      "language": "en",
+      "importHints": {
+        "trendAesthetic": [
+          "trend_story_documentary"
+        ]
+      },
+      "sourceTier": "large-gallery-secondary",
+      "qualityTier": "curated",
+      "recommendedForCurrentProduct": true,
+      "chunkId": "evolink:fashion",
+      "searchText": "premium food photography template create a square [aspect ratio] premium food photography image of a steaming [food] served in a dark black stone bowl or cast-iron skillet on a wooden board. the dish should look hot, glossy, spicy, and freshly served, with bite-sized pieces of browned protein, dried red chilies, green scallions, white onion, garlic, chili flakes, and visible sichuan peppercorns coated in a deep red, oily szechuan sauce. use a slightly elevated close-up camera angle with shallow depth of field. make the food the clear hero of the image, centered and richly detailed. add visible steam rising naturally from the dish. surround the bowl with subtle restaurant-style props like a dark red tray, scattered dried chilies, peppercorns, a small sauce bowl, or a blurred teapot in the background. lighting should feel warm, moody, and editorial, like a high-end restaurant food shoot. emphasize realistic textures and keep the image appetizing, realistic, cinematic, and polished. avoid text, logos, hands, people, utensils covering the food, cartoon styling, fake plastic textures, excessive symmetry, or an overly clean stock-photo look. ecommerce prometheanaix cinematic editorial realistic",
+      "originalCategory": "ecommerce",
+      "normalizedCategory": "fashion",
+      "importConfidence": 0.95,
+      "portraitFocused": true,
+      "entryKind": "case"
+    },
+    {
+      "id": "evolink-portrait-soft-black-mist-editorial-portrait",
+      "sourceId": "evolink",
+      "sourceRepo": "EvoLinkAI/awesome-gpt-image-2-API-and-Prompts",
+      "sourceUrl": "https://x.com/BubbleBrain/status/2046434670724907395",
+      "title": "Soft Black Mist Editorial Portrait",
+      "author": "BubbleBrain",
+      "license": "See source repository",
+      "category": "portrait",
+      "styleTags": [
+        "portrait",
+        "editorial",
+        "realistic"
+      ],
+      "sceneTags": [],
+      "prompt": "9:16 vertical - editorial portrait, single subject soft black mist filter, subtle haze, gentle highlight bloom, muted tones minimal indoor space, clean background, slight texture young Korean woman, minimal makeup, natural skin texture outfit: fitted ribbed knit top or soft camisole layered under a loose shirt, paired with high-waisted shorts or skirt; fabric slightly clings to body shape, soft and natural, no revealing elements hair: slightly messy, natural volume pose: sitting on floor with one leg bent and the other relaxed, body slightly leaning, shoulders not aligned, head tilted composition: subject slightly off-center, negative space present expression: calm, slightly distant, natural lips lighting: soft side light, gentle shadow falloff mood: understated, quiet, subtly sensual through natural body lines, relaxed and unposed quality: fine grain, slight softness, realistic look",
+      "description": "",
+      "displayTitleZh": "Soft Black Mist 编辑感 人像",
+      "displaySummaryZh": "来自EvoLinkAI 大型案例库的时尚条目《Soft Black Mist Editorial Portrait》。 关键词：portrait、editorial。结构更完整，适合直接导入高级编辑。",
+      "displayCategoryZh": "时尚",
+      "language": "en",
+      "importHints": {},
+      "sourceTier": "large-gallery-secondary",
+      "qualityTier": "curated",
+      "recommendedForCurrentProduct": true,
+      "chunkId": "evolink:fashion",
+      "searchText": "soft black mist editorial portrait 9:16 vertical - editorial portrait, single subject soft black mist filter, subtle haze, gentle highlight bloom, muted tones minimal indoor space, clean background, slight texture young korean woman, minimal makeup, natural skin texture outfit: fitted ribbed knit top or soft camisole layered under a loose shirt, paired with high-waisted shorts or skirt; fabric slightly clings to body shape, soft and natural, no revealing elements hair: slightly messy, natural volume pose: sitting on floor with one leg bent and the other relaxed, body slightly leaning, shoulders not aligned, head tilted composition: subject slightly off-center, negative space present expression: calm, slightly distant, natural lips lighting: soft side light, gentle shadow falloff mood: understated, quiet, subtly sensual through natural body lines, relaxed and unposed quality: fine grain, slight softness, realistic look portrait bubblebrain portrait editorial realistic",
+      "originalCategory": "portrait",
+      "normalizedCategory": "fashion",
+      "importConfidence": 0.95,
+      "portraitFocused": true,
+      "entryKind": "case"
+    },
+    {
+      "id": "evolink-portrait-soft-black-mist-idol-portrait",
+      "sourceId": "evolink",
+      "sourceRepo": "EvoLinkAI/awesome-gpt-image-2-API-and-Prompts",
+      "sourceUrl": "https://x.com/BubbleBrain/status/2046518189509734903",
+      "title": "Soft Black Mist Idol Portrait",
+      "author": "BubbleBrain",
+      "license": "See source repository",
+      "category": "portrait",
+      "styleTags": [
+        "portrait",
+        "film",
+        "realistic"
+      ],
+      "sceneTags": [],
+      "prompt": "9:16 vertical - Korean idol portrait photography, single subject soft black mist filter effect, lowered contrast, gentle highlight bloom, subtle glow, soft diffusion, slightly faded blacks minimal indoor setting near window, white curtains, clean light-toned background young Korean female idol, natural minimal makeup, dewy realistic skin texture, subtle imperfections outfit: oversized white button-up shirt + short bottoms, slightly loose fit, soft and casual styling, no revealing elements hair: long dark hair, slightly messy, natural volume, softly flowing pose: relaxed standing or slight lean, body subtly angled, one leg slightly forward, shoulders relaxed; one hand lightly touching collar or resting near neckline, the other relaxed; gentle body curve without exaggeration expression: soft cute smile, slightly playful eyes, direct or slightly off-camera gaze camera: close to mid-body framing, eye-level, intimate distance, slight handheld feel lighting: diffused natural daylight, soft shadows, gentle light wrapping around face and body mood: cute yet subtly sensual, intimate, everyday softness, quiet romantic atmosphere quality: ultra-realistic, fine film grain, slight softness at edges, natural imperfections, dreamy understated tone",
+      "description": "",
+      "displayTitleZh": "Soft Black Mist Idol 人像",
+      "displaySummaryZh": "来自EvoLinkAI 大型案例库的时尚条目《Soft Black Mist Idol Portrait》。 关键词：portrait、film。结构更完整，适合直接导入高级编辑。",
+      "displayCategoryZh": "时尚",
+      "language": "en",
+      "importHints": {},
+      "sourceTier": "large-gallery-secondary",
+      "qualityTier": "curated",
+      "recommendedForCurrentProduct": true,
+      "chunkId": "evolink:fashion",
+      "searchText": "soft black mist idol portrait 9:16 vertical - korean idol portrait photography, single subject soft black mist filter effect, lowered contrast, gentle highlight bloom, subtle glow, soft diffusion, slightly faded blacks minimal indoor setting near window, white curtains, clean light-toned background young korean female idol, natural minimal makeup, dewy realistic skin texture, subtle imperfections outfit: oversized white button-up shirt + short bottoms, slightly loose fit, soft and casual styling, no revealing elements hair: long dark hair, slightly messy, natural volume, softly flowing pose: relaxed standing or slight lean, body subtly angled, one leg slightly forward, shoulders relaxed; one hand lightly touching collar or resting near neckline, the other relaxed; gentle body curve without exaggeration expression: soft cute smile, slightly playful eyes, direct or slightly off-camera gaze camera: close to mid-body framing, eye-level, intimate distance, slight handheld feel lighting: diffused natural daylight, soft shadows, gentle light wrapping around face and body mood: cute yet subtly sensual, intimate, everyday softness, quiet romantic atmosphere quality: ultra-realistic, fine film grain, slight softness at edges, natural imperfections, dreamy understated tone portrait bubblebrain portrait film realistic",
+      "originalCategory": "portrait",
+      "normalizedCategory": "fashion",
+      "importConfidence": 0.95,
+      "portraitFocused": true,
+      "entryKind": "case"
+    },
+    {
+      "id": "evolink-portrait-restored-vintage-mother-and-child-portrait",
+      "sourceId": "evolink",
+      "sourceRepo": "EvoLinkAI/awesome-gpt-image-2-API-and-Prompts",
+      "sourceUrl": "https://x.com/gdb/status/2048184797374325031",
+      "title": "Restored Vintage Mother and Child Portrait",
+      "author": "gdb",
+      "license": "See source repository",
+      "category": "portrait",
+      "styleTags": [
+        "portrait",
+        "film",
+        "analog",
+        "realistic",
+        "snapshot"
+      ],
+      "sceneTags": [],
+      "prompt": "A restored vintage family snapshot, photographed indoors in soft natural light, showing a young mother seated and holding a toddler on her lap in a close, centered waist-up portrait. The adult has short softly curled auburn hair in a voluminous 1960s-inspired bob, wears a sleeveless black dress and a thin gold necklace, and wraps both arms protectively around the child. The child has fine light blond hair and wears a plain white long-sleeve outfit. Compose the image with a warm nostalgic color cast, gentle film softness, subtle grain, and the look of a carefully repaired old printed photograph. Place them in front of a cream-colored curtain patterned with small brown teddy bear motifs, with a softly blurred interior window frame visible along the top background. Preserve realistic skin tones, natural posture, and the intimate family-photo feeling, as if an old damaged photograph has been professionally reimagined and restored. Square crop, centered composition, shallow depth of field, authentic analog photo texture, no modern styling, no text.",
+      "description": "",
+      "displayTitleZh": "Restored Vintage Mother and Child 人像",
+      "displaySummaryZh": "来自EvoLinkAI 大型案例库的时尚条目《Restored Vintage Mother and Child Portrait》。 关键词：portrait、film。结构更完整，适合直接导入高级编辑。",
+      "displayCategoryZh": "时尚",
+      "language": "en",
+      "importHints": {},
+      "sourceTier": "large-gallery-secondary",
+      "qualityTier": "curated",
+      "recommendedForCurrentProduct": true,
+      "chunkId": "evolink:fashion",
+      "searchText": "restored vintage mother and child portrait a restored vintage family snapshot, photographed indoors in soft natural light, showing a young mother seated and holding a toddler on her lap in a close, centered waist-up portrait. the adult has short softly curled auburn hair in a voluminous 1960s-inspired bob, wears a sleeveless black dress and a thin gold necklace, and wraps both arms protectively around the child. the child has fine light blond hair and wears a plain white long-sleeve outfit. compose the image with a warm nostalgic color cast, gentle film softness, subtle grain, and the look of a carefully repaired old printed photograph. place them in front of a cream-colored curtain patterned with small brown teddy bear motifs, with a softly blurred interior window frame visible along the top background. preserve realistic skin tones, natural posture, and the intimate family-photo feeling, as if an old damaged photograph has been professionally reimagined and restored. square crop, centered composition, shallow depth of field, authentic analog photo texture, no modern styling, no text. portrait gdb portrait film analog realistic snapshot",
+      "originalCategory": "portrait",
+      "normalizedCategory": "fashion",
+      "importConfidence": 0.95,
+      "portraitFocused": true,
+      "entryKind": "case"
+    },
+    {
+      "id": "evolink-portrait-dreamy-backlit-editorial-portrait",
+      "sourceId": "evolink",
+      "sourceRepo": "EvoLinkAI/awesome-gpt-image-2-API-and-Prompts",
+      "sourceUrl": "https://x.com/ToroJushiAi/status/2048139425465467248",
+      "title": "Dreamy Backlit Editorial Portrait",
+      "author": "ToroJushiAi",
+      "license": "See source repository",
+      "category": "portrait",
+      "styleTags": [
+        "portrait",
+        "editorial",
+        "cinematic",
+        "fashion",
+        "beauty"
+      ],
+      "sceneTags": [],
+      "prompt": "A cinematic soft-focus portrait of a woman from behind and slightly in profile, framed from the upper torso up in a vertical composition. She has dark brown hair styled in a loose messy updo with wispy strands catching the light. Her face is mostly hidden by her pose and hair, with only a small portion of one cheek visible. She wears a deep red sleeveless dress with an open back or low-cut side, emphasizing her bare shoulder and upper back. One hand is raised delicately near her neck or shoulder, fingers relaxed. Use strong warm backlighting and rim light, with glowing golden highlights around the hair and skin, dreamy lens flare, and large circular bokeh in the blurred background. The image should feel intimate, elegant, and slightly sensual, like a high-end fashion or beauty editorial, with shallow depth of field, creamy blur, warm amber and rose tones, and a soft cinematic glow.",
+      "description": "",
+      "displayTitleZh": "Dreamy Backlit 编辑感 人像",
+      "displaySummaryZh": "来自EvoLinkAI 大型案例库的时尚条目《Dreamy Backlit Editorial Portrait》。 关键词：portrait、editorial。结构更完整，适合直接导入高级编辑。",
+      "displayCategoryZh": "时尚",
+      "language": "en",
+      "importHints": {
+        "trendAesthetic": [
+          "trend_story_documentary"
+        ],
+        "shotType": "shot_beauty_closeup"
+      },
+      "sourceTier": "large-gallery-secondary",
+      "qualityTier": "curated",
+      "recommendedForCurrentProduct": true,
+      "chunkId": "evolink:fashion",
+      "searchText": "dreamy backlit editorial portrait a cinematic soft-focus portrait of a woman from behind and slightly in profile, framed from the upper torso up in a vertical composition. she has dark brown hair styled in a loose messy updo with wispy strands catching the light. her face is mostly hidden by her pose and hair, with only a small portion of one cheek visible. she wears a deep red sleeveless dress with an open back or low-cut side, emphasizing her bare shoulder and upper back. one hand is raised delicately near her neck or shoulder, fingers relaxed. use strong warm backlighting and rim light, with glowing golden highlights around the hair and skin, dreamy lens flare, and large circular bokeh in the blurred background. the image should feel intimate, elegant, and slightly sensual, like a high-end fashion or beauty editorial, with shallow depth of field, creamy blur, warm amber and rose tones, and a soft cinematic glow. portrait torojushiai portrait editorial cinematic fashion beauty",
+      "originalCategory": "portrait",
+      "normalizedCategory": "fashion",
+      "importConfidence": 0.95,
+      "portraitFocused": true,
+      "entryKind": "case"
+    },
+    {
+      "id": "evolink-portrait-luxury-studio-outfit-transformation",
+      "sourceId": "evolink",
+      "sourceRepo": "EvoLinkAI/awesome-gpt-image-2-API-and-Prompts",
+      "sourceUrl": "https://x.com/Abdullah__Ai7/status/2048083022315159595",
+      "title": "Luxury Studio Outfit Transformation",
+      "author": "Abdullah__Ai7",
+      "license": "See source repository",
+      "category": "portrait",
+      "styleTags": [
+        "studio",
+        "portrait",
+        "cinematic",
+        "editorial",
+        "fashion",
+        "snapshot"
+      ],
+      "sceneTags": [
+        "studio"
+      ],
+      "prompt": "Using REFERENCE_0 as the subject base, transform the casual desert snapshot into a full-body luxury fashion studio portrait. Replace the denim jacket, tank top, and shorts with a fitted strapless mini cocktail dress in powder blue with ornate silver floral embroidery and exactly 2 geometric cutouts at the chest and upper waist. Change the setting to a clean seamless light-gray studio background with polished high-end editorial styling. Add 1 silver clutch with a thin chain strap in the subject's right hand and 1 pair of pointed silver high heels. Refine the pose into an elegant standing fashion pose with one hand near the face, keep the same person and hair identity, and apply soft cinematic luxury lighting with crisp 8K fashion-photography detail.",
+      "description": "",
+      "displayTitleZh": "轻奢 棚拍 Outfit Transformation",
+      "displaySummaryZh": "来自EvoLinkAI 大型案例库的时尚条目《Luxury Studio Outfit Transformation》。 关键词：studio、portrait、studio。结构更完整，适合直接导入高级编辑。",
+      "displayCategoryZh": "时尚",
+      "language": "en",
+      "importHints": {
+        "trendAesthetic": [
+          "trend_story_documentary"
+        ]
+      },
+      "sourceTier": "large-gallery-secondary",
+      "qualityTier": "curated",
+      "recommendedForCurrentProduct": true,
+      "chunkId": "evolink:fashion",
+      "searchText": "luxury studio outfit transformation using reference_0 as the subject base, transform the casual desert snapshot into a full-body luxury fashion studio portrait. replace the denim jacket, tank top, and shorts with a fitted strapless mini cocktail dress in powder blue with ornate silver floral embroidery and exactly 2 geometric cutouts at the chest and upper waist. change the setting to a clean seamless light-gray studio background with polished high-end editorial styling. add 1 silver clutch with a thin chain strap in the subject's right hand and 1 pair of pointed silver high heels. refine the pose into an elegant standing fashion pose with one hand near the face, keep the same person and hair identity, and apply soft cinematic luxury lighting with crisp 8k fashion-photography detail. portrait abdullah__ai7 studio portrait cinematic editorial fashion snapshot studio",
+      "originalCategory": "portrait",
+      "normalizedCategory": "fashion",
+      "importConfidence": 0.95,
+      "portraitFocused": true,
+      "entryKind": "case"
+    },
+    {
+      "id": "evolink-portrait-cyberpunk-fashion-portrait",
+      "sourceId": "evolink",
+      "sourceRepo": "EvoLinkAI/awesome-gpt-image-2-API-and-Prompts",
+      "sourceUrl": "https://x.com/ChillaiKalan__/status/2050453739430195320",
+      "title": "Cyberpunk Fashion Portrait",
+      "author": "ChillaiKalan__",
+      "license": "See source repository",
+      "category": "portrait",
+      "styleTags": [
+        "portrait",
+        "fashion",
+        "cinematic",
+        "realistic"
+      ],
+      "sceneTags": [],
+      "prompt": "GPT Image 2 on @SocialSight Prompt: Futuristic portrait of a young woman facing camera, wearing a transparent neon jacket with glowing green and orange edges, large illuminated logo on chest, black inner outfit, sleek sunglasses, soft smoke light trails behind, dark teal background, cyberpunk fashion campaign, ultra-realistic textures, cinematic lighting, sharp focus, luxury sportswear branding style, 8k Style keywords: neon edges, glowing logo, fashion campaign, high-end branding, moody lighting",
+      "description": "",
+      "displayTitleZh": "Cyberpunk 时尚 人像",
+      "displaySummaryZh": "来自EvoLinkAI 大型案例库的时尚条目《Cyberpunk Fashion Portrait》。 关键词：portrait、fashion。结构更完整，适合直接导入高级编辑。",
+      "displayCategoryZh": "时尚",
+      "language": "en",
+      "importHints": {
+        "trendAesthetic": [
+          "trend_story_documentary"
+        ]
+      },
+      "sourceTier": "large-gallery-secondary",
+      "qualityTier": "curated",
+      "recommendedForCurrentProduct": true,
+      "chunkId": "evolink:fashion",
+      "searchText": "cyberpunk fashion portrait gpt image 2 on @socialsight prompt: futuristic portrait of a young woman facing camera, wearing a transparent neon jacket with glowing green and orange edges, large illuminated logo on chest, black inner outfit, sleek sunglasses, soft smoke light trails behind, dark teal background, cyberpunk fashion campaign, ultra-realistic textures, cinematic lighting, sharp focus, luxury sportswear branding style, 8k style keywords: neon edges, glowing logo, fashion campaign, high-end branding, moody lighting portrait chillaikalan__ portrait fashion cinematic realistic",
+      "originalCategory": "portrait",
+      "normalizedCategory": "fashion",
+      "importConfidence": 0.95,
+      "portraitFocused": true,
+      "entryKind": "case"
+    },
+    {
+      "id": "evolink-portrait-paris-caf-lifestyle-portrait",
+      "sourceId": "evolink",
+      "sourceRepo": "EvoLinkAI/awesome-gpt-image-2-API-and-Prompts",
+      "sourceUrl": "https://x.com/Sairah_0/status/2050432730962530809",
+      "title": "Paris Café Lifestyle Portrait",
+      "author": "Sairah_0",
+      "license": "See source repository",
+      "category": "portrait",
+      "styleTags": [
+        "portrait",
+        "cinematic",
+        "editorial",
+        "35mm",
+        "fashion",
+        "realistic",
+        "phone camera",
+        "street"
+      ],
+      "sceneTags": [
+        "street"
+      ],
+      "prompt": "GPT IMAGE 2 on Chat Gpt Prompt : Ultra-realistic portrait of a young woman sitting at a Parisian café, soft golden hour sunlight hitting her face, natural glowing skin, light blush, minimal makeup, green eyes, dark hair tied back with sunglasses on head, wearing a cozy grey knit sweater, resting her face on her hand, relaxed expression, shallow depth of field, cinematic lighting, reflections of classic Paris buildings in the window behind her, table with glassware and subtle foreground blur, 50mm lens, high detail, editorial fashion photography style. Prompt : Natural lifestyle portrait of a young woman at an outdoor Paris café, soft daylight, slightly wet slicked-back dark hair, minimal makeup with dewy skin and flushed cheeks, wearing a loose grey sweater, leaning her head on her hand, calm and intimate expression, symmetrical framing, glass windows reflecting Haussmann-style buildings, table with water glasses and phone, candid aesthetic, soft shadows, realistic tones, 35mm photography, high resolution, cinematic street-style fashion shoot.",
+      "description": "",
+      "displayTitleZh": "Paris Café Lifestyle 人像",
+      "displaySummaryZh": "来自EvoLinkAI 大型案例库的时尚条目《Paris Café Lifestyle Portrait》。 关键词：portrait、cinematic、street。结构更完整，适合直接导入高级编辑。",
+      "displayCategoryZh": "时尚",
+      "language": "en",
+      "importHints": {
+        "trendAesthetic": [
+          "trend_story_documentary"
+        ]
+      },
+      "sourceTier": "large-gallery-secondary",
+      "qualityTier": "curated",
+      "recommendedForCurrentProduct": true,
+      "chunkId": "evolink:fashion",
+      "searchText": "paris café lifestyle portrait gpt image 2 on chat gpt prompt : ultra-realistic portrait of a young woman sitting at a parisian café, soft golden hour sunlight hitting her face, natural glowing skin, light blush, minimal makeup, green eyes, dark hair tied back with sunglasses on head, wearing a cozy grey knit sweater, resting her face on her hand, relaxed expression, shallow depth of field, cinematic lighting, reflections of classic paris buildings in the window behind her, table with glassware and subtle foreground blur, 50mm lens, high detail, editorial fashion photography style. prompt : natural lifestyle portrait of a young woman at an outdoor paris café, soft daylight, slightly wet slicked-back dark hair, minimal makeup with dewy skin and flushed cheeks, wearing a loose grey sweater, leaning her head on her hand, calm and intimate expression, symmetrical framing, glass windows reflecting haussmann-style buildings, table with water glasses and phone, candid aesthetic, soft shadows, realistic tones, 35mm photography, high resolution, cinematic street-style fashion shoot. portrait sairah_0 portrait cinematic editorial 35mm fashion realistic phone camera street street",
+      "originalCategory": "portrait",
+      "normalizedCategory": "fashion",
+      "importConfidence": 0.95,
+      "portraitFocused": true,
+      "entryKind": "case"
+    },
+    {
+      "id": "evolink-portrait-selective-color-editorial-portrait",
+      "sourceId": "evolink",
+      "sourceRepo": "EvoLinkAI/awesome-gpt-image-2-API-and-Prompts",
+      "sourceUrl": "https://x.com/SPEEDAI07/status/2051262381733618119",
+      "title": "Selective-Color Editorial Portrait",
+      "author": "SPEEDAI07",
+      "license": "See source repository",
+      "category": "portrait",
+      "styleTags": [
+        "portrait",
+        "editorial",
+        "cinematic",
+        "fashion",
+        "studio"
+      ],
+      "sceneTags": [
+        "studio"
+      ],
+      "prompt": "GPT Image 2 on ChatGPT\n\nA studio-style close-up editorial portrait of a person with strong, well-defined facial features and slightly imperfect, natural skin texture. The subject wears a black tailored turtleneck with sharp, clean lines, layered under a high-collared black jacket in a minimalist contemporary fashion style.The subject wears semi-transparent orange acetate sunglasses - rectangular frames with softly rounded edges, glossy finish, and amber gradient lenses - serving as the only colored element in the image.Color concept: selective color photography - monochrome black-and-white image with only the sunglasses in vivid orange.\n\nMood is calm and confident, serious expression, direct gaze into the camera.\n\nLighting is soft frontal studio light with gentle shadows, even skin tones, cinematic contrast, and visible natural skin texture. Shot on a professional portrait camera, f/2.0, ISO 100, 1/125s. High resolution, ultra-sharp focus on the face.",
+      "description": "",
+      "displayTitleZh": "Selective-Color 编辑感 人像",
+      "displaySummaryZh": "来自EvoLinkAI 大型案例库的时尚条目《Selective-Color Editorial Portrait》。 关键词：portrait、editorial、studio。结构更完整，适合直接导入高级编辑。",
+      "displayCategoryZh": "时尚",
+      "language": "en",
+      "importHints": {
+        "trendAesthetic": [
+          "trend_story_documentary"
+        ]
+      },
+      "sourceTier": "large-gallery-secondary",
+      "qualityTier": "curated",
+      "recommendedForCurrentProduct": true,
+      "chunkId": "evolink:fashion",
+      "searchText": "selective-color editorial portrait gpt image 2 on chatgpt a studio-style close-up editorial portrait of a person with strong, well-defined facial features and slightly imperfect, natural skin texture. the subject wears a black tailored turtleneck with sharp, clean lines, layered under a high-collared black jacket in a minimalist contemporary fashion style.the subject wears semi-transparent orange acetate sunglasses - rectangular frames with softly rounded edges, glossy finish, and amber gradient lenses - serving as the only colored element in the image.color concept: selective color photography - monochrome black-and-white image with only the sunglasses in vivid orange. mood is calm and confident, serious expression, direct gaze into the camera. lighting is soft frontal studio light with gentle shadows, even skin tones, cinematic contrast, and visible natural skin texture. shot on a professional portrait camera, f/2.0, iso 100, 1/125s. high resolution, ultra-sharp focus on the face. portrait speedai07 portrait editorial cinematic fashion studio studio",
+      "originalCategory": "portrait",
+      "normalizedCategory": "fashion",
+      "importConfidence": 0.95,
+      "portraitFocused": true,
+      "entryKind": "case"
+    },
+    {
+      "id": "evolink-portrait-white-suit-red-backdrop-portrait",
+      "sourceId": "evolink",
+      "sourceRepo": "EvoLinkAI/awesome-gpt-image-2-API-and-Prompts",
+      "sourceUrl": "https://x.com/iamsofiaijaz/status/2051153792725667873",
+      "title": "White Suit Red Backdrop Portrait",
+      "author": "iamsofiaijaz",
+      "license": "See source repository",
+      "category": "portrait",
+      "styleTags": [
+        "portrait",
+        "cinematic",
+        "editorial",
+        "35mm",
+        "fashion",
+        "realistic",
+        "studio"
+      ],
+      "sceneTags": [
+        "studio"
+      ],
+      "prompt": "A cinematic, high-fashion portrait of a confident stylish woman wearing an elegant tailored white suit with a high-neck design and sleek oval sunglasses. She is holding a thin medium cigar with soft smoke rising, and a slightly burning King of Hearts playing card with minimal flame detail. Soft wisps of smoke drift upward. The background is a bold, vibrant solid red seamless backdrop. High-key professional studio lighting with soft shadows and gentle warm highlights reflecting on her face. Ultra-realistic skin texture, sharp focus on facial features, shallow depth of field, soft bokeh, 35mm lens look. Crisp contrast, modern editorial fashion photography, clean luxury aesthetic, refined, powerful, and slightly rebellious mood.",
+      "description": "",
+      "displayTitleZh": "White Suit Red Backdrop 人像",
+      "displaySummaryZh": "来自EvoLinkAI 大型案例库的时尚条目《White Suit Red Backdrop Portrait》。 关键词：portrait、cinematic、studio。结构更完整，适合直接导入高级编辑。",
+      "displayCategoryZh": "时尚",
+      "language": "en",
+      "importHints": {
+        "trendAesthetic": [
+          "trend_story_documentary"
+        ]
+      },
+      "sourceTier": "large-gallery-secondary",
+      "qualityTier": "curated",
+      "recommendedForCurrentProduct": true,
+      "chunkId": "evolink:fashion",
+      "searchText": "white suit red backdrop portrait a cinematic, high-fashion portrait of a confident stylish woman wearing an elegant tailored white suit with a high-neck design and sleek oval sunglasses. she is holding a thin medium cigar with soft smoke rising, and a slightly burning king of hearts playing card with minimal flame detail. soft wisps of smoke drift upward. the background is a bold, vibrant solid red seamless backdrop. high-key professional studio lighting with soft shadows and gentle warm highlights reflecting on her face. ultra-realistic skin texture, sharp focus on facial features, shallow depth of field, soft bokeh, 35mm lens look. crisp contrast, modern editorial fashion photography, clean luxury aesthetic, refined, powerful, and slightly rebellious mood. portrait iamsofiaijaz portrait cinematic editorial 35mm fashion realistic studio studio",
+      "originalCategory": "portrait",
+      "normalizedCategory": "fashion",
+      "importConfidence": 0.95,
+      "portraitFocused": true,
+      "entryKind": "case"
+    },
+    {
+      "id": "evolink-portrait-watercolor-fashion-sketch",
+      "sourceId": "evolink",
+      "sourceRepo": "EvoLinkAI/awesome-gpt-image-2-API-and-Prompts",
+      "sourceUrl": "https://x.com/Naiknelofar788/status/2054741712011223312",
+      "title": "Watercolor Fashion Sketch",
+      "author": "Naiknelofar788",
+      "license": "See source repository",
+      "category": "portrait",
+      "styleTags": [
+        "fashion",
+        "editorial",
+        "realistic"
+      ],
+      "sceneTags": [],
+      "prompt": "Transform the uploaded photo into a full-body watercolor fashion illustration in the style of an elegant runway design sketch. Preserve the original outfit, pose, silhouette, colors, fabrics, accessories, shoes, hairstyle and overall styling from the photo. Do not redesign the clothing. Use elongated fashion-sketch proportions The clothing should remain realistic and recognizable, with accurate cut, fit, folds, fabric texture, prints and details. Style: high-fashion watercolor illustration, loose expressive ink lines, delicate pencil contour, transparent watercolor washes, soft shadows, painterly texture, minimalist editorial mood. White or very light background, clean composition, full body centered, lots of negative space. Elegant, modern, airy, like a professional fashion designer sketch.",
+      "description": "",
+      "displayTitleZh": "Watercolor 时尚 Sketch",
+      "displaySummaryZh": "来自EvoLinkAI 大型案例库的时尚条目《Watercolor Fashion Sketch》。 关键词：fashion、editorial。结构更完整，适合直接导入高级编辑。",
+      "displayCategoryZh": "时尚",
+      "language": "en",
+      "importHints": {},
+      "sourceTier": "large-gallery-secondary",
+      "qualityTier": "curated",
+      "recommendedForCurrentProduct": true,
+      "chunkId": "evolink:fashion",
+      "searchText": "watercolor fashion sketch transform the uploaded photo into a full-body watercolor fashion illustration in the style of an elegant runway design sketch. preserve the original outfit, pose, silhouette, colors, fabrics, accessories, shoes, hairstyle and overall styling from the photo. do not redesign the clothing. use elongated fashion-sketch proportions the clothing should remain realistic and recognizable, with accurate cut, fit, folds, fabric texture, prints and details. style: high-fashion watercolor illustration, loose expressive ink lines, delicate pencil contour, transparent watercolor washes, soft shadows, painterly texture, minimalist editorial mood. white or very light background, clean composition, full body centered, lots of negative space. elegant, modern, airy, like a professional fashion designer sketch. portrait naiknelofar788 fashion editorial realistic",
+      "originalCategory": "portrait",
+      "normalizedCategory": "fashion",
+      "importConfidence": 0.95,
+      "portraitFocused": true,
+      "entryKind": "case"
+    },
+    {
+      "id": "evolink-ui-apple-pods-pro-3-headphone-e-commerce-infographic",
+      "sourceId": "evolink",
+      "sourceRepo": "EvoLinkAI/awesome-gpt-image-2-API-and-Prompts",
+      "sourceUrl": "https://x.com/meng_dagg695/status/2047935217231663186",
+      "title": "Apple Pods Pro 3 Headphone E-Commerce Infographic",
+      "author": "meng_dagg695",
+      "license": "See source repository",
+      "category": "ui",
+      "styleTags": [
+        "phone camera",
+        "cinematic",
+        "editorial",
+        "fashion",
+        "realistic",
+        "studio"
+      ],
+      "sceneTags": [
+        "studio"
+      ],
+      "prompt": "High-impact e-commerce infographic for \"Apple Pods Pro 3\" \n\npremium wireless over-ear headphones.\n\nFOREGROUND - PRODUCT HERO SHOT\n\nExtreme close-up of a hand holding a sleek, \n\nmatte-white premium over-ear headphone toward the camera \n\nat a slight angle. The headphone features:\n\n- Glossy white ear cushions with soft memory foam padding\n\n- Brushed aluminum silver headband with subtle Apple Pods \n\n Pro 3 embossed branding\n\n- Black mesh speaker grille visible on the ear cup face\n\n- A tiny glowing green LED status indicator on the \n\n right ear cup edge\n\n- Subtle touch-control icons etched on the outer cup surface\n\nMacro-lens shallow depth of field - hand and headphone \n\nslightly blurred at edges to create cinematic depth. \n\nProduct remains razor-sharp in center frame.\n\nCENTRAL SUBJECT - MODEL\n\nIn the mid-ground: a smiling young woman with freckles \n\nand wavy pastel-pink hair. She wears:\n\n- A vibrant lime-green knit beanie\n\n- A psychedelic black and white-striped long-sleeve shirt\n\n- The white over-ear headphones resting stylishly \n\n around her neck (not on ears) - one hand casually \n\n touching the ear cup\n\nExpression: relaxed, confident, joyful. \n\nShe is glancing slightly off-camera with a natural smile.\n\nBACKGROUND & ATMOSPHERE\n\nClean soft-focus studio backdrop - light gray gradient \n\nfading to warm white at center. \n\nAtmospheric overlays:\n\n- Diagonal rainbow prism lens flares cutting across \n\n upper-left to lower-right\n\n- Soft pastel light leaks in pink and yellow at corners\n\n- 4-5 blurred white over-ear headphones floating \n\n artistically in the background at various depths \n\n and rotation angles\n\n- Subtle bokeh circles from background studio lights\n\nLighting: Soft professional three-point studio lighting. \n\nKey light from upper-left, fill light right side. \n\nRim light behind model for separation. \n\nGlossy highlights on headphone surfaces catching light naturally.\n\nTYPOGRAPHY & LAYOUT - Sans-Serif, Clean white \n\nTOP CENTER (behind model, large background text):\n\n→ Massive bold oversized text: \"HEADPHONES\"\n\n Semi-transparent white, spanning full width behind subject\n\nTOP RIGHT CORNER:\n\n→ Bold clean text: \"Apple Pods Pro 3\"\n\n Subtitle smaller text: \"Over-Ear Wireless\"\n\nMID LEFT:\n\n→ Icon: small sound wave symbol\n\n→ Bold text: \"Premium Sound\"\n\n→ Sub-text: \"Active Noise Cancellation + Transparency Mode\"\n\nMID RIGHT:\n\n→ Extra-large bold numeral: \"40\"\n\n→ Smaller text below: \"hours of battery life\"\n\nLOWER LEFT:\n\n→ Extra-large bold numeral: \"0\"\n\n with \"to\" beside it → then bold \"100%\"\n\n→ Sub-text: \"Fast charge - 10 min = 3hrs playback\"\n\nBOTTOM RIGHT:\n\n→ Extra-large bold numeral: \"1\"\n\n→ Sub-text: \"Year Warranty Included\"\n\nBOTTOM CENTER (fine print style):\n\n→ Small elegant text: \n\n \"Bluetooth 5.4 | Hi-Res Audio Certified \n\n | Foldable Design | USB-C Charging\"\n\nTECHNICAL SPECS\n\nResolution: 8K ultra-sharp\n\nStyle: Commercial product photography meets \n\n editorial fashion advertising\n\nColor Palette: White, lime green, pastel pink, \n\n rainbow prism accents\n\nFocus: Tack-sharp on headphone product - \n\n shallow DOF on everything else\n\nLens: 85mm macro, slight low angle\n\nRender Quality: Hyperrealistic, clean ad aesthetic, \n\n vibrant yet professional color grading",
+      "description": "",
+      "displaySummaryZh": "来自EvoLinkAI 大型案例库的时尚条目《Apple Pods Pro 3 Headphone E-Commerce Infographic》。 关键词：phone camera、cinematic、studio。结构更完整，适合直接导入高级编辑。",
+      "displayCategoryZh": "时尚",
+      "language": "en",
+      "importHints": {
+        "trendAesthetic": [
+          "trend_story_documentary"
+        ]
+      },
+      "sourceTier": "large-gallery-secondary",
+      "qualityTier": "curated",
+      "recommendedForCurrentProduct": true,
+      "chunkId": "evolink:fashion",
+      "searchText": "apple pods pro 3 headphone e-commerce infographic high-impact e-commerce infographic for \"apple pods pro 3\" premium wireless over-ear headphones. foreground - product hero shot extreme close-up of a hand holding a sleek, matte-white premium over-ear headphone toward the camera at a slight angle. the headphone features: - glossy white ear cushions with soft memory foam padding - brushed aluminum silver headband with subtle apple pods pro 3 embossed branding - black mesh speaker grille visible on the ear cup face - a tiny glowing green led status indicator on the right ear cup edge - subtle touch-control icons etched on the outer cup surface macro-lens shallow depth of field - hand and headphone slightly blurred at edges to create cinematic depth. product remains razor-sharp in center frame. central subject - model in the mid-ground: a smiling young woman with freckles and wavy pastel-pink hair. she wears: - a vibrant lime-green knit beanie - a psychedelic black and white-striped long-sleeve shirt - the white over-ear headphones resting stylishly around her neck (not on ears) - one hand casually touching the ear cup expression: relaxed, confident, joyful. she is glancing slightly off-camera with a natural smile. background & atmosphere clean soft-focus studio backdrop - light gray gradient fading to warm white at center. atmospheric overlays: - diagonal rainbow prism lens flares cutting across upper-left to lower-right - soft pastel light leaks in pink and yellow at corners - 4-5 blurred white over-ear headphones floating artistically in the background at various depths and rotation angles - subtle bokeh circles from background studio lights lighting: soft professional three-point studio lighting. key light from upper-left, fill light right side. rim light behind model for separation. glossy highlights on headphone surfaces catching light naturally. typography & layout - sans-serif, clean white top center (behind model, large background text): → massive bold oversized text: \"headphones\" semi-transparent white, spanning full width behind subject top right corner: → bold clean text: \"apple pods pro 3\" subtitle smaller text: \"over-ear wireless\" mid left: → icon: small sound wave symbol → bold text: \"premium sound\" → sub-text: \"active noise cancellation + transparency mode\" mid right: → extra-large bold numeral: \"40\" → smaller text below: \"hours of battery life\" lower left: → extra-large bold numeral: \"0\" with \"to\" beside it → then bold \"100%\" → sub-text: \"fast charge - 10 min = 3hrs playback\" bottom right: → extra-large bold numeral: \"1\" → sub-text: \"year warranty included\" bottom center (fine print style): → small elegant text: \"bluetooth 5.4 | hi-res audio certified | foldable design | usb-c charging\" technical specs resolution: 8k ultra-sharp style: commercial product photography meets editorial fashion advertising color palette: white, lime green, pastel pink, rainbow prism accents focus: tack-sharp on headphone product - shallow dof on everything else lens: 85mm macro, slight low angle render quality: hyperrealistic, clean ad aesthetic, vibrant yet professional color grading ui meng_dagg695 phone camera cinematic editorial fashion realistic studio studio",
+      "originalCategory": "ui",
+      "normalizedCategory": "fashion",
+      "importConfidence": 0.95,
+      "portraitFocused": true,
+      "entryKind": "case"
+    },
+    {
+      "id": "evolink-ui-spanish-grwm-morning-beauty-thumbnail",
+      "sourceId": "evolink",
+      "sourceRepo": "EvoLinkAI/awesome-gpt-image-2-API-and-Prompts",
+      "sourceUrl": "https://x.com/S0N_IA_/status/2047414367243657296",
+      "title": "Spanish GRWM Morning Beauty Thumbnail",
+      "author": "S0N_IA_",
+      "license": "See source repository",
+      "category": "ui",
+      "styleTags": [
+        "beauty",
+        "editorial"
+      ],
+      "sceneTags": [
+        "bedroom",
+        "mirror"
+      ],
+      "prompt": "A vertical 9:16 TikTok-style GRWM beauty thumbnail set in a warm, sunlit Mediterranean-inspired bedroom. A stylish young woman with dark brown hair in a messy curly updo sits at a marble vanity, leaning forward with one arm folded and the other hand applying lip balm or lipstick to her mouth. Her face is covered by a centered rectangular blur block for privacy, but the rest of her styling is elegant and natural: tan glowing skin, delicate gold necklace with a small round pendant, thin gold bracelet, stacked gold rings, and a white lace camisole with thin straps. In the foreground on the vanity are exactly 7 visible beauty objects: 1 round tabletop vanity mirror on the left, 1 cup holding 5 makeup brushes, 1 clear glass dropper bottle, 1 tall white pump skincare bottle, 1 small black dropper bottle, 1 beige rounded cosmetic sponge or puff, and 1 pale green squeeze tube on the right. The background shows a softly blurred cozy bedroom with 1 arched window on the left, 1 leafy potted plant, 1 bed with white bedding and a mustard accent pillow, exposed wooden ceiling detail, and 1 framed landscape painting on the wall. Use golden-hour sunlight streaming from the left, soft shadows, creamy skin tones, shallow depth of field, luxury lifestyle editorial photography, intimate self-care mood, polished but natural composition. Add bold playful Spanish headline text in the upper left in three stacked lines reading Mi rutina de belleza matutina, with each line large and rounded, white outline and soft drop shadow, using pastel colors: first line white, second line pink, third line pale yellow. Add 3 pink doodle accent strokes above the headline, 1 curved pink underline-swoosh beneath it, and 1 small yellow sun icon to the right of the last line. Place a clean white Pollo.ai logo in the upper right. High-end influencer thumbnail aesthetic, crisp product focus in foreground, warm inviting lifestyle scene.",
+      "description": "",
+      "displayTitleZh": "Spanish GRWM Morning 美妆 Thumbnail",
+      "displaySummaryZh": "来自EvoLinkAI 大型案例库的时尚条目《Spanish GRWM Morning Beauty Thumbnail》。 关键词：beauty、editorial、bedroom、mirror。结构更完整，适合直接导入高级编辑。",
+      "displayCategoryZh": "时尚",
+      "language": "en",
+      "importHints": {
+        "shotType": "shot_beauty_closeup"
+      },
+      "sourceTier": "large-gallery-secondary",
+      "qualityTier": "curated",
+      "recommendedForCurrentProduct": true,
+      "chunkId": "evolink:fashion",
+      "searchText": "spanish grwm morning beauty thumbnail a vertical 9:16 tiktok-style grwm beauty thumbnail set in a warm, sunlit mediterranean-inspired bedroom. a stylish young woman with dark brown hair in a messy curly updo sits at a marble vanity, leaning forward with one arm folded and the other hand applying lip balm or lipstick to her mouth. her face is covered by a centered rectangular blur block for privacy, but the rest of her styling is elegant and natural: tan glowing skin, delicate gold necklace with a small round pendant, thin gold bracelet, stacked gold rings, and a white lace camisole with thin straps. in the foreground on the vanity are exactly 7 visible beauty objects: 1 round tabletop vanity mirror on the left, 1 cup holding 5 makeup brushes, 1 clear glass dropper bottle, 1 tall white pump skincare bottle, 1 small black dropper bottle, 1 beige rounded cosmetic sponge or puff, and 1 pale green squeeze tube on the right. the background shows a softly blurred cozy bedroom with 1 arched window on the left, 1 leafy potted plant, 1 bed with white bedding and a mustard accent pillow, exposed wooden ceiling detail, and 1 framed landscape painting on the wall. use golden-hour sunlight streaming from the left, soft shadows, creamy skin tones, shallow depth of field, luxury lifestyle editorial photography, intimate self-care mood, polished but natural composition. add bold playful spanish headline text in the upper left in three stacked lines reading mi rutina de belleza matutina, with each line large and rounded, white outline and soft drop shadow, using pastel colors: first line white, second line pink, third line pale yellow. add 3 pink doodle accent strokes above the headline, 1 curved pink underline-swoosh beneath it, and 1 small yellow sun icon to the right of the last line. place a clean white pollo.ai logo in the upper right. high-end influencer thumbnail aesthetic, crisp product focus in foreground, warm inviting lifestyle scene. ui s0n_ia_ beauty editorial bedroom mirror",
+      "originalCategory": "ui",
+      "normalizedCategory": "fashion",
+      "importConfidence": 0.95,
+      "portraitFocused": true,
+      "entryKind": "case"
+    },
+    {
+      "id": "evolink-ui-anime-band-finale-at-budokan",
+      "sourceId": "evolink",
+      "sourceRepo": "EvoLinkAI/awesome-gpt-image-2-API-and-Prompts",
+      "sourceUrl": "https://x.com/SDAI1807097011/status/2048127178592915583",
+      "title": "Anime Band Finale at Budokan",
+      "author": "SDAI1807097011",
+      "license": "See source repository",
+      "category": "ui",
+      "styleTags": [
+        "cinematic",
+        "phone camera"
+      ],
+      "sceneTags": [],
+      "prompt": "A dramatic anime concert illustration seen from behind the performers onstage, showing 4 teenage girls standing shoulder to shoulder at the front of a huge indoor arena, arms around each other in a triumphant post-performance moment. The camera is positioned slightly behind and below them, facing out toward the audience and the giant venue screen. The atmosphere is dazzling and emotional, filled with dense blue-and-gold confetti, sparkling particles, and strong white stage spotlights pouring down from above. The crowd fills the entire arena as a sea of tiny glowing blue lights. At center top, a giant rectangular screen displays elegant serif concert text: ELEMAYU, \"1st LIVE at 日本武道館\", 2024.6.15, and \"SOLD OUT\". On both upper side walls of the arena, the large venue name \"日本武道館\" is visible. The 4 girls all wear matching dark stage outfits: black or very dark navy hooded jackets with subtle decorative back prints, short pleated skirts, and live-performance styling. Count and depict all 4 members distinctly from left to right: 1) a girl with short wavy silver-lavender hair holding a bass guitar slung over her shoulder, 2) a girl with long straight black hair holding a red electric guitar, 3) a girl with fluffy shoulder-length blonde hair holding a dark guitar, 4) a girl with brown hair in a high ponytail, no visible instrument, raising one arm high and holding a drumstick or baton in celebration while the other arm wraps around the blonde member. Show their backs and silhouettes rim-lit by stage light, with soft highlights on their hair. Include stage equipment: a microphone stand and part of a bass neck at the far left, and a visible drum kit with cymbals at the right edge. The stage floor is glossy and reflective, covered with scattered confetti and several blue flower bouquets near the bottom foreground. Use rich midnight blues, violet shadows, warm golden sparkles, and cinematic bloom. The mood should feel like a sold-out dream performance finale, sentimental, victorious, and breathtakingly luminous, in highly detailed painterly anime style.",
+      "description": "",
+      "displaySummaryZh": "来自EvoLinkAI 大型案例库的时尚条目《Anime Band Finale at Budokan》。 关键词：cinematic、phone camera。结构更完整，适合直接导入高级编辑。",
+      "displayCategoryZh": "时尚",
+      "language": "mixed",
+      "importHints": {
+        "trendAesthetic": [
+          "trend_story_documentary"
+        ]
+      },
+      "sourceTier": "large-gallery-secondary",
+      "qualityTier": "curated",
+      "recommendedForCurrentProduct": true,
+      "chunkId": "evolink:fashion",
+      "searchText": "anime band finale at budokan a dramatic anime concert illustration seen from behind the performers onstage, showing 4 teenage girls standing shoulder to shoulder at the front of a huge indoor arena, arms around each other in a triumphant post-performance moment. the camera is positioned slightly behind and below them, facing out toward the audience and the giant venue screen. the atmosphere is dazzling and emotional, filled with dense blue-and-gold confetti, sparkling particles, and strong white stage spotlights pouring down from above. the crowd fills the entire arena as a sea of tiny glowing blue lights. at center top, a giant rectangular screen displays elegant serif concert text: elemayu, \"1st live at 日本武道館\", 2024.6.15, and \"sold out\". on both upper side walls of the arena, the large venue name \"日本武道館\" is visible. the 4 girls all wear matching dark stage outfits: black or very dark navy hooded jackets with subtle decorative back prints, short pleated skirts, and live-performance styling. count and depict all 4 members distinctly from left to right: 1) a girl with short wavy silver-lavender hair holding a bass guitar slung over her shoulder, 2) a girl with long straight black hair holding a red electric guitar, 3) a girl with fluffy shoulder-length blonde hair holding a dark guitar, 4) a girl with brown hair in a high ponytail, no visible instrument, raising one arm high and holding a drumstick or baton in celebration while the other arm wraps around the blonde member. show their backs and silhouettes rim-lit by stage light, with soft highlights on their hair. include stage equipment: a microphone stand and part of a bass neck at the far left, and a visible drum kit with cymbals at the right edge. the stage floor is glossy and reflective, covered with scattered confetti and several blue flower bouquets near the bottom foreground. use rich midnight blues, violet shadows, warm golden sparkles, and cinematic bloom. the mood should feel like a sold-out dream performance finale, sentimental, victorious, and breathtakingly luminous, in highly detailed painterly anime style. ui sdai1807097011 cinematic phone camera",
+      "originalCategory": "ui",
+      "normalizedCategory": "fashion",
+      "importConfidence": 0.95,
+      "portraitFocused": true,
+      "entryKind": "case"
+    },
+    {
+      "id": "evolink-ui-outfit-breakdown-chart",
+      "sourceId": "evolink",
+      "sourceRepo": "EvoLinkAI/awesome-gpt-image-2-API-and-Prompts",
+      "sourceUrl": "https://x.com/Shinning1010/status/2051230882069901713",
+      "title": "Outfit Breakdown Chart",
+      "author": "Shinning1010",
+      "license": "See source repository",
+      "category": "ui",
+      "styleTags": [
+        "portrait",
+        "fashion",
+        "realistic",
+        "magazine"
+      ],
+      "sceneTags": [],
+      "prompt": "Create a clean vertical fashion infographic from the uploaded portrait. Preserve the same face identity, hairstyle, body shape, and overall outfit style. Place the full-body character in the center in a relaxed T-pose, facing forward. Surround the character with realistic photo-style outfit breakdown elements, connected by thin arrows.\n\nInclude separate cutout sections for: head details, cardigan, sailor top, inner blouse, plaid skirt, bag, socks, loafers, color palette, styling notes, and fabric texture. Add 3-4 head close-ups from different angles at the top. Use short English handwritten-style labels and concise bullet points.\n\nVisual style: soft pastel cream and blush-pink background, clean fashion board layout, elegant magazine-style composition, sweet preppy aesthetic, realistic fabric textures, delicate borders, small bow and heart doodles, airy and polished design. Keep the text short, readable, and fully in English. Original vertical aspect ratio.\n\nNegative Prompt:\n\nChinese text, long text, messy layout, old parchment background, yellow aged paper, blurry details, distorted face, changed identity, extra limbs, bad hands, duplicated body, unrealistic fabric, cartoon style, anime style, 3D render, watermark, logo, unreadable typography, overcrowded design, harsh colors, low resolution.",
+      "description": "",
+      "displaySummaryZh": "来自EvoLinkAI 大型案例库的时尚条目《Outfit Breakdown Chart》。 关键词：portrait、fashion。结构更完整，适合直接导入高级编辑。",
+      "displayCategoryZh": "时尚",
+      "language": "en",
+      "importHints": {},
+      "sourceTier": "large-gallery-secondary",
+      "qualityTier": "curated",
+      "recommendedForCurrentProduct": true,
+      "chunkId": "evolink:fashion",
+      "searchText": "outfit breakdown chart create a clean vertical fashion infographic from the uploaded portrait. preserve the same face identity, hairstyle, body shape, and overall outfit style. place the full-body character in the center in a relaxed t-pose, facing forward. surround the character with realistic photo-style outfit breakdown elements, connected by thin arrows. include separate cutout sections for: head details, cardigan, sailor top, inner blouse, plaid skirt, bag, socks, loafers, color palette, styling notes, and fabric texture. add 3-4 head close-ups from different angles at the top. use short english handwritten-style labels and concise bullet points. visual style: soft pastel cream and blush-pink background, clean fashion board layout, elegant magazine-style composition, sweet preppy aesthetic, realistic fabric textures, delicate borders, small bow and heart doodles, airy and polished design. keep the text short, readable, and fully in english. original vertical aspect ratio. negative prompt: chinese text, long text, messy layout, old parchment background, yellow aged paper, blurry details, distorted face, changed identity, extra limbs, bad hands, duplicated body, unrealistic fabric, cartoon style, anime style, 3d render, watermark, logo, unreadable typography, overcrowded design, harsh colors, low resolution. ui shinning1010 portrait fashion realistic magazine",
+      "originalCategory": "ui",
+      "normalizedCategory": "fashion",
+      "importConfidence": 0.95,
+      "portraitFocused": true,
+      "entryKind": "case"
+    }
+  ]
+}

@@ -1,5 +1,11 @@
-import type { DirectorData } from '../utils/storage'
-export type { DirectorData }
+export interface DirectorData {
+  model?: string; subject?: string; scene?: string; ratio?: string;
+  composition?: string; lighting?: string; camera?: string; depthOfField?: string;
+  expression?: string; face?: string; makeup?: string; hair?: string;
+  body?: string; action?: string; clothing?: string; accessories?: string;
+  background?: string; atmosphere?: string; caption?: string;
+  mustKeep?: string; avoid?: string; negative?: string;
+}
 
 export type ThemePreset = string
 export type Mode = 'light' | 'dark'
