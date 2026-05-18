@@ -1,341 +1,127 @@
-import type { DirectorSelection } from './types'
+import type { DirectorSelection, DirectorTemplate } from './types'
+import { DEVICE_PRESETS } from '../data/devicePresets'
+import { SCENE_PACKS } from '../data/scenePacks'
+import { LIGHT_PACKS } from '../data/lightPacks'
+import { STATE_PACKS } from '../data/statePacks'
+import { MASTER_TEMPLATE_MAP, masterTemplates } from '../data/masterTemplates'
+import { PROP_FACET_FRAGMENTS, mergeFacetSelections, type FacetSelections } from '../data/facetSyncMaps'
 
-type FacetSelections = Record<string, string | string[]>
+function scoreFragment(fragment: FacetSelections | undefined, selections: FacetSelections): number {
+  if (!fragment) return 0
+  let score = 0
 
-const deviceMap: Record<string, string> = {
-  'phone-natural': 'med_phone',
-  'iphone-lifestyle': 'med_iphone',
-  'android-lowres': 'med_android_lo',
-  'digital-camera': 'med_compact',
-  'ccd': 'med_ccd',
-  'ccd-flash': 'med_ccd',
-  'film-35mm': 'med_film',
-  'dv-vhs': 'med_dv',
-  'dslr': 'med_dslr',
-  'mirrorless': 'med_mirrorless',
-  'pro-camera': 'med_dslr',
-  'cinematic-still': 'med_cinema',
-  'phone': 'med_phone',
-}
+  for (const [slotId, expected] of Object.entries(fragment)) {
+    const current = selections[slotId]
+    if (!current) continue
 
-const sceneMap: Record<string, string> = {
-  'cafe': 'scene_cafe',
-  'cafe-window': 'scene_cafe',
-  'living-room': 'scene_livingroom',
-  'living-room-window': 'scene_livingroom',
-  'bedroom-lo-fi': 'scene_bedroom',
-  'convenience-store-night': 'scene_street',
-  'night-convenience-ccd': 'scene_street',
-  'subway-platform': 'scene_subway',
-  'subway-cold-street': 'scene_subway',
-  'park': 'scene_park',
-  'forest': 'scene_forest',
-  'forest-magic': 'scene_forest',
-  'seaside-wind': 'scene_beach',
-  'city-street': 'scene_street',
-  'city-walk': 'scene_street',
-  'night-market': 'scene_night_market',
-  'rainy-neon-street': 'scene_street',
-  'rainy-night-street': 'scene_street',
-  'rainy-window-broken': 'scene_cafe',
-  'studio': 'scene_studio_grey',
-  'car-interior': 'scene_parking',
-  'rooftop-blue-hour': 'scene_rooftop',
-}
-
-const lightMap: Record<string, string> = {
-  'window-natural': 'lf_window',
-  'golden-hour': 'lf_golden_hour',
-  'daylight-clean': 'lf_natural',
-  'softbox': 'lf_studio_strobe',
-  'direct-flash': 'lf_speedlight',
-  'neon-sign': 'lf_neon',
-  'neon-glow': 'lf_neon',
-  'warm-indoor': 'lf_continuous',
-  'cold-white-top': 'lf_fluorescent',
-  'cold-fluorescent': 'lf_fluorescent',
-  'warm-fluorescent': 'lf_fluorescent',
-  'city-lights': 'lf_street_lamp',
-  'car-window-cold': 'lf_mixed',
-  'overcast-soft': 'lf_overcast',
-  'sunset-backlight': 'lf_sunset_backlight',
-  'blue-hour-city': 'lf_natural',
-  'tree-dappled': 'lf_natural',
-  'sunny-day': 'lf_natural',
-  'purple-ambient': 'lf_mixed',
-  'screen-light': 'lf_mixed',
-  'studio-strobe': 'lf_studio_strobe',
-  'convenience-cold': 'lf_fluorescent',
-  'rainy-neon-reflect': 'lf_neon',
-}
-
-const stateToPoseMap: Record<string, string> = {
-  'walking-toward': 'pose_walking',
-  'walking-naturally': 'pose_walking',
-  'walking-passing': 'pose_walking',
-  'walking-in-rain': 'pose_walking',
-  'running': 'pose_running',
-  'jumping': 'pose_jumping',
-  'standing': 'pose_standing',
-  'standing-confident': 'pose_standing',
-  'standing-alone': 'pose_standing',
-  'sitting': 'pose_sitting',
-  'sitting-on-couch': 'pose_sitting',
-  'sitting-in-car': 'pose_sitting',
-  'leaning': 'pose_leaning',
-  'leaning-on-wall': 'pose_leaning',
-  'leaning-on-window': 'pose_leaning',
-  'looking-out-window': 'pose_leaning',
-  'looking-at-camera': 'pose_hands_on_hips',
-  'looking-into-distance': 'pose_arms_crossed',
-  'looking-away': 'pose_turning',
-  'looking-back': 'pose_looking_back',
-  'looking-down': 'pose_hands_in_pockets',
-  'lying-down': 'pose_lying',
-  'lying-down-relaxed': 'pose_lying',
-  'turn-back-glance': 'pose_looking_back',
-  'dancing': 'pose_dancing',
-  'spinning': 'pose_dancing',
-  'playing': 'pose_crouching',
-  'reading': 'pose_sitting',
-  'reading-book': 'pose_sitting',
-  'writing': 'pose_sitting',
-  'sipping-drink': 'pose_sitting',
-  'holding-cup': 'pose_one_hand_hold',
-  'holding-drink': 'pose_one_hand_hold',
-  'holding-item': 'pose_one_hand_hold',
-  'holding-food': 'pose_one_hand_hold',
-  'holding-umbrella': 'pose_one_hand_hold',
-  'holding-flowers': 'pose_one_hand_hold',
-  'holding-product': 'pose_one_hand_hold',
-  'phone-selfie': 'pose_hands_on_hips',
-  'face-forward': 'pose_standing',
-  'side-face-daydream': 'pose_leaning',
-  'side-profile': 'pose_turning',
-  'head-tilt-smile': 'pose_hands_on_hips',
-  'group-posing': 'pose_standing',
-  'posing': 'pose_standing',
-  'cool-detached': 'pose_arms_crossed',
-  'cool-confident': 'pose_hands_on_hips',
-  'confident-smirk': 'pose_hands_on_hips',
-  'shy-smile': 'pose_leaning_forward',
-  'shy-head-down': 'pose_hands_in_pockets',
-  'empty-eyes': 'pose_leaning',
-  'sad-melancholy': 'pose_leaning',
-  'tired-relaxed': 'pose_sitting',
-  'bright-smile': 'pose_standing',
-  'hair-in-wind': 'pose_turning',
-  'not-looking-camera': 'pose_turning',
-  'window-daydream': 'pose_leaning',
-  'looking-down-phone': 'pose_sitting',
-  'waiting': 'pose_standing',
-  'wearing-headphones': 'pose_standing',
-  'standing-under-eave': 'pose_standing',
-  'looking-up': 'pose_turning',
-  'close-eyes': 'pose_leaning',
-  'chin-resting': 'pose_sitting',
-  'slight-side': 'pose_turning',
-  'standing-together': 'pose_standing',
-}
-
-const stateToExprMap: Record<string, string> = {
-  'smile': 'expr_smile',
-  'bright-smile': 'expr_bright_smile',
-  'laughing': 'expr_laugh',
-  'confident-smirk': 'expr_confident',
-  'cool-confident': 'expr_confident',
-  'cool-detached': 'expr_cool',
-  'shy-smile': 'expr_shy',
-  'shy-head-down': 'expr_shy',
-  'sad-melancholy': 'expr_melancholy',
-  'empty-eyes': 'expr_melancholy',
-  'window-daydream': 'expr_contemplative',
-  'side-face-daydream': 'expr_contemplative',
-  'tired-relaxed': 'expr_tired',
-  'head-tilt-smile': 'expr_sweet',
-  'looking-into-distance': 'expr_contemplative',
-  'not-looking-camera': 'expr_contemplative',
-  'looking-down': 'expr_contemplative',
-  'looking-away': 'expr_contemplative',
-  'looking-back': 'expr_contemplative',
-  'looking-out-window': 'expr_contemplative',
-  'looking-at-camera': 'expr_neutral',
-  'looking-up': 'expr_contemplative',
-  'face-forward': 'expr_neutral',
-  'close-eyes': 'expr_calm',
-  'chin-resting': 'expr_contemplative',
-  'relaxed': 'expr_calm',
-  'enjoying': 'expr_smile',
-  'playful': 'expr_playful',
-  'pensive': 'expr_thoughtful',
-  'detached': 'expr_cool',
-  'neutral': 'expr_neutral',
-  'focus': 'expr_focused',
-  'sleepy': 'expr_tired',
-  'energetic': 'expr_excited',
-}
-
-function fuzzyMatchStateAction(stateId: string, activities: string[]): string | null {
-  const stateLower = stateId.toLowerCase().replace(/[-_]/g, ' ')
-  for (const act of activities) {
-    const actLower = act.toLowerCase().replace(/[-_]/g, ' ')
-    if (stateLower.includes(actLower) || actLower.includes(stateLower)) return act
+    if (Array.isArray(expected)) {
+      const currentList = Array.isArray(current) ? current : [current]
+      score += expected.filter(value => currentList.includes(value)).length
+    } else if (Array.isArray(current)) {
+      if (current.includes(expected)) score += 1
+    } else if (current === expected) {
+      score += 1
+    }
   }
-  return null
+
+  return score
+}
+
+function findBestTemplate(selections: FacetSelections): string | null {
+  let bestId: string | null = null
+  let bestScore = 0
+
+  for (const template of masterTemplates) {
+    const fragment = template.advancedSelections
+    if (!fragment) continue
+    if (typeof selections.scenePrimary === 'string' && typeof fragment.scenePrimary === 'string' && selections.scenePrimary !== fragment.scenePrimary) {
+      continue
+    }
+    if (typeof selections.shootingMedium === 'string' && typeof fragment.shootingMedium === 'string' && selections.shootingMedium !== fragment.shootingMedium) {
+      continue
+    }
+    const score = scoreFragment(fragment, selections)
+    if (score > bestScore) {
+      bestId = template.id
+      bestScore = score
+    }
+  }
+
+  return bestScore >= 6 ? bestId : null
+}
+
+function matchSingle<T extends { id: string; facetFragment?: FacetSelections }>(items: T[], selections: FacetSelections, minScore = 1): string | null {
+  let best: string | null = null
+  let bestScore = 0
+  for (const item of items) {
+    const score = scoreFragment(item.facetFragment, selections)
+    if (score > bestScore) {
+      best = item.id
+      bestScore = score
+    }
+  }
+  return bestScore >= minScore ? best : null
+}
+
+function matchStates(selections: FacetSelections): string[] {
+  const states = STATE_PACKS
+    .map(state => ({ id: state.id, score: scoreFragment(state.facetFragment, selections) }))
+    .filter(entry => entry.score > 0)
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 4)
+    .map(entry => entry.id)
+  return [...new Set(states)]
+}
+
+function matchCustomProps(selections: FacetSelections): string[] {
+  const result: string[] = []
+
+  for (const [propLabel, fragment] of Object.entries(PROP_FACET_FRAGMENTS)) {
+    if (scoreFragment(fragment, selections) > 0) result.push(propLabel)
+  }
+
+  return result.slice(0, 3)
+}
+
+function applyDirectorLayer(base: FacetSelections, sel: DirectorSelection): FacetSelections {
+  const parts: Array<FacetSelections | undefined> = [base]
+
+  if (sel.devicePreset) {
+    const device = DEVICE_PRESETS.find(entry => entry.id === sel.devicePreset)
+    parts.push(device?.facetFragment)
+  }
+  if (sel.scenePack) {
+    const scene = SCENE_PACKS.find(entry => entry.id === sel.scenePack)
+    parts.push(scene?.facetFragment)
+  }
+  if (sel.lightPack) {
+    const light = LIGHT_PACKS.find(entry => entry.id === sel.lightPack)
+    parts.push(light?.facetFragment)
+  }
+  for (const stateId of sel.statePacks) {
+    const state = STATE_PACKS.find(entry => entry.id === stateId)
+    parts.push(state?.facetFragment)
+  }
+  for (const customProp of sel.customProps) {
+    parts.push(PROP_FACET_FRAGMENTS[customProp])
+  }
+
+  return mergeFacetSelections(...parts)
 }
 
 export function directorToFacetSelections(sel: DirectorSelection): FacetSelections {
-  const result: FacetSelections = {}
-
-  // Map device → shootingMedium
-  if (sel.devicePreset && deviceMap[sel.devicePreset]) {
-    result['shootingMedium'] = deviceMap[sel.devicePreset]
-  }
-
-  // Map scene → scenePrimary
-  if (sel.scenePack && sceneMap[sel.scenePack]) {
-    result['scenePrimary'] = sceneMap[sel.scenePack]
-  }
-
-  // Map light → lightFamily
-  if (sel.lightPack && lightMap[sel.lightPack]) {
-    result['lightFamily'] = lightMap[sel.lightPack]
-  }
-
-  // Map statePacks → posePrimary, expressionPrimary, activities
-  const poseMatches: string[] = []
-  const exprMatches: string[] = []
-  const activityMatches: string[] = []
-
-  for (const stateId of sel.statePacks) {
-    if (stateToPoseMap[stateId]) {
-      poseMatches.push(stateToPoseMap[stateId])
-    }
-    if (stateToExprMap[stateId]) {
-      exprMatches.push(stateToExprMap[stateId])
-    }
-  }
-
-  if (poseMatches.length > 0) {
-    result['posePrimary'] = poseMatches[0]
-  }
-
-  if (exprMatches.length > 0) {
-    result['expressionPrimary'] = exprMatches[0]
-  }
-
-  // Map customProps → handheld
-  if (sel.customProps.length > 0) {
-    result['handheld'] = sel.customProps.slice(0, 3)
-  }
-
-  return result
-}
-
-// Reverse maps
-const deviceRev: Record<string, string> = {}
-for (const [k, v] of Object.entries(deviceMap)) {
-  if (!deviceRev[v]) deviceRev[v] = k
-}
-
-const sceneRev: Record<string, string> = {}
-for (const [k, v] of Object.entries(sceneMap)) {
-  if (!sceneRev[v]) sceneRev[v] = k
-}
-
-const lightRev: Record<string, string> = {}
-for (const [k, v] of Object.entries(lightMap)) {
-  if (!lightRev[v]) lightRev[v] = k
-}
-
-const poseToState: Record<string, string[]> = {}
-for (const [k, v] of Object.entries(stateToPoseMap)) {
-  if (!poseToState[v]) poseToState[v] = []
-  poseToState[v].push(k)
-}
-
-const exprToState: Record<string, string[]> = {}
-for (const [k, v] of Object.entries(stateToExprMap)) {
-  if (!exprToState[v]) exprToState[v] = []
-  exprToState[v].push(k)
+  const template = sel.directorTemplate ? MASTER_TEMPLATE_MAP[sel.directorTemplate] : null
+  const base = template?.advancedSelections ?? {}
+  return applyDirectorLayer(base, sel)
 }
 
 export interface BridgeSyncUpdate {
+  templateId?: string | null
   devicePreset?: string | null
   scenePack?: string | null
   lightPack?: string | null
   statePacks?: string[]
   customProps?: string[]
-}
-
-const poseKeywordMap: Record<string, string> = {
-  '站': 'pose_standing',
-  '坐': 'pose_sitting',
-  '走': 'pose_walking',
-  '跑': 'pose_running',
-  '跳': 'pose_jumping',
-  '躺': 'pose_lying',
-  '卧': 'pose_lying',
-  '蹲': 'pose_squatting',
-  '靠': 'pose_leaning',
-  '倚': 'pose_leaning',
-  '回眸': 'pose_looking_back',
-  '转身': 'pose_turning',
-  '抱臂': 'pose_arms_crossed',
-  '叉腰': 'pose_hands_on_hips',
-  '插袋': 'pose_hands_in_pockets',
-  '持物': 'pose_one_hand_hold',
-  '伸手': 'pose_leaning_forward',
-  '前倾': 'pose_leaning_forward',
-  '蜷': 'pose_crouching',
-  '舞': 'pose_dancing',
-  '弯腰': 'pose_bending_over',
-  '翘脚': 'pose_cross_legged',
-  '托腮': 'pose_lean_on_elbow',
-  '抚胸': 'pose_hand_on_chest',
-  '抚脸': 'pose_hand_on_face',
-  '遮阳': 'pose_one_hand_hold',
-}
-
-const exprKeywordMap: Record<string, string> = {
-  '微笑': 'expr_smile',
-  '灿笑': 'expr_bright_smile',
-  '大笑': 'expr_laugh',
-  '自信': 'expr_confident',
-  '甜美': 'expr_sweet',
-  '冷酷': 'expr_cool',
-  '平静': 'expr_calm',
-  '沉思': 'expr_contemplative',
-  '忧郁': 'expr_melancholy',
-  '悲伤': 'expr_sad',
-  '疲惫': 'expr_tired',
-  '害羞': 'expr_shy',
-  '俏皮': 'expr_playful',
-  '专注': 'expr_focused',
-  '兴奋': 'expr_excited',
-  '若有所思': 'expr_thoughtful',
-  '慵懒': 'expr_languid',
-  '神秘': 'expr_mysterious',
-  '严肃': 'expr_serious',
-  '挑衅': 'expr_defiant',
-}
-
-const cropKeywordMap: Record<string, string> = {
-  '大特写': 'size_extreme_close',
-  '特写': 'size_close',
-  '近景': 'size_near',
-  '半身': 'size_half',
-  '七分身': 'size_three_quarter',
-  '全身': 'size_full',
-  '远景': 'size_wide',
-  '中景': 'size_half',
-}
-
-function matchKeyword(text: string, map: Record<string, string>): string | null {
-  for (const [kw, val] of Object.entries(map)) {
-    if (text.includes(kw)) return val
-  }
-  return null
 }
 
 export interface VariantOverlayInput {
@@ -348,87 +134,25 @@ export interface VariantOverlayInput {
   cameraCrop: string
   cameraAngle: string
   motionCue: string
+  facetFragment?: FacetSelections
 }
 
 export function variantOverlayToFacetSelections(overlay: VariantOverlayInput): FacetSelections {
-  const sels: FacetSelections = {}
-
-  const poseVal = matchKeyword(overlay.bodyPose, poseKeywordMap)
-  if (poseVal) sels['posePrimary'] = poseVal
-
-  const exprVal = matchKeyword(overlay.expression, exprKeywordMap)
-  if (exprVal) sels['expressionPrimary'] = exprVal
-
-  const cropVal = matchKeyword(overlay.cameraCrop, cropKeywordMap)
-  if (cropVal) sels['shotSize'] = cropVal
-
-  if (overlay.gaze && !overlay.gaze.includes('选一个')) {
-    if (overlay.gaze.includes('看镜头') || overlay.gaze.includes('看相机')) {
-      sels['expressionModifiers'] = ['emod_looking_at_camera']
-    } else if (overlay.gaze.includes('不看镜头') || overlay.gaze.includes('看远方') || overlay.gaze.includes('望')) {
-      sels['expressionModifiers'] = ['emod_looking_away']
-    } else if (overlay.gaze.includes('闭眼')) {
-      sels['expressionModifiers'] = ['emod_eyes_closed']
-    }
-  }
-
-  if (overlay.cameraAngle) {
-    if (overlay.cameraAngle.includes('俯')) sels['cameraAngle'] = 'angle_high'
-    else if (overlay.cameraAngle.includes('仰')) sels['cameraAngle'] = 'angle_low'
-    else if (overlay.cameraAngle.includes('平')) sels['cameraAngle'] = 'angle_eye'
-  }
-
-  if (overlay.weightShift) {
-    if (overlay.weightShift.includes('前倾')) sels['poseModifiers'] = ['pmod_shoulder_turn']
-  }
-
-  if (overlay.bodyAngle) {
-    if (overlay.bodyAngle.includes('侧')) sels['orientation'] = 'ori_three_quarter'
-  }
-
-  return sels
+  return overlay.facetFragment ? mergeFacetSelections(overlay.facetFragment) : {}
 }
 
 export function facetToDirectorUpdate(facetSel: FacetSelections): BridgeSyncUpdate {
-  const update: BridgeSyncUpdate = {}
+  return {
+    templateId: findBestTemplate(facetSel),
+    devicePreset: matchSingle(DEVICE_PRESETS, facetSel, 1),
+    scenePack: matchSingle(SCENE_PACKS, facetSel, 1),
+    lightPack: matchSingle(LIGHT_PACKS, facetSel, 1),
+    statePacks: matchStates(facetSel),
+    customProps: matchCustomProps(facetSel),
+  }
+}
 
-  // Reverse device
-  const medium = facetSel['shootingMedium']
-  if (typeof medium === 'string' && deviceRev[medium]) {
-    update.devicePreset = deviceRev[medium]
-  }
-
-  // Reverse scene
-  const scene = facetSel['scenePrimary']
-  if (typeof scene === 'string' && sceneRev[scene]) {
-    update.scenePack = sceneRev[scene]
-  }
-
-  // Reverse light
-  const light = facetSel['lightFamily']
-  if (typeof light === 'string' && lightRev[light]) {
-    update.lightPack = lightRev[light]
-  }
-
-  // Reverse pose + expression → statePacks
-  const states: string[] = []
-  const pose = facetSel['posePrimary']
-  if (typeof pose === 'string' && poseToState[pose]) {
-    states.push(poseToState[pose][0])
-  }
-  const expr = facetSel['expressionPrimary']
-  if (typeof expr === 'string' && exprToState[expr]) {
-    states.push(exprToState[expr][0])
-  }
-  if (states.length > 0) {
-    update.statePacks = states
-  }
-
-  // Reverse handheld → customProps
-  const handheld = facetSel['handheld']
-  if (Array.isArray(handheld) && handheld.length > 0) {
-    update.customProps = handheld.slice(0, 3)
-  }
-
-  return update
+export function resolveTemplateFromFacetSelections(selections: FacetSelections): DirectorTemplate | null {
+  const templateId = findBestTemplate(selections)
+  return templateId ? MASTER_TEMPLATE_MAP[templateId] ?? null : null
 }

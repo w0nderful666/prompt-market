@@ -1,4 +1,5 @@
 import type { ScenePack } from '../core/types'
+import { SCENE_FACET_FRAGMENTS } from './facetSyncMaps'
 
 export const SCENE_PACKS: ScenePack[] = [
   {
@@ -364,4 +365,5 @@ export const SCENE_PACKS: ScenePack[] = [
 ]
 
 export const SCENE_MAP: Record<string, ScenePack> = {}
+SCENE_PACKS.forEach(scene => { scene.facetFragment = SCENE_FACET_FRAGMENTS[scene.id] ?? {} })
 SCENE_PACKS.forEach(s => { SCENE_MAP[s.id] = s })

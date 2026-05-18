@@ -9,6 +9,7 @@ export interface DevicePreset {
   recommendedLights: string[]
   defaultAspectRatios: string[]
   styleTags: string[]
+  facetFragment?: Record<string, string | string[]>
 }
 
 export interface ScenePack {
@@ -22,6 +23,7 @@ export interface ScenePack {
   defaultProps: string[]
   autoDiffPacks: string[]
   defaultAspectRatio: string
+  facetFragment?: Record<string, string | string[]>
 }
 
 export interface LightPack {
@@ -32,6 +34,7 @@ export interface LightPack {
   negativePrompt: string[]
   recommendedDevices: string[]
   recommendedScenes: string[]
+  facetFragment?: Record<string, string | string[]>
 }
 
 export interface StatePack {
@@ -41,6 +44,7 @@ export interface StatePack {
   positivePromptZh: string
   recommendedScenes: string[]
   autoDiffPacks: string[]
+  facetFragment?: Record<string, string | string[]>
 }
 
 export interface DiffPack {
@@ -75,6 +79,7 @@ export interface DirectorTemplate {
   diffPacks: string[]
   avoid: string[]
   parameterPreset: string
+  advancedSelections?: Record<string, string | string[]>
 }
 
 export interface ParameterPreset {
@@ -102,8 +107,166 @@ export interface AutoEnabledPack {
   reason: string
 }
 
+export interface PromptSection {
+  id: string
+  label: string
+  text: string
+}
+
+export interface PromptImportMatch {
+  slotId: string
+  valueId: string
+  label: string
+  matchedText: string
+}
+
+export type PromptImportSourceKind = 'manualPaste' | 'externalLibraryImport'
+
+export interface PromptImportMeta {
+  sourceText: string
+  sourceKind?: PromptImportSourceKind
+  sourceLabel?: string
+  sourceUrl?: string
+  sourceRepo?: string
+  entryId?: string
+  qualityTier?: ExternalPromptLibraryQualityTier
+  sourceTier?: ExternalPromptLibrarySourceTier
+  matchedCount: number
+  matchedValues: PromptImportMatch[]
+  unmatchedPositive: string[]
+  unmatchedNegative: string[]
+  parameterSuffix: string
+}
+
+export type ExternalPromptLanguage = 'zh' | 'en' | 'mixed'
+export type ExternalPromptEntryKind = 'template' | 'case'
+export type ExternalPromptLibrarySourceTier = 'structured-primary' | 'large-gallery-secondary'
+export type ExternalPromptLibraryQualityTier = 'curated' | 'usable' | 'noisy'
+export type ExternalPromptLibraryNormalizedCategory =
+  | 'portrait'
+  | 'photography'
+  | 'cinematic'
+  | 'street'
+  | 'fashion'
+  | 'lifestyle'
+  | 'realism'
+  | 'character-consistency'
+  | 'phone-camera'
+  | 'film-texture'
+  | 'social-snapshot'
+  | 'beauty'
+  | 'commercial'
+  | 'ui-graphic'
+  | 'poster'
+  | 'other'
+
+export interface ExternalPromptLibrarySource {
+  id: string
+  label: string
+  labelEn?: string
+  repo: string
+  sourceUrl: string
+  license: string
+  kind: 'structured' | 'curated'
+  sourceTier: ExternalPromptLibrarySourceTier
+  description: string
+}
+
+export interface ExternalPromptLibraryEntry {
+  id: string
+  sourceId: string
+  sourceRepo: string
+  sourceUrl: string
+  title: string
+  author: string
+  license: string
+  category: string
+  styleTags: string[]
+  sceneTags: string[]
+  prompt: string
+  description?: string
+  displayTitleZh?: string
+  displaySummaryZh?: string
+  displayCategoryZh: string
+  previewImage?: string
+  language: ExternalPromptLanguage
+  importHints: Record<string, string | string[]>
+  sourceTier: ExternalPromptLibrarySourceTier
+  qualityTier: ExternalPromptLibraryQualityTier
+  recommendedForCurrentProduct: boolean
+  chunkId: string
+  searchText: string
+  originalCategory: string
+  normalizedCategory: ExternalPromptLibraryNormalizedCategory
+  importConfidence: number
+  portraitFocused: boolean
+  entryKind: ExternalPromptEntryKind
+}
+
+export interface ExternalPromptLibraryCategorySummary {
+  id: ExternalPromptLibraryNormalizedCategory
+  label: string
+  recommended: boolean
+  entryCount: number
+  recommendedOrder: number | null
+}
+
+export interface ExternalPromptLibraryChunkMeta {
+  id: string
+  sourceId: string
+  normalizedCategory: ExternalPromptLibraryNormalizedCategory
+  label: string
+  path: string
+  entryCount: number
+}
+
+export interface ExternalPromptLibraryEntrySummary {
+  id: string
+  sourceId: string
+  sourceRepo: string
+  sourceUrl: string
+  title: string
+  author: string
+  license: string
+  category: string
+  styleTags: string[]
+  sceneTags: string[]
+  description?: string
+  displayTitleZh?: string
+  displaySummaryZh?: string
+  displayCategoryZh: string
+  previewImage?: string
+  language: ExternalPromptLanguage
+  importHints: Record<string, string | string[]>
+  sourceTier: ExternalPromptLibrarySourceTier
+  qualityTier: ExternalPromptLibraryQualityTier
+  recommendedForCurrentProduct: boolean
+  portraitFocused: boolean
+  entryKind: ExternalPromptEntryKind
+  chunkId: string
+  searchText: string
+  originalCategory: string
+  normalizedCategory: ExternalPromptLibraryNormalizedCategory
+  importConfidence: number
+}
+
+export interface ExternalPromptLibraryChunk {
+  meta: ExternalPromptLibraryChunkMeta
+  entries: ExternalPromptLibraryEntry[]
+}
+
+export interface ExternalPromptLibraryIndex {
+  sources: ExternalPromptLibrarySource[]
+  categories: ExternalPromptLibraryCategorySummary[]
+  chunks: ExternalPromptLibraryChunkMeta[]
+  entryIndex: ExternalPromptLibraryEntrySummary[]
+}
+
 export interface ComposedOutput {
   positivePrompt: string
+  flatPrompt: string
+  naturalPrompt: string
+  sections: PromptSection[]
   negativePrompt: string[]
   parameterSuffix: string
   autoEnabledPacks: AutoEnabledPack[]
@@ -155,4 +318,5 @@ export interface PoseVariant {
   positivePrompt: string
   negativePrompt: string[]
   autoDiffPacks: string[]
+  facetFragment?: Record<string, string | string[]>
 }

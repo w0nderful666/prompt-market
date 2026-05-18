@@ -1,4 +1,5 @@
 import type { DirectorTemplate } from '../core/types'
+import { resolveTemplateAdvancedSelections } from './facetSyncMaps'
 
 export const masterTemplates: DirectorTemplate[] = [
   {
@@ -1182,4 +1183,7 @@ export const masterTemplates: DirectorTemplate[] = [
 ]
 
 export const MASTER_TEMPLATE_MAP: Record<string, DirectorTemplate> = {}
-masterTemplates.forEach(t => { MASTER_TEMPLATE_MAP[t.id] = t })
+masterTemplates.forEach(template => {
+  template.advancedSelections = resolveTemplateAdvancedSelections(template)
+  MASTER_TEMPLATE_MAP[template.id] = template
+})

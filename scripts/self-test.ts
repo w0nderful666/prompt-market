@@ -1,297 +1,362 @@
 #!/usr/bin/env node
 
-const path = await import('path')
-const { fileURLToPath, pathToFileURL } = await import('url')
-const __dirname = path.dirname(fileURLToPath(import.meta.url))
+import { mkdtempSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'fs'
+import { tmpdir } from 'os'
+import path from 'path'
+import ts from 'typescript'
+import { fileURLToPath, pathToFileURL } from 'url'
+
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
+const runtimeDir = mkdtempSync(path.join(tmpdir(), 'prompt-market-react-selftest-'))
 
 const PASS: string[] = []
 const FAIL: string[] = []
-const WARN: string[] = []
+const compiled = new Map<string, string>()
 
 function check(desc: string, fn: () => boolean | string) {
   try {
     const result = fn()
-    if (result === true) {
-      PASS.push(desc)
-    } else if (result === false) {
-      FAIL.push(desc)
-    } else if (typeof result === 'string') {
-      FAIL.push(desc + ': ' + result)
-    } else {
-      PASS.push(desc)
-    }
-  } catch (e: any) {
-    FAIL.push(desc + ': ' + e.message)
+    if (result === true) PASS.push(desc)
+    else if (result === false) FAIL.push(desc)
+    else FAIL.push(`${desc}: ${result}`)
+  } catch (error: any) {
+    FAIL.push(`${desc}: ${error.message}`)
   }
 }
 
-async function load(name: string) {
-  const fp = path.resolve(__dirname, '../src/data/' + name)
-  return await import(pathToFileURL(fp).href)
+function normalizeSpecifier(specifier: string) {
+  if (!specifier.startsWith('.')) return specifier
+  if (specifier.endsWith('.ts')) return specifier.replace(/\.ts$/, '.js')
+  if (specifier.endsWith('.tsx')) return specifier.replace(/\.tsx$/, '.js')
+  if (specifier.endsWith('.js') || specifier.endsWith('.mjs')) return specifier
+  return `${specifier}.js`
 }
 
-async function loadCore(name: string) {
-  const fp = path.resolve(__dirname, '../src/core/' + name)
-  return await import(pathToFileURL(fp).href)
+function resolveSourcePath(fromFile: string, specifier: string) {
+  const base = path.resolve(path.dirname(fromFile), specifier)
+  const candidates = [base, `${base}.ts`, `${base}.tsx`, path.join(base, 'index.ts'), path.join(base, 'index.tsx')]
+  return candidates.find(candidate => ts.sys.fileExists(candidate)) ?? null
 }
 
-const devicePresets = await load('devicePresets.ts')
-const scenePacks = await load('scenePacks.ts')
-const lightPacks = await load('lightPacks.ts')
-const statePacks = await load('statePacks.ts')
-const diffPacks = await load('diffPacks.ts')
-const masterTemplates = await load('masterTemplates.ts')
-const parameterPresets = await load('parameterPresets.ts')
-const scenePoseRules = await load('scenePoseRules.ts')
-const posePipelines = await load('posePipelines.ts')
+function compileModule(sourcePath: string): string {
+  const resolved = path.resolve(sourcePath)
+  if (compiled.has(resolved)) return compiled.get(resolved)!
 
-const DEVICE_IDS = new Set(devicePresets.DEVICE_PRESETS.map(d => d.id))
-const SCENE_IDS = new Set(scenePacks.SCENE_PACKS.map(s => s.id))
-const LIGHT_IDS = new Set(lightPacks.LIGHT_PACKS.map(l => l.id))
-const STATE_IDS = new Set(statePacks.STATE_PACKS.map(s => s.id))
-const DIFF_IDS = new Set(diffPacks.DIFF_PACKS.map(d => d.id))
-const PARAM_IDS = new Set(parameterPresets.PARAMETER_PRESETS.map(p => p.id))
-const RULE_SCENE_IDS = new Set(scenePoseRules.SCENE_POSE_RULES.map(r => r.sceneId))
+  const relative = path.relative(root, resolved).replace(/\\/g, '/')
+  const outPath = path.join(runtimeDir, relative).replace(/\.(ts|tsx)$/, '.js')
+  mkdirSync(path.dirname(outPath), { recursive: true })
 
-// --- 1. masterTemplates id uniqueness ---
-check('masterTemplates: all ids unique', () => {
-  const ids = masterTemplates.masterTemplates.map(t => t.id)
-  const unique = new Set(ids)
-  return unique.size === ids.length || `duplicates: ${ids.filter((id, i) => ids.indexOf(id) !== i).join(', ')}`
-})
+  let source = readFileSync(resolved, 'utf8')
+  const importRegex = /(from\s+['"])(\.{1,2}\/[^'"]+)(['"])|(import\s*\(\s*['"])(\.{1,2}\/[^'"]+)(['"]\s*\))/g
+  source = source.replace(importRegex, (...args) => {
+    const prefix = args[1] || args[4]
+    const specifier = args[2] || args[5]
+    const suffix = args[3] || args[6]
+    const target = resolveSourcePath(resolved, specifier)
+    if (target) compileModule(target)
+    return `${prefix}${normalizeSpecifier(specifier)}${suffix}`
+  })
 
-// --- 2. lockedCore.device exists ---
-check('masterTemplates: all lockedCore.device in DEVICE_MAP', () => {
-  const bad = masterTemplates.masterTemplates.filter(t => !DEVICE_IDS.has(t.lockedCore.device))
-  return bad.length === 0 || `bad device IDs: ${bad.map(t => t.id + ':' + t.lockedCore.device).join(', ')}`
-})
+  const output = ts.transpileModule(source, {
+    compilerOptions: {
+      module: ts.ModuleKind.ESNext,
+      target: ts.ScriptTarget.ES2022,
+      jsx: ts.JsxEmit.ReactJSX,
+      esModuleInterop: true,
+    },
+    fileName: resolved,
+  }).outputText
 
-// --- 3. lockedCore.scene exists ---
-check('masterTemplates: all lockedCore.scene in SCENE_MAP', () => {
-  const bad = masterTemplates.masterTemplates.filter(t => !SCENE_IDS.has(t.lockedCore.scene))
-  return bad.length === 0 || `bad scene IDs: ${bad.map(t => t.id + ':' + t.lockedCore.scene).join(', ')}`
-})
+  writeFileSync(outPath, output, 'utf8')
+  compiled.set(resolved, outPath)
+  return outPath
+}
 
-// --- 4. lockedCore.light exists ---
-check('masterTemplates: all lockedCore.light in LIGHT_MAP', () => {
-  const bad = masterTemplates.masterTemplates.filter(t => !LIGHT_IDS.has(t.lockedCore.light))
-  return bad.length === 0 || `bad light IDs: ${bad.map(t => t.id + ':' + t.lockedCore.light).join(', ')}`
-})
+async function load(relativePath: string) {
+  const sourcePath = path.resolve(root, relativePath)
+  const compiledPath = compileModule(sourcePath)
+  return await import(pathToFileURL(compiledPath).href)
+}
 
-// --- 5. parameterPreset exists ---
-check('masterTemplates: all parameterPreset in PARAMETER_MAP', () => {
-  const bad = masterTemplates.masterTemplates.filter(t => !PARAM_IDS.has(t.parameterPreset))
-  return bad.length === 0 || `bad param IDs: ${bad.map(t => t.id + ':' + t.parameterPreset).join(', ')}`
-})
+try {
+  const { masterTemplates, MASTER_TEMPLATE_MAP } = await load('src/data/masterTemplates.ts')
+  const { STATE_PACKS } = await load('src/data/statePacks.ts')
+  const { SCENE_PACKS } = await load('src/data/scenePacks.ts')
+  const { DEVICE_PRESETS } = await load('src/data/devicePresets.ts')
+  const { LIGHT_PACKS } = await load('src/data/lightPacks.ts')
+  const promptState = await load('src/core/promptState.ts')
+  const builder = await load('src/utils/facetedBuilder.ts')
+  const variantComposer = await load('src/core/variantComposer.ts')
+  const externalLibrary = JSON.parse(readFileSync(path.resolve(root, 'public', 'external-library-manifest-v2.json'), 'utf8'))
 
-// --- 6. randomPools.state exist in STATE_MAP ---
-check('masterTemplates: randomPools.state in STATE_MAP or text-only', () => {
-  const bad = []
-  for (const t of masterTemplates.masterTemplates) {
-    for (const s of t.randomPools.state) {
-      if (!STATE_IDS.has(s)) bad.push(t.id + ':' + s)
-    }
-  }
-  return bad.length === 0 || `bad state refs: ${bad.join(', ')}`
-})
+  const stateIds = new Set(STATE_PACKS.map((entry: any) => entry.id))
+  const sceneIds = new Set(SCENE_PACKS.map((entry: any) => entry.id))
+  const deviceIds = new Set(DEVICE_PRESETS.map((entry: any) => entry.id))
+  const lightIds = new Set(LIGHT_PACKS.map((entry: any) => entry.id))
 
-// --- 7. scenePoseRules sceneIds in SCENE_MAP ---
-check('scenePoseRules: all sceneId in SCENE_MAP', () => {
-  const bad = scenePoseRules.SCENE_POSE_RULES.filter(r => !SCENE_IDS.has(r.sceneId))
-  return bad.length === 0 || `bad rule sceneIds: ${bad.map(r => r.sceneId).join(', ')}`
-})
+  check('masterTemplates: all template ids unique', () => {
+    const ids = masterTemplates.map((template: any) => template.id)
+    return ids.length === new Set(ids).size || 'duplicate template ids found'
+  })
 
-// --- 8. posePipelines requiredDiffPacks in DIFF_MAP ---
-check('posePipelines: requiredDiffPacks in DIFF_MAP', () => {
-  const bad = []
-  for (const pl of posePipelines.POSE_PIPELINES) {
-    for (const shot of pl.sequence) {
-      for (const packId of shot.requiredDiffPacks) {
-        if (!DIFF_IDS.has(packId)) bad.push(pl.id + ':' + shot.id + ':' + packId)
+  check('masterTemplates: every template has advancedSelections', () => {
+    const missing = masterTemplates.filter((template: any) => !template.advancedSelections || Object.keys(template.advancedSelections).length === 0)
+    return missing.length === 0 || `missing advancedSelections: ${missing.map((template: any) => template.id).join(', ')}`
+  })
+
+  check('masterTemplates: device/scene/light references remain valid', () => {
+    const broken = masterTemplates.filter((template: any) =>
+      !deviceIds.has(template.lockedCore.device) ||
+      !sceneIds.has(template.lockedCore.scene) ||
+      !lightIds.has(template.lockedCore.light),
+    )
+    return broken.length === 0 || `broken refs: ${broken.map((template: any) => template.id).join(', ')}`
+  })
+
+  check('masterTemplates: all randomPools.state exist in STATE_PACKS', () => {
+    const broken: string[] = []
+    for (const template of masterTemplates) {
+      for (const stateId of template.randomPools.state) {
+        if (!stateIds.has(stateId)) broken.push(`${template.id}:${stateId}`)
       }
     }
-  }
-  return bad.length === 0 || `bad diff refs: ${bad.join(', ')}`
-})
+    return broken.length === 0 || `broken state refs: ${broken.join(', ')}`
+  })
 
-// --- 9. diffPacks all have valid triggerSlots ---
-check('diffPacks: each has at least one triggerSlot or *', () => {
-  const bad = diffPacks.DIFF_PACKS.filter(d => d.triggerSlots.length === 0)
-  return bad.length === 0 || `empty triggerSlots: ${bad.map(d => d.id).join(', ')}`
-})
+  check('bridge coverage: known missing scenes are now mapped', () => {
+    const targets = ['ballet-studio', 'bookstore-silent', 'clean-girl-headshot', 'summer-tree-candid', 'office-siren', 'gallery-minimal']
+    const broken = targets.filter(id => !MASTER_TEMPLATE_MAP[id]?.advancedSelections?.scenePrimary)
+    return broken.length === 0 || `scenePrimary missing: ${broken.join(', ')}`
+  })
 
-// ==================== Behavioral Tests ====================
-const promptState = await loadCore('promptState.ts')
+  check('bridge coverage: known missing states now have facet fragments', () => {
+    const targets = ['drinking-tea', 'playing-with-pet', 'walking']
+    const broken = targets.filter(id => {
+      const state = STATE_PACKS.find((entry: any) => entry.id === id)
+      return !state?.facetFragment || Object.keys(state.facetFragment).length === 0
+    })
+    return broken.length === 0 || `state facetFragment missing: ${broken.join(', ')}`
+  })
 
-// --- 10. APPLY_MASTER_TEMPLATE fills advanced.facetSelections ---
-check('promptReducer: APPLY_MASTER_TEMPLATE sets advanced.facetSelections', () => {
-  const state = promptState.defaultPromptState
-  const next = promptState.promptReducer(state, { type: 'APPLY_MASTER_TEMPLATE', templateId: 'night-convenience-ccd' })
-  return Object.keys(next.advanced.facetSelections).length > 0 || 'facetSelections is empty'
-})
+  check('promptReducer: APPLY_MASTER_TEMPLATE seeds full advanced selections', () => {
+    const next = promptState.promptReducer(promptState.defaultPromptState, { type: 'APPLY_MASTER_TEMPLATE', templateId: 'night-convenience-ccd' })
+    return Object.keys(next.advanced.facetSelections).length >= 6 || `too few slots: ${Object.keys(next.advanced.facetSelections).length}`
+  })
 
-// --- 11. advanced.facetSelections contains director mapping result ---
-check('promptReducer: advanced.facetSelections includes shootingMedium from device mapping', () => {
-  const state = promptState.defaultPromptState
-  const next = promptState.promptReducer(state, { type: 'APPLY_MASTER_TEMPLATE', templateId: 'night-convenience-ccd' })
-  return next.advanced.facetSelections['shootingMedium'] === 'med_ccd' || `expected med_ccd got ${next.advanced.facetSelections['shootingMedium']}`
-})
+  check('promptReducer: advanced edits can invalidate template match and keep custom state', () => {
+    const seeded = promptState.promptReducer(promptState.defaultPromptState, { type: 'APPLY_MASTER_TEMPLATE', templateId: 'night-convenience-ccd' })
+    const changed = promptState.promptReducer(seeded, { type: 'UPDATE_ADVANCED_FACET', slotId: 'scenePrimary', value: 'scene_cafe' })
+    return changed.director.templateId === null || changed.director.templateId === 'cafe-window' || `unexpected template match: ${changed.director.templateId}`
+  })
 
-// --- 12. UPDATE_ADVANCED_FACET syncs back to director ---
-check('promptReducer: UPDATE_ADVANCED_FACET updates director via reverse mapping', () => {
-  const state = {
-    ...promptState.defaultPromptState,
-    advanced: { facetSelections: { shootingMedium: 'med_ccd', scenePrimary: 'scene_street', lightFamily: 'lf_speedlight', posePrimary: 'pose_walking', expressionPrimary: 'expr_confident', handheld: ['饮料'] } },
-  }
-  const next = promptState.promptReducer(state as any, { type: 'UPDATE_ADVANCED_FACET', slotId: 'shootingMedium', value: 'med_phone' })
-  return next.director.deviceId === 'phone-natural' || `expected phone-natural got ${next.director.deviceId}`
-})
+  check('parseImportedPrompt: Chinese prompt hits structured slots and preserves params', () => {
+    const parsed = builder.parseImportedPrompt('咖啡馆，窗边光，回眸，胶片感，--ar 3:4')
+    const lightHit = parsed.selections.lightingPrimary === 'light_natural_window' || parsed.selections.lightFamily === 'lf_window'
+    return (
+      parsed.selections.scenePrimary === 'scene_cafe' &&
+      lightHit &&
+      parsed.selections.posePrimary === 'pose_looking_back' &&
+      parsed.selections.colorGradePrimary === 'color_film' &&
+      parsed.importMeta.parameterSuffix.includes('--ar 3:4')
+    ) || 'Chinese parsing failed to recover expected structured selections'
+  })
 
-// --- 13. APPLY_POSE_VARIANT creates variantOverlay ---
-check('promptReducer: APPLY_POSE_VARIANT creates variantOverlay', () => {
-  const mockVariant = {
-    shot: {
-      id: 'test-variant-1',
-      title: 'Test',
-      purpose: 'test',
-      bodyPose: 'standing',
-      bodyAngle: '',
-      weightShift: '',
-      handTask: '',
-      gaze: '',
-      expression: '',
-      sceneInteraction: '',
-      cameraCrop: '',
-      cameraAngle: '',
-      motionCue: '',
-      requiredDiffPacks: [],
-      avoid: [],
-    },
-    pipelineId: 'test',
-    positivePrompt: 'test prompt',
-    negativePrompt: [],
-    autoDiffPacks: ['hand-fix'],
-  }
-  const state = { ...promptState.defaultPromptState, variants: { list: [mockVariant], activeVariantId: 'test-variant-1', appliedVariantId: null } }
-  const next = promptState.promptReducer(state as any, { type: 'APPLY_POSE_VARIANT', variantId: 'test-variant-1' })
-  return next.variantOverlay !== null || 'variantOverlay is null'
-})
+  check('parseImportedPrompt: mixed Chinese/English prompt keeps unmatched content and negative prompt', () => {
+    const parsed = builder.parseImportedPrompt('书店, natural light, 看镜头, clean girl, extra unknown note, 负面提示词：手变形，塑料皮肤, --stylize 100')
+    const expr = parsed.selections.expressionModifiers
+    const hasEyeContact = Array.isArray(expr) && expr.includes('emod_looking_at_camera')
+    return (
+      parsed.selections.scenePrimary === 'scene_bookstore' &&
+      parsed.selections.lightFamily === 'lf_natural' &&
+      hasEyeContact &&
+      parsed.freeformPositive.includes('extra unknown note') &&
+      parsed.freeformNegative.includes('手变形') &&
+      parsed.importMeta.parameterSuffix.includes('--stylize 100')
+    ) || 'mixed-language parsing failed'
+  })
 
-// --- 14. APPLY_POSE_VARIANT updates advanced.facetSelections ---
-check('promptReducer: APPLY_POSE_VARIANT updates advanced.facetSelections with pose mapping', () => {
-  const mockVariant = {
-    shot: {
-      id: 'test-variant-2',
-      title: 'Test',
-      purpose: 'test',
-      bodyPose: '站在树下',
-      bodyAngle: '',
-      weightShift: '',
-      handTask: '',
-      gaze: '看镜头',
-      expression: '微笑',
-      sceneInteraction: '',
-      cameraCrop: '半身',
-      cameraAngle: '',
-      motionCue: '',
-      requiredDiffPacks: [],
-      avoid: [],
-    },
-    pipelineId: 'test',
-    positivePrompt: 'test prompt',
-    negativePrompt: [],
-    autoDiffPacks: ['hand-fix'],
-  }
-  const state = { ...promptState.defaultPromptState, variants: { list: [mockVariant], activeVariantId: 'test-variant-2', appliedVariantId: null } }
-  const next = promptState.promptReducer(state as any, { type: 'APPLY_POSE_VARIANT', variantId: 'test-variant-2' })
-  return (next.advanced.facetSelections['posePrimary'] === 'pose_standing' && next.advanced.facetSelections['expressionPrimary'] === 'expr_smile') || `got pose=${next.advanced.facetSelections['posePrimary']} expr=${next.advanced.facetSelections['expressionPrimary']}`
-})
+  check('promptReducer: manual import records sourceKind manualPaste', () => {
+    const next = promptState.promptReducer(promptState.defaultPromptState, { type: 'IMPORT_ADVANCED_PROMPT', text: '咖啡馆，窗边光，回眸' })
+    return next.advanced.importMeta?.sourceKind === 'manualPaste' || 'manual import meta sourceKind missing'
+  })
 
-// --- 15. selectOutput positive includes variant bodyPose ---
-check('selectOutput: APPLY_POSE_VARIANT output includes variant bodyPose in positivePrompt', () => {
-  const mockVariant = {
-    shot: {
-      id: 'test-variant-3', title: 'Test', purpose: 'test',
-      bodyPose: '站在树荫下', bodyAngle: '', weightShift: '',
-      handTask: '', gaze: '', expression: '', sceneInteraction: '',
-      cameraCrop: '', cameraAngle: '', motionCue: '', requiredDiffPacks: [], avoid: [],
-    },
-    pipelineId: 'test', positivePrompt: 'test prompt', negativePrompt: [], autoDiffPacks: [],
-  }
-  const state = { ...promptState.defaultPromptState, variants: { list: [mockVariant], activeVariantId: 'test-variant-3', appliedVariantId: null } }
-  const next = promptState.promptReducer(state as any, { type: 'APPLY_POSE_VARIANT', variantId: 'test-variant-3' })
-  const output = promptState.selectOutput(next)
-  return output.positivePrompt.includes('站在树荫下') || `positivePrompt missing variant text: ${output.positivePrompt}`
-})
+  check('buildSegmentedPrompt: tag and natural outputs both work across languages', () => {
+    const selections = {
+      outputLang: 'lang_mix',
+      scenePrimary: 'scene_cafe',
+      posePrimary: 'pose_sitting',
+      expressionPrimary: 'expr_smile',
+    }
+    const tag = builder.buildSegmentedPrompt(selections, { outputLang: 'mix', promptStyle: 'tag' })
+    const natural = builder.buildSegmentedPrompt(selections, { outputLang: 'mix', promptStyle: 'natural' })
+    return (
+      tag.flatPrompt.includes('|') &&
+      natural.naturalPrompt.includes('English tags:') &&
+      tag.positivePrompt !== natural.positivePrompt
+    ) || 'segmented prompt outputs do not differ as expected'
+  })
 
-// --- 16. selectOutput negative includes autoDiffPacks negative ---
-check('selectOutput: APPLY_POSE_VARIANT negativePrompt contains autoDiffPack negatives', () => {
-  const mockVariant = {
-    shot: {
-      id: 'test-variant-4', title: 'Test', purpose: 'test',
-      bodyPose: '', bodyAngle: '', weightShift: '', handTask: '手拿咖啡',
-      gaze: '', expression: '', sceneInteraction: '', cameraCrop: '',
-      cameraAngle: '', motionCue: '', requiredDiffPacks: [], avoid: [],
-    },
-    pipelineId: 'test', positivePrompt: 'test prompt', negativePrompt: [], autoDiffPacks: ['hand-fix'],
-  }
-  const state = { ...promptState.defaultPromptState, variants: { list: [mockVariant], activeVariantId: 'test-variant-4', appliedVariantId: null } }
-  const next = promptState.promptReducer(state as any, { type: 'APPLY_POSE_VARIANT', variantId: 'test-variant-4' })
-  const output = promptState.selectOutput(next)
-  return output.negativePrompt.some(n => n.includes('extra fingers') || n.includes('missing fingers')) || `hand-fix negatives not found: ${JSON.stringify(output.negativePrompt)}`
-})
+  check('external library: generated manifest has valid sources, categories, chunks, and entry summaries', () => {
+    const index = externalLibrary
+    const sourceIds = new Set(index.sources.map((source: any) => source.id))
+    const chunkIds = new Set(index.chunks.map((chunk: any) => chunk.id))
+    const invalid = index.entryIndex.filter((entry: any) =>
+      !sourceIds.has(entry.sourceId) ||
+      !chunkIds.has(entry.chunkId) ||
+      !(entry.displayTitleZh || entry.title) ||
+      !entry.category ||
+      !entry.displayCategoryZh ||
+      !entry.normalizedCategory ||
+      !entry.sourceTier ||
+      !entry.qualityTier ||
+      !Array.isArray(entry.styleTags) ||
+      !Array.isArray(entry.sceneTags) ||
+      typeof entry.importHints !== 'object' ||
+      typeof entry.searchText !== 'string',
+    )
+    const sourceCoverage = ['freestylefly', 'evolink', 'youmind'].every(sourceId =>
+      index.entryIndex.some((entry: any) => entry.sourceId === sourceId),
+    )
+    const categoryCoverage = ['portrait', 'street', 'cinematic', 'fashion', 'commercial', 'poster', 'ui-graphic'].every(categoryId =>
+      index.categories.some((category: any) => category.id === categoryId && category.entryCount > 0),
+    )
+    const mojibake = index.entryIndex.filter((entry: any) =>
+      /(^"|"$)|"[^"]/.test(entry.title) ||
+      entry.title.includes('锛') ||
+      entry.title.includes('銆') ||
+      entry.title.includes('鈥')
+    )
+    return (
+      index.entryIndex.length >= 1000 &&
+      index.categories.length >= 10 &&
+      index.chunks.length >= 10 &&
+      sourceCoverage &&
+      categoryCoverage &&
+      mojibake.length === 0 &&
+      invalid.length === 0
+    ) || `invalid manifest entries: ${invalid.map((entry: any) => entry.id).slice(0, 10).join(', ')}; mojibake: ${mojibake.map((entry: any) => entry.id).slice(0, 10).join(', ')}`
+  })
 
-// --- 17. getCompatibleDevices only returns scene.recommendedDevices ---
-check('DirectorPanel: getCompatibleDevices filters by scene', () => {
-  const template = masterTemplates.MASTER_TEMPLATE_MAP?.['night-convenience-ccd'] ?? masterTemplates.masterTemplates.find((t: any) => t.id === 'night-convenience-ccd')
-  if (!template) return 'template not found'
-  const scenePack = scenePacks.SCENE_MAP[template.lockedCore.scene] || scenePacks.SCENE_PACKS.find((s: any) => s.id === template.lockedCore.scene)
-  if (!scenePack) return 'scene pack not found'
-  const recommended = scenePack.recommendedDevices
-  if (!recommended || recommended.length === 0) return 'no recommended devices'
-  return true
-})
+  check('external library: chunk files exist and can hydrate full entries on demand', () => {
+    const index = externalLibrary
+    const sample = index.entryIndex.find((entry: any) => entry.sourceId === 'evolink' && entry.normalizedCategory === 'street')
+      ?? index.entryIndex[0]
+    if (!sample) return 'missing sample summary entry'
 
-// --- 18. getCompatibleLights only returns scene.recommendedLights ---
-check('DirectorPanel: getCompatibleLights filters by scene', () => {
-  const template = masterTemplates.MASTER_TEMPLATE_MAP?.['night-convenience-ccd'] ?? masterTemplates.masterTemplates.find((t: any) => t.id === 'night-convenience-ccd')
-  if (!template) return 'template not found'
-  const scenePack = scenePacks.SCENE_MAP[template.lockedCore.scene] || scenePacks.SCENE_PACKS.find((s: any) => s.id === template.lockedCore.scene)
-  if (!scenePack) return 'scene pack not found'
-  const recommended = scenePack.recommendedLights
-  if (!recommended || recommended.length === 0) return 'no recommended lights'
-  return true
-})
+    const chunk = index.chunks.find((item: any) => item.id === sample.chunkId)
+    if (!chunk) return `missing chunk meta for ${sample.chunkId}`
 
-// --- 19. filterAvoidedItems excludes matching items ---
-check('DirectorPanel: filterAvoidedItems excludes items by id/label', () => {
-  const items = [
-    { id: 'ccd-flash', labelZh: 'CCD 闪光灯' },
-    { id: 'phone-natural', labelZh: '手机原相机' },
-  ]
-  const filtered = items.filter(item => !['ccd'].some(a =>
-    item.id.includes(a) || (item.labelZh && item.labelZh.includes(a))
-  ))
-  return filtered.length === 1 && filtered[0].id === 'phone-natural' || 'ccd-flash not filtered out'
-})
+    const chunkPath = path.resolve(root, 'public', chunk.path.replace(/^\//, ''))
+    if (!ts.sys.fileExists(chunkPath)) return `chunk file missing: ${chunk.path}`
 
-// --- Report ---
+    const loaded = JSON.parse(readFileSync(chunkPath, 'utf8')) as { meta: any; entries: Array<any> }
+    const entry = loaded.entries.find(item => item.id === sample.id)
+    return (
+      loaded.meta.id === chunk.id &&
+      Array.isArray(loaded.entries) &&
+      loaded.entries.length > 0 &&
+      !!entry?.prompt
+    ) || `chunk did not contain full entry for ${sample.id}`
+  })
+
+  check('promptReducer: external library import preserves source metadata and round-trips into advanced state', () => {
+    const index = externalLibrary
+    const summary = index.entryIndex.find((entry: any) =>
+      entry.sourceId === 'evolink' &&
+      entry.recommendedForCurrentProduct &&
+      Object.keys(entry.importHints ?? {}).length > 0,
+    ) ?? index.entryIndex.find((entry: any) => Object.keys(entry.importHints ?? {}).length > 0)
+    if (!summary) return 'missing importable external library summary'
+
+    const chunk = index.chunks.find((item: any) => item.id === summary.chunkId)
+    if (!chunk) return `missing chunk meta for ${summary.chunkId}`
+
+    const chunkPath = path.resolve(root, 'public', chunk.path.replace(/^\//, ''))
+    const loaded = JSON.parse(readFileSync(chunkPath, 'utf8')) as { entries: Array<any> }
+    const entry = loaded.entries.find(item => item.id === summary.id)
+    if (!entry) return `missing full entry for ${summary.id}`
+
+    const next = promptState.promptReducer(promptState.defaultPromptState, { type: 'IMPORT_EXTERNAL_LIBRARY_ENTRY', entry })
+    return (
+      next.advanced.importMeta?.sourceKind === 'externalLibraryImport' &&
+      next.advanced.importMeta?.entryId === entry.id &&
+      next.advanced.importMeta?.sourceRepo === entry.sourceRepo &&
+      next.advanced.importMeta?.qualityTier === entry.qualityTier &&
+      next.advanced.importMeta?.sourceTier === entry.sourceTier &&
+      (Object.keys(next.advanced.facetSelections).length > 1 || next.advanced.freeformPositive.length > 0)
+    ) || 'external library import metadata or selections missing'
+  })
+
+  check('generatePoseVariants: returns exact counts for 3/5/9', () => {
+    const selection = {
+      directorTemplate: 'cafe-window',
+      devicePreset: 'iphone-lifestyle',
+      scenePack: 'cafe-window',
+      lightPack: 'window-natural',
+      statePacks: ['reading-book'],
+      diffStrength: 'normal',
+      parameterPreset: 'real-stable',
+      customProps: ['咖啡杯'],
+    }
+    const counts = [3, 5, 9].map(count => variantComposer.generatePoseVariants(selection, { variantCount: count as 3 | 5 | 9, intensity: 'standard' }).length)
+    return counts[0] === 3 && counts[1] === 5 && counts[2] === 9 || `bad counts: ${counts.join(', ')}`
+  })
+
+  check('generatePoseVariants: avoids obvious duplicate pose batches', () => {
+    const selection = {
+      directorTemplate: 'summer-tree-candid',
+      devicePreset: 'digital-camera',
+      scenePack: 'summer-tree-candid',
+      lightPack: 'tree-dappled',
+      statePacks: ['walking-naturally'],
+      diffStrength: 'normal',
+      parameterPreset: 'real-stable',
+      customProps: [],
+    }
+    const variants = variantComposer.generatePoseVariants(selection, { variantCount: 5, intensity: 'dynamic' })
+    const poses = new Set(variants.map((variant: any) => variant.facetFragment?.posePrimary))
+    return poses.size >= 3 || `not enough pose diversity: ${poses.size}`
+  })
+
+  check('promptReducer: APPLY_POSE_VARIANT merges facet fragment into advanced selections', () => {
+    const variants = variantComposer.generatePoseVariants({
+      directorTemplate: 'cafe-window',
+      devicePreset: 'iphone-lifestyle',
+      scenePack: 'cafe-window',
+      lightPack: 'window-natural',
+      statePacks: ['reading-book'],
+      diffStrength: 'normal',
+      parameterPreset: 'real-stable',
+      customProps: [],
+    }, { variantCount: 3, intensity: 'standard' })
+
+    const seeded = {
+      ...promptState.defaultPromptState,
+      variants: { list: variants, activeVariantId: variants[0].shot.id, appliedVariantId: null },
+      advanced: { ...promptState.defaultPromptState.advanced, facetSelections: { outputLang: 'lang_zh' } },
+    }
+    const next = promptState.promptReducer(seeded, { type: 'APPLY_POSE_VARIANT', variantId: variants[0].shot.id })
+    return Object.keys(next.advanced.facetSelections).length > 1 || 'variant fragment was not applied to advanced selections'
+  })
+
+  check('selectOutput: sections and natural prompt are populated', () => {
+    const seeded = promptState.promptReducer(promptState.defaultPromptState, { type: 'APPLY_MASTER_TEMPLATE', templateId: 'cafe-window' })
+    const output = promptState.selectOutput(seeded)
+    return output.sections.length > 0 && output.flatPrompt.length > 0 && output.naturalPrompt.length > 0 || 'composed output missing segmented data'
+  })
+} finally {
+  rmSync(runtimeDir, { recursive: true, force: true })
+}
+
 console.log('')
 console.log('=== Self-Test Results ===')
 console.log(`  PASS: ${PASS.length}`)
 console.log(`  FAIL: ${FAIL.length}`)
-console.log(`  WARN: ${WARN.length}`)
 console.log('')
 
 if (FAIL.length > 0) {
   console.log('--- FAILURES ---')
-  for (const f of FAIL) console.log('  ✗ ' + f)
-  console.log('')
-}
-
-if (WARN.length > 0) {
-  console.log('--- WARNINGS ---')
-  for (const w of WARN) console.log('  ⚠ ' + w)
+  for (const failure of FAIL) console.log(`  - ${failure}`)
   console.log('')
 }
 

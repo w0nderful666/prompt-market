@@ -1,0 +1,144 @@
+{
+  "meta": {
+    "id": "evolink:lifestyle",
+    "sourceId": "evolink",
+    "normalizedCategory": "lifestyle",
+    "label": "EvoLinkAI 大型案例库 · 生活方式",
+    "path": "/external-library-chunks-v2/evolink/lifestyle.json",
+    "entryCount": 4
+  },
+  "entries": [
+    {
+      "id": "evolink-portrait-blonde-maid-in-warm-cafe",
+      "sourceId": "evolink",
+      "sourceRepo": "EvoLinkAI/awesome-gpt-image-2-API-and-Prompts",
+      "sourceUrl": "https://x.com/yume00112211/status/2048072808606089230",
+      "title": "Blonde Maid in Warm Cafe",
+      "author": "yume00112211",
+      "license": "See source repository",
+      "category": "portrait",
+      "styleTags": [
+        "portrait"
+      ],
+      "sceneTags": [
+        "cafe"
+      ],
+      "prompt": "A polished anime-style portrait of a blonde female VTuber-inspired maid seated indoors in a cozy sunlit cafe, framed from upper thighs to head in a slightly high, intimate angle. She has short to medium-length tousled golden blonde hair with soft layers, a white frilled maid headband, and a teal ribbon hair accessory with a small gold ornament on the right side. Her face is mostly obscured by the hair falling forward, creating a mysterious hidden-face composition. She wears an elegant black-and-white maid dress with puff sleeves, white ruffles, gold trim, a fitted bodice, a white apron, and a large white waist bow visible at the side and back. Add 2 teal bows with gold star-like charms: 1 at the collar and 1 on the wrist. Her right hand gently touches the bow at her chest, and her left hand is raised delicately near her shoulder holding a loose strand of hair. Include a frilly lace garter on her exposed thigh with a small teal-and-gold ribbon decoration. The background is a warmly lit European-style cafe interior with wooden beams, framed botanical art on the walls, a softly blurred cake stand on the left, window light streaming in, and tiny glowing dust-like sparkles in the air. Use soft golden afternoon lighting, shallow depth of field, glossy detailed fabric rendering, delicate skin shading, subtle romantic atmosphere, and highly detailed refined anime illustration quality.",
+      "description": "",
+      "displayTitleZh": "Blonde Maid in Warm 咖啡馆",
+      "displaySummaryZh": "来自EvoLinkAI 大型案例库的生活方式条目《Blonde Maid in Warm Cafe》。 关键词：portrait、cafe。结构更完整，适合直接导入高级编辑。",
+      "displayCategoryZh": "生活方式",
+      "language": "en",
+      "importHints": {
+        "scenePrimary": "scene_cafe"
+      },
+      "sourceTier": "large-gallery-secondary",
+      "qualityTier": "curated",
+      "recommendedForCurrentProduct": true,
+      "chunkId": "evolink:lifestyle",
+      "searchText": "blonde maid in warm cafe a polished anime-style portrait of a blonde female vtuber-inspired maid seated indoors in a cozy sunlit cafe, framed from upper thighs to head in a slightly high, intimate angle. she has short to medium-length tousled golden blonde hair with soft layers, a white frilled maid headband, and a teal ribbon hair accessory with a small gold ornament on the right side. her face is mostly obscured by the hair falling forward, creating a mysterious hidden-face composition. she wears an elegant black-and-white maid dress with puff sleeves, white ruffles, gold trim, a fitted bodice, a white apron, and a large white waist bow visible at the side and back. add 2 teal bows with gold star-like charms: 1 at the collar and 1 on the wrist. her right hand gently touches the bow at her chest, and her left hand is raised delicately near her shoulder holding a loose strand of hair. include a frilly lace garter on her exposed thigh with a small teal-and-gold ribbon decoration. the background is a warmly lit european-style cafe interior with wooden beams, framed botanical art on the walls, a softly blurred cake stand on the left, window light streaming in, and tiny glowing dust-like sparkles in the air. use soft golden afternoon lighting, shallow depth of field, glossy detailed fabric rendering, delicate skin shading, subtle romantic atmosphere, and highly detailed refined anime illustration quality. portrait yume00112211 portrait cafe",
+      "originalCategory": "portrait",
+      "normalizedCategory": "lifestyle",
+      "importConfidence": 0.95,
+      "portraitFocused": true,
+      "entryKind": "case"
+    },
+    {
+      "id": "evolink-ui-anime-friends-eating-soba",
+      "sourceId": "evolink",
+      "sourceRepo": "EvoLinkAI/awesome-gpt-image-2-API-and-Prompts",
+      "sourceUrl": "https://x.com/AIMAG31G/status/2048089673621516547",
+      "title": "Anime Friends Eating Soba",
+      "author": "AIMAG31G",
+      "license": "See source repository",
+      "category": "ui",
+      "styleTags": [
+        "snapshot"
+      ],
+      "sceneTags": [],
+      "prompt": "A cozy anime-style interior of a traditional Japanese soba restaurant, viewed from table height in a booth, with two young women seated across the near corners of a rectangular wooden table and facing the viewer in a casual dining snapshot. The left woman has long straight pastel lavender with cyan highlights hair with glossy strands and soft bangs, and wears a white kimono-style top with bright blue trim and a deep blue obi-like sash skirt; she is slightly curvy, sitting on the left red vinyl bench, turned a little toward the camera, raising her left hand in an open friendly wave. The right woman has a sleek short bob in dark brown to black with a purple underlayer visible near the ends, red rectangular glasses, small earrings, a fitted charcoal-gray long-sleeve scoop-neck top, and light blue jeans; she sits on the right red vinyl bench, leaning slightly toward the table and holding chopsticks in her right hand as if about to eat. Place 2 large black bowls of soba on the table, one in front of each woman, both filled with dark broth, noodles, sliced duck meat, and chopped green onions; add 1 clear water glass near the center back of the table and 2 small condiment dishes beside it. The restaurant should feel warm and nostalgic, with wooden paneling, a shoji-style window on the left, a small potted plant on the windowsill, a back counter with condiments and utensils, and a navy noren curtain on the right bearing large white Japanese text \"蕎麦\" and smaller vertical text \"手打ちそば\". On the back wall, show 7 vertical wooden menu boards with Japanese dish names and prices, including labels such as \"もりそば\", \"ざるそば\", \"かけそば\", \"たぬきそば\", \"肉そば\", \"天ぷらそば\", and \"鴨南蛮そば\". Use clean polished anime rendering, crisp line art, soft warm lighting, detailed food illustration, rich wood textures, and a friendly everyday outing mood.",
+      "description": "",
+      "displaySummaryZh": "来自EvoLinkAI 大型案例库的生活方式条目《Anime Friends Eating Soba》。 关键词：snapshot。结构更完整，适合直接导入高级编辑。",
+      "displayCategoryZh": "生活方式",
+      "language": "mixed",
+      "importHints": {},
+      "sourceTier": "large-gallery-secondary",
+      "qualityTier": "curated",
+      "recommendedForCurrentProduct": true,
+      "chunkId": "evolink:lifestyle",
+      "searchText": "anime friends eating soba a cozy anime-style interior of a traditional japanese soba restaurant, viewed from table height in a booth, with two young women seated across the near corners of a rectangular wooden table and facing the viewer in a casual dining snapshot. the left woman has long straight pastel lavender with cyan highlights hair with glossy strands and soft bangs, and wears a white kimono-style top with bright blue trim and a deep blue obi-like sash skirt; she is slightly curvy, sitting on the left red vinyl bench, turned a little toward the camera, raising her left hand in an open friendly wave. the right woman has a sleek short bob in dark brown to black with a purple underlayer visible near the ends, red rectangular glasses, small earrings, a fitted charcoal-gray long-sleeve scoop-neck top, and light blue jeans; she sits on the right red vinyl bench, leaning slightly toward the table and holding chopsticks in her right hand as if about to eat. place 2 large black bowls of soba on the table, one in front of each woman, both filled with dark broth, noodles, sliced duck meat, and chopped green onions; add 1 clear water glass near the center back of the table and 2 small condiment dishes beside it. the restaurant should feel warm and nostalgic, with wooden paneling, a shoji-style window on the left, a small potted plant on the windowsill, a back counter with condiments and utensils, and a navy noren curtain on the right bearing large white japanese text \"蕎麦\" and smaller vertical text \"手打ちそば\". on the back wall, show 7 vertical wooden menu boards with japanese dish names and prices, including labels such as \"もりそば\", \"ざるそば\", \"かけそば\", \"たぬきそば\", \"肉そば\", \"天ぷらそば\", and \"鴨南蛮そば\". use clean polished anime rendering, crisp line art, soft warm lighting, detailed food illustration, rich wood textures, and a friendly everyday outing mood. ui aimag31g snapshot",
+      "originalCategory": "ui",
+      "normalizedCategory": "lifestyle",
+      "importConfidence": 0.95,
+      "portraitFocused": true,
+      "entryKind": "case"
+    },
+    {
+      "id": "evolink-ui-anime-campers-in-a-winter-tent",
+      "sourceId": "evolink",
+      "sourceRepo": "EvoLinkAI/awesome-gpt-image-2-API-and-Prompts",
+      "sourceUrl": "https://x.com/sub_raw_jin/status/2048066779835220392",
+      "title": "Anime Campers in a Winter Tent",
+      "author": "sub_raw_jin",
+      "license": "See source repository",
+      "category": "ui",
+      "styleTags": [
+        "realistic",
+        "snapshot"
+      ],
+      "sceneTags": [],
+      "prompt": "A cozy winter camping scene inside a large beige canvas tent, rendered as a semi-realistic anime illustration with natural lighting and realistic environmental detail. Show exactly 2 seated young women around a compact kerosene heater used as a camp table, with a large black metal pot resting on top. The viewpoint is a candid wide-angle photo composition from slightly above seated height, making the scene feel like a casual snapshot taken inside the tent. The woman on the left has dark brown hair tied in a high ponytail with loose bangs, and wears a fluffy brown fleece jacket, dark pants, and a red lanyard with an ID card. She sits in a low camping chair and leans forward, using chopsticks over a small bowl or food container in her hands. The woman on the right has black shoulder-length hair and wears a muted purple hoodie layered under a black puffer vest, light gray sweatpants, and dark shoes. She sits in another low camping chair, resting her cheek on one hand in a relaxed, sleepy pose. Keep both faces obscured by a soft rectangular blur block, as if anonymized in a posted photo. Around them, include exactly 4 red beverage cans visible in the scene: 2 on the wooden table planks near the center, 1 cropped in the lower right foreground, and 1 farther back near the right side. Build a low U-shaped arrangement of 3 wooden bench planks surrounding the heater. Add small camping details: 1 olive duffel bag on the left ground, 1 plastic storage box with supplies behind the left woman, 1 white plastic shopping bag on top of the box, 1 small bowl on the table, 1 colorful snack package on the right-side plank, 1 soft brown cloth on the far left floor, and 1 black metal rack frame standing at the back right. The tent interior should have taut canvas walls, visible seams and support poles, a gravel ground, and a warm muted color palette. Preserve the feeling of a real camping photo where only the people have been turned into anime-style characters while the setting remains highly realistic.",
+      "description": "",
+      "displaySummaryZh": "来自EvoLinkAI 大型案例库的生活方式条目《Anime Campers in a Winter Tent》。 关键词：realistic、snapshot。结构更完整，适合直接导入高级编辑。",
+      "displayCategoryZh": "生活方式",
+      "language": "en",
+      "importHints": {},
+      "sourceTier": "large-gallery-secondary",
+      "qualityTier": "curated",
+      "recommendedForCurrentProduct": true,
+      "chunkId": "evolink:lifestyle",
+      "searchText": "anime campers in a winter tent a cozy winter camping scene inside a large beige canvas tent, rendered as a semi-realistic anime illustration with natural lighting and realistic environmental detail. show exactly 2 seated young women around a compact kerosene heater used as a camp table, with a large black metal pot resting on top. the viewpoint is a candid wide-angle photo composition from slightly above seated height, making the scene feel like a casual snapshot taken inside the tent. the woman on the left has dark brown hair tied in a high ponytail with loose bangs, and wears a fluffy brown fleece jacket, dark pants, and a red lanyard with an id card. she sits in a low camping chair and leans forward, using chopsticks over a small bowl or food container in her hands. the woman on the right has black shoulder-length hair and wears a muted purple hoodie layered under a black puffer vest, light gray sweatpants, and dark shoes. she sits in another low camping chair, resting her cheek on one hand in a relaxed, sleepy pose. keep both faces obscured by a soft rectangular blur block, as if anonymized in a posted photo. around them, include exactly 4 red beverage cans visible in the scene: 2 on the wooden table planks near the center, 1 cropped in the lower right foreground, and 1 farther back near the right side. build a low u-shaped arrangement of 3 wooden bench planks surrounding the heater. add small camping details: 1 olive duffel bag on the left ground, 1 plastic storage box with supplies behind the left woman, 1 white plastic shopping bag on top of the box, 1 small bowl on the table, 1 colorful snack package on the right-side plank, 1 soft brown cloth on the far left floor, and 1 black metal rack frame standing at the back right. the tent interior should have taut canvas walls, visible seams and support poles, a gravel ground, and a warm muted color palette. preserve the feeling of a real camping photo where only the people have been turned into anime-style characters while the setting remains highly realistic. ui sub_raw_jin realistic snapshot",
+      "originalCategory": "ui",
+      "normalizedCategory": "lifestyle",
+      "importConfidence": 0.95,
+      "portraitFocused": true,
+      "entryKind": "case"
+    },
+    {
+      "id": "evolink-portrait-cozy-cafe-editorial-portrait",
+      "sourceId": "evolink",
+      "sourceRepo": "EvoLinkAI/awesome-gpt-image-2-API-and-Prompts",
+      "sourceUrl": "https://x.com/sha_zdiii/status/2054047328420634927",
+      "title": "Cozy Cafe Editorial Portrait",
+      "author": "sha_zdiii",
+      "license": "See source repository",
+      "category": "portrait",
+      "styleTags": [
+        "portrait",
+        "editorial"
+      ],
+      "sceneTags": [
+        "cafe"
+      ],
+      "prompt": "",
+      "description": "",
+      "displayTitleZh": "Cozy 咖啡馆 编辑感 人像",
+      "displaySummaryZh": "来自EvoLinkAI 大型案例库的生活方式条目《Cozy Cafe Editorial Portrait》。 关键词：portrait、editorial、cafe。原始文本噪音偏多，导入后建议顺手清理一下。",
+      "displayCategoryZh": "生活方式",
+      "language": "en",
+      "importHints": {
+        "scenePrimary": "scene_cafe"
+      },
+      "sourceTier": "large-gallery-secondary",
+      "qualityTier": "noisy",
+      "recommendedForCurrentProduct": true,
+      "chunkId": "evolink:lifestyle",
+      "searchText": "cozy cafe editorial portrait portrait sha_zdiii portrait editorial cafe",
+      "originalCategory": "portrait",
+      "normalizedCategory": "lifestyle",
+      "importConfidence": 0.75,
+      "portraitFocused": true,
+      "entryKind": "case"
+    }
+  ]
+}

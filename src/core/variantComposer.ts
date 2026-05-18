@@ -1,182 +1,144 @@
-import type { DirectorSelection, PoseVariant, PosePipeline, PoseShot, ScenePoseRule } from './types'
-import { selectPipeline } from '../data/posePipelines'
-import { getScenePoseRule } from '../data/scenePoseRules'
+import type { DirectorSelection, PoseVariant } from './types'
 import { DEVICE_MAP } from '../data/devicePresets'
-import { SCENE_MAP } from '../data/scenePacks'
 import { LIGHT_MAP } from '../data/lightPacks'
+import { SCENE_MAP } from '../data/scenePacks'
 import { STATE_MAP } from '../data/statePacks'
 import { DIFF_MAP } from '../data/diffPacks'
-
-function pickRandom<T>(arr: T[]): T {
-  return arr[Math.floor(Math.random() * arr.length)]
-}
-
-function resolveGenericChoice(text: string, choices: string[]): string {
-  if (!text) return text
-  const match = text.match(/从[^]*?([\u4e00-\u9fff\w]+)[^]*?选一个/)
-  if (match) {
-    if (choices.length > 0) return pickRandom(choices)
-    return match[1]
-  }
-  return text
-}
-
-function resolveShotWithSceneRule(shot: PoseShot, rule: ScenePoseRule | null, intensity: string): PoseShot {
-  if (!rule) return shot
-
-  let bodyPose = shot.bodyPose
-  let handTask = shot.handTask
-  let gaze = shot.gaze
-  let expression = shot.expression
-  let cameraCrop = shot.cameraCrop
-  let motionCue = shot.motionCue
-  const avoid = [...shot.avoid, ...rule.forbiddenActions]
-
-  if (bodyPose.includes('自然站立或坐姿') || bodyPose.includes('选一个')) {
-    const filtered = rule.allowedBasePoses.filter(p => !rule.forbiddenActions.some(f => p.includes(f)))
-    if (filtered.length > 0) bodyPose = pickRandom(filtered)
-  }
-
-  if (handTask.includes('选一个')) {
-    const filtered = rule.allowedHandTasks.filter(h => !rule.forbiddenActions.some(f => h.includes(f)))
-    if (filtered.length > 0) handTask = pickRandom(filtered)
-  }
-
-  if (gaze.includes('选一个') || gaze === '看向画面外') {
-    const filtered = rule.allowedGazes.filter(g => !rule.forbiddenActions.some(f => g.includes(f)))
-    if (filtered.length > 0) gaze = pickRandom(filtered)
-  }
-
-  if (expression.includes('选一个')) {
-    const filtered = rule.allowedExpressions.filter(e => !rule.forbiddenActions.some(f => e.includes(f)))
-    if (filtered.length > 0) expression = pickRandom(filtered)
-  }
-
-  if (rule.preferredCrops.length > 0 && !rule.preferredCrops.includes(cameraCrop)) {
-    cameraCrop = pickRandom(rule.preferredCrops)
-  }
-
-  if (rule.preferredMotion.length > 0) {
-    motionCue = pickRandom(rule.preferredMotion)
-  }
-
-  bodyPose = resolveGenericChoice(bodyPose, rule.allowedBasePoses)
-  handTask = resolveGenericChoice(handTask, rule.allowedHandTasks)
-  gaze = resolveGenericChoice(gaze, rule.allowedGazes)
-  expression = resolveGenericChoice(expression, rule.allowedExpressions)
-
-  return { ...shot, bodyPose, handTask, gaze, expression, cameraCrop, motionCue, avoid }
-}
-
-function autoDetectDiffPacks(shot: PoseShot): string[] {
-  const packs: string[] = [...shot.requiredDiffPacks]
-  const hand = shot.handTask || ''
-  const body = shot.bodyPose || ''
-  const crop = shot.cameraCrop || ''
-  const motion = shot.motionCue || ''
-  const gaze = shot.gaze || ''
-
-  if (hand.includes('手') || hand.includes('拿') || hand.includes('扶') || hand.includes('拨') || hand.includes('撑') || hand.includes('伞') || hand.includes('手机') || hand.includes('咖啡') || hand.includes('花') || hand.includes('袋') || hand.includes('帽')) {
-    if (!packs.includes('hand-fix')) packs.push('hand-fix')
-  }
-  if (hand.includes('咖啡') || hand.includes('杯') || hand.includes('手机') || hand.includes('书') || hand.includes('伞') || hand.includes('袋') || hand.includes('花') || hand.includes('饮料') || hand.includes('道具') || hand.includes('耳机') || hand.includes('帽子')) {
-    if (!packs.includes('object-product-fix')) packs.push('object-product-fix')
-  }
-  if (body.includes('行走') || body.includes('转身') || body.includes('回眸') || body.includes('跳跃') || body.includes('走动') || motion.includes('模糊') || motion.includes('动态') || motion.includes('运动') || motion.includes('风吹') || motion.includes('转身') || motion.includes('走动')) {
-    if (!packs.includes('motion-fix')) packs.push('motion-fix')
-  }
-  if (crop.includes('特写') || crop.includes('近景') || crop.includes('头像') || gaze.includes('看镜头')) {
-    if (!packs.includes('face-fix')) packs.push('face-fix')
-  }
-  if (body.includes('坐') || body.includes('蹲') || body.includes('躺') || body.includes('卧')) {
-    if (!packs.includes('real-photo-base')) packs.unshift('real-photo-base')
-  }
-
-  return [...new Set(packs)]
-}
-
-function buildVariantPositivePrompt(basePrompt: string, shot: PoseShot): string {
-  const parts: string[] = []
-
-  if (basePrompt) parts.push(basePrompt)
-
-  const poseParts: string[] = []
-  if (shot.bodyPose && !shot.bodyPose.includes('选一个')) poseParts.push(shot.bodyPose)
-  if (shot.bodyAngle) poseParts.push(shot.bodyAngle)
-  if (shot.weightShift) poseParts.push(shot.weightShift)
-  if (shot.handTask && !shot.handTask.includes('选一个')) poseParts.push(shot.handTask)
-  if (shot.gaze && !shot.gaze.includes('选一个')) poseParts.push(shot.gaze)
-  if (shot.expression && !shot.expression.includes('选一个')) poseParts.push(shot.expression)
-  if (shot.sceneInteraction) poseParts.push(shot.sceneInteraction)
-  if (shot.cameraCrop && !shot.cameraCrop.includes('选一个')) poseParts.push(shot.cameraCrop)
-  if (shot.cameraAngle) poseParts.push(shot.cameraAngle)
-  if (shot.motionCue && !shot.motionCue.includes('选一个')) poseParts.push(shot.motionCue)
-
-  if (poseParts.length > 0) {
-    parts.push(poseParts.join('，'))
-  }
-
-  return parts.join('，')
-}
-
-function buildVariantNegative(packIds: string[], shot: PoseShot): string[] {
-  const negs: string[] = []
-  for (const packId of packIds) {
-    const pack = DIFF_MAP[packId]
-    if (pack) {
-      negs.push(...pack.negativePrompt)
-    }
-  }
-  if (shot.avoid.length > 0) {
-    negs.push(...shot.avoid)
-  }
-  return [...new Set(negs)]
-}
+import { VARIANT_SHOT_TEMPLATES } from '../data/variantShotTemplates'
+import { mergeFacetSelections } from '../data/facetSyncMaps'
+import { buildSegmentedPrompt } from '../utils/facetedBuilder'
 
 export interface GenerateVariantsOptions {
   variantCount: 3 | 5 | 9
   intensity: 'subtle' | 'standard' | 'dynamic'
 }
 
-export function generatePoseVariants(
-  sel: DirectorSelection,
-  options: GenerateVariantsOptions
-): PoseVariant[] {
-  const pipeline = selectPipeline(sel.scenePack || '', options.variantCount, options.intensity)
-  if (!pipeline) return []
-
-  const device = sel.devicePreset ? DEVICE_MAP[sel.devicePreset] : null
-  const scene = sel.scenePack ? SCENE_MAP[sel.scenePack] : null
-  const light = sel.lightPack ? LIGHT_MAP[sel.lightPack] : null
-  const states = sel.statePacks.map(id => STATE_MAP[id]).filter(Boolean)
-
-  const sceneRule = sel.scenePack ? getScenePoseRule(sel.scenePack) : null
-
-  const baseParts: string[] = []
-  if (scene) baseParts.push(scene.positivePromptZh)
-  for (const st of states) baseParts.push(st.positivePromptZh)
-  if (device) baseParts.push(device.positivePromptZh)
-  if (light) baseParts.push(light.positivePromptZh)
-  const basePrompt = baseParts.join('，')
-
-  const variants: PoseVariant[] = []
-  for (const rawShot of pipeline.sequence) {
-    const resolvedShot = resolveShotWithSceneRule(rawShot, sceneRule, options.intensity)
-
-    const autoPacks = autoDetectDiffPacks(resolvedShot)
-    const positive = buildVariantPositivePrompt(basePrompt, resolvedShot)
-    const negative = buildVariantNegative(autoPacks, resolvedShot)
-
-    variants.push({
-      shot: { ...resolvedShot, requiredDiffPacks: autoPacks },
-      pipelineId: pipeline.id,
-      positivePrompt: positive,
-      negativePrompt: negative,
-      autoDiffPacks: autoPacks,
-    })
+function baseSelections(sel: DirectorSelection): Record<string, string | string[]> {
+  const selections: Record<string, string | string[]> = { outputLang: 'lang_zh' }
+  if (sel.statePacks.length > 0) {
+    for (const stateId of sel.statePacks) {
+      const state = STATE_MAP[stateId]
+      if (!state?.facetFragment) continue
+      Object.assign(selections, mergeFacetSelections(selections, state.facetFragment))
+    }
   }
-
-  return variants
+  return selections
 }
 
-export { resolveShotWithSceneRule }
+function buildBasePrompt(sel: DirectorSelection): string {
+  const parts: string[] = []
+  const scene = sel.scenePack ? SCENE_MAP[sel.scenePack] : null
+  const device = sel.devicePreset ? DEVICE_MAP[sel.devicePreset] : null
+  const light = sel.lightPack ? LIGHT_MAP[sel.lightPack] : null
+
+  if (scene) parts.push(scene.positivePromptZh)
+  for (const stateId of sel.statePacks) {
+    const state = STATE_MAP[stateId]
+    if (state) parts.push(state.positivePromptZh)
+  }
+  if (device) parts.push(device.positivePromptZh)
+  if (light) parts.push(light.positivePromptZh)
+
+  return parts.filter(Boolean).join('，')
+}
+
+function buildVariantNegative(packIds: string[]): string[] {
+  const items: string[] = []
+  for (const id of packIds) {
+    const pack = DIFF_MAP[id]
+    if (pack) items.push(...pack.negativePrompt)
+  }
+  return [...new Set(items)]
+}
+
+function resolveTemplates(sceneId: string | null, intensity: 'subtle' | 'standard' | 'dynamic') {
+  const exact = VARIANT_SHOT_TEMPLATES.filter(template =>
+    template.intensity === intensity &&
+    (!sceneId || template.sceneTypes.includes(sceneId)),
+  )
+  if (exact.length > 0) return exact
+
+  const sameIntensity = VARIANT_SHOT_TEMPLATES.filter(template => template.intensity === intensity)
+  if (sameIntensity.length > 0) return sameIntensity
+
+  return VARIANT_SHOT_TEMPLATES
+}
+
+function scoreDiversity(template: typeof VARIANT_SHOT_TEMPLATES[number], picked: typeof VARIANT_SHOT_TEMPLATES) {
+  if (picked.length === 0) return 100
+
+  let score = 0
+  for (const current of picked) {
+    if (current.facetFragment.posePrimary !== template.facetFragment.posePrimary) score += 2
+    if (current.facetFragment.expressionPrimary !== template.facetFragment.expressionPrimary) score += 2
+    if (current.facetFragment.shotSize !== template.facetFragment.shotSize) score += 1
+    if (current.facetFragment.cameraAngle !== template.facetFragment.cameraAngle) score += 1
+  }
+  return score
+}
+
+function pickVariantTemplates(sceneId: string | null, options: GenerateVariantsOptions) {
+  const candidates = resolveTemplates(sceneId, options.intensity)
+  const picked: typeof VARIANT_SHOT_TEMPLATES = []
+  const used = new Set<string>()
+
+  while (picked.length < options.variantCount && used.size < candidates.length) {
+    const remaining = candidates.filter(template => !used.has(template.id))
+    remaining.sort((a, b) => scoreDiversity(b, picked) - scoreDiversity(a, picked))
+    const next = remaining[0]
+    if (!next) break
+    picked.push(next)
+    used.add(next.id)
+  }
+
+  if (picked.length < options.variantCount) {
+    for (const template of VARIANT_SHOT_TEMPLATES) {
+      if (picked.length >= options.variantCount) break
+      if (used.has(template.id)) continue
+      picked.push(template)
+      used.add(template.id)
+    }
+  }
+
+  return picked.slice(0, options.variantCount)
+}
+
+export function generatePoseVariants(sel: DirectorSelection, options: GenerateVariantsOptions): PoseVariant[] {
+  const templates = pickVariantTemplates(sel.scenePack, options)
+  const basePrompt = buildBasePrompt(sel)
+  const baseFacetSelections = baseSelections(sel)
+
+  return templates.map(template => {
+    const mergedSelections = mergeFacetSelections(baseFacetSelections, template.facetFragment)
+    const segmented = buildSegmentedPrompt(mergedSelections, {
+      outputLang: 'zh',
+      promptStyle: 'tag',
+    })
+    const autoDiffPacks = [...new Set(['real-photo-base', ...template.requiredDiffPacks])]
+
+    return {
+      shot: {
+        id: template.id,
+        title: template.title,
+        purpose: template.purpose,
+        bodyPose: template.bodyPose,
+        bodyAngle: template.bodyAngle,
+        weightShift: template.weightShift,
+        handTask: template.handTask,
+        gaze: template.gaze,
+        expression: template.expression,
+        sceneInteraction: template.sceneInteraction,
+        cameraCrop: template.cameraCrop,
+        cameraAngle: template.cameraAngle,
+        motionCue: template.motionCue,
+        requiredDiffPacks: template.requiredDiffPacks,
+        avoid: template.avoid,
+      },
+      pipelineId: `${sel.scenePack ?? 'generic'}-${options.intensity}-${options.variantCount}`,
+      positivePrompt: [basePrompt, segmented.flatPrompt].filter(Boolean).join('，'),
+      negativePrompt: buildVariantNegative(autoDiffPacks),
+      autoDiffPacks,
+      facetFragment: template.facetFragment,
+    }
+  })
+}

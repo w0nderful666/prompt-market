@@ -1,4 +1,5 @@
 import type { LightPack } from '../core/types'
+import { LIGHT_FACET_FRAGMENTS } from './facetSyncMaps'
 
 export const LIGHT_PACKS: LightPack[] = [
   {
@@ -274,4 +275,5 @@ export const LIGHT_PACKS: LightPack[] = [
 ]
 
 export const LIGHT_MAP: Record<string, LightPack> = {}
+LIGHT_PACKS.forEach(light => { light.facetFragment = LIGHT_FACET_FRAGMENTS[light.id] ?? {} })
 LIGHT_PACKS.forEach(l => { LIGHT_MAP[l.id] = l })

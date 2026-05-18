@@ -1,0 +1,156 @@
+{
+  "meta": {
+    "id": "freestylefly:other",
+    "sourceId": "freestylefly",
+    "normalizedCategory": "other",
+    "label": "FreestyleFly 结构化词库 · 其他",
+    "path": "/external-library-chunks-v2/freestylefly/other.json",
+    "entryCount": 4
+  },
+  "entries": [
+    {
+      "id": "freestylefly-architecture-space",
+      "sourceId": "freestylefly",
+      "sourceRepo": "freestylefly/awesome-gpt-image-2",
+      "sourceUrl": "https://github.com/freestylefly/awesome-gpt-image-2/blob/main/data/style-library.json",
+      "title": "Architecture & Space",
+      "author": "freestylefly",
+      "license": "See source repository",
+      "category": "Architecture & Spaces",
+      "styleTags": [
+        "Architecture",
+        "Interior",
+        "Map"
+      ],
+      "sceneTags": [
+        "Travel",
+        "Commerce"
+      ],
+      "prompt": "Interior, exterior, city, map, and spatial concept visuals.\n\nDefine viewpoint, scale, material, lighting, and spatial function.\nFor maps, specify landmarks, labels, border decoration, and visual accuracy level.\nAvoid impossible perspectives unless the output is conceptual.\nLock map label language and relative placement.",
+      "description": "Interior, exterior, city, map, and spatial concept visuals.",
+      "displaySummaryZh": "来自FreestyleFly 结构化词库的其他条目《Architecture & Space》。 关键词：Architecture、Interior、Travel、Commerce。结构更完整，适合直接导入高级编辑。",
+      "displayCategoryZh": "其他",
+      "language": "en",
+      "importHints": {},
+      "sourceTier": "structured-primary",
+      "qualityTier": "curated",
+      "recommendedForCurrentProduct": false,
+      "chunkId": "freestylefly:other",
+      "searchText": "architecture & space interior, exterior, city, map, and spatial concept visuals. interior, exterior, city, map, and spatial concept visuals. define viewpoint, scale, material, lighting, and spatial function. for maps, specify landmarks, labels, border decoration, and visual accuracy level. avoid impossible perspectives unless the output is conceptual. lock map label language and relative placement. architecture & spaces architecture interior map travel commerce",
+      "originalCategory": "Architecture & Spaces",
+      "normalizedCategory": "other",
+      "importConfidence": 0.92,
+      "portraitFocused": false,
+      "entryKind": "template"
+    },
+    {
+      "id": "freestylefly-illustration-art-style",
+      "sourceId": "freestylefly",
+      "sourceRepo": "freestylefly/awesome-gpt-image-2",
+      "sourceUrl": "https://github.com/freestylefly/awesome-gpt-image-2/blob/main/data/style-library.json",
+      "title": "Illustration & Art Style",
+      "author": "freestylefly",
+      "license": "See source repository",
+      "category": "Illustration & Art",
+      "styleTags": [
+        "Illustration",
+        "Art",
+        "Style"
+      ],
+      "sceneTags": [
+        "Story",
+        "Creative"
+      ],
+      "prompt": "Anime, watercolor, ink, material experiments, and art direction.\n\nDefine composition, subject, palette, brush material, mood, and rendering depth.\nFor reference images, state what must be preserved.\nAvoid style-only prompts without composition.\nLock character identity when using references.",
+      "description": "Anime, watercolor, ink, material experiments, and art direction.",
+      "displaySummaryZh": "来自FreestyleFly 结构化词库的其他条目《Illustration & Art Style》。 关键词：Illustration、Art、Story、Creative。结构更完整，适合直接导入高级编辑。",
+      "displayCategoryZh": "其他",
+      "language": "en",
+      "importHints": {},
+      "sourceTier": "structured-primary",
+      "qualityTier": "curated",
+      "recommendedForCurrentProduct": false,
+      "chunkId": "freestylefly:other",
+      "searchText": "illustration & art style anime, watercolor, ink, material experiments, and art direction. anime, watercolor, ink, material experiments, and art direction. define composition, subject, palette, brush material, mood, and rendering depth. for reference images, state what must be preserved. avoid style-only prompts without composition. lock character identity when using references. illustration & art illustration art style story creative",
+      "originalCategory": "Illustration & Art",
+      "normalizedCategory": "other",
+      "importConfidence": 0.92,
+      "portraitFocused": false,
+      "entryKind": "template"
+    },
+    {
+      "id": "freestylefly-history-classical-themes",
+      "sourceId": "freestylefly",
+      "sourceRepo": "freestylefly/awesome-gpt-image-2",
+      "sourceUrl": "https://github.com/freestylefly/awesome-gpt-image-2/blob/main/data/style-library.json",
+      "title": "History & Classical Themes",
+      "author": "freestylefly",
+      "license": "See source repository",
+      "category": "History & Classical Themes",
+      "styleTags": [
+        "History",
+        "Classical",
+        "Illustration",
+        "Scroll"
+      ],
+      "sceneTags": [
+        "History",
+        "Story"
+      ],
+      "prompt": "Dynasty clothing, scroll narrative, poetry, and traditional motifs.\n\nSpecify dynasty, clothing system, object references, layout format, and cultural mood.\nUse scroll, album page, or poster format deliberately.\nAvoid mixing dynasties when historical accuracy matters.\nConstrain random modern props.",
+      "description": "Dynasty clothing, scroll narrative, poetry, and traditional motifs.",
+      "displaySummaryZh": "来自FreestyleFly 结构化词库的其他条目《History & Classical Themes》。 关键词：History、Classical、History、Story。结构更完整，适合直接导入高级编辑。",
+      "displayCategoryZh": "其他",
+      "language": "en",
+      "importHints": {},
+      "sourceTier": "structured-primary",
+      "qualityTier": "curated",
+      "recommendedForCurrentProduct": false,
+      "chunkId": "freestylefly:other",
+      "searchText": "history & classical themes dynasty clothing, scroll narrative, poetry, and traditional motifs. dynasty clothing, scroll narrative, poetry, and traditional motifs. specify dynasty, clothing system, object references, layout format, and cultural mood. use scroll, album page, or poster format deliberately. avoid mixing dynasties when historical accuracy matters. constrain random modern props. history & classical themes history classical illustration scroll history story",
+      "originalCategory": "History & Classical Themes",
+      "normalizedCategory": "other",
+      "importConfidence": 0.92,
+      "portraitFocused": false,
+      "entryKind": "template"
+    },
+    {
+      "id": "freestylefly-concept-product-breakdown",
+      "sourceId": "freestylefly",
+      "sourceRepo": "freestylefly/awesome-gpt-image-2",
+      "sourceUrl": "https://github.com/freestylefly/awesome-gpt-image-2/blob/main/data/style-library.json",
+      "title": "Concept Product Breakdown",
+      "author": "freestylefly",
+      "license": "See source repository",
+      "category": "Other Use Cases",
+      "styleTags": [
+        "Other Use Cases",
+        "Product",
+        "Creative",
+        "R&D",
+        "Special"
+      ],
+      "sceneTags": [
+        "Creative",
+        "Tech"
+      ],
+      "prompt": "R&D boards, exploded views, mixed tasks, and special outputs.\n\nDefine the artifact type, components, labels, material logic, and final presentation format.\nUse clear callouts and a controlled technical style.\nAvoid unspecified mixed tasks.\nKeep labels short and component relationships visible.",
+      "description": "R&D boards, exploded views, mixed tasks, and special outputs.",
+      "displayTitleZh": "Concept 产品 Breakdown",
+      "displaySummaryZh": "来自FreestyleFly 结构化词库的其他条目《Concept Product Breakdown》。 关键词：Other Use Cases、Product、Creative、Tech。结构更完整，适合直接导入高级编辑。",
+      "displayCategoryZh": "其他",
+      "language": "en",
+      "importHints": {},
+      "sourceTier": "structured-primary",
+      "qualityTier": "curated",
+      "recommendedForCurrentProduct": false,
+      "chunkId": "freestylefly:other",
+      "searchText": "concept product breakdown r&d boards, exploded views, mixed tasks, and special outputs. r&d boards, exploded views, mixed tasks, and special outputs. define the artifact type, components, labels, material logic, and final presentation format. use clear callouts and a controlled technical style. avoid unspecified mixed tasks. keep labels short and component relationships visible. other use cases other use cases product creative r&d special creative tech",
+      "originalCategory": "Other Use Cases",
+      "normalizedCategory": "other",
+      "importConfidence": 0.92,
+      "portraitFocused": false,
+      "entryKind": "template"
+    }
+  ]
+}

@@ -2,11 +2,10 @@ import type { DirectorSelection, ComposedOutput, AutoEnabledPack } from './types
 import { DEVICE_MAP } from '../data/devicePresets'
 import { SCENE_MAP } from '../data/scenePacks'
 import { LIGHT_MAP } from '../data/lightPacks'
-import { STATE_MAP } from '../data/statePacks'
 import { DIFF_MAP } from '../data/diffPacks'
 import { MASTER_TEMPLATE_MAP } from '../data/masterTemplates'
 import { PARAMETER_MAP } from '../data/parameterPresets'
-import type { DirectorTemplate } from './types'
+import { buildSegmentedPrompt, type FacetSelections, type OutputLanguage, type PromptStyle } from '../utils/facetedBuilder'
 
 function triggerMatchesPack(packTriggerSlots: string[], selectionSlotKeys: string[], selectedValueIds: string[]): boolean {
   if (packTriggerSlots.includes('*')) return true
@@ -17,8 +16,21 @@ function triggerMatchesPack(packTriggerSlots: string[], selectionSlotKeys: strin
   return false
 }
 
+function resolveOutputLanguage(selections: FacetSelections): OutputLanguage {
+  if (selections.outputLang === 'lang_en') return 'en'
+  if (selections.outputLang === 'lang_mix') return 'mix'
+  return 'zh'
+}
+
 export function composePrompt(
   sel: DirectorSelection,
+  advancedSelections: FacetSelections,
+  options?: {
+    freeformPositive?: string
+    freeformNegative?: string[]
+    promptStyle?: PromptStyle
+    importedParameterSuffix?: string
+  },
   variantOverlay?: {
     shotId: string
     bodyPose: string
@@ -32,100 +44,60 @@ export function composePrompt(
     cameraAngle: string
     motionCue: string
     autoDiffPacks: string[]
-  } | null
+  } | null,
 ): ComposedOutput {
   const device = sel.devicePreset ? DEVICE_MAP[sel.devicePreset] : null
   const scene = sel.scenePack ? SCENE_MAP[sel.scenePack] : null
   const light = sel.lightPack ? LIGHT_MAP[sel.lightPack] : null
-  const states = sel.statePacks.map(id => STATE_MAP[id]).filter(Boolean)
   const paramPreset = sel.parameterPreset ? PARAMETER_MAP[sel.parameterPreset] : null
-  const tpl: DirectorTemplate | null = sel.directorTemplate ? MASTER_TEMPLATE_MAP[sel.directorTemplate] ?? null : null
+  const template = sel.directorTemplate ? MASTER_TEMPLATE_MAP[sel.directorTemplate] ?? null : null
 
-  let aspectRatio = '--ar 4:5'
-  if (tpl) {
-    aspectRatio = `--ar ${tpl.lockedCore.aspectRatio}`
-  } else if (device) {
-    aspectRatio = `--ar ${device.defaultAspectRatios[0]}`
-  }
-
-  const positiveParts: string[] = []
-
-  if (scene) {
-    positiveParts.push(scene.positivePromptZh)
-  }
-
-  for (const st of states) {
-    positiveParts.push(st.positivePromptZh)
-  }
-
-  if (sel.customProps.length > 0) {
-    positiveParts.push(`手里自然${sel.customProps.length > 1 ? '分别' : ''}拿着${sel.customProps.join('和')}`)
-  }
-
-  if (device) {
-    positiveParts.push(device.positivePromptZh)
-  }
-
-  if (light) {
-    positiveParts.push(light.positivePromptZh)
-  }
-
-  if (variantOverlay) {
-    const overlayParts: string[] = []
-    if (variantOverlay.bodyPose && !variantOverlay.bodyPose.includes('选一个')) overlayParts.push(variantOverlay.bodyPose)
-    if (variantOverlay.bodyAngle) overlayParts.push(variantOverlay.bodyAngle)
-    if (variantOverlay.weightShift) overlayParts.push(variantOverlay.weightShift)
-    if (variantOverlay.handTask && !variantOverlay.handTask.includes('选一个')) overlayParts.push(variantOverlay.handTask)
-    if (variantOverlay.gaze) overlayParts.push(variantOverlay.gaze)
-    if (variantOverlay.expression) overlayParts.push(variantOverlay.expression)
-    if (variantOverlay.sceneInteraction) overlayParts.push(variantOverlay.sceneInteraction)
-    if (variantOverlay.cameraCrop) overlayParts.push(variantOverlay.cameraCrop)
-    if (variantOverlay.cameraAngle) overlayParts.push(variantOverlay.cameraAngle)
-    if (variantOverlay.motionCue && !variantOverlay.motionCue.includes('选一个')) overlayParts.push(variantOverlay.motionCue)
-    if (overlayParts.length > 0) {
-      positiveParts.push(overlayParts.join('，'))
-    }
-  }
-
-  const positivePrompt = positiveParts.join('，')
+  const aspectRatio = template
+    ? `--ar ${template.lockedCore.aspectRatio}`
+    : device
+      ? `--ar ${device.defaultAspectRatios[0]}`
+      : '--ar 4:5'
 
   const enabledPacks: AutoEnabledPack[] = []
-  const negativeParts: string[] = []
-  const positiveRepairParts: string[] = []
+  const negativeParts: string[] = [...(options?.freeformNegative ?? [])]
 
   const forcedPackIds: string[] = variantOverlay?.autoDiffPacks ?? []
-
   const selectionSlotKeys: string[] = []
   const selectedValueIds: string[] = []
 
   if (device) selectionSlotKeys.push('devicePreset')
   if (scene) selectionSlotKeys.push('scenePack')
   if (light) selectionSlotKeys.push('lightPack')
-  for (const sid of sel.statePacks) {
+
+  for (const stateId of sel.statePacks) {
     selectionSlotKeys.push('statePack')
-    selectedValueIds.push(sid)
+    selectedValueIds.push(stateId)
   }
-  for (const prop of sel.customProps) {
-    selectedValueIds.push(`prop_${prop}`)
+
+  for (const customProp of sel.customProps) {
+    selectedValueIds.push(`prop_${customProp}`)
     selectionSlotKeys.push('handheld')
+  }
+
+  for (const [slotId, value] of Object.entries(advancedSelections)) {
+    selectionSlotKeys.push(slotId)
+    if (Array.isArray(value)) selectedValueIds.push(...value)
+    else selectedValueIds.push(value)
   }
 
   for (const pack of Object.values(DIFF_MAP)) {
     if (forcedPackIds.includes(pack.id) || triggerMatchesPack(pack.triggerSlots, selectionSlotKeys, selectedValueIds)) {
-      let reason = ''
-      if (pack.id === 'real-photo-base') reason = '所有写实人像默认启用'
-      else if (pack.id === 'no-random-text') reason = '默认防文字乱码'
-      else if (pack.id === 'device-specific-fix' && device) reason = `已选择「${device.labelZh}」，自动启用设备专属修复`
-      else if (pack.id === 'hand-fix') reason = sel.statePacks.length > 0 ? '已选择手部动作或手持物品，自动启用手部修复' : '已选择手持物品，自动启用手部修复'
-      else if (pack.id === 'face-fix') reason = '已选择面部相关状态，自动启用面部修复'
-      else if (pack.id === 'skin-realism') reason = '已选择写真人像，自动启用皮肤真实纹理修复'
-      else if (pack.id === 'motion-fix') reason = '已选择动态状态，自动启用动态动作防扭曲'
-      else if (pack.id === 'object-product-fix') reason = '已选择手持物品，自动启用产品/道具修复'
-      else reason = `自动启用「${pack.labelZh}」`
+      let reason = 'Automatic quality protection'
+      if (pack.id === 'real-photo-base') reason = 'Base realism pack'
+      else if (pack.id === 'device-specific-fix' && device) reason = `${device.labelZh} specific protection`
+      else if (pack.id === 'hand-fix') reason = 'Hand pose or handheld object detected'
+      else if (pack.id === 'face-fix') reason = 'Face-sensitive prompt detected'
+      else if (pack.id === 'skin-realism') reason = 'Skin realism protection'
+      else if (pack.id === 'motion-fix') reason = 'Motion scene protection'
+      else if (pack.id === 'object-product-fix') reason = 'Object holding protection'
 
       enabledPacks.push({ id: pack.id, label: pack.labelZh, reason })
       negativeParts.push(...pack.negativePrompt)
-      positiveRepairParts.push(...pack.positiveRepair)
 
       if (pack.id === 'device-specific-fix' && device) {
         negativeParts.push(...device.negativePrompt)
@@ -133,16 +105,28 @@ export function composePrompt(
     }
   }
 
-  const negativePrompt = [...new Set(negativeParts)]
+  const outputLang = resolveOutputLanguage(advancedSelections)
+  const promptStyle = options?.promptStyle ?? 'tag'
+  const segmented = buildSegmentedPrompt(advancedSelections, {
+    outputLang,
+    promptStyle,
+    freeformPositive: options?.freeformPositive,
+  })
 
-  const paramSuffix = paramPreset
-    ? `\n${paramPreset.midjourney}\n${aspectRatio}`
-    : `\n${aspectRatio}\n--style raw --s 50 --c 5`
+  const importedParameterSuffix = options?.importedParameterSuffix?.trim()
+  const parameterSuffix = importedParameterSuffix
+    ? [importedParameterSuffix, aspectRatio].filter(Boolean).join('\n')
+    : paramPreset
+      ? `${paramPreset.midjourney}\n${aspectRatio}`
+      : `${aspectRatio}\n--style raw --s 50 --c 5`
 
   return {
-    positivePrompt,
-    negativePrompt,
-    parameterSuffix: paramSuffix,
+    positivePrompt: segmented.positivePrompt,
+    flatPrompt: segmented.flatPrompt,
+    naturalPrompt: segmented.naturalPrompt,
+    sections: segmented.sections,
+    negativePrompt: [...new Set(negativeParts.filter(Boolean))],
+    parameterSuffix,
     autoEnabledPacks: enabledPacks,
   }
 }

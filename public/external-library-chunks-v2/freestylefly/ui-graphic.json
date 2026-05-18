@@ -1,0 +1,158 @@
+{
+  "meta": {
+    "id": "freestylefly:ui-graphic",
+    "sourceId": "freestylefly",
+    "normalizedCategory": "ui-graphic",
+    "label": "FreestyleFly 结构化词库 · UI / 设计",
+    "path": "/external-library-chunks-v2/freestylefly/ui-graphic.json",
+    "entryCount": 4
+  },
+  "entries": [
+    {
+      "id": "freestylefly-ui-screenshot-system",
+      "sourceId": "freestylefly",
+      "sourceRepo": "freestylefly/awesome-gpt-image-2",
+      "sourceUrl": "https://github.com/freestylefly/awesome-gpt-image-2/blob/main/data/style-library.json",
+      "title": "UI Screenshot System",
+      "author": "freestylefly",
+      "license": "See source repository",
+      "category": "UI & Interfaces",
+      "styleTags": [
+        "UI",
+        "Dashboard",
+        "Screenshot"
+      ],
+      "sceneTags": [
+        "Tech",
+        "Social"
+      ],
+      "prompt": "High-fidelity app, web, dashboard, and social interface prompts.\n\nLock platform, aspect ratio, layout hierarchy, and exact visible text.\nSpecify UI chrome such as status bars, tabs, action rows, or comment layers.\nAvoid vague platform names and generic app mockups.\nConstrain text readability and platform-specific details.",
+      "description": "High-fidelity app, web, dashboard, and social interface prompts.",
+      "displayTitleZh": "界面 Screenshot System",
+      "displaySummaryZh": "来自FreestyleFly 结构化词库的UI / 设计条目《UI Screenshot System》。 关键词：UI、Dashboard、Tech、Social。结构更完整，适合直接导入高级编辑。",
+      "displayCategoryZh": "UI / 设计",
+      "language": "en",
+      "importHints": {},
+      "sourceTier": "structured-primary",
+      "qualityTier": "curated",
+      "recommendedForCurrentProduct": true,
+      "chunkId": "freestylefly:ui-graphic",
+      "searchText": "ui screenshot system high-fidelity app, web, dashboard, and social interface prompts. high-fidelity app, web, dashboard, and social interface prompts. lock platform, aspect ratio, layout hierarchy, and exact visible text. specify ui chrome such as status bars, tabs, action rows, or comment layers. avoid vague platform names and generic app mockups. constrain text readability and platform-specific details. ui & interfaces ui dashboard screenshot tech social",
+      "originalCategory": "UI & Interfaces",
+      "normalizedCategory": "ui-graphic",
+      "importConfidence": 0.94,
+      "portraitFocused": true,
+      "entryKind": "template"
+    },
+    {
+      "id": "freestylefly-document-publishing",
+      "sourceId": "freestylefly",
+      "sourceRepo": "freestylefly/awesome-gpt-image-2",
+      "sourceUrl": "https://github.com/freestylefly/awesome-gpt-image-2/blob/main/data/style-library.json",
+      "title": "Document & Publishing",
+      "author": "freestylefly",
+      "license": "See source repository",
+      "category": "Documents & Publishing",
+      "styleTags": [
+        "Documents",
+        "Infographic",
+        "Document",
+        "Publishing",
+        "Layout"
+      ],
+      "sceneTags": [
+        "Education",
+        "Tech"
+      ],
+      "prompt": "White papers, manuals, encyclopedic plates, and page systems.\n\nDefine page size, columns, table of contents, figure system, and typography hierarchy.\nUse readable headings, tables, labels, and page rhythm.\nAvoid tiny dense text.\nKeep charts and captions aligned to the page grid.",
+      "description": "White papers, manuals, encyclopedic plates, and page systems.",
+      "displaySummaryZh": "来自FreestyleFly 结构化词库的UI / 设计条目《Document & Publishing》。 关键词：Documents、Infographic、Education、Tech。结构更完整，适合直接导入高级编辑。",
+      "displayCategoryZh": "UI / 设计",
+      "language": "en",
+      "importHints": {},
+      "sourceTier": "structured-primary",
+      "qualityTier": "curated",
+      "recommendedForCurrentProduct": true,
+      "chunkId": "freestylefly:ui-graphic",
+      "searchText": "document & publishing white papers, manuals, encyclopedic plates, and page systems. white papers, manuals, encyclopedic plates, and page systems. define page size, columns, table of contents, figure system, and typography hierarchy. use readable headings, tables, labels, and page rhythm. avoid tiny dense text. keep charts and captions aligned to the page grid. documents & publishing documents infographic document publishing layout education tech",
+      "originalCategory": "Documents & Publishing",
+      "normalizedCategory": "ui-graphic",
+      "importConfidence": 0.94,
+      "portraitFocused": true,
+      "entryKind": "template"
+    },
+    {
+      "id": "freestylefly-infographic-engine",
+      "sourceId": "freestylefly",
+      "sourceRepo": "freestylefly/awesome-gpt-image-2",
+      "sourceUrl": "https://github.com/freestylefly/awesome-gpt-image-2/blob/main/data/style-library.json",
+      "title": "Infographic Engine",
+      "author": "freestylefly",
+      "license": "See source repository",
+      "category": "Charts & Infographics",
+      "styleTags": [
+        "Infographic",
+        "Charts",
+        "Chart",
+        "Education"
+      ],
+      "sceneTags": [
+        "Education",
+        "Tech"
+      ],
+      "prompt": "Structured diagrams, timelines, knowledge maps, and explainers.\n\nDefine 3-5 modules, information flow, visual hierarchy, and short labels.\nUse color groups, arrows, icons, and clean spacing to reduce clutter.\nAvoid long paragraphs inside the image.\nLimit module count before adding visual detail.",
+      "description": "Structured diagrams, timelines, knowledge maps, and explainers.",
+      "displaySummaryZh": "来自FreestyleFly 结构化词库的UI / 设计条目《Infographic Engine》。 关键词：Infographic、Charts、Education、Tech。结构更完整，适合直接导入高级编辑。",
+      "displayCategoryZh": "UI / 设计",
+      "language": "en",
+      "importHints": {},
+      "sourceTier": "structured-primary",
+      "qualityTier": "curated",
+      "recommendedForCurrentProduct": false,
+      "chunkId": "freestylefly:ui-graphic",
+      "searchText": "infographic engine structured diagrams, timelines, knowledge maps, and explainers. structured diagrams, timelines, knowledge maps, and explainers. define 3-5 modules, information flow, visual hierarchy, and short labels. use color groups, arrows, icons, and clean spacing to reduce clutter. avoid long paragraphs inside the image. limit module count before adding visual detail. charts & infographics infographic charts chart education education tech",
+      "originalCategory": "Charts & Infographics",
+      "normalizedCategory": "ui-graphic",
+      "importConfidence": 0.92,
+      "portraitFocused": false,
+      "entryKind": "template"
+    },
+    {
+      "id": "freestylefly-scientific-scale-diagram",
+      "sourceId": "freestylefly",
+      "sourceRepo": "freestylefly/awesome-gpt-image-2",
+      "sourceUrl": "https://github.com/freestylefly/awesome-gpt-image-2/blob/main/data/style-library.json",
+      "title": "Scientific Scale Diagram",
+      "author": "freestylefly",
+      "license": "See source repository",
+      "category": "Charts & Infographics",
+      "styleTags": [
+        "Infographic",
+        "Charts",
+        "Realistic",
+        "Chart",
+        "Education"
+      ],
+      "sceneTags": [
+        "Education",
+        "Tech"
+      ],
+      "prompt": "Multi-scale science visuals with readable labels and hierarchy.\n\nUse 6-8 scale frames and keep each label short.\nShow units, magnification, and distinct scale detail.\nAvoid making every scale frame visually identical.\nAvoid generic magnifying glass icon layouts.",
+      "description": "Multi-scale science visuals with readable labels and hierarchy.",
+      "displaySummaryZh": "来自FreestyleFly 结构化词库的UI / 设计条目《Scientific Scale Diagram》。 关键词：Infographic、Charts、Education、Tech。结构更完整，适合直接导入高级编辑。",
+      "displayCategoryZh": "UI / 设计",
+      "language": "en",
+      "importHints": {},
+      "sourceTier": "structured-primary",
+      "qualityTier": "curated",
+      "recommendedForCurrentProduct": false,
+      "chunkId": "freestylefly:ui-graphic",
+      "searchText": "scientific scale diagram multi-scale science visuals with readable labels and hierarchy. multi-scale science visuals with readable labels and hierarchy. use 6-8 scale frames and keep each label short. show units, magnification, and distinct scale detail. avoid making every scale frame visually identical. avoid generic magnifying glass icon layouts. charts & infographics infographic charts realistic chart education education tech",
+      "originalCategory": "Charts & Infographics",
+      "normalizedCategory": "ui-graphic",
+      "importConfidence": 0.92,
+      "portraitFocused": false,
+      "entryKind": "template"
+    }
+  ]
+}

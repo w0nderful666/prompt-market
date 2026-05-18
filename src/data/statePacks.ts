@@ -1,4 +1,5 @@
 import type { StatePack } from '../core/types'
+import { STATE_FACET_FRAGMENTS } from './facetSyncMaps'
 
 export const STATE_PACKS: StatePack[] = [
   {
@@ -652,4 +653,5 @@ export const STATE_PACKS: StatePack[] = [
 ]
 
 export const STATE_MAP: Record<string, StatePack> = {}
+STATE_PACKS.forEach(state => { state.facetFragment = STATE_FACET_FRAGMENTS[state.id] ?? {} })
 STATE_PACKS.forEach(s => { STATE_MAP[s.id] = s })

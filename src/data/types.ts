@@ -15,6 +15,10 @@ export interface FacetValue {
   aliases?: string[]
   slot: string
   exportPrompt?: string
+  exportPromptZh?: string
+  exportPromptEn?: string
+  naturalPromptZh?: string
+  naturalPromptEn?: string
   conflicts?: string[]
 }
 

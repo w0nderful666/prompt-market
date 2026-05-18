@@ -1,4 +1,5 @@
 import type { DevicePreset } from '../core/types'
+import { DEVICE_FACET_FRAGMENTS } from './facetSyncMaps'
 
 export const DEVICE_PRESETS: DevicePreset[] = [
   {
@@ -124,4 +125,5 @@ export const DEVICE_PRESETS: DevicePreset[] = [
 ]
 
 export const DEVICE_MAP: Record<string, DevicePreset> = {}
+DEVICE_PRESETS.forEach(device => { device.facetFragment = DEVICE_FACET_FRAGMENTS[device.id] ?? {} })
 DEVICE_PRESETS.forEach(d => { DEVICE_MAP[d.id] = d })
