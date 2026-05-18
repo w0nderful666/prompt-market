@@ -288,8 +288,24 @@ export default function ExternalPromptLibraryPanel({ onImportToAdvanced }: Props
 
     return (
       <div className="mt-4 rounded-2xl border border-border bg-muted/30 p-4">
-        <div className="mb-2 text-sm font-bold text-foreground">{UI.rawPrompt}</div>
-        <p className="whitespace-pre-wrap text-sm leading-7 text-muted-foreground">{entry.prompt}</p>
+        <div className="mb-3 flex items-center gap-4">
+          <span className="text-sm font-bold text-foreground">{UI.rawPrompt}</span>
+          {entry.promptZh && (
+            <span className="rounded-full bg-primary/10 px-2 py-0.5 text-xs font-medium text-primary">
+              ZH / EN
+            </span>
+          )}
+        </div>
+        {entry.promptZh && (
+          <div className="mb-3 rounded-xl border border-border/50 bg-background/60 p-3">
+            <div className="mb-1 text-xs font-bold text-foreground/70">ZH</div>
+            <p className="whitespace-pre-wrap text-sm leading-7 text-muted-foreground">{entry.promptZh}</p>
+          </div>
+        )}
+        <div>
+          {entry.promptZh && <div className="mb-1 text-xs font-bold text-foreground/70">EN</div>}
+          <p className="whitespace-pre-wrap text-sm leading-7 text-muted-foreground">{entry.prompt}</p>
+        </div>
         <div className="mt-4 grid gap-3 md:grid-cols-2">
           <div className="rounded-xl bg-background/80 p-3 text-sm leading-7 text-muted-foreground">
             <div className="mb-1 text-xs font-bold text-foreground">{UI.importNotes}</div>
@@ -537,7 +553,10 @@ export default function ExternalPromptLibraryPanel({ onImportToAdvanced }: Props
                   </div>
                   <h3 className="text-xl font-black text-foreground">{displayTitle}</h3>
                   {entry.displayTitleZh && entry.displayTitleZh !== entry.title && (
-                    <p className="text-sm text-muted-foreground">{entry.title}</p>
+                    <p className="text-sm text-muted-foreground">EN: {entry.title}</p>
+                  )}
+                  {!entry.displayTitleZh && (
+                    <p className="text-xs text-muted-foreground/60">EN</p>
                   )}
                   <p className="text-sm leading-6 text-muted-foreground">
                     {(source?.label ?? entry.sourceRepo)} · {entry.author} · {SOURCE_TIER_LABELS[entry.sourceTier]}
@@ -554,6 +573,11 @@ export default function ExternalPromptLibraryPanel({ onImportToAdvanced }: Props
               </div>
 
               <p className="mt-4 text-sm leading-7 text-muted-foreground">{displaySummary}</p>
+              {entry.descriptionZh && (
+                <p className="mt-2 rounded-lg border border-border/50 bg-muted/20 px-3 py-2 text-sm leading-6 text-muted-foreground">
+                  <span className="text-xs font-bold text-foreground/70">ZH </span>{entry.descriptionZh}
+                </p>
+              )}
 
               <div className="mt-4 flex flex-wrap gap-2">
                 {entry.recommendedForCurrentProduct && (
@@ -581,7 +605,7 @@ export default function ExternalPromptLibraryPanel({ onImportToAdvanced }: Props
                   </span>
                 </div>
                 <p className="line-clamp-4 text-sm leading-7 text-muted-foreground">
-                  {entry.description ?? entry.searchText.slice(0, 240)}
+                  {entry.descriptionZh ?? entry.description ?? entry.displaySummaryZh ?? entry.searchText.slice(0, 240)}
                 </p>
               </div>
 

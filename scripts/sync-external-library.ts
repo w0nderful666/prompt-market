@@ -88,7 +88,7 @@ type ExternalPromptLibraryChunkMeta = {
   entryCount: number
 }
 
-type ExternalPromptLibraryEntrySummary = Omit<ExternalPromptLibraryEntry, 'prompt'>
+type ExternalPromptLibraryEntrySummary = Omit<ExternalPromptLibraryEntry, 'prompt' | 'promptZh'>
 
 type ExternalPromptLibraryChunk = {
   meta: ExternalPromptLibraryChunkMeta
@@ -548,7 +548,7 @@ function resetDirectory(directoryPath: string) {
 }
 
 function toSummary(entry: ExternalPromptLibraryEntry): ExternalPromptLibraryEntrySummary {
-  const { prompt: _prompt, ...summary } = entry
+  const { prompt: _prompt, promptZh: _promptZh, ...summary } = entry
   return summary
 }
 
@@ -558,35 +558,41 @@ function parseFreestyleflyEntries() {
   const entries: ExternalPromptLibraryEntry[] = []
 
   for (const template of library.templates ?? []) {
-    const title = cleanText(template.title?.en || template.id)
-    const description = cleanText(template.description?.en || template.useWhen?.en)
-    const guidance = uniq([...(template.guidance?.en ?? []), ...(template.pitfalls?.en ?? [])].map(cleanText)).join('\n')
-    const prompt = cleanText([description, guidance].filter(Boolean).join('\n\n'))
+      const title = cleanText(template.title?.en || template.id)
+      const titleZh = template.title?.zh ? cleanText(template.title.zh) : undefined
+      const description = cleanText(template.description?.en || template.useWhen?.en)
+      const descriptionZh = template.description?.zh ? cleanText(template.description.zh) : undefined
+      const guidance = uniq([...(template.guidance?.en ?? []), ...(template.pitfalls?.en ?? [])].map(cleanText)).join('\n')
+      const guidanceZh = uniq([...(template.guidance?.zh ?? []), ...(template.pitfalls?.zh ?? [])].map(cleanText)).join('\n')
+      const prompt = cleanText([description, guidance].filter(Boolean).join('\n\n'))
+      const promptZh = cleanText([descriptionZh || cleanText(template.useWhen?.zh || ''), guidanceZh].filter(Boolean).join('\n\n'))
     const styleTags = uniq([...(template.styles ?? []), ...(template.tags ?? [])].map(cleanText))
     const sceneTags = uniq((template.scenes ?? []).map(cleanText))
     const originalCategory = cleanText(template.category || 'Other Use Cases')
     const categoryText = [title, description, prompt, originalCategory, styleTags.join(' '), sceneTags.join(' ')].join(' ')
     const normalizedCategory = inferCategory(categoryText, source.id, originalCategory, template.id)
     const portraitFocused = inferPortraitFocused(normalizedCategory, categoryText)
-    const qualityTier = buildQualityTier(source.id, prompt, title, normalizedCategory)
-    const importConfidence = buildImportConfidence(source.id, normalizedCategory, qualityTier, portraitFocused)
-    const displayTitleZh = buildLocalizedTitle(title)
+      const qualityTier = buildQualityTier(source.id, prompt, title, normalizedCategory)
+      const importConfidence = buildImportConfidence(source.id, normalizedCategory, qualityTier, portraitFocused)
+      const displayTitleZh = titleZh || buildLocalizedTitle(title) || undefined
 
-    entries.push({
-      id: `freestylefly-${template.id}`,
-      sourceId: source.id,
-      sourceRepo: source.repo,
-      sourceUrl: `${source.sourceUrl}/blob/main/data/style-library.json`,
-      title,
-      author: 'freestylefly',
-      license: source.license,
-      category: originalCategory,
-      styleTags,
-      sceneTags,
-      prompt,
-      description,
-      displayTitleZh,
-      displaySummaryZh: buildSummaryZh(source, normalizedCategory, qualityTier, title, styleTags, sceneTags),
+      entries.push({
+        id: `freestylefly-${template.id}`,
+        sourceId: source.id,
+        sourceRepo: source.repo,
+        sourceUrl: `${source.sourceUrl}/blob/main/data/style-library.json`,
+        title,
+        author: 'freestylefly',
+        license: source.license,
+        category: originalCategory,
+        styleTags,
+        sceneTags,
+        prompt,
+        description,
+        descriptionZh,
+        displayTitleZh,
+        promptZh: promptZh || undefined,
+        displaySummaryZh: buildSummaryZh(source, normalizedCategory, qualityTier, titleZh || title, styleTags, sceneTags),
       displayCategoryZh: CATEGORY_LABELS[normalizedCategory],
       language: detectLanguage(`${title} ${description} ${prompt}`),
       importHints: buildImportHints(normalizedCategory, styleTags, sceneTags),

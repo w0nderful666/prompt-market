@@ -28,7 +28,10 @@
       ],
       "prompt": "Characters, pose sheets, action grids, and identity consistency.\n\nDefine identity anchors, outfit, proportions, pose count, and sheet layout.\nKeep face, hairstyle, and costume details consistent.\nAvoid changing costume details between poses.\nLimit pose count if the sheet becomes crowded.",
       "description": "Characters, pose sheets, action grids, and identity consistency.",
-      "displaySummaryZh": "来自FreestyleFly 结构化词库的人像条目《Character Design Sheet》。 关键词：Character、Illustration、Story。结构更完整，适合直接导入高级编辑。",
+      "descriptionZh": "生成角色设定、动作分解和一致性参考。",
+      "displayTitleZh": "角色设定表",
+      "promptZh": "生成角色设定、动作分解和一致性参考。\n\n定义身份锚点、服装、比例、动作数量和版式。\n保持脸、发型和服装细节一致。\n避免不同动作里服装细节变化。\n画面拥挤时减少动作数量。",
+      "displaySummaryZh": "来自FreestyleFly 结构化词库的人像条目《角色设定表》。 关键词：Character、Illustration、Story。结构更完整，适合直接导入高级编辑。",
       "displayCategoryZh": "人像",
       "language": "en",
       "importHints": {
@@ -65,7 +68,10 @@
       ],
       "prompt": "Reference photo to premium 3D collectible figure prompts.\n\nPreserve face and outfit anchors from the reference.\nSpecify material, packaging, base, lighting, and collectible scale.\nAvoid generic toy bodies without identity details.\nKeep packaging text minimal and accurate.",
       "description": "Reference photo to premium 3D collectible figure prompts.",
-      "displaySummaryZh": "来自FreestyleFly 结构化词库的人像条目《3D Collectible Toy》。 关键词：3D、Character、Commerce、Creative。结构更完整，适合直接导入高级编辑。",
+      "descriptionZh": "把参考图转换成高级 3D 收藏玩具效果。",
+      "displayTitleZh": "3D 收藏玩具",
+      "promptZh": "把参考图转换成高级 3D 收藏玩具效果。\n\n保留参考图中的脸和服装锚点。\n指定材质、包装、底座、光线和收藏比例。\n避免没有身份细节的通用玩具。\n包装文字保持少量且准确。",
+      "displaySummaryZh": "来自FreestyleFly 结构化词库的人像条目《3D 收藏玩具》。 关键词：3D、Character、Commerce、Creative。结构更完整，适合直接导入高级编辑。",
       "displayCategoryZh": "人像",
       "language": "en",
       "importHints": {

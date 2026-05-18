@@ -30,7 +30,10 @@
       ],
       "prompt": "Storyboards, worldbuilding, narrative scenes, and emotional pacing.\n\nDefine who, where, when, conflict, emotion, and camera framing.\nUse scene details to support narrative rather than decoration.\nAvoid generic fantasy backgrounds.\nKeep narrative cues visible in the frame.",
       "description": "Storyboards, worldbuilding, narrative scenes, and emotional pacing.",
-      "displaySummaryZh": "来自FreestyleFly 结构化词库的电影感条目《Scene Storytelling》。 关键词：Scenes、Illustration、Story、Social。结构更完整，适合直接导入高级编辑。",
+      "descriptionZh": "生成分镜、世界观、故事场景和情绪节奏。",
+      "displayTitleZh": "场景叙事",
+      "promptZh": "生成分镜、世界观、故事场景和情绪节奏。\n\n定义人物、地点、时间、冲突、情绪和机位。\n让场景细节服务故事。\n避免通用幻想背景。\n让故事线索在画面里可见。",
+      "displaySummaryZh": "来自FreestyleFly 结构化词库的电影感条目《场景叙事》。 关键词：Scenes、Illustration、Story、Social。结构更完整，适合直接导入高级编辑。",
       "displayCategoryZh": "电影感",
       "language": "en",
       "importHints": {

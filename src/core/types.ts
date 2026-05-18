@@ -185,6 +185,7 @@ export interface ExternalPromptLibraryEntry {
   sceneTags: string[]
   prompt: string
   description?: string
+  descriptionZh?: string
   displayTitleZh?: string
   displaySummaryZh?: string
   displayCategoryZh: string
@@ -201,6 +202,7 @@ export interface ExternalPromptLibraryEntry {
   importConfidence: number
   portraitFocused: boolean
   entryKind: ExternalPromptEntryKind
+  promptZh?: string
 }
 
 export interface ExternalPromptLibraryCategorySummary {
@@ -232,6 +234,7 @@ export interface ExternalPromptLibraryEntrySummary {
   styleTags: string[]
   sceneTags: string[]
   description?: string
+  descriptionZh?: string
   displayTitleZh?: string
   displaySummaryZh?: string
   displayCategoryZh: string
@@ -248,6 +251,7 @@ export interface ExternalPromptLibraryEntrySummary {
   originalCategory: string
   normalizedCategory: ExternalPromptLibraryNormalizedCategory
   importConfidence: number
+  promptZh?: string
 }
 
 export interface ExternalPromptLibraryChunk {
