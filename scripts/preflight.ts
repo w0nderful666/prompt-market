@@ -53,7 +53,7 @@ console.log('\n=== Preflight Check ===\n')
 run('npm run build compiles', 'npm run build 2>&1', out => !out.toLowerCase().includes('error'))
 run('npm run self-test passes', 'npm run self-test 2>&1', out => out.includes('FAIL: 0'))
 
-checkFile('vite base is /prompt-market-react/', resolve(root, 'vite.config.ts'), content => content.includes("'/prompt-market-react/'"))
+checkFile('vite base is /prompt-market/', resolve(root, 'vite.config.ts'), content => content.includes("'/prompt-market/'"))
 checkFile('README is not Vite default', resolve(root, 'README.md'), content => !content.includes('React + TypeScript + Vite'))
 
 const deployPath = resolve(root, '.github/workflows/deploy.yml')
