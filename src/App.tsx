@@ -6,6 +6,7 @@ import DirectorPanel from './components/DirectorPanel'
 import ErrorBoundary from './components/ErrorBoundary'
 import ExternalPromptLibraryPanel from './components/ExternalPromptLibraryPanel'
 import FacetedPresetPanel from './components/FacetedPresetPanel'
+import MasterPanel from './components/MasterPanel'
 import SettingsSection from './components/SettingsSection'
 import { DirectorProvider } from './context/DirectorContext'
 import { PresetPackProvider } from './context/PresetPackContext'
@@ -16,6 +17,7 @@ import { applyTheme } from './lib/applyTheme'
 const TABS = [
   { id: 'quick-gen', label: '快速生成', icon: '🎯' },
   { id: 'advanced-edit', label: '高级编辑', icon: '🧰' },
+  { id: 'master-mode', label: '母版模式', icon: '📋' },
   { id: 'external-library', label: '外挂词库', icon: '📚' },
   { id: 'settings', label: '设置', icon: '⚙️' },
 ]
@@ -40,6 +42,12 @@ function AppContent() {
           )}
           {activeTab === 'advanced-edit' && (
             <FacetedPresetPanel onNavigateToQuick={() => setActiveTab('quick-gen')} />
+          )}
+          {activeTab === 'master-mode' && (
+            <MasterPanel
+              onNavigateToAdvanced={() => setActiveTab('advanced-edit')}
+              onNavigateToQuick={() => setActiveTab('quick-gen')}
+            />
           )}
           {activeTab === 'external-library' && (
             <ExternalPromptLibraryPanel onImportToAdvanced={() => setActiveTab('advanced-edit')} />
