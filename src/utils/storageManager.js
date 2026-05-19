@@ -3,6 +3,8 @@
  * Handles quota errors, usage estimation, and bulk import/export
  */
 
+import { appMeta } from '../config/appMeta.js'
+
 const STORAGE_PREFIX = 'prompt_market_'
 
 /**
@@ -70,7 +72,8 @@ export function exportAllData() {
     }
   } catch { /* ignore */ }
   return {
-    appVersion: '3.0.0',
+    appVersion: appMeta.version,
+    productName: appMeta.productName,
     exportedAt: new Date().toISOString(),
     storageUsage: getStorageUsage(),
     data
@@ -162,7 +165,11 @@ export function clearSnapshots() {
  */
 export function clearUserPacks() {
   const packs = safeRead('prompt_market_packs', [])
-  const builtIn = packs.filter(p => p.builtIn)
+  if (!Array.isArray(packs)) {
+    safeWrite('prompt_market_packs', [])
+    return 0
+  }
+  const builtIn = packs.filter(p => p?.builtIn)
   safeWrite('prompt_market_packs', builtIn)
   return packs.length - builtIn.length
 }
