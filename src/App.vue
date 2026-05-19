@@ -147,7 +147,6 @@
 
 <script setup>
 import { computed, onMounted, ref, watch } from 'vue'
-import { appMeta } from './config/appMeta.js'
 import AppHeader from './components/layout/AppHeader.vue'
 import AppNavigation from './components/layout/AppNavigation.vue'
 import AppFooter from './components/layout/AppFooter.vue'
@@ -161,7 +160,7 @@ import PromptPacksPanel from './components/PromptPacksPanel.vue'
 import ImportExportModal from './components/ImportExportModal.vue'
 import defaultPrompts from './data/prompts.json'
 import examplesData from './data/examples.json'
-import { deleteScheme, downloadJson, importPromptLibrary, storage } from './utils/storage.js'
+import { downloadJson, importPromptLibrary, storage } from './utils/storage.js'
 import { buildModelOutputs } from './utils/modelAdapter.js'
 import { scorePrompt } from './utils/promptScore.js'
 import { generateVariants } from './utils/variantGenerator.js'
@@ -411,7 +410,11 @@ async function importLibrary(event) {
   if (!file) return
   try {
     const data = await importPromptLibrary(file)
-    safeWrite('prompt_market_custom_prompts', data)
+    const result = safeWrite('prompt_market_custom_prompts', data)
+    if (!result.success) {
+      notify(result.error || '词库写入失败', 'error')
+      return
+    }
     notify('词库导入成功')
   } catch (error) { notify(error.message || '导入失败', 'error') }
   finally { event.target.value = '' }
